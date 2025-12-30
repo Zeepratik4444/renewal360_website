@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, RefreshCw, MessageSquare, FileText, Database, CheckCircle2 } from "lucide-react";
+import executiveSummaryDashboard from "@/assets/executive-summary-dashboard.jpeg";
 
 export function FeaturesPage() {
 	return (
@@ -208,33 +209,11 @@ export function FeaturesPage() {
 					</div>
 
 					<div className="grid md:grid-cols-2 gap-8 items-center">
-						<Card className="bg-orange-50 md:order-2">
-							<CardContent className="pt-6">
-								<div className="bg-white p-4 rounded">
-									<div className="text-sm font-semibold mb-3">
-										Weekly Executive Summary
-									</div>
-									<div className="space-y-2 text-sm">
-										<div className="flex justify-between">
-											<span className="text-gray-600">Renewals Due (30d):</span>
-											<span className="font-semibold">24</span>
-										</div>
-										<div className="flex justify-between">
-											<span className="text-gray-600">At Risk:</span>
-											<span className="font-semibold text-red-600">3</span>
-										</div>
-										<div className="flex justify-between">
-											<span className="text-gray-600">On Track:</span>
-											<span className="font-semibold text-green-600">18</span>
-										</div>
-										<div className="flex justify-between">
-											<span className="text-gray-600">Pending Response:</span>
-											<span className="font-semibold text-yellow-600">3</span>
-										</div>
-									</div>
-								</div>
-							</CardContent>
-						</Card>
+						<img
+							src={executiveSummaryDashboard}
+							alt="Executive Summary Dashboard"
+							className="w-full h-auto rounded-lg shadow-lg md:order-2"
+						/>
 						<div className="md:order-1">
 							<FileText className="h-12 w-12 text-orange-600 mb-4" />
 							<h2 className="text-3xl font-bold text-gray-900 mb-4">
