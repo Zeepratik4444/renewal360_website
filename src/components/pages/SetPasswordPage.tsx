@@ -19,7 +19,8 @@ const passwordSchema = z.object({
 type PasswordFormData = z.infer<typeof passwordSchema>;
 
 export function SetPasswordPage() {
-    const { token } = useSearch({ from: '/set-password' });
+    const search = useSearch({ from: '/set-password' });
+    const token = (search as any).token;
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
     const [errorMessage, setErrorMessage] = useState("");
 

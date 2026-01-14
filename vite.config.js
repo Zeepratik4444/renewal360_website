@@ -37,8 +37,9 @@ export default defineConfig({
 			interval: 300, // ms; tune if CPU gets high
 		},
 		proxy: {
-			'/api': {
-				target: process.env.VITE_API_PROXY_TARGET || 'https://copilot.renewal360.in',
+			"/api": {
+				target:
+					process.env.VITE_API_PROXY_TARGET || "https://copilot.renewal360.in",
 				changeOrigin: true,
 			},
 		},
