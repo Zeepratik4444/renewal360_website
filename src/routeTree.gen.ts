@@ -11,6 +11,7 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as SetPasswordImport } from './routes/set-password'
 import { Route as PricingImport } from './routes/pricing'
 import { Route as HowItWorksImport } from './routes/how-it-works'
 import { Route as FeaturesImport } from './routes/features'
@@ -20,6 +21,12 @@ import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
+
+const SetPasswordRoute = SetPasswordImport.update({
+  id: '/set-password',
+  path: '/set-password',
+  getParentRoute: () => rootRoute,
+} as any)
 
 const PricingRoute = PricingImport.update({
   id: '/pricing',
@@ -116,6 +123,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingImport
       parentRoute: typeof rootRoute
     }
+    '/set-password': {
+      id: '/set-password'
+      path: '/set-password'
+      fullPath: '/set-password'
+      preLoaderRoute: typeof SetPasswordImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
@@ -129,6 +143,7 @@ export interface FileRoutesByFullPath {
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/set-password': typeof SetPasswordRoute
 }
 
 export interface FileRoutesByTo {
@@ -139,6 +154,7 @@ export interface FileRoutesByTo {
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/set-password': typeof SetPasswordRoute
 }
 
 export interface FileRoutesById {
@@ -150,6 +166,7 @@ export interface FileRoutesById {
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/set-password': typeof SetPasswordRoute
 }
 
 export interface FileRouteTypes {
@@ -162,8 +179,17 @@ export interface FileRouteTypes {
     | '/features'
     | '/how-it-works'
     | '/pricing'
+    | '/set-password'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/faq' | '/features' | '/how-it-works' | '/pricing'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/faq'
+    | '/features'
+    | '/how-it-works'
+    | '/pricing'
+    | '/set-password'
   id:
     | '__root__'
     | '/'
@@ -173,6 +199,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/how-it-works'
     | '/pricing'
+    | '/set-password'
   fileRoutesById: FileRoutesById
 }
 
@@ -184,6 +211,7 @@ export interface RootRouteChildren {
   FeaturesRoute: typeof FeaturesRoute
   HowItWorksRoute: typeof HowItWorksRoute
   PricingRoute: typeof PricingRoute
+  SetPasswordRoute: typeof SetPasswordRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -194,6 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   FeaturesRoute: FeaturesRoute,
   HowItWorksRoute: HowItWorksRoute,
   PricingRoute: PricingRoute,
+  SetPasswordRoute: SetPasswordRoute,
 }
 
 export const routeTree = rootRoute
@@ -212,7 +241,8 @@ export const routeTree = rootRoute
         "/faq",
         "/features",
         "/how-it-works",
-        "/pricing"
+        "/pricing",
+        "/set-password"
       ]
     },
     "/": {
@@ -235,6 +265,9 @@ export const routeTree = rootRoute
     },
     "/pricing": {
       "filePath": "pricing.tsx"
+    },
+    "/set-password": {
+      "filePath": "set-password.tsx"
     }
   }
 }

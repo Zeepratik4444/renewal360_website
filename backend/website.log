@@ -1,0 +1,24 @@
+2026-01-13 17:44:17,547 - INFO - Website database tables created/verified.
+2026-01-13 17:52:29,965 - INFO - Website database tables created/verified.
+2026-01-13 18:13:23,214 - INFO - Website database tables created/verified.
+2026-01-13 19:05:53,360 - INFO - Demo request received from: pratikicecool96@gmail.com
+2026-01-13 19:07:47,469 - INFO - Demo request received from: pratikicecool96@gmail.com
+2026-01-13 19:07:50,967 - INFO - Lead pratikicecool96@gmail.com already has trial/account
+2026-01-13 19:11:12,954 - INFO - Demo request received from: zee.pratik4444@gmail.com
+2026-01-13 19:11:13,482 - INFO - Lead zee.pratik4444@gmail.com already has trial/account
+2026-01-13 19:39:11,147 - INFO - Demo request received from: zee.pratik4444@gmail.com
+2026-01-13 19:40:46,065 - INFO - Demo request received from: zee.pratik4444@gmail.com
+2026-01-13 19:40:49,764 - INFO - Lead zee.pratik4444@gmail.com already has trial/account
+2026-01-13 20:00:32,032 - INFO - Demo request received from: zee.pratik4444@gmail.com
+2026-01-13 20:13:17,879 - INFO - Demo request received from: zee.pratik4444@gmail.com
+2026-01-13 20:13:21,251 - INFO - Calling copilot API to create trial for lead: zee.pratik4444@gmail.com
+2026-01-13 20:13:24,245 - ERROR - Error calling copilot API: All connection attempts failed
+2026-01-13 20:21:21,537 - INFO - Website database tables created/verified.
+2026-01-13 20:35:19,427 - INFO - Demo request received from: zee.pratik4444@gmail.com
+2026-01-13 23:12:39,088 - INFO - Website database tables created/verified.
+2026-01-13 23:48:37,749 - INFO - Demo request received from: pratikicecool96@gmail.com
+2026-01-13 23:49:04,299 - INFO - Website database tables created/verified.
+2026-01-14 00:10:08,431 - INFO - Demo request received from: zee.pratik4444@gmail.com
+2026-01-14 00:10:13,461 - INFO - Calling copilot API to create trial for lead: zee.pratik4444@gmail.com
+2026-01-14 00:10:14,208 - INFO - HTTP Request: POST http://127.0.0.1:7000/api/trial/signup "HTTP/1.1 500 Internal Server Error"
+2026-01-14 00:10:14,463 - ERROR - Copilot API error: 500 - Internal Server Error

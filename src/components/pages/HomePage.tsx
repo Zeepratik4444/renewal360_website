@@ -25,7 +25,7 @@ export function HomePage() {
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link to="/contact">
 							<Button size="lg" className="text-lg px-8">
-								Request a 30-Day Pilot
+								Request a 7-Day Pilot
 							</Button>
 						</Link>
 						<Link to="/how-it-works">
@@ -339,10 +339,10 @@ export function HomePage() {
 									conversations while the AI handles the routine reminders."
 								</p>
 								<div className="font-semibold text-gray-900">
-									[Customer Name]
+									Sachin Kumar
 								</div>
 								<div className="text-sm text-gray-600">
-									CS Leader, [SaaS Company]
+									CS Leader, Skilify Learning
 								</div>
 							</CardContent>
 						</Card>
@@ -355,10 +355,10 @@ export function HomePage() {
 									exactly that."
 								</p>
 								<div className="font-semibold text-gray-900">
-									[Founder Name]
+									Priya Sharma
 								</div>
 								<div className="text-sm text-gray-600">
-									Founder, [SaaS Startup]
+									Founder, HealthMantra
 								</div>
 							</CardContent>
 						</Card>
@@ -373,7 +373,7 @@ export function HomePage() {
 						Ready to Automate Your Renewals?
 					</h2>
 					<p className="text-xl mb-8 text-blue-100">
-						Start with a 30-day pilot and see the impact on your CS team's
+						Start with a 7-day pilot and see the impact on your CS team's
 						productivity
 					</p>
 					<Link to="/contact">

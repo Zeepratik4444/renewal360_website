@@ -14,7 +14,7 @@ function Root() {
 				<Outlet />
 			</ErrorBoundary>
 			<TanStackRouterDevtools position="bottom-right" />
-			<FloatingBanner position="bottom-left" />
+
 		</div>
 	);
 }

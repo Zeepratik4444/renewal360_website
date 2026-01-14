@@ -5,8 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { FormSubmissionORM, FormSubmissionFormType, type FormSubmissionModel } from "@/sdk/database/orm/orm_form_submission";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export function ContactPage() {
 	const [formData, setFormData] = useState({
@@ -18,28 +17,37 @@ export function ContactPage() {
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+	const [submitMessage, setSubmitMessage] = useState<string>(""); // New state for dynamic message
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsSubmitting(true);
 		setSubmitStatus("idle");
+		setSubmitMessage(""); // Clear previous message
 
 		try {
-			const orm = FormSubmissionORM.getInstance();
-			
-			const submission: Partial<FormSubmissionModel> = {
-				company_name: formData.companyName,
-				contact_person_name: formData.contactPersonName,
-				email_address: formData.emailAddress,
-				phone_number: formData.phoneNumber || null,
-				message: formData.message || null,
-				form_type: FormSubmissionFormType.demo_request,
-				submitted_at: Math.floor(Date.now() / 1000).toString(),
-			};
+			const response = await fetch("/api/request-demo", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					company_name: formData.companyName,
+					contact_person_name: formData.contactPersonName,
+					email_address: formData.emailAddress,
+					phone_number: formData.phoneNumber || null,
+					message: formData.message || null,
+				}),
+			});
 
-			await orm.insertFormSubmission([submission as FormSubmissionModel]);
-			
+			const data = await response.json(); // Parse response to get message
+
+			if (!response.ok) {
+				throw new Error(data.message || "Form submission failed"); // Use message from backend if available
+			}
+
 			setSubmitStatus("success");
+			setSubmitMessage(data.message); // Set the dynamic message
 			setFormData({
 				companyName: "",
 				contactPersonName: "",
@@ -50,6 +58,7 @@ export function ContactPage() {
 		} catch (error) {
 			console.error("Form submission error:", error);
 			setSubmitStatus("error");
+			setSubmitMessage(error instanceof Error ? error.message : "An unknown error occurred."); // Set error message
 		} finally {
 			setIsSubmitting(false);
 		}
@@ -62,11 +71,11 @@ export function ContactPage() {
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<div className="text-center mb-16">
 					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-						Request a Demo
+						Request a Trial
 					</h1>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
 						Let's discuss how Renewal360 can help automate your renewal
-						process. Start with a 30-day pilot.
+						process. Start with a 7-day pilot.
 					</p>
 				</div>
 
@@ -75,7 +84,7 @@ export function ContactPage() {
 						<Card>
 							<CardHeader>
 								<CardTitle className="text-2xl">
-									Schedule Your Demo
+									Schedule Your Trial
 								</CardTitle>
 							</CardHeader>
 							<CardContent>
@@ -132,7 +141,9 @@ export function ContactPage() {
 									</div>
 
 									<div className="space-y-2">
-										<Label htmlFor="phoneNumber">Phone Number (Optional)</Label>
+										<Label htmlFor="phoneNumber">
+											Phone Number (Optional)
+										</Label>
 										<Input
 											id="phoneNumber"
 											type="tel"
@@ -140,9 +151,10 @@ export function ContactPage() {
 											onChange={(e) =>
 												setFormData({ ...formData, phoneNumber: e.target.value })
 											}
-											placeholder="+91 98765 43210"
+											placeholder="Your phone number"
 										/>
 									</div>
+
 
 									<div className="space-y-2">
 										<Label htmlFor="message">
@@ -161,15 +173,13 @@ export function ContactPage() {
 
 									{submitStatus === "success" && (
 										<div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-											Thank you! We'll be in touch within 24 hours to schedule your
-											demo.
+											{submitMessage}
 										</div>
 									)}
 
 									{submitStatus === "error" && (
 										<div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-											Something went wrong. Please try again or email us directly at
-											hello@renewalcopilot.com
+											{submitMessage}
 										</div>
 									)}
 
@@ -179,7 +189,7 @@ export function ContactPage() {
 										className="w-full"
 										disabled={isSubmitting}
 									>
-										{isSubmitting ? "Submitting..." : "Request Demo"}
+										{isSubmitting ? "Submitting..." : "Request Trial"}
 									</Button>
 								</form>
 							</CardContent>
@@ -214,11 +224,10 @@ export function ContactPage() {
 										</div>
 										<div>
 											<div className="font-semibold text-gray-900">
-												Schedule a Live Demo
+												Start Your Free Trial
 											</div>
 											<div className="text-sm text-gray-600">
-												30-minute walkthrough of the platform with real examples
-												from your industry
+												7-day full access to test with your actual renewal data
 											</div>
 										</div>
 									</div>
@@ -229,11 +238,10 @@ export function ContactPage() {
 										</div>
 										<div>
 											<div className="font-semibold text-gray-900">
-												Start Your Pilot
+												Start Your Trial
 											</div>
 											<div className="text-sm text-gray-600">
-												Begin with a 30-day pilot to see real results with your
-												renewal data
+												Get instant access to your trial account and import your renewals
 											</div>
 										</div>
 									</div>
@@ -251,29 +259,7 @@ export function ContactPage() {
 									<div>
 										<div className="font-semibold text-gray-900">Email</div>
 										<div className="text-sm text-gray-600">
-											hello@renewalcopilot.com
-										</div>
-									</div>
-								</div>
-
-								<div className="flex items-start gap-3">
-									<Phone className="h-5 w-5 text-blue-600 mt-0.5" />
-									<div>
-										<div className="font-semibold text-gray-900">Phone</div>
-										<div className="text-sm text-gray-600">
-											+91 98765 43210
-										</div>
-									</div>
-								</div>
-
-								<div className="flex items-start gap-3">
-									<Clock className="h-5 w-5 text-blue-600 mt-0.5" />
-									<div>
-										<div className="font-semibold text-gray-900">
-											Support Hours
-										</div>
-										<div className="text-sm text-gray-600">
-											Monday - Friday, 9 AM - 6 PM IST
+											hello@renewal360.in
 										</div>
 									</div>
 								</div>

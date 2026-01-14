@@ -1,0 +1,2 @@
+The link in email we are sending once the users requests a demo is not working. We need to make this work for the user being able to access @Github/renewal_copilot features.
+We are curently working on its landing page @Github/renewal360_website
