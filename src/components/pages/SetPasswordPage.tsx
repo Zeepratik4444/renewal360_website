@@ -39,7 +39,8 @@ export function SetPasswordPage() {
         }
 
         try {
-            const response = await fetch("/api/set-password", {
+            const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '';
+            const response = await fetch(`${API_BASE_URL}/api/set-password`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ token, password: data.password }),
