@@ -80,7 +80,7 @@ const useAuthStore = create<AuthStore>(
 			}
 
 			try {
-				const response = await fetch(`${API_BASE_PATH}/me`, {
+				const response = await fetch(`${API_BASE_PATH}/api/users/me`, {
 					method: "GET",
 					headers: {
 						Authorization: `Bearer ${token}`,

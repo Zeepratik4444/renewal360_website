@@ -38,8 +38,7 @@ export default defineConfig({
 		},
 		proxy: {
 			"/api": {
-				target:
-					process.env.VITE_API_PROXY_TARGET || "https://copilot.renewal360.in",
+				target: "http://localhost:7000",
 				changeOrigin: true,
 			},
 		},

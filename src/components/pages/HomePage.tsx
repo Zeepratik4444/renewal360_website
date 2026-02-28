@@ -25,7 +25,7 @@ export function HomePage() {
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link to="/contact">
 							<Button size="lg" className="text-lg px-8">
-								Request a 7-Day Pilot
+								Start for Free
 							</Button>
 						</Link>
 						<Link to="/how-it-works">
@@ -373,12 +373,11 @@ export function HomePage() {
 						Ready to Automate Your Renewals?
 					</h2>
 					<p className="text-xl mb-8 text-blue-100">
-						Start with a 7-day pilot and see the impact on your CS team's
-						productivity
+						Start with our Free tier and see the impact on your CS team's productivity
 					</p>
 					<Link to="/contact">
 						<Button size="lg" variant="secondary" className="text-lg px-8">
-							Request Your Pilot Today
+							Start for Free
 						</Button>
 					</Link>
 				</div>

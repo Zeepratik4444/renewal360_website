@@ -13,6 +13,7 @@
 import { Route as rootRoute } from './routes/__root'
 import { Route as SetPasswordImport } from './routes/set-password'
 import { Route as PricingImport } from './routes/pricing'
+import { Route as PaymentSuccessImport } from './routes/payment-success'
 import { Route as HowItWorksImport } from './routes/how-it-works'
 import { Route as FeaturesImport } from './routes/features'
 import { Route as FaqImport } from './routes/faq'
@@ -31,6 +32,12 @@ const SetPasswordRoute = SetPasswordImport.update({
 const PricingRoute = PricingImport.update({
   id: '/pricing',
   path: '/pricing',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PaymentSuccessRoute = PaymentSuccessImport.update({
+  id: '/payment-success',
+  path: '/payment-success',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -116,6 +123,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HowItWorksImport
       parentRoute: typeof rootRoute
     }
+    '/payment-success': {
+      id: '/payment-success'
+      path: '/payment-success'
+      fullPath: '/payment-success'
+      preLoaderRoute: typeof PaymentSuccessImport
+      parentRoute: typeof rootRoute
+    }
     '/pricing': {
       id: '/pricing'
       path: '/pricing'
@@ -142,6 +156,7 @@ export interface FileRoutesByFullPath {
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
 }
@@ -153,6 +168,7 @@ export interface FileRoutesByTo {
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
 }
@@ -165,6 +181,7 @@ export interface FileRoutesById {
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/payment-success': typeof PaymentSuccessRoute
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
 }
@@ -178,6 +195,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/features'
     | '/how-it-works'
+    | '/payment-success'
     | '/pricing'
     | '/set-password'
   fileRoutesByTo: FileRoutesByTo
@@ -188,6 +206,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/features'
     | '/how-it-works'
+    | '/payment-success'
     | '/pricing'
     | '/set-password'
   id:
@@ -198,6 +217,7 @@ export interface FileRouteTypes {
     | '/faq'
     | '/features'
     | '/how-it-works'
+    | '/payment-success'
     | '/pricing'
     | '/set-password'
   fileRoutesById: FileRoutesById
@@ -210,6 +230,7 @@ export interface RootRouteChildren {
   FaqRoute: typeof FaqRoute
   FeaturesRoute: typeof FeaturesRoute
   HowItWorksRoute: typeof HowItWorksRoute
+  PaymentSuccessRoute: typeof PaymentSuccessRoute
   PricingRoute: typeof PricingRoute
   SetPasswordRoute: typeof SetPasswordRoute
 }
@@ -221,6 +242,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqRoute: FaqRoute,
   FeaturesRoute: FeaturesRoute,
   HowItWorksRoute: HowItWorksRoute,
+  PaymentSuccessRoute: PaymentSuccessRoute,
   PricingRoute: PricingRoute,
   SetPasswordRoute: SetPasswordRoute,
 }
@@ -241,6 +263,7 @@ export const routeTree = rootRoute
         "/faq",
         "/features",
         "/how-it-works",
+        "/payment-success",
         "/pricing",
         "/set-password"
       ]
@@ -262,6 +285,9 @@ export const routeTree = rootRoute
     },
     "/how-it-works": {
       "filePath": "how-it-works.tsx"
+    },
+    "/payment-success": {
+      "filePath": "payment-success.tsx"
     },
     "/pricing": {
       "filePath": "pricing.tsx"
