@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { Mail } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export function ContactPage() {
 	const [formData, setFormData] = useState({
@@ -17,7 +18,8 @@ export function ContactPage() {
 	});
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-	const [submitMessage, setSubmitMessage] = useState<string>(""); // New state for dynamic message
+	const [submitMessage, setSubmitMessage] = useState<string>("");
+	const [acceptTerms, setAcceptTerms] = useState(false);
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -184,11 +186,26 @@ export function ContactPage() {
 										</div>
 									)}
 
+									<div className="flex items-start gap-3">
+										<input
+											type="checkbox"
+											id="acceptTerms"
+											checked={acceptTerms}
+											onChange={(e) => setAcceptTerms(e.target.checked)}
+											className="mt-1 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+										/>
+										<label htmlFor="acceptTerms" className="text-sm text-gray-600 cursor-pointer">
+											I agree to the{" "}
+											<Link to="/terms" target="_blank" className="text-blue-600 hover:underline font-medium">Terms of Service & Privacy Policy</Link>
+											<span className="text-red-500 ml-0.5">*</span>
+										</label>
+									</div>
+
 									<Button
 										type="submit"
 										size="lg"
 										className="w-full"
-										disabled={isSubmitting}
+										disabled={isSubmitting || !acceptTerms}
 									>
 										{isSubmitting ? "Submitting..." : "Request Trial"}
 									</Button>

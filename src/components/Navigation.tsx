@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 
 export function Navigation() {
@@ -11,8 +11,12 @@ export function Navigation() {
 		{ to: "/features", label: "Features" },
 		{ to: "/pricing", label: "Pricing" },
 		{ to: "/how-it-works", label: "How It Works" },
+	];
+
+	const moreLinks = [
 		{ to: "/about", label: "About" },
 		{ to: "/faq", label: "FAQ" },
+		{ to: "/glimpses", label: "Glimpses" },
 	];
 
 	return (
@@ -39,6 +43,27 @@ export function Navigation() {
 								{link.label}
 							</Link>
 						))}
+						<div className="relative group">
+							<button className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group py-2">
+								More.. <ChevronDown className="ml-1 h-4 w-4 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
+							</button>
+							<div className="absolute left-0 top-full pt-1 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-left -translate-y-2 group-hover:translate-y-0 text-left">
+								<div className="bg-white border border-gray-100 rounded-xl shadow-lg py-2">
+									{moreLinks.map((link) => (
+										<Link
+											key={link.to}
+											to={link.to}
+											className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+											activeProps={{
+												className: "text-blue-600 font-semibold bg-blue-50/50",
+											}}
+										>
+											{link.label}
+										</Link>
+									))}
+								</div>
+							</div>
+						</div>
 						<Link to="/contact">
 							<Button>Request Demo</Button>
 						</Link>
@@ -74,8 +99,26 @@ export function Navigation() {
 								{link.label}
 							</Link>
 						))}
+						
+						<div className="px-3 pt-4 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+							More..
+						</div>
+						{moreLinks.map((link) => (
+							<Link
+								key={link.to}
+								to={link.to}
+								className="block px-3 py-2 pl-6 text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-md"
+								activeProps={{
+									className: "bg-blue-50 text-blue-600 font-semibold",
+								}}
+								onClick={() => setIsMenuOpen(false)}
+							>
+								{link.label}
+							</Link>
+						))}
+
 						<Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-							<Button className="w-full mt-2">Request Demo</Button>
+							<Button className="w-full mt-4">Request Demo</Button>
 						</Link>
 					</div>
 				</div>

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Loader2, Lock } from "lucide-react";
 import { API_BASE_URL } from "@/lib/utils";
+import { Link } from "@tanstack/react-router";
 
 interface CheckoutModalProps {
     isOpen: boolean;
@@ -23,6 +24,7 @@ export function CheckoutModal({ isOpen, onClose, plan, billingCycle, currency, p
         companyName: "",
         password: ""
     });
+    const [acceptTerms, setAcceptTerms] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -214,7 +216,22 @@ export function CheckoutModal({ isOpen, onClose, plan, billingCycle, currency, p
                         />
                     </div>
 
-                    <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={loading}>
+                    <div className="flex items-start gap-3 mt-1">
+                        <input
+                            type="checkbox"
+                            id="checkoutAcceptTerms"
+                            checked={acceptTerms}
+                            onChange={(e) => setAcceptTerms(e.target.checked)}
+                            className="mt-1 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                        />
+                        <label htmlFor="checkoutAcceptTerms" className="text-sm text-gray-600 cursor-pointer">
+                            I agree to the{" "}
+                            <Link to="/terms" target="_blank" className="text-blue-600 hover:underline font-medium">Terms of Service & Privacy Policy</Link>
+                            <span className="text-red-500 ml-0.5">*</span>
+                        </label>
+                    </div>
+
+                    <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={loading || !acceptTerms}>
                         {loading ? (
                             <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Processing...</>
                         ) : (
@@ -223,8 +240,6 @@ export function CheckoutModal({ isOpen, onClose, plan, billingCycle, currency, p
                     </Button>
 
                     <p className="text-xs text-center text-gray-500 mt-2">
-                        By continuing, you agree to our Terms of Service and Privacy Policy.
-                        <br />
                         Secure payment via Razorpay.
                     </p>
                 </form>

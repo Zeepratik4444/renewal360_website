@@ -8,146 +8,74 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-// Import Routes
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermsRouteImport } from './routes/terms'
+import { Route as SetPasswordRouteImport } from './routes/set-password'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PaymentSuccessRouteImport } from './routes/payment-success'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as GlimpsesRouteImport } from './routes/glimpses'
+import { Route as FeaturesRouteImport } from './routes/features'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as IndexRouteImport } from './routes/index'
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as SetPasswordImport } from './routes/set-password'
-import { Route as PricingImport } from './routes/pricing'
-import { Route as PaymentSuccessImport } from './routes/payment-success'
-import { Route as HowItWorksImport } from './routes/how-it-works'
-import { Route as FeaturesImport } from './routes/features'
-import { Route as FaqImport } from './routes/faq'
-import { Route as ContactImport } from './routes/contact'
-import { Route as AboutImport } from './routes/about'
-import { Route as IndexImport } from './routes/index'
-
-// Create/Update Routes
-
-const SetPasswordRoute = SetPasswordImport.update({
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SetPasswordRoute = SetPasswordRouteImport.update({
   id: '/set-password',
   path: '/set-password',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const PricingRoute = PricingImport.update({
+const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const PaymentSuccessRoute = PaymentSuccessImport.update({
+const PaymentSuccessRoute = PaymentSuccessRouteImport.update({
   id: '/payment-success',
   path: '/payment-success',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const HowItWorksRoute = HowItWorksImport.update({
+const HowItWorksRoute = HowItWorksRouteImport.update({
   id: '/how-it-works',
   path: '/how-it-works',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const FeaturesRoute = FeaturesImport.update({
+const GlimpsesRoute = GlimpsesRouteImport.update({
+  id: '/glimpses',
+  path: '/glimpses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeaturesRoute = FeaturesRouteImport.update({
   id: '/features',
   path: '/features',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const FaqRoute = FaqImport.update({
+const FaqRoute = FaqRouteImport.update({
   id: '/faq',
   path: '/faq',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const ContactRoute = ContactImport.update({
+const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const AboutRoute = AboutImport.update({
+const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-const IndexRoute = IndexImport.update({
+const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
-
-// Populate the FileRoutesByPath interface
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
-      parentRoute: typeof rootRoute
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactImport
-      parentRoute: typeof rootRoute
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqImport
-      parentRoute: typeof rootRoute
-    }
-    '/features': {
-      id: '/features'
-      path: '/features'
-      fullPath: '/features'
-      preLoaderRoute: typeof FeaturesImport
-      parentRoute: typeof rootRoute
-    }
-    '/how-it-works': {
-      id: '/how-it-works'
-      path: '/how-it-works'
-      fullPath: '/how-it-works'
-      preLoaderRoute: typeof HowItWorksImport
-      parentRoute: typeof rootRoute
-    }
-    '/payment-success': {
-      id: '/payment-success'
-      path: '/payment-success'
-      fullPath: '/payment-success'
-      preLoaderRoute: typeof PaymentSuccessImport
-      parentRoute: typeof rootRoute
-    }
-    '/pricing': {
-      id: '/pricing'
-      path: '/pricing'
-      fullPath: '/pricing'
-      preLoaderRoute: typeof PricingImport
-      parentRoute: typeof rootRoute
-    }
-    '/set-password': {
-      id: '/set-password'
-      path: '/set-password'
-      fullPath: '/set-password'
-      preLoaderRoute: typeof SetPasswordImport
-      parentRoute: typeof rootRoute
-    }
-  }
-}
-
-// Create and export the route tree
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -155,37 +83,40 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
+  '/glimpses': typeof GlimpsesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/payment-success': typeof PaymentSuccessRoute
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
+  '/terms': typeof TermsRoute
 }
-
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
+  '/glimpses': typeof GlimpsesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/payment-success': typeof PaymentSuccessRoute
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
+  '/terms': typeof TermsRoute
 }
-
 export interface FileRoutesById {
-  __root__: typeof rootRoute
+  __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
+  '/glimpses': typeof GlimpsesRoute
   '/how-it-works': typeof HowItWorksRoute
   '/payment-success': typeof PaymentSuccessRoute
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
+  '/terms': typeof TermsRoute
 }
-
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
@@ -194,10 +125,12 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/features'
+    | '/glimpses'
     | '/how-it-works'
     | '/payment-success'
     | '/pricing'
     | '/set-password'
+    | '/terms'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -205,10 +138,12 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/features'
+    | '/glimpses'
     | '/how-it-works'
     | '/payment-success'
     | '/pricing'
     | '/set-password'
+    | '/terms'
   id:
     | '__root__'
     | '/'
@@ -216,23 +151,108 @@ export interface FileRouteTypes {
     | '/contact'
     | '/faq'
     | '/features'
+    | '/glimpses'
     | '/how-it-works'
     | '/payment-success'
     | '/pricing'
     | '/set-password'
+    | '/terms'
   fileRoutesById: FileRoutesById
 }
-
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   FeaturesRoute: typeof FeaturesRoute
+  GlimpsesRoute: typeof GlimpsesRoute
   HowItWorksRoute: typeof HowItWorksRoute
   PaymentSuccessRoute: typeof PaymentSuccessRoute
   PricingRoute: typeof PricingRoute
   SetPasswordRoute: typeof SetPasswordRoute
+  TermsRoute: typeof TermsRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/set-password': {
+      id: '/set-password'
+      path: '/set-password'
+      fullPath: '/set-password'
+      preLoaderRoute: typeof SetPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payment-success': {
+      id: '/payment-success'
+      path: '/payment-success'
+      fullPath: '/payment-success'
+      preLoaderRoute: typeof PaymentSuccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glimpses': {
+      id: '/glimpses'
+      path: '/glimpses'
+      fullPath: '/glimpses'
+      preLoaderRoute: typeof GlimpsesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/features': {
+      id: '/features'
+      path: '/features'
+      fullPath: '/features'
+      preLoaderRoute: typeof FeaturesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
 }
 
 const rootRouteChildren: RootRouteChildren = {
@@ -241,60 +261,13 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   FeaturesRoute: FeaturesRoute,
+  GlimpsesRoute: GlimpsesRoute,
   HowItWorksRoute: HowItWorksRoute,
   PaymentSuccessRoute: PaymentSuccessRoute,
   PricingRoute: PricingRoute,
   SetPasswordRoute: SetPasswordRoute,
+  TermsRoute: TermsRoute,
 }
-
-export const routeTree = rootRoute
+export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-/* ROUTE_MANIFEST_START
-{
-  "routes": {
-    "__root__": {
-      "filePath": "__root.tsx",
-      "children": [
-        "/",
-        "/about",
-        "/contact",
-        "/faq",
-        "/features",
-        "/how-it-works",
-        "/payment-success",
-        "/pricing",
-        "/set-password"
-      ]
-    },
-    "/": {
-      "filePath": "index.tsx"
-    },
-    "/about": {
-      "filePath": "about.tsx"
-    },
-    "/contact": {
-      "filePath": "contact.tsx"
-    },
-    "/faq": {
-      "filePath": "faq.tsx"
-    },
-    "/features": {
-      "filePath": "features.tsx"
-    },
-    "/how-it-works": {
-      "filePath": "how-it-works.tsx"
-    },
-    "/payment-success": {
-      "filePath": "payment-success.tsx"
-    },
-    "/pricing": {
-      "filePath": "pricing.tsx"
-    },
-    "/set-password": {
-      "filePath": "set-password.tsx"
-    }
-  }
-}
-ROUTE_MANIFEST_END */

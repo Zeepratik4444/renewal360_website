@@ -1,192 +1,78 @@
-import { useDelegatedComponentEventHandler } from "@/sdk/core/internal/creao-shell";
-import type * as React from "react";
+import * as React from "react"
+import { cn } from "@/lib/utils"
 
-import { cn } from "@/lib/utils";
+const Card = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "rounded-xl border bg-card text-card-foreground shadow-sm",
+      className
+    )}
+    {...props}
+  />
+))
+Card.displayName = "Card"
 
-function Card({
-	className,
-	id,
-	name,
-	onClick,
-	...props
-}: React.ComponentProps<"div"> & {
-	id?: string;
-	name?: string;
-}) {
-	const handleClick = useDelegatedComponentEventHandler(onClick, () => ({
-		componentType: "card",
-		eventType: "click",
-		componentInfo: {
-			id,
-			name,
-		},
-	}));
+const CardHeader = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    {...props}
+  />
+))
+CardHeader.displayName = "CardHeader"
 
-	return (
-		<div
-			data-slot="card"
-			id={id}
-			data-name={name}
-			onClick={handleClick}
-			className={cn(
-				"bg-card text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
-				className,
-			)}
-			{...props}
-		/>
-	);
-}
+const CardTitle = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLHeadingElement>
+>(({ className, ...props }, ref) => (
+  <h3
+    ref={ref}
+    className={cn(
+      "text-2xl font-semibold leading-none tracking-tight",
+      className
+    )}
+    {...props}
+  />
+))
+CardTitle.displayName = "CardTitle"
 
-function CardHeader({
-	className,
-	id,
-	name,
-	onClick,
-	...props
-}: React.ComponentProps<"div"> & {
-	id?: string;
-	name?: string;
-}) {
-	const handleClick = useDelegatedComponentEventHandler(onClick, () => ({
-		componentType: "card-header",
-		eventType: "click",
-		componentInfo: {
-			id,
-			name,
-		},
-	}));
-	return (
-		<div
-			data-slot="card-header"
-			id={id}
-			data-name={name}
-			onClick={handleClick}
-			className={cn(
-				"@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6",
-				className,
-			)}
-			{...props}
-		/>
-	);
-}
+const CardDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.HTMLAttributes<HTMLParagraphElement>
+>(({ className, ...props }, ref) => (
+  <p
+    ref={ref}
+    className={cn("text-sm text-muted-foreground", className)}
+    {...props}
+  />
+))
+CardDescription.displayName = "CardDescription"
 
-function CardTitle({
-	className,
-	id,
-	name,
-	onClick,
-	...props
-}: React.ComponentProps<"div"> & {
-	id?: string;
-	name?: string;
-}) {
-	const handleClick = useDelegatedComponentEventHandler(onClick, () => ({
-		componentType: "card-title",
-		eventType: "click",
-		componentInfo: {
-			id,
-			name,
-		},
-	}));
-	return (
-		<div
-			data-slot="card-title"
-			id={id}
-			data-name={name}
-			onClick={handleClick}
-			className={cn("leading-none font-semibold", className)}
-			{...props}
-		/>
-	);
-}
+const CardContent = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+))
+CardContent.displayName = "CardContent"
 
-function CardDescription({
-	className,
-	id,
-	name,
-	onClick,
-	...props
-}: React.ComponentProps<"div"> & {
-	id?: string;
-	name?: string;
-}) {
-	const handleClick = useDelegatedComponentEventHandler(onClick, () => ({
-		componentType: "card-description",
-		eventType: "click",
-		componentInfo: {
-			id,
-			name,
-		},
-	}));
-	return (
-		<div
-			data-slot="card-description"
-			id={id}
-			data-name={name}
-			onClick={handleClick}
-			className={cn("text-muted-foreground text-sm", className)}
-			{...props}
-		/>
-	);
-}
+const CardFooter = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("flex items-center p-6 pt-0", className)}
+    {...props}
+  />
+))
+CardFooter.displayName = "CardFooter"
 
-function CardAction({
-	className,
-	id,
-	name,
-	onClick,
-	...props
-}: React.ComponentProps<"div"> & {
-	id?: string;
-	name?: string;
-}) {
-	const handleClick = useDelegatedComponentEventHandler(onClick, () => ({
-		componentType: "card-action",
-		eventType: "click",
-		componentInfo: {
-			id,
-			name,
-		},
-	}));
-	return (
-		<div
-			data-slot="card-action"
-			className={cn(
-				"col-start-2 row-span-2 row-start-1 self-start justify-self-end",
-				className,
-			)}
-			onClick={handleClick}
-			{...props}
-		/>
-	);
-}
-
-function CardContent({ className, ...props }: React.ComponentProps<"div">) {
-	return (
-		<div
-			data-slot="card-content"
-			className={cn("px-6", className)}
-			{...props}
-		/>
-	);
-}
-
-function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
-	return (
-		<div
-			data-slot="card-footer"
-			className={cn("flex items-center px-6 [.border-t]:pt-6", className)}
-			{...props}
-		/>
-	);
-}
-
-export {
-	Card,
-	CardHeader,
-	CardFooter,
-	CardTitle,
-	CardAction,
-	CardDescription,
-	CardContent,
-};
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
