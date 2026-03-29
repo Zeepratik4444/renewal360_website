@@ -7,8 +7,8 @@ import dashboardForecast from "@/assets/dashboard-forecast.png";
 import actionCenter from "@/assets/actioncenter.png";
 import renewalList from "@/assets/renewallist.png";
 import renewalDetail from "@/assets/renewaldetail.png";
-import aiHelper from "@/assets/aihelper.PNG";
-import sequenceBuilder from "@/assets/sequencebuilder.PNG";
+import aiHelper from "@/assets/aihelper.png";
+import sequenceBuilder from "@/assets/sequencebuilder.png";
 import { CheckCircle2, TrendingUp, PieChart, Activity, ListFilter, UserCog, MessageSquare, Mail, Maximize2, X } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
