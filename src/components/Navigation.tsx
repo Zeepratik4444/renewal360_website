@@ -45,7 +45,7 @@ export function Navigation() {
 						))}
 						<div className="relative group">
 							<button className="flex items-center text-gray-700 hover:text-blue-600 transition-colors group py-2">
-								More.. <ChevronDown className="ml-1 h-4 w-4 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
+								More <ChevronDown className="ml-1 h-4 w-4 opacity-50 group-hover:opacity-100 transition-transform group-hover:rotate-180" />
 							</button>
 							<div className="absolute left-0 top-full pt-1 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 transform origin-top-left -translate-y-2 group-hover:translate-y-0 text-left">
 								<div className="bg-white border border-gray-100 rounded-xl shadow-lg py-2">
@@ -101,7 +101,7 @@ export function Navigation() {
 						))}
 						
 						<div className="px-3 pt-4 pb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-							More..
+							More
 						</div>
 						{moreLinks.map((link) => (
 							<Link
