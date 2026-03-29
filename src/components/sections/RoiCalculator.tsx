@@ -122,7 +122,7 @@ export function RoiCalculator() {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-emerald-100 bg-emerald-950/50 px-3 py-2 rounded-lg inline-flex">
                       <span className="font-bold">{parseFloat(roiMultiplier).toLocaleString()}x ROI</span> 
-                      <span>based on the $5k Starter plan</span>
+                      <span>based on the $199/mo SMB plan</span>
                     </div>
                   </div>
                 </div>

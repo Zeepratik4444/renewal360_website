@@ -24,8 +24,9 @@ export function Pricing() {
             Straightforward pricing. No lock-in.
           </h2>
           <p className="text-lg text-muted-foreground">
-            Start free with 25 accounts. Scale as your team grows. Cancel anytime
-            with 30 days notice.
+            Every signup gets <strong>7 days of full Scale access</strong> — then
+            choose the plan that fits. Unlimited seats at every tier. No credit
+            card required.
           </p>
         </div>
 
@@ -54,6 +55,14 @@ export function Pricing() {
               </span>
             </button>
           </div>
+        </div>
+
+        {/* Unlimited seats badge */}
+        <div className="flex justify-center mb-6">
+          <span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium px-4 py-2 rounded-full">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+            Unlimited seats at every tier — no per-user charges
+          </span>
         </div>
 
         {/* Plan cards */}
