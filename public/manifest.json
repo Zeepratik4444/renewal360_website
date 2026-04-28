@@ -1,6 +1,7 @@
 {
-  "short_name": "Creao",
-  "name": "Creao",
+  "short_name": "Renewal360",
+  "name": "Renewal360 - AI SaaS Renewal Automation",
+  "description": "AI-powered renewal automation for SaaS Customer Success teams.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -13,7 +14,7 @@
       "sizes": "192x192 512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

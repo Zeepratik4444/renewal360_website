@@ -1,11 +1,24 @@
+import { SiSalesforce, SiHubspot, SiSlack, SiGooglesheets, SiGooglecalendar, SiGmail, SiZoho } from "react-icons/si";
+
 export function Integrations() {
   const integrations = [
-    { name: "Salesforce", icon: "☁️", plans: "Scale plan", planVariant: "border-amber-300 text-amber-600" },
-    { name: "HubSpot", icon: "🟠", plans: "Growth+", planVariant: "border-green-300 text-green-600" },
-    { name: "Slack", icon: "💬", plans: "All plans", planVariant: "border-green-300 text-green-600" },
-    { name: "Google Sheets", icon: "📊", plans: "All plans", planVariant: "border-green-300 text-green-600" },
-    { name: "Google Calendar", icon: "📅", plans: "All plans", planVariant: "border-green-300 text-green-600" },
-    { name: "Gmail / Zoho Mail", icon: "📧", plans: "All plans", planVariant: "border-green-300 text-green-600" },
+    { name: "Salesforce", icon: <SiSalesforce className="w-7 h-7 text-[#00A1E0]" />, plans: "Scale plan", planVariant: "border-amber-300 text-amber-600" },
+    { name: "HubSpot", icon: <SiHubspot className="w-7 h-7 text-[#FF7A59]" />, plans: "Growth+", planVariant: "border-green-300 text-green-600" },
+    { name: "Slack", icon: <SiSlack className="w-7 h-7 text-white" />, plans: "All plans", planVariant: "border-green-300 text-green-600" },
+    { name: "Google Sheets", icon: <SiGooglesheets className="w-7 h-7 text-[#34A853]" />, plans: "All plans", planVariant: "border-green-300 text-green-600" },
+    { name: "Google Calendar", icon: <SiGooglecalendar className="w-7 h-7 text-[#4285F4]" />, plans: "All plans", planVariant: "border-green-300 text-green-600" },
+    { 
+      name: "Gmail / Zoho Mail", 
+      icon: (
+        <div className="flex items-center gap-2">
+          <SiGmail className="w-7 h-7 text-[#EA4335]" />
+          <span className="text-slate-500 font-light text-lg">/</span>
+          <SiZoho className="w-7 h-7 text-white" />
+        </div>
+      ), 
+      plans: "All plans", 
+      planVariant: "border-green-300 text-green-600" 
+    },
   ];
 
   return (

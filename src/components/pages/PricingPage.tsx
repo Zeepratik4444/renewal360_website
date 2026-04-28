@@ -14,6 +14,7 @@ import {
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { usePricing } from "@/hooks/usePricing";
 import { FEATURE_COMPARISON } from "@/lib/pricing";
+import { useSEO } from "@/hooks/useSEO";
 
 // Razorpay types
 declare global {
@@ -43,6 +44,10 @@ function ComparisonCell({ value, isGrowth }: { value: string; isGrowth?: boolean
 
 export function PricingPage() {
 	const { currency, isAnnual, setIsAnnual, plans, addOn, getPrice } = usePricing();
+	useSEO({
+		title: "Pricing - Renewal360",
+		description: "Simple, transparent pricing. Every signup gets 7 days of full Scale access.",
+	});
 
 	const [selectedTier, setSelectedTier] = useState<{
 		name: string;

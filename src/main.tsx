@@ -1,4 +1,3 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
@@ -13,18 +12,7 @@ import "./styles.css";
 import { APP_CONFIG } from "./sdk/core/global.ts";
 export { APP_CONFIG }; // for backward compatibility
 
-// Create a QueryClient instance
-const queryClient = new QueryClient({
-	defaultOptions: {
-		queries: {
-			staleTime: 5 * 60 * 1000, // 5 minutes
-			gcTime: 10 * 60 * 1000, // 10 minutes (previously cacheTime)
-			retry: 1,
-			refetchOnWindowFocus: false,
-		},
-	},
-});
-
+// QueryClient removed
 // Create a new router instance
 const router = createRouter({
 	routeTree,
@@ -49,9 +37,7 @@ if (rootElement && !rootElement.innerHTML) {
 	const root = ReactDOM.createRoot(rootElement);
 	root.render(
 		<StrictMode>
-			<QueryClientProvider client={queryClient}>
-				<RouterProvider router={router} />
-			</QueryClientProvider>
+			<RouterProvider router={router} />
 		</StrictMode>,
 	);
 }

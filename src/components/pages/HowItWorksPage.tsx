@@ -2,8 +2,14 @@ import { Navigation } from "@/components/Navigation";
 import { Zap, Target, Mail, Shield, BarChart3 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import { useSEO } from "@/hooks/useSEO";
 
 export function HowItWorksPage() {
+	useSEO({
+		title: "How It Works - Renewal360",
+		description: "Behind the scenes, Renewal360's AI engine continuously monitors every account, crafts intelligent outreach, and escalates at-risk revenue.",
+	});
+
 	const steps = [
 		{
 			step: "01",

@@ -3,6 +3,8 @@ import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import executiveSummaryDashboard from "@/assets/dashboard-summary.png";
+import { useSEO } from "@/hooks/useSEO";
+import { SiSalesforce, SiHubspot, SiZendesk, SiGmail, SiSlack } from "react-icons/si";
 
 /* ── Reusable check list ── */
 function CheckList({ items, color = "text-blue-600" }: { items: string[]; color?: string }) {
@@ -28,6 +30,11 @@ function MockCard({ children, bg = "bg-blue-50" }: { children: React.ReactNode; 
 }
 
 export function FeaturesPage() {
+	useSEO({
+		title: "Features - Renewal360",
+		description: "Built on the 20% of features that protect 80% of your ARR. Here's exactly how Renewal360 works under the hood.",
+	});
+
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation />
@@ -362,14 +369,14 @@ export function FeaturesPage() {
 						<div className="text-sm font-semibold text-gray-700 mb-4">Integrations Hub</div>
 						<div className="space-y-3">
 							{[
-								{ icon: "☁️", name: "Salesforce", status: "Connected", statusCls: "text-green-600 bg-green-50", detail: "Last synced 4 min ago · 312 accounts" },
-								{ icon: "🟠", name: "HubSpot", status: "Connected", statusCls: "text-green-600 bg-green-50", detail: "Last synced 12 min ago · 187 deals" },
-								{ icon: "🎫", name: "Zendesk", status: "Connected", statusCls: "text-green-600 bg-green-50", detail: "Ticket volume feeding into risk scores" },
-								{ icon: "📧", name: "Gmail (IMAP)", status: "Monitoring", statusCls: "text-blue-600 bg-blue-50", detail: "Watching inbox · 3 replies detected today" },
-								{ icon: "💬", name: "Slack", status: "Active", statusCls: "text-green-600 bg-green-50", detail: "#cs-alerts · daily digest at 9am" },
+								{ icon: <SiSalesforce className="w-6 h-6 text-[#00A1E0]" />, name: "Salesforce", status: "Connected", statusCls: "text-green-600 bg-green-50", detail: "Last synced 4 min ago · 312 accounts" },
+								{ icon: <SiHubspot className="w-6 h-6 text-[#FF7A59]" />, name: "HubSpot", status: "Connected", statusCls: "text-green-600 bg-green-50", detail: "Last synced 12 min ago · 187 deals" },
+								{ icon: <SiZendesk className="w-6 h-6 text-[#03363D]" />, name: "Zendesk", status: "Connected", statusCls: "text-green-600 bg-green-50", detail: "Ticket volume feeding into risk scores" },
+								{ icon: <SiGmail className="w-6 h-6 text-[#EA4335]" />, name: "Gmail (IMAP)", status: "Monitoring", statusCls: "text-blue-600 bg-blue-50", detail: "Watching inbox · 3 replies detected today" },
+								{ icon: <SiSlack className="w-6 h-6 text-[#E01E5A]" />, name: "Slack", status: "Active", statusCls: "text-green-600 bg-green-50", detail: "#cs-alerts · daily digest at 9am" },
 							].map(({ icon, name, status, statusCls, detail }) => (
 								<div key={name} className="bg-white rounded-xl p-3 flex items-center gap-3 border border-white/60">
-									<span className="text-2xl">{icon}</span>
+									<div className="flex-shrink-0 flex items-center justify-center w-8 h-8">{icon}</div>
 									<div className="flex-1 min-w-0">
 										<div className="flex items-center gap-2">
 											<span className="font-semibold text-sm text-gray-800">{name}</span>

@@ -2,8 +2,14 @@ import { Navigation } from "@/components/Navigation";
 import { FAQItem } from "@/components/sections/FAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
+import { useSEO } from "@/hooks/useSEO";
 
 export function FAQPage() {
+	useSEO({
+		title: "FAQ - Renewal360",
+		description: "Frequently Asked Questions about Renewal360.",
+	});
+
 	const faqs = [
 		{ q: "Is Renewal360 a software or a managed service?", a: "It's both. The core engine is a powerful AI platform, but it operates as a managed service — we handle the AI infrastructure, email delivery, and operational details. You provide your renewal data, approve emails, and track results." },
 		{ q: "Do I have to approve every email the AI writes?", a: "Yes — and that's intentional. Every email goes through your team before reaching a customer. You can edit, approve, or reject any email. Once you're comfortable, you can configure auto-send for lower-risk segments." },

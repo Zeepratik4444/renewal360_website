@@ -1,8 +1,14 @@
 import { Navigation } from "@/components/Navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Zap } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 export function AboutPage() {
+	useSEO({
+		title: "About Us - Renewal360",
+		description: "Built by Customer Success Practitioners who understand the renewal grind firsthand.",
+	});
+
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation />

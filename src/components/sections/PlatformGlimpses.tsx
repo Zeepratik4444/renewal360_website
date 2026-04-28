@@ -11,10 +11,7 @@ export function PlatformGlimpses() {
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-20">
 					<Badge className="mb-4 text-blue-700 bg-blue-100 hover:bg-blue-200">Platform Glimpses</Badge>
-					<h2
-						className="text-3xl md:text-5xl font-bold mb-6 text-gray-900"
-						style={{ fontFamily: "'Syne', sans-serif" }}
-					>
+					<h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
 						Actionable insights, <br className="hidden md:block"/> <span className="text-blue-600">at the highest level.</span>
 					</h2>
 					<p className="text-lg text-gray-600 max-w-2xl mx-auto">

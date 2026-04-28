@@ -53,7 +53,7 @@ function App() {
 			</main>
 
 			<footer className="py-12 px-6 border-t border-slate-200 text-center text-sm text-slate-500">
-				<p>© {new Date().getFullYear()} Renewal360. All rights reserved.</p>
+				<p>© 2026 Renewal360. All rights reserved.</p>
 			</footer>
 		</div>
 	);

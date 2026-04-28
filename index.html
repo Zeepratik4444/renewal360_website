@@ -1,30 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
-  <meta name="theme-color" content="#f8fafc" />
+
+  <!-- ===================== PRIMARY SEO ===================== -->
+  <title>Renewal360 - AI-Powered SaaS Renewal Automation</title>
   <meta name="description"
     content="AI-powered renewal automation for SaaS teams. Save 10+ hours per month with automated renewal reminders, smart follow-ups, and executive visibility. Start your 30-day pilot today." />
-  <meta name="keywords"
-    content="SaaS renewal automation, customer success, renewal reminders, AI email automation, subscription renewals, CS tools, renewal360" />
-  <link rel="apple-touch-icon" href="/creao_icon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://renewal360.in/" />
+
+  <!-- ===================== OPEN GRAPH ===================== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Renewal360" />
+  <meta property="og:url" content="https://renewal360.in/" />
+  <meta property="og:title" content="Renewal360 - AI-Powered SaaS Renewal Automation" />
+  <meta property="og:description"
+    content="Save 10+ hours/month with automated renewal reminders, smart AI follow-ups, and real-time executive visibility. Built for SaaS Customer Success teams." />
+  <meta property="og:image" content="https://renewal360.in/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Renewal360 - AI-Powered SaaS Renewal Automation Dashboard" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- ===================== TWITTER CARD ===================== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Renewal360 - AI-Powered SaaS Renewal Automation" />
+  <meta name="twitter:description"
+    content="Save 10+ hours/month with automated renewal reminders and smart AI follow-ups for SaaS CS teams." />
+  <meta name="twitter:image" content="https://renewal360.in/og-image.png" />
+  <meta name="twitter:image:alt" content="Renewal360 Dashboard Preview" />
+
+  <!-- ===================== ICONS & PWA ===================== -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/creao_icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/creao_icon.svg" />
   <link rel="manifest" href="/manifest.json" />
-  <title>Renewal360 - AI-Powered SaaS Renewal Automation</title>
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <meta name="theme-color" content="#000000" />
+
+  <!-- ===================== STRUCTURED DATA (JSON-LD) ===================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Renewal360",
+    "url": "https://renewal360.in",
+    "description": "AI-powered renewal automation for SaaS Customer Success teams. Automate renewal reminders, smart follow-ups, and get executive-level visibility.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "INR",
+      "availability": "https://schema.org/InStock"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Renewal360",
+      "url": "https://renewal360.in"
+    }
+  }
+  </script>
+
+  <!-- ===================== PERFORMANCE HINTS ===================== -->
+  <link rel="preconnect" href="https://checkout.razorpay.com" />
+  <link rel="preconnect" href="https://in.fw-cdn.com" />
+  <link rel="dns-prefetch" href="https://in.fw-cdn.com" />
+
 </head>
 
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.tsx"></script>
-  <script src='//in.fw-cdn.com/32698369/1516968.js' chat='true'></script>
+  <!-- Razorpay: load deferred so it doesn't block render -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+  <!-- Freshworks chat widget -->
+  <script src='//in.fw-cdn.com/32698369/1516968.js' chat='true' defer></script>
 </body>
 
 </html>

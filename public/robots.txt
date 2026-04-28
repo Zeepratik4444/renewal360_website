@@ -1,3 +1,13 @@
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Block transactional & auth pages - no SEO value
+Disallow: /payment-success
+Disallow: /set-password
+
+# Block build artifacts if accidentally served
+Disallow: /dist/
+
+Sitemap: https://renewal360.in/sitemap.xml

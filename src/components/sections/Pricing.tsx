@@ -17,10 +17,7 @@ export function Pricing() {
     <section className="py-24 bg-slate-50/50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-10">
-          <h2
-            className="text-3xl md:text-5xl font-bold mb-4"
-            style={{ fontFamily: "'Syne', sans-serif" }}
-          >
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Straightforward pricing. No lock-in.
           </h2>
           <p className="text-lg text-muted-foreground">

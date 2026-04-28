@@ -7,6 +7,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useSEO } from "@/hooks/useSEO";
 
 const passwordSchema = z.object({
     password: z.string().min(8, "Password must be at least 8 characters long"),
@@ -19,6 +20,11 @@ const passwordSchema = z.object({
 type PasswordFormData = z.infer<typeof passwordSchema>;
 
 export function SetPasswordPage() {
+    useSEO({
+        title: "Set Password - Renewal360",
+        description: "Set your password for Renewal360.",
+    });
+
     const search = useSearch({ from: '/set-password' });
     const token = (search as any).token;
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");

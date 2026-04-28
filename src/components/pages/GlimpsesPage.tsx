@@ -11,6 +11,7 @@ import aiHelper from "@/assets/aihelper.png";
 import sequenceBuilder from "@/assets/sequencebuilder.png";
 import { CheckCircle2, TrendingUp, PieChart, Activity, ListFilter, UserCog, MessageSquare, Mail, Maximize2, X } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { useSEO } from "@/hooks/useSEO";
 
 function ExpandableImage({ src, alt, containerClassName = "" }: { src: string; alt: string; containerClassName?: string }) {
 	const [isOpen, setIsOpen] = useState(false);
@@ -51,6 +52,11 @@ function ExpandableImage({ src, alt, containerClassName = "" }: { src: string; a
 }
 
 export function GlimpsesPage() {
+	useSEO({
+		title: "Platform Glimpses - Renewal360",
+		description: "Executive visibility, finally. Stop relying on spreadsheets. Renewal360 gives leadership a real-time, unified platform to identify risk.",
+	});
+
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation />
@@ -59,10 +65,7 @@ export function GlimpsesPage() {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-20">
 						<Badge className="mb-4 text-blue-700 bg-blue-100 hover:bg-blue-200">Platform Glimpses</Badge>
-						<h1
-							className="text-4xl md:text-5xl font-bold mb-6 text-gray-900"
-							style={{ fontFamily: "'Syne', sans-serif" }}
-						>
+						<h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
 							Executive visibility, <span className="text-blue-600">finally</span>.
 						</h1>
 						<p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -291,7 +294,7 @@ export function GlimpsesPage() {
 						</div>
 					</div>
 					<div className="border-t border-gray-800 pt-6 text-sm text-center">
-						<p>© {new Date().getFullYear()} Renewal360. All rights reserved. · SOC 2 Ready · Built on Gemini 2.0 AI</p>
+						<p>© 2026 Renewal360. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>

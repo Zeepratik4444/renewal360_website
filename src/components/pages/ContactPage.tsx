@@ -7,8 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import { Mail } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import { useSEO } from "@/hooks/useSEO";
 
 export function ContactPage() {
+	useSEO({
+		title: "Contact Us - Renewal360",
+		description: "Request a Trial. Let's discuss how Renewal360 can help automate your renewal process.",
+	});
+
 	const [formData, setFormData] = useState({
 		companyName: "",
 		contactPersonName: "",

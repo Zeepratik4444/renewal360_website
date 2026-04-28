@@ -2,8 +2,14 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { useSearch } from "@tanstack/react-router";
+import { useSEO } from "@/hooks/useSEO";
 
 export function PaymentSuccessPage() {
+    useSEO({
+        title: "Payment Successful - Renewal360",
+        description: "Thank you for subscribing to Renewal360.",
+    });
+
     const search = useSearch({ strict: false }) as { plan?: string };
     const planName = search?.plan || "your selected";
 

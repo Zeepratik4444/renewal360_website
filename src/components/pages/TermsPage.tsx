@@ -1,7 +1,13 @@
 import { Navigation } from "@/components/Navigation";
 import { Link } from "@tanstack/react-router";
+import { useSEO } from "@/hooks/useSEO";
 
 export function TermsPage() {
+	useSEO({
+		title: "Terms of Service & Privacy Policy - Renewal360",
+		description: "Terms of Service & Privacy Policy for Renewal360.",
+	});
+
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation />

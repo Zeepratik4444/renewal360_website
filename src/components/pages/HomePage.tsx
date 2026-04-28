@@ -11,6 +11,30 @@ import { PersonaCards } from "@/components/sections/PersonaCards";
 import { RoiCalculator } from "@/components/sections/RoiCalculator";
 import { Pricing } from "@/components/sections/Pricing";
 import { PlatformGlimpses } from "@/components/sections/PlatformGlimpses";
+import { useSEO } from "@/hooks/useSEO";
+import { SiSalesforce, SiHubspot, SiSlack, SiGooglesheets, SiGooglecalendar, SiGmail } from "react-icons/si";
+
+const TeamsIcon = () => (
+	<svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M19.19 7.01C20.74 7.01 22 5.75 22 4.2S20.74 1.39 19.19 1.39 16.38 2.65 16.38 4.2s1.26 2.81 2.81 2.81z" fill="#7B83EB"/>
+		<path d="M15 7.5H23v7.5a4 4 0 01-4 4h0a4 4 0 01-4-4V7.5z" fill="#7B83EB"/>
+		<path d="M13.09 7.5H9.5v8.44A4.06 4.06 0 0013.56 20h0a4 4 0 003.44-1.94V11.5A4 4 0 0013.09 7.5z" fill="#5059C9"/>
+		<circle cx="10.44" cy="4.44" r="2.94" fill="#5059C9"/>
+		<path d="M2 8.5a5.5 5.5 0 1011 0 5.5 5.5 0 00-11 0z" fill="#7B83EB"/>
+		<path d="M1 17c0 2.76 2.24 5 5 5h6c2.76 0 5-2.24 5-5v-1H1v1z" fill="#7B83EB"/>
+		<path d="M12.5 8.5H1v8.5c0 2.76 2.24 5 5 5h6c2.76 0 5-2.24 5-5v-4a4.5 4.5 0 00-4.5-4.5z" fill="#5059C9"/>
+	</svg>
+);
+
+const OutlookIcon = () => (
+	<svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M14 2H7a1 1 0 00-1 1v4H2v10h4v4a1 1 0 001 1h14a1 1 0 001-1V8l-8-6z" fill="#0078D4"/>
+		<path d="M14 2v6h6L14 2z" fill="#A0C3FF"/>
+		<path d="M2 7h10v10H2V7z" fill="#0078D4"/>
+		<path d="M7.5 9.5a3 3 0 100 5 3 3 0 000-5z" fill="white"/>
+	</svg>
+);
+
 /* ── Inline FAQ Accordion ── */
 function FAQItem({ q, a }: { q: string; a: string }) {
 	const [open, setOpen] = useState(false);
@@ -33,6 +57,11 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 export function HomePage() {
+	useSEO({
+		title: "Renewal360 - AI-Powered SaaS Renewal Automation",
+		description: "Stop losing renewals to silence. Let AI handle the outreach.",
+	});
+
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation />
@@ -225,14 +254,14 @@ export function HomePage() {
 					</p>
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
 						{[
-							{ name: "Salesforce", icon: "☁️" },
-							{ name: "HubSpot", icon: "🟠" },
-							{ name: "Slack", icon: "💬" },
-							{ name: "Microsoft Teams", icon: "🔵" },
-							{ name: "Google Sheets", icon: "📊" },
-							{ name: "Google Calendar", icon: "📅" },
-							{ name: "Gmail", icon: "📧" },
-							{ name: "Outlook", icon: "📨" },
+							{ name: "Salesforce", icon: <SiSalesforce className="w-8 h-8 text-[#00A1E0]" /> },
+							{ name: "HubSpot", icon: <SiHubspot className="w-8 h-8 text-[#FF7A59]" /> },
+							{ name: "Slack", icon: <SiSlack className="w-8 h-8 text-white" /> },
+							{ name: "Microsoft Teams", icon: <TeamsIcon /> },
+							{ name: "Google Sheets", icon: <SiGooglesheets className="w-8 h-8 text-[#34A853]" /> },
+							{ name: "Google Calendar", icon: <SiGooglecalendar className="w-8 h-8 text-[#4285F4]" /> },
+							{ name: "Gmail", icon: <SiGmail className="w-8 h-8 text-[#EA4335]" /> },
+							{ name: "Outlook", icon: <OutlookIcon /> },
 						].map((tool) => (
 							<div key={tool.name} className="p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-center flex flex-col items-center justify-center">
 								<div className="text-3xl mb-3">{tool.icon}</div>
@@ -353,7 +382,7 @@ export function HomePage() {
 						</div>
 					</div>
 					<div className="border-t border-gray-800 pt-6 text-sm text-center">
-						<p>© {new Date().getFullYear()} Renewal360. All rights reserved. · SOC 2 Ready · Built on Gemini 2.0 AI</p>
+						<p>© 2026 Renewal360. All rights reserved.</p>
 					</div>
 				</div>
 			</footer>
