@@ -14,6 +14,7 @@ export function Navigation() {
 	];
 
 	const moreLinks = [
+		{ to: "/blog", label: "Blog" },
 		{ to: "/about", label: "About" },
 		{ to: "/faq", label: "FAQ" },
 		{ to: "/glimpses", label: "Glimpses" },

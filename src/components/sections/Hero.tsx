@@ -25,7 +25,7 @@ export function Hero() {
             Start Free Pilot — 25 accounts, no credit card
           </Button>
           <Button variant="outline" size="lg" className="w-full sm:w-auto font-semibold rounded-full px-8 h-12 text-base">
-            Watch 2-min demo ▶
+            See how it works
           </Button>
         </div>
 

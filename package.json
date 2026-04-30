@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prebuild": "node scripts/generate-static-blog.mjs",
+    "generate:static-blog": "node scripts/generate-static-blog.mjs",
     "dev": "vite --port 3000",
     "start": "vite --port 3000",
     "build": "npm run check:safe && vite build",

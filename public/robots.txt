@@ -2,12 +2,50 @@
 
 User-agent: *
 Allow: /
-
-# Block transactional & auth pages - no SEO value
 Disallow: /payment-success
 Disallow: /set-password
+Disallow: /dist/
 
-# Block build artifacts if accidentally served
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
+Disallow: /dist/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
+Disallow: /dist/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
+Disallow: /dist/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
+Disallow: /dist/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
+Disallow: /dist/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
+Disallow: /dist/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
 Disallow: /dist/
 
 Sitemap: https://renewal360.in/sitemap.xml

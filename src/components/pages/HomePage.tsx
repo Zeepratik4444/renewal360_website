@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
 	CheckCircle2, Clock, Target, TrendingUp, Mail,
-	BarChart3, Shield, Zap, Users, Star
+	BarChart3, Shield, Zap, Users, Star, BookOpen, ArrowRight
 } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
 import { PersonaCards } from "@/components/sections/PersonaCards";
@@ -12,26 +12,27 @@ import { RoiCalculator } from "@/components/sections/RoiCalculator";
 import { Pricing } from "@/components/sections/Pricing";
 import { PlatformGlimpses } from "@/components/sections/PlatformGlimpses";
 import { useSEO } from "@/hooks/useSEO";
+import { blogPosts } from "@/lib/blogPosts";
 import { SiSalesforce, SiHubspot, SiSlack, SiGooglesheets, SiGooglecalendar, SiGmail } from "react-icons/si";
 
 const TeamsIcon = () => (
 	<svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M19.19 7.01C20.74 7.01 22 5.75 22 4.2S20.74 1.39 19.19 1.39 16.38 2.65 16.38 4.2s1.26 2.81 2.81 2.81z" fill="#7B83EB"/>
-		<path d="M15 7.5H23v7.5a4 4 0 01-4 4h0a4 4 0 01-4-4V7.5z" fill="#7B83EB"/>
-		<path d="M13.09 7.5H9.5v8.44A4.06 4.06 0 0013.56 20h0a4 4 0 003.44-1.94V11.5A4 4 0 0013.09 7.5z" fill="#5059C9"/>
-		<circle cx="10.44" cy="4.44" r="2.94" fill="#5059C9"/>
-		<path d="M2 8.5a5.5 5.5 0 1011 0 5.5 5.5 0 00-11 0z" fill="#7B83EB"/>
-		<path d="M1 17c0 2.76 2.24 5 5 5h6c2.76 0 5-2.24 5-5v-1H1v1z" fill="#7B83EB"/>
-		<path d="M12.5 8.5H1v8.5c0 2.76 2.24 5 5 5h6c2.76 0 5-2.24 5-5v-4a4.5 4.5 0 00-4.5-4.5z" fill="#5059C9"/>
+		<path d="M19.19 7.01C20.74 7.01 22 5.75 22 4.2S20.74 1.39 19.19 1.39 16.38 2.65 16.38 4.2s1.26 2.81 2.81 2.81z" fill="#7B83EB" />
+		<path d="M15 7.5H23v7.5a4 4 0 01-4 4h0a4 4 0 01-4-4V7.5z" fill="#7B83EB" />
+		<path d="M13.09 7.5H9.5v8.44A4.06 4.06 0 0013.56 20h0a4 4 0 003.44-1.94V11.5A4 4 0 0013.09 7.5z" fill="#5059C9" />
+		<circle cx="10.44" cy="4.44" r="2.94" fill="#5059C9" />
+		<path d="M2 8.5a5.5 5.5 0 1011 0 5.5 5.5 0 00-11 0z" fill="#7B83EB" />
+		<path d="M1 17c0 2.76 2.24 5 5 5h6c2.76 0 5-2.24 5-5v-1H1v1z" fill="#7B83EB" />
+		<path d="M12.5 8.5H1v8.5c0 2.76 2.24 5 5 5h6c2.76 0 5-2.24 5-5v-4a4.5 4.5 0 00-4.5-4.5z" fill="#5059C9" />
 	</svg>
 );
 
 const OutlookIcon = () => (
 	<svg viewBox="0 0 24 24" className="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<path d="M14 2H7a1 1 0 00-1 1v4H2v10h4v4a1 1 0 001 1h14a1 1 0 001-1V8l-8-6z" fill="#0078D4"/>
-		<path d="M14 2v6h6L14 2z" fill="#A0C3FF"/>
-		<path d="M2 7h10v10H2V7z" fill="#0078D4"/>
-		<path d="M7.5 9.5a3 3 0 100 5 3 3 0 000-5z" fill="white"/>
+		<path d="M14 2H7a1 1 0 00-1 1v4H2v10h4v4a1 1 0 001 1h14a1 1 0 001-1V8l-8-6z" fill="#0078D4" />
+		<path d="M14 2v6h6L14 2z" fill="#A0C3FF" />
+		<path d="M2 7h10v10H2V7z" fill="#0078D4" />
+		<path d="M7.5 9.5a3 3 0 100 5 3 3 0 000-5z" fill="white" />
 	</svg>
 );
 
@@ -91,7 +92,7 @@ export function HomePage() {
 						</Link>
 						<Link to="/how-it-works">
 							<Button size="lg" variant="outline" className="text-lg px-8">
-								Watch 2-min demo ▶
+								See how it works
 							</Button>
 						</Link>
 					</div>
@@ -285,6 +286,73 @@ export function HomePage() {
 			{/* ── PRICING ── */}
 			<Pricing />
 
+			{/* ── BLOG ── */}
+			<section className="py-16 bg-blue-50" id="blog">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between mb-10">
+						<div>
+							<span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-blue-700 text-xs font-semibold uppercase tracking-widest mb-4 border border-blue-100">
+								<BookOpen className="h-4 w-4" />
+								Blog
+							</span>
+							<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+								Renewal playbooks for modern SaaS teams.
+							</h2>
+							<p className="text-lg text-gray-600 max-w-2xl">
+								Learn how to automate renewal outreach, catch churn risk earlier,
+								and give leadership a clearer view of revenue at risk.
+							</p>
+						</div>
+						<Link to="/blog">
+							<Button variant="outline" size="lg" className="bg-white border-blue-200 hover:bg-blue-50">
+								View all posts
+							</Button>
+						</Link>
+					</div>
+
+					<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+						{blogPosts.map((post) => (
+							<Link
+								key={post.slug}
+								to="/blog/$slug"
+								params={{ slug: post.slug }}
+								className="group block h-full"
+							>
+								<Card className="h-full bg-white transition-all duration-200 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
+									<CardContent className="p-6">
+										<div className="flex flex-wrap gap-2 mb-5">
+											{post.tags.map((tag) => (
+												<span
+													key={tag}
+													className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700"
+												>
+													{tag}
+												</span>
+											))}
+										</div>
+										<h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+											{post.title}
+										</h3>
+										<p className="text-gray-600 text-sm leading-relaxed mb-6">
+											{post.summary}
+										</p>
+										<div className="flex items-center justify-between text-sm">
+											<span className="text-gray-500">
+												{post.readTime} - {post.publishedAt}
+											</span>
+											<span className="inline-flex items-center gap-2 font-semibold text-blue-600">
+												Read
+												<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+											</span>
+										</div>
+									</CardContent>
+								</Card>
+							</Link>
+						))}
+					</div>
+				</div>
+			</section>
+
 			{/* ── TESTIMONIALS ── */}
 			<section className="py-16 bg-white" id="testimonials">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -349,43 +417,6 @@ export function HomePage() {
 				</div>
 			</section>
 
-			{/* ── FOOTER ── */}
-			<footer className="bg-gray-900 text-gray-400 border-t border-gray-800 py-10">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid md:grid-cols-4 gap-8 mb-8">
-						<div>
-							<h3 className="text-white font-semibold mb-3">Renewal360</h3>
-							<p className="text-sm">AI-powered renewal automation for SaaS teams.</p>
-						</div>
-						<div>
-							<h4 className="text-white font-semibold mb-3">Product</h4>
-							<ul className="space-y-2 text-sm">
-								{[["Features", "/features"], ["Glimpses", "/glimpses"], ["Pricing", "/pricing"], ["How It Works", "/how-it-works"]].map(([label, to]) => (
-									<li key={label}><Link to={to as string} className="hover:text-white transition-colors">{label}</Link></li>
-								))}
-							</ul>
-						</div>
-						<div>
-							<h4 className="text-white font-semibold mb-3">Company</h4>
-							<ul className="space-y-2 text-sm">
-								{[["About", "/about"], ["FAQ", "/faq"], ["Contact", "/contact"], ["Terms", "/terms"]].map(([label, to]) => (
-									<li key={label}><Link to={to as string} className="hover:text-white transition-colors">{label}</Link></li>
-								))}
-							</ul>
-						</div>
-						<div>
-							<h4 className="text-white font-semibold mb-3">Connect</h4>
-							<ul className="space-y-2 text-sm">
-								<li><a href="#" className="hover:text-white">LinkedIn</a></li>
-								<li><a href="#" className="hover:text-white">Twitter / X</a></li>
-							</ul>
-						</div>
-					</div>
-					<div className="border-t border-gray-800 pt-6 text-sm text-center">
-						<p>© 2026 Renewal360. All rights reserved.</p>
-					</div>
-				</div>
-			</footer>
 		</div>
 	);
 }

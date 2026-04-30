@@ -1,6 +1,7 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { FloatingBanner } from "@/components/FloatingBanner";
+import { Footer } from "@/components/Footer";
 
 export const Route = createRootRoute({
 	component: Root,
@@ -12,7 +13,7 @@ function Root() {
 			<ErrorBoundary tagName="main" className="flex-1">
 				<Outlet />
 			</ErrorBoundary>
-
+			<Footer />
 		</div>
 	);
 }

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Automate SaaS Renewal Emails (Step-by-Step) | Renewal360 Blog</title>
+  <meta name="description" content="A practical guide to automating SaaS renewal emails — from CRM sync and health scoring to AI-drafted outreach, reply detection, and approval workflows. No more manual follow-ups." />
+  <meta property="og:title" content="How to Automate SaaS Renewal Emails (Step-by-Step)" />
+  <meta property="og:description" content="A practical guide to automating SaaS renewal emails — from CRM sync and health scoring to AI-drafted outreach and reply detection." />
+  <meta property="og:url" content="https://renewal360.in/blog/how-to-automate-saas-renewal-emails" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://renewal360.in/blog/how-to-automate-saas-renewal-emails" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Lora', serif; }
+    .prose-content p { margin-bottom: 1.25rem; line-height: 1.8; color: #374151; }
+    .prose-content h2 { font-size: 1.6rem; font-weight: 700; color: #111827; margin: 2.5rem 0 1rem; }
+    .prose-content h3 { font-size: 1.15rem; font-weight: 600; color: #1d4ed8; margin: 1.75rem 0 0.5rem; }
+    .prose-content ul { list-style: none; padding: 0; margin-bottom: 1.25rem; }
+    .prose-content ul li { padding: 0.3rem 0 0.3rem 1.75rem; position: relative; color: #374151; line-height: 1.7; }
+    .prose-content ul li::before { content: "→"; position: absolute; left: 0; color: #2563eb; font-weight: 600; }
+    .step-card { background: #f0f7ff; border-left: 4px solid #2563eb; border-radius: 0 0.5rem 0.5rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .step-card .step-num { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #2563eb; margin-bottom: 0.25rem; }
+    .step-card h3 { font-family: 'Lora', serif; font-size: 1.1rem; color: #1e3a8a; margin: 0 0 0.5rem 0; }
+    .step-card p { color: #374151; font-size: 0.95rem; line-height: 1.7; margin: 0; }
+    .callout { background: #1e3a8a; color: white; border-radius: 0.75rem; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .callout p { color: #bfdbfe; margin: 0; }
+    .callout strong { color: white; }
+    .tag { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 999px; margin-right: 0.5rem; }
+    .timeline-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; }
+    .timeline-badge { flex-shrink: 0; width: 56px; height: 56px; background: #2563eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Lora', serif; font-weight: 700; color: white; font-size: 0.85rem; text-align: center; line-height: 1.2; }
+    .timeline-body h4 { font-weight: 600; color: #111827; margin: 0 0 0.25rem; }
+    .timeline-body p { color: #6b7280; font-size: 0.9rem; margin: 0; line-height: 1.6; }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Nav -->
+  <nav class="border-b border-gray-100 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
+    <a href="/" class="text-xl font-bold text-blue-600" style="font-family:'Lora',serif;">Renewal360</a>
+    <div class="flex gap-6 text-sm text-gray-500">
+      <a href="/features" class="hover:text-blue-600 transition-colors">Features</a>
+      <a href="/pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
+      <a href="/contact" class="hover:text-blue-600 transition-colors">Start Pilot</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="max-w-3xl mx-auto px-6 pt-16 pb-10">
+    <div class="mb-5">
+      <span class="tag">Automation</span>
+      <span class="tag">Customer Success</span>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+      How to Automate SaaS Renewal Emails<br />
+      <span class="text-blue-600">(Step-by-Step)</span>
+    </h1>
+    <p class="text-xl text-gray-500 leading-relaxed">
+      Most CS teams are one missed follow-up away from a lost renewal. Here's how a proper automation system works — from CRM sync to AI draft to sent email — without removing your team from the loop.
+    </p>
+    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
+      <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm" style="font-family:'Lora',serif;">R</div>
+      <div>
+        <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
+        <div class="text-xs text-gray-400">8 min read · April 2026</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+
+    <p>
+      The average SaaS CSM manages 40–60 accounts. At any given moment, a dozen of those are inside a 90-day renewal window. Manually tracking who needs what email, when, and with what context is not a strategy — it's a recipe for dropped balls.
+    </p>
+    <p>
+      This post walks through how a complete renewal email automation system actually works under the hood — the real mechanics, not marketing promises.
+    </p>
+
+    <h2>Why "just set up email reminders" isn't enough</h2>
+    <p>
+      The instinct most teams start with is a simple calendar reminder or a basic drip sequence: send email at 90 days, 60 days, 30 days. This solves exactly one problem — not forgetting to send something. It ignores everything else:
+    </p>
+    <ul>
+      <li>Is this account actually at risk, or are they a healthy auto-renew?</li>
+      <li>Has someone from this company already replied to a previous email?</li>
+      <li>Has product usage dropped 40% in the last 30 days — a signal that changes everything?</li>
+      <li>Is this a $2,000 account or a $200,000 account? The effort should differ.</li>
+    </ul>
+    <p>
+      Effective renewal automation requires connecting three things: <strong>account health data, branching logic, and a human approval layer</strong>. Here's how to build it.
+    </p>
+
+    <!-- Step 1 -->
+    <div class="step-card">
+      <div class="step-num">Step 1</div>
+      <h3>Connect your CRM and pull live account data</h3>
+      <p>Before any email can be intelligently sent, the system needs to know the truth about each account. That means pulling from Salesforce or HubSpot: ARR, renewal date, contract tier, primary contact, and historical activity. This is not a one-time import — it's a live sync. An account's renewal date changes. Champion contacts leave. ARR expands or contracts.</p>
+    </div>
+
+    <p>
+      Most teams treat their CRM as a record system and their email tool as a separate silo. The renewal automation layer sits between them — reading CRM state in real-time so that every email reflects current reality, not a 2-week-old export.
+    </p>
+
+    <!-- Step 2 -->
+    <div class="step-card">
+      <div class="step-num">Step 2</div>
+      <h3>Score each account's health before any email goes out</h3>
+      <p>Not every account in a 90-day renewal window needs the same treatment. A five-signal health score — built from product usage, stakeholder engagement, support ticket volume, payment history, and NPS sentiment — tells you who to prioritize, who to escalate, and who to let run on autopilot.</p>
+    </div>
+
+    <p>The key word here is <em>weighted</em>. A support ticket spike matters more for a $150K account than a $5K account. A 30% usage drop matters more in month 10 than in month 2. A good scoring model lets you tune the weights per account tier — not just apply a flat formula.</p>
+
+    <div class="callout">
+      <strong>What this looks like in practice:</strong>
+      <p class="mt-2">An account scores 38/100 on health. Product usage is down 35% over 60 days. Zero activity from the champion contact in 45 days. Two open support tickets unresolved for 10+ days. The system flags this automatically and escalates it from a standard sequence to a high-risk intervention track — before your CSM even opens their laptop.</p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-card">
+      <div class="step-num">Step 3</div>
+      <h3>Build sequences with branching logic, not linear drips</h3>
+      <p>A linear drip sequence sends email 1, then email 2, then email 3 — regardless of what happened in between. A branching sequence is smarter: if the account replied to email 1, stop the sequence and notify the CSM. If product usage dropped below a threshold after email 2, jump to the high-risk escalation track. If the renewal date is inside 14 days and no response received, trigger an executive summary alert on Slack.</p>
+    </div>
+
+    <p>This is the difference between automation that helps and automation that annoys. Branch conditions are what stop a churning customer from receiving a cheerful "just checking in!" email the day after they logged a complaint.</p>
+
+    <h2>The milestone email structure that works</h2>
+    <p>Based on renewal outcome data, there are four natural touchpoints that perform consistently:</p>
+
+    <div style="margin: 1.5rem 0;">
+      <div class="timeline-row">
+        <div class="timeline-badge">90<br/>days</div>
+        <div class="timeline-body">
+          <h4>Early relationship email</h4>
+          <p>Not a renewal push — an honest check-in. What's going well? What blockers exist? This opens a dialogue early enough to actually fix problems, not just surface them.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-badge">60<br/>days</div>
+        <div class="timeline-body">
+          <h4>Value recap + expansion framing</h4>
+          <p>Summarise usage milestones, outcomes achieved, and — if warranted — introduce relevant upsell context. The goal is to anchor their mental model around ROI before commercial conversations start.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-badge">30<br/>days</div>
+        <div class="timeline-body">
+          <h4>Commercial conversation trigger</h4>
+          <p>Introduce renewal terms. Request a call. For at-risk accounts, this email is replaced by a direct CSM-to-champion call request instead.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-badge">7<br/>days</div>
+        <div class="timeline-body">
+          <h4>Final confirmation or escalation</h4>
+          <p>Confirm the renewal is proceeding, or escalate to manager-level contact. For accounts that have gone silent, the system flags them for urgent human intervention — not another automated email.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-card">
+      <div class="step-num">Step 4</div>
+      <h3>Let AI draft the emails — but keep humans in the approval loop</h3>
+      <p>AI can personalise at scale in a way no template system can. It pulls account context — the industry, ARR tier, recent activity, which features they've been using — and writes a draft that reads like a CSM wrote it themselves. But "reads like a human wrote it" is different from "is correct and appropriate to send." That's why every AI draft goes to the CSM for review before it touches a customer inbox.</p>
+    </div>
+
+    <p>
+      The approval queue becomes a 10-minute daily ritual: scan the drafts, make any edits, approve. Your CSM is no longer the author — they're the editor. That shift alone saves 4–5 hours per week per CSM.
+    </p>
+
+    <!-- Step 5 -->
+    <div class="step-card">
+      <div class="step-num">Step 5</div>
+      <h3>Monitor replies and stop sequences automatically</h3>
+      <p>This is the step most teams forget. Sending emails is half the job. The system needs to watch the inbox too — via IMAP monitoring — so that when a customer replies, the sequence pauses immediately. Nothing undermines customer trust faster than receiving a "have you had a chance to look at this?" follow-up 24 hours after they already replied to the previous email.</p>
+    </div>
+
+    <p>
+      Reply detection should also classify intent. A "yes, let's discuss" reply is different from a "we're evaluating other options" reply. Both should stop the automated sequence — but the second one should trigger an immediate alert to the CSM and put the account into a manual intervention queue.
+    </p>
+
+    <h2>What your executive team needs to see</h2>
+    <p>
+      Renewal automation without visibility is just automation running in the dark. Leadership needs a live view of:
+    </p>
+    <ul>
+      <li>Total ARR inside the 90-day renewal window</li>
+      <li>ARR flagged as at-risk (health score below threshold)</li>
+      <li>Renewal pipeline broken down by CSM and account tier</li>
+      <li>Email sequence performance — open rates, reply rates, conversion per milestone</li>
+    </ul>
+    <p>
+      When a board meeting comes up and someone asks "what's our churn forecast this quarter?", the answer shouldn't require someone to spend two hours building a spreadsheet.
+    </p>
+
+    <h2>The setup reality: this doesn't take months</h2>
+    <p>
+      The most common objection we hear from CS teams is: "this sounds like a six-month implementation project." It isn't — if you're not trying to rebuild your CRM in the process. A focused renewal automation layer that connects to your existing CRM, reads account health signals, and runs sequences through your existing email infrastructure can be live in under two weeks. The bottleneck is usually deciding on sequence logic and approval workflows, not the technical integration.
+    </p>
+    <p>
+      Start with your 20 highest-ARR accounts in a 90-day window. Run the system there first. The ROI case will be obvious inside a quarter.
+    </p>
+
+    <!-- CTA -->
+    <div style="background: linear-gradient(135deg, #1e3a8a, #2563eb); border-radius: 1rem; padding: 2.5rem; margin: 3rem 0; text-align: center;">
+      <h2 style="color: white; margin: 0 0 0.75rem; font-size: 1.6rem;">See the full system live</h2>
+      <p style="color: #bfdbfe; margin: 0 0 1.5rem; font-size: 1rem;">Renewal360 implements everything in this post out of the box. 25 accounts, no credit card, live in 7 days.</p>
+      <a href="/contact" style="display: inline-block; background: white; color: #1d4ed8; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">Start Free Pilot →</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
+    <p>© 2026 Renewal360 · <a href="/terms" class="hover:text-blue-600">Terms</a> · <a href="/contact" class="hover:text-blue-600">Contact</a></p>
+  </footer>
+
+</body>
+</html>

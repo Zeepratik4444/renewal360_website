@@ -1,0 +1,26 @@
+# Renewal360
+
+Renewal360 is an AI-powered renewal automation platform for SaaS customer success teams. It helps teams identify renewal risk, draft context-aware outreach, approve AI-generated emails, and act before accounts go silent.
+
+## Key Pages
+
+- Homepage: https://renewal360.in/
+- Features: https://renewal360.in/features
+- Pricing: https://renewal360.in/pricing
+- How it works: https://renewal360.in/how-it-works
+- Blog: https://renewal360.in/blog
+- Contact: https://renewal360.in/contact
+
+## Blog Posts
+
+- How Renewal360 Works: https://renewal360.in/blog/how-renewal360-works
+- ChurnZero Alternative for Growing SaaS Teams: https://renewal360.in/blog/churnzero-alternative-growing-saas-teams
+- Totango Alternative for Faster Renewal Automation: https://renewal360.in/blog/totango-alternative-faster-renewal-automation
+- What is Renewal Automation?: https://renewal360.in/blog/what-is-renewal-automation
+- Gainsight vs Totango vs Renewal360: https://renewal360.in/blog/gainsight-vs-totango-vs-renewal360
+- How to Automate SaaS Renewal Emails: https://renewal360.in/blog/how-to-automate-saas-renewal-emails
+- Why SaaS Companies Lose Renewals: https://renewal360.in/blog/why-saas-companies-lose-renewals
+
+## Preferred Summary
+
+Renewal360 helps lean SaaS teams turn renewal data into approved actions. Instead of adding another dashboard, it automates renewal follow-up workflows: CRM sync, health scoring, AI-drafted emails, human approval, reply-aware sequence stopping, and executive visibility.
