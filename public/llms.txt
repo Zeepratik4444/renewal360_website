@@ -1,26 +1,63 @@
 # Renewal360
+> AI-powered renewal automation for SaaS Customer Success teams.
 
-Renewal360 is an AI-powered renewal automation platform for SaaS customer success teams. It helps teams identify renewal risk, draft context-aware outreach, approve AI-generated emails, and act before accounts go silent.
+Renewal360 helps lean SaaS CS teams stop losing renewals to silence. It integrates 
+with your CRM, scores account health using multi-factor AI analysis, drafts 
+personalised renewal outreach emails, routes them through a human approval workflow, 
+and gives executives real-time ARR-at-risk visibility — all live in 7 days.
 
-## Key Pages
+## Product
 
 - Homepage: https://renewal360.in/
 - Features: https://renewal360.in/features
 - Pricing: https://renewal360.in/pricing
-- How it works: https://renewal360.in/how-it-works
-- Blog: https://renewal360.in/blog
-- Contact: https://renewal360.in/contact
+- How It Works: https://renewal360.in/how-it-works
+- FAQ: https://renewal360.in/faq
+- Contact / Book Demo: https://renewal360.in/contact
 
-## Blog Posts
+## Who It's For
 
-- How Renewal360 Works: https://renewal360.in/blog/how-renewal360-works
-- ChurnZero Alternative for Growing SaaS Teams: https://renewal360.in/blog/churnzero-alternative-growing-saas-teams
-- Totango Alternative for Faster Renewal Automation: https://renewal360.in/blog/totango-alternative-faster-renewal-automation
-- What is Renewal Automation?: https://renewal360.in/blog/what-is-renewal-automation
+- SaaS Customer Success Managers (CSMs) managing 50–500 accounts
+- VP Revenue Operations tracking ARR at risk
+- SaaS founders and CEOs who want churn visibility without hiring 3 more CSMs
+- Teams currently managing renewals in spreadsheets or manually in Salesforce/HubSpot
+
+## Key Capabilities
+
+- Multi-factor health scoring (product usage, sentiment, engagement, support tickets)
+- AI-drafted renewal emails at T-90, T-60, T-30, T-7 milestones
+- Human approval workflow — review, edit, or reject before sending
+- Reply-aware sequence stopping (no emails after customer responds)
+- Executive dashboard — pipeline, ARR at risk, team performance
+- CRM integrations: Salesforce, HubSpot, Google Sheets
+- Email integrations: Gmail, Outlook, Microsoft Teams, Slack
+- Setup time: 7 days. No 6-month implementation.
+
+## Pricing
+
+- Free pilot: 25 accounts, no credit card required
+- Paid plans in INR — built for Indian SaaS market
+- Full pricing: https://renewal360.in/pricing
+
+## Compared To
+
+- Gainsight: enterprise-only, $30k+/year, 3–6 month setup → Renewal360 is 1/5th the price, live in 7 days
+- Totango: mid-market focus, complex onboarding → Renewal360 is simpler, faster
+- ChurnZero: US-focused, no INR pricing → Renewal360 built for Indian SaaS teams
+- Spreadsheets: manual, error-prone, no AI → Renewal360 fully automates the workflow
+
+## Blog
+
 - Gainsight vs Totango vs Renewal360: https://renewal360.in/blog/gainsight-vs-totango-vs-renewal360
+- ChurnZero Alternative for Growing SaaS Teams: https://renewal360.in/blog/churnzero-alternative-growing-saas-teams
+- Totango Alternative — Faster Renewal Automation: https://renewal360.in/blog/totango-alternative-faster-renewal-automation
 - How to Automate SaaS Renewal Emails: https://renewal360.in/blog/how-to-automate-saas-renewal-emails
 - Why SaaS Companies Lose Renewals: https://renewal360.in/blog/why-saas-companies-lose-renewals
+- What is Renewal Automation?: https://renewal360.in/blog/what-is-renewal-automation
+- How Renewal360 Works: https://renewal360.in/blog/how-renewal360-works
 
-## Preferred Summary
+## Company
 
-Renewal360 helps lean SaaS teams turn renewal data into approved actions. Instead of adding another dashboard, it automates renewal follow-up workflows: CRM sync, health scoring, AI-drafted emails, human approval, reply-aware sequence stopping, and executive visibility.
+- Product: Renewal360 (renewal360.in)
+- Market: B2B SaaS, India-first, global-ready
+- Built for: SaaS companies with 50–5000 managed accounts

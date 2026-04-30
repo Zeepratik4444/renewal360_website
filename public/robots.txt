@@ -1,48 +1,82 @@
 # https://www.robotstxt.org/robotstxt.html
 
-User-agent: *
+# ── Google ──────────────────────────────────────────
+User-agent: Googlebot
 Allow: /
 Disallow: /payment-success
 Disallow: /set-password
 Disallow: /dist/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ── Bing / Microsoft ────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
+Disallow: /dist/
+
+# ── OpenAI ──────────────────────────────────────────
+User-agent: GPTBot
+Allow: /
+Disallow: /payment-success
+Disallow: /set-password
 
 User-agent: OAI-SearchBot
 Allow: /
 Disallow: /payment-success
 Disallow: /set-password
-Disallow: /dist/
-
-User-agent: GPTBot
-Allow: /
-Disallow: /payment-success
-Disallow: /set-password
-Disallow: /dist/
 
 User-agent: ChatGPT-User
 Allow: /
-Disallow: /payment-success
-Disallow: /set-password
-Disallow: /dist/
 
+# ── Anthropic / Claude ───────────────────────────────
 User-agent: ClaudeBot
 Allow: /
 Disallow: /payment-success
 Disallow: /set-password
-Disallow: /dist/
 
 User-agent: Claude-SearchBot
 Allow: /
-Disallow: /payment-success
-Disallow: /set-password
-Disallow: /dist/
 
+# ── Perplexity ───────────────────────────────────────
 User-agent: PerplexityBot
 Allow: /
 Disallow: /payment-success
 Disallow: /set-password
-Disallow: /dist/
 
-User-agent: Google-Extended
+# ── Other AI Crawlers ────────────────────────────────
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# ── Block junk / scraper bots ────────────────────────
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# ── Catch-all fallback ───────────────────────────────
+User-agent: *
 Allow: /
 Disallow: /payment-success
 Disallow: /set-password
