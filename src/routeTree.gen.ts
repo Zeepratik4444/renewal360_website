@@ -21,7 +21,11 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogSlugRouteImport } from './routes/blog_.$slug'
+import { Route as BlogZendeskHubspotSalesforceCsPlatformComparisonRouteImport } from './routes/blog/zendesk-hubspot-salesforce-cs-platform-comparison'
+import { Route as BlogHowToRunYourEntireCsOperationInRenewal360RouteImport } from './routes/blog/how-to-run-your-entire-cs-operation-in-renewal360'
+import { Route as BlogCustomerSuccessPlatformForGrowingSaasRouteImport } from './routes/blog/customer-success-platform-for-growing-saas'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -83,16 +87,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog_/$slug',
   path: '/blog/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogZendeskHubspotSalesforceCsPlatformComparisonRoute =
+  BlogZendeskHubspotSalesforceCsPlatformComparisonRouteImport.update({
+    id: '/zendesk-hubspot-salesforce-cs-platform-comparison',
+    path: '/zendesk-hubspot-salesforce-cs-platform-comparison',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogHowToRunYourEntireCsOperationInRenewal360Route =
+  BlogHowToRunYourEntireCsOperationInRenewal360RouteImport.update({
+    id: '/how-to-run-your-entire-cs-operation-in-renewal360',
+    path: '/how-to-run-your-entire-cs-operation-in-renewal360',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogCustomerSuccessPlatformForGrowingSaasRoute =
+  BlogCustomerSuccessPlatformForGrowingSaasRouteImport.update({
+    id: '/customer-success-platform-for-growing-saas',
+    path: '/customer-success-platform-for-growing-saas',
+    getParentRoute: () => BlogRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
@@ -102,12 +129,15 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
   '/terms': typeof TermsRoute
+  '/blog/customer-success-platform-for-growing-saas': typeof BlogCustomerSuccessPlatformForGrowingSaasRoute
+  '/blog/how-to-run-your-entire-cs-operation-in-renewal360': typeof BlogHowToRunYourEntireCsOperationInRenewal360Route
+  '/blog/zendesk-hubspot-salesforce-cs-platform-comparison': typeof BlogZendeskHubspotSalesforceCsPlatformComparisonRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
@@ -117,13 +147,17 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
   '/terms': typeof TermsRoute
+  '/blog/customer-success-platform-for-growing-saas': typeof BlogCustomerSuccessPlatformForGrowingSaasRoute
+  '/blog/how-to-run-your-entire-cs-operation-in-renewal360': typeof BlogHowToRunYourEntireCsOperationInRenewal360Route
+  '/blog/zendesk-hubspot-salesforce-cs-platform-comparison': typeof BlogZendeskHubspotSalesforceCsPlatformComparisonRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/faq': typeof FaqRoute
   '/features': typeof FeaturesRoute
@@ -133,7 +167,11 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/set-password': typeof SetPasswordRoute
   '/terms': typeof TermsRoute
+  '/blog/customer-success-platform-for-growing-saas': typeof BlogCustomerSuccessPlatformForGrowingSaasRoute
+  '/blog/how-to-run-your-entire-cs-operation-in-renewal360': typeof BlogHowToRunYourEntireCsOperationInRenewal360Route
+  '/blog/zendesk-hubspot-salesforce-cs-platform-comparison': typeof BlogZendeskHubspotSalesforceCsPlatformComparisonRoute
   '/blog_/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -150,12 +188,15 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/set-password'
     | '/terms'
+    | '/blog/customer-success-platform-for-growing-saas'
+    | '/blog/how-to-run-your-entire-cs-operation-in-renewal360'
+    | '/blog/zendesk-hubspot-salesforce-cs-platform-comparison'
     | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
-    | '/blog'
     | '/contact'
     | '/faq'
     | '/features'
@@ -165,7 +206,11 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/set-password'
     | '/terms'
+    | '/blog/customer-success-platform-for-growing-saas'
+    | '/blog/how-to-run-your-entire-cs-operation-in-renewal360'
+    | '/blog/zendesk-hubspot-salesforce-cs-platform-comparison'
     | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
@@ -180,13 +225,17 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/set-password'
     | '/terms'
+    | '/blog/customer-success-platform-for-growing-saas'
+    | '/blog/how-to-run-your-entire-cs-operation-in-renewal360'
+    | '/blog/zendesk-hubspot-salesforce-cs-platform-comparison'
     | '/blog_/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   FaqRoute: typeof FaqRoute
   FeaturesRoute: typeof FeaturesRoute
@@ -285,6 +334,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog_/$slug': {
       id: '/blog_/$slug'
       path: '/blog/$slug'
@@ -292,13 +348,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/zendesk-hubspot-salesforce-cs-platform-comparison': {
+      id: '/blog/zendesk-hubspot-salesforce-cs-platform-comparison'
+      path: '/zendesk-hubspot-salesforce-cs-platform-comparison'
+      fullPath: '/blog/zendesk-hubspot-salesforce-cs-platform-comparison'
+      preLoaderRoute: typeof BlogZendeskHubspotSalesforceCsPlatformComparisonRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/how-to-run-your-entire-cs-operation-in-renewal360': {
+      id: '/blog/how-to-run-your-entire-cs-operation-in-renewal360'
+      path: '/how-to-run-your-entire-cs-operation-in-renewal360'
+      fullPath: '/blog/how-to-run-your-entire-cs-operation-in-renewal360'
+      preLoaderRoute: typeof BlogHowToRunYourEntireCsOperationInRenewal360RouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/customer-success-platform-for-growing-saas': {
+      id: '/blog/customer-success-platform-for-growing-saas'
+      path: '/customer-success-platform-for-growing-saas'
+      fullPath: '/blog/customer-success-platform-for-growing-saas'
+      preLoaderRoute: typeof BlogCustomerSuccessPlatformForGrowingSaasRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogCustomerSuccessPlatformForGrowingSaasRoute: typeof BlogCustomerSuccessPlatformForGrowingSaasRoute
+  BlogHowToRunYourEntireCsOperationInRenewal360Route: typeof BlogHowToRunYourEntireCsOperationInRenewal360Route
+  BlogZendeskHubspotSalesforceCsPlatformComparisonRoute: typeof BlogZendeskHubspotSalesforceCsPlatformComparisonRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogCustomerSuccessPlatformForGrowingSaasRoute:
+    BlogCustomerSuccessPlatformForGrowingSaasRoute,
+  BlogHowToRunYourEntireCsOperationInRenewal360Route:
+    BlogHowToRunYourEntireCsOperationInRenewal360Route,
+  BlogZendeskHubspotSalesforceCsPlatformComparisonRoute:
+    BlogZendeskHubspotSalesforceCsPlatformComparisonRoute,
+  BlogIndexRoute: BlogIndexRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   FaqRoute: FaqRoute,
   FeaturesRoute: FeaturesRoute,
