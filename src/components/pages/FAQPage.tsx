@@ -11,7 +11,7 @@ export function FAQPage() {
 	});
 
 	const faqs = [
-		{ q: "Is Renewal360 a software or a managed service?", a: "It's both. The core engine is a powerful AI platform, but it operates as a managed service — we handle the AI infrastructure, email delivery, and operational details. You provide your renewal data, approve emails, and track results." },
+		{ q: "Is Renewal360 a software or a managed service?", a: "It's a powerful AI platform that combines the depth of enterprise software with the ease of a managed service. We handle the AI infrastructure, email delivery, and operational details. You provide your renewal data, approve actions, and track results." },
 		{ q: "Do I have to approve every email the AI writes?", a: "Yes — and that's intentional. Every email goes through your team before reaching a customer. You can edit, approve, or reject any email. Once you're comfortable, you can configure auto-send for lower-risk segments." },
 		{ q: "How long does setup take?", a: "About 7 days: Connect data (1–2 days) → Configure templates (1–2 days) → Team training (1 day) → Test batch (1–2 days). Our onboarding team handles the heavy lifting." },
 		{ q: "What happens to my data if I cancel?", a: "We export all your data and email history in a standard format. No lock-in — your data is always yours. You receive a full export within 5 business days." },

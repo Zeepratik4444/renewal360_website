@@ -77,7 +77,7 @@ export const PRICING_DATA: Record<Currency, PricingTier[]> = {
             features: SMB_FEATURES,
             cta: "Get Started",
             ctaLink: "/contact",
-            gainsightNote: "Traditional enterprise tools start at ₹25,00,000/year",
+            gainsightNote: "Traditional enterprise platforms start at ₹25,00,000/year",
         },
         {
             name: "Growth",
@@ -122,7 +122,7 @@ export const PRICING_DATA: Record<Currency, PricingTier[]> = {
             features: SMB_FEATURES,
             cta: "Get Started",
             ctaLink: "/contact",
-            gainsightNote: "Traditional enterprise tools start at $30,000/year",
+            gainsightNote: "Traditional enterprise platforms start at $30,000/year",
         },
         {
             name: "Growth",
@@ -167,7 +167,7 @@ export const PRICING_DATA: Record<Currency, PricingTier[]> = {
             features: SMB_FEATURES,
             cta: "Get Started",
             ctaLink: "/contact",
-            gainsightNote: "Traditional enterprise tools start at €28,000/year",
+            gainsightNote: "Traditional enterprise platforms start at €28,000/year",
         },
         {
             name: "Growth",
@@ -212,7 +212,7 @@ export const PRICING_DATA: Record<Currency, PricingTier[]> = {
             features: SMB_FEATURES,
             cta: "Get Started",
             ctaLink: "/contact",
-            gainsightNote: "Traditional enterprise tools start at £25,000/year",
+            gainsightNote: "Traditional enterprise platforms start at £25,000/year",
         },
         {
             name: "Growth",

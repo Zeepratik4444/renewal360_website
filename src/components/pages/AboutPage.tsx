@@ -44,15 +44,15 @@ export function AboutPage() {
 									cracks or get addressed at the last minute.
 								</p>
 								<p>
-									I looked for tools to automate this workflow, but everything I
+									I looked for platforms to automate this workflow, but everything I
 									found was either too complex (requiring months of setup and
 									dedicated ops resources) or too simple (just basic email
 									templates without intelligence).
 								</p>
 								<p>
-									That's when I decided to build Renewal360: a service that
+									That's when I decided to build Renewal360: a platform that
 									combines AI automation with human oversight, designed
-									specifically for lean SaaS teams who need renewal automation
+									specifically for lean SaaS teams who need a robust CS platform
 									without the operational overhead.
 								</p>
 							</div>
@@ -117,12 +117,12 @@ export function AboutPage() {
 						<Card className="bg-gray-50">
 							<CardContent className="pt-6">
 								<h3 className="text-xl font-bold text-gray-900 mb-3">
-									Not Software
+									The CS Platform
 								</h3>
 								<p className="text-gray-600">
-									Renewal360 is a service, not just software. We handle the
+									Renewal360 is a full CS platform, not just a point solution. We handle the
 									AI, the email infrastructure, and the operational details. You
-									just approve emails and track results.
+									just approve actions and track results.
 								</p>
 							</CardContent>
 						</Card>

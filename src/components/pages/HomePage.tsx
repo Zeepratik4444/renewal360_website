@@ -59,8 +59,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export function HomePage() {
 	useSEO({
-		title: "Renewal360 - AI-Powered SaaS Renewal Automation",
-		description: "Stop losing renewals to silence. Let AI handle the outreach.",
+		title: "Renewal360 - The CS Platform That Prevents Churn",
+		description: "The Customer Success platform built for SaaS teams who can't afford Gainsight.",
 	});
 
 	return (
@@ -73,13 +73,13 @@ export function HomePage() {
 					{/* Competitive badge */}
 					<div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-8 border border-blue-200">
 						<span className="h-2 w-2 rounded-full bg-blue-600 animate-pulse inline-block"></span>
-						Enterprise-grade renewal automation — at 1/5th the price, up in 7 days
+						The Customer Success platform built for growing SaaS teams
 					</div>
 
 					<h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-						Stop losing renewals to silence.
+						The CS platform that
 						<br />
-						<span className="text-blue-600">Let AI handle the outreach.</span>
+						<span className="text-blue-600">actually prevents churn.</span>
 					</h1>
 					<p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
 						Renewal360 integrates multi-factor health scoring and real-time sentiment tracking to identify churn months before the renewal date. Automatically deploy precise, personalised retention outreach—live in just 7 days.
@@ -170,7 +170,7 @@ export function HomePage() {
 					<div className="mt-12 text-center max-w-2xl mx-auto">
 						<p className="text-xl font-semibold text-gray-900">You don't need to hire 3 more CSMs.</p>
 						<p className="text-gray-600 mt-2">
-							You need a smarter system. Renewal360 gives your existing team AI-powered foresight and automated outreach — so no account ever goes quiet again.
+							You need a smarter platform. Renewal360 gives your existing team AI-powered foresight and automated outreach — so no account ever goes quiet again.
 						</p>
 					</div>
 				</div>
@@ -217,9 +217,9 @@ export function HomePage() {
 					</div>
 					<div className="grid md:grid-cols-3 gap-6 mb-10">
 						{[
-							{ icon: <Mail className="h-6 w-6 text-blue-600" />, name: "AI Email Sequences", desc: "Context-aware renewal emails per account at 90, 60, 30, and 7-day milestones." },
-							{ icon: <BarChart3 className="h-6 w-6 text-blue-600" />, name: "Executive Dashboard", desc: "Track your renewal pipeline, team performance, and revenue at risk in real-time." },
-							{ icon: <CheckCircle2 className="h-6 w-6 text-blue-600" />, name: "Human Approval Workflow", desc: "Review, edit, or reject every AI-written email before it leaves your organisation." },
+							{ icon: <Mail className="h-6 w-6 text-blue-600" />, name: "Lifecycle Sequences", desc: "Context-aware automated outreach for onboarding, adoption, and renewals." },
+							{ icon: <BarChart3 className="h-6 w-6 text-blue-600" />, name: "Executive Visibility", desc: "Real-time ARR-at-risk dashboards, team performance, and renewal pipeline metrics." },
+							{ icon: <CheckCircle2 className="h-6 w-6 text-blue-600" />, name: "Human-in-the-Loop AI", desc: "Leverage AI to draft personalized outreach while keeping your CSMs in full control." },
 						].map((f) => (
 							<Card key={f.name} className="hover:-translate-y-1 transition-transform duration-200">
 								<CardHeader>
@@ -392,7 +392,7 @@ export function HomePage() {
 			<section className="py-20 bg-gray-900 text-white">
 				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h2 className="text-3xl md:text-5xl font-bold mb-6">
-						Your next renewal shouldn't depend on<br />someone remembering to follow up.
+						Your next renewal shouldn't depend on<br />someone's manual effort to follow up.
 					</h2>
 					<p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
 						Start your free pilot. 25 accounts. No credit card. Up and running in a week.

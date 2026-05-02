@@ -1,10 +1,8 @@
 # Renewal360
-> AI-powered renewal automation for SaaS Customer Success teams.
+> The CS platform that actually prevents churn.
 
-Renewal360 helps lean SaaS CS teams stop losing renewals to silence. It integrates 
-with your CRM, scores account health using multi-factor AI analysis, drafts 
-personalised renewal outreach emails, routes them through a human approval workflow, 
-and gives executives real-time ARR-at-risk visibility — all live in 7 days.
+Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop losing renewals and scale customer success. It integrates 
+with your CRM, support desk, and email to provide multi-factor health scoring, AI-drafted outreach, and real-time executive visibility—all live in 7 days.
 
 ## Product
 
@@ -55,9 +53,53 @@ and gives executives real-time ARR-at-risk visibility — all live in 7 days.
 - Why SaaS Companies Lose Renewals: https://renewal360.in/blog/why-saas-companies-lose-renewals
 - What is Renewal Automation?: https://renewal360.in/blog/what-is-renewal-automation
 - How Renewal360 Works: https://renewal360.in/blog/how-renewal360-works
+- Customer Success Platform for Growing SaaS: https://renewal360.in/blog/customer-success-platform-for-growing-saas
+- How to Run Your Entire CS Operation in Renewal360: https://renewal360.in/blog/how-to-run-your-entire-cs-operation-in-renewal360
+- Zendesk, HubSpot, & Salesforce CS Platform Comparison: https://renewal360.in/blog/zendesk-hubspot-salesforce-cs-platform-comparison
 
 ## Company
 
 - Product: Renewal360 (renewal360.in)
 - Market: B2B SaaS, India-first, global-ready
 - Built for: SaaS companies with 50–5000 managed accounts
+
+
+## Full Platform Capabilities
+
+### Customer Intelligence
+- Per-account knowledge layer with historical context
+- Multi-factor health scoring (usage, email engagement, support sentiment, CRM signals)
+- Custom fields and data enrichment
+- Performance snapshots and trend tracking
+
+### Lifecycle Management
+- Enrollment workflows across full customer lifecycle
+- Touchpoint tracking and logging
+- Calendar integration for renewal scheduling
+- Survey engine for NPS and CSAT collection
+
+### AI & Automation
+- Gemini-powered email drafting personalised per account
+- Reply-aware sequences (auto-stops on customer reply)
+- AI helper with configurable LLM settings
+- Approval queue — human review before every send
+
+### Integrations
+- CRM: Salesforce (OAuth), HubSpot (OAuth)
+- Support: Zendesk (OAuth)
+- Communication: Slack, Microsoft Teams, Outlook (Microsoft Graph)
+- Email: Gmail (OAuth), IMAP
+- Calendar: Google Calendar, Microsoft Calendar
+
+### Enterprise Features
+- SSO (Single Sign-On)
+- MFA (Multi-Factor Authentication)
+- RBAC (Role-Based Access Control)
+- Multi-tenant architecture
+- Billing and subscription management
+
+### Analytics & Reporting
+- Executive ARR dashboard
+- Renewal pipeline visibility
+- Team performance metrics
+- Analytics module
