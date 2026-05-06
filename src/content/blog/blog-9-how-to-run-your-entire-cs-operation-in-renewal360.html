@@ -1,13 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How to Run Your Entire CS Operation in Renewal360 | Renewal360</title>
-  <meta name="description" content="A guide to using Renewal360 as your primary Customer Success operating system, from health scoring to lifecycle automation." />
+  <meta name="description"
+    content="A complete guide to using Renewal360 as your primary Customer Success operating system — from health scoring and lifecycle automation to executive reporting and AI-assisted outreach." />
+  <meta property="og:title" content="How to Run Your Entire CS Operation in Renewal360" />
+  <meta property="og:description"
+    content="A guide to using Renewal360 as your primary Customer Success operating system, from health scoring to lifecycle automation." />
+  <meta property="og:url" content="https://renewal360.in/blog/how-to-run-your-entire-cs-operation-in-renewal360" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://renewal360.in/blog/how-to-run-your-entire-cs-operation-in-renewal360" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Lora', serif;
+    }
+
+    .prose-content p {
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+      color: #374151;
+    }
+
+    .prose-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #111827;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .prose-content h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1d4ed8;
+      margin: 1.75rem 0 0.5rem;
+    }
+
+    .prose-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    .prose-content ul li {
+      padding: 0.3rem 0 0.3rem 1.75rem;
+      position: relative;
+      color: #374151;
+      line-height: 1.7;
+    }
+
+    .prose-content ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    .step-card {
+      background: #f0f7ff;
+      border-left: 4px solid #2563eb;
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .step-card .step-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #2563eb;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: #1e3a8a;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .step-card p {
+      color: #374151;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .callout {
+      background: #1e3a8a;
+      color: white;
+      border-radius: 0.75rem;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+
+    .callout p {
+      color: #bfdbfe;
+      margin: 0;
+    }
+
+    .callout strong {
+      color: white;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-right: 0.5rem;
+    }
+
+    .timeline-row {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+    }
+
+    .timeline-badge {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      background: #2563eb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      color: white;
+      font-size: 0.85rem;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .timeline-body h4 {
+      font-weight: 600;
+      color: #111827;
+      margin: 0 0 0.25rem;
+    }
+
+    .timeline-body p {
+      color: #6b7280;
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .blog-cta-link {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .blog-cta-link:hover {
+      background: #1d4ed8;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.25rem 0;
+    }
+
+    .faq-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111827;
+      margin: 0 0 0.5rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .week-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .week-badge {
+      flex-shrink: 0;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.25rem;
+      margin-top: 0.2rem;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Run Your Entire CS Operation in Renewal360",
+    "description": "A step-by-step guide to using Renewal360 as your primary Customer Success operating system.",
+    "step": [
+      { "@type": "HowToStep", "name": "Build Your Intelligence Foundation", "text": "Connect your CRM and support desk to create a Per-Account Knowledge Layer." },
+      { "@type": "HowToStep", "name": "Design Your Customer Journeys", "text": "Use the Visual Journey Builder to automate the full customer lifecycle." },
+      { "@type": "HowToStep", "name": "Collect Direct Customer Feedback", "text": "Deploy NPS and CSAT surveys with automated health score integration." },
+      { "@type": "HowToStep", "name": "Execute with Human-in-the-Loop AI", "text": "Review and approve AI-drafted outreach in the daily Approval Queue." },
+      { "@type": "HowToStep", "name": "Run Executive Syncs from the Dashboard", "text": "Use the ARR-at-Risk and renewal pipeline views for real-time leadership reporting." }
+    ],
+    "author": { "@type": "Organization", "name": "Renewal360" },
+    "publisher": { "@type": "Organization", "name": "Renewal360", "url": "https://renewal360.in" }
+  }
+  </script>
 </head>
+
 <body class="bg-white text-gray-900">
+
+  <nav class="border-b border-gray-100 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
+    <a href="/" class="text-xl font-bold text-blue-600" style="font-family:'Lora',serif;">Renewal360</a>
+    <div class="flex gap-6 text-sm text-gray-500">
+      <a href="/features" class="hover:text-blue-600 transition-colors">Features</a>
+      <a href="/pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
+      <a href="/contact" class="hover:text-blue-600 transition-colors">Start Pilot</a>
+    </div>
+  </nav>
+
   <header class="max-w-3xl mx-auto px-6 pt-16 pb-10">
     <div class="mb-5">
       <span class="tag">Tutorial</span>
@@ -19,88 +261,313 @@
       <span class="text-blue-600">Renewal360</span>
     </h1>
     <p class="text-xl text-gray-500 leading-relaxed">
-      You don't need five different tools to manage your customers. Here is how to use Renewal360 as your core CS operating system.
+      You do not need five different tools to manage your customers. Here is the complete playbook for using Renewal360
+      as your core CS operating system — from day one to fully automated.
     </p>
+    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
+      <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm"
+        style="font-family:'Lora',serif;">R</div>
+      <div>
+        <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
+        <div class="text-xs text-gray-400">12 min read · April 2026</div>
+      </div>
+    </div>
   </header>
 
   <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
-    <p>
-      For many teams, "Customer Success" is spread across Salesforce, Zendesk, Slack, and half a dozen spreadsheets. This fragmentation is where churn lives. Renewal360 was designed to consolidate these signals into a single, actionable workspace.
-    </p>
 
     <p>
-      For many teams, "Customer Success" is spread across Salesforce, Zendesk, Slack, and half a dozen spreadsheets. This fragmentation is where churn lives. Renewal360 was designed to consolidate these signals into a single, actionable workspace. 
+      For most CS teams, "customer success" is actually four different jobs running in parallel: CRM administrator,
+      health score analyst, outreach writer, and reporting coordinator. Each role uses a different tool, pulls from a
+      different data source, and produces output that needs to be manually reconciled before anyone can answer the
+      question: "Which accounts need attention this week?"
     </p>
+    <p>
+      This fragmentation is where churn lives. Not in one big failure, but in the accumulated gaps between your
+      Salesforce tab, your Zendesk queue, your email drafts, and your weekly spreadsheet update. Renewal360 was built to
+      close those gaps — consolidating signals, automating execution, and keeping humans in control of the moments that
+      actually matter.
+    </p>
+    <p>
+      Here is a complete walkthrough of how to run your entire CS operation in Renewal360, from the initial setup to
+      running your weekly leadership sync from a single dashboard.
+    </p>
+
+    <h2>Before You Start: What Renewal360 Replaces</h2>
+    <p>
+      Understanding what the platform consolidates helps you plan the migration. Here is what most teams are managing
+      before they switch:
+    </p>
+    <ul>
+      <li><strong>Renewal tracking sheet:</strong> A Google Sheet or Airtable with account names, ARR values, and
+        renewal dates. Often stale, rarely complete. Renewal360 replaces this entirely via live CRM sync.</li>
+      <li><strong>Manual health checks:</strong> CSMs periodically reviewing Zendesk tickets and login activity to
+        assess account risk. Renewal360 replaces this with real-time automated health scoring.</li>
+      <li><strong>Email sequence tool:</strong> A basic drip tool like Mailchimp or HubSpot Sequences, firing on fixed
+        schedules without branching logic. Renewal360 replaces this with the branching Visual Journey Builder.</li>
+      <li><strong>Leadership reporting spreadsheet:</strong> A weekly doc built by scraping multiple tools. Renewal360
+        replaces this with the live ARR-at-Risk and renewal pipeline dashboard.</li>
+      <li><strong>Slack alerts (manual):</strong> CSMs manually posting "@here this account looks at-risk" in a Slack
+        channel. Renewal360 replaces this with automated, threshold-based Slack notifications.</li>
+    </ul>
+
+    <div class="callout">
+      <strong>What this means in practice:</strong>
+      <p class="mt-2">Teams that consolidate onto Renewal360 typically eliminate 8-12 hours of manual weekly effort per
+        CSM — time that shifts directly into account conversations, QBRs, and expansion discussions.</p>
+    </div>
 
     <h2>Step 1: Build Your Intelligence Foundation</h2>
     <p>
-      Running a high-performing CS operation requires a single source of truth. Renewal360 connects to your CRM (Salesforce/HubSpot) and support desk (Zendesk) via secure OAuth. 
+      Running a high-performing CS operation requires a single source of truth about each account. Before any sequence
+      runs or any email gets drafted, Renewal360 needs to know who your customers are, what they pay, when they renew,
+      and how they are actually using your product.
     </p>
     <p>
-      This creates a **Per-Account Knowledge Layer**. Instead of CSMs hunting for data, the platform automatically surfaces:
+      Connect your CRM via OAuth — Salesforce or HubSpot both work natively. The platform maps your deal objects,
+      account objects, and contact records automatically. You can configure custom field mappings if your CRM uses
+      non-standard field names, but the defaults cover 90% of setups without modification.
     </p>
+    <p>
+      Once the CRM sync is live, connect your support desk. Renewal360's Zendesk integration does more than display
+      tickets in a sidebar. It reads ticket categories, resolution times, and the text of ticket descriptions to
+      classify sentiment — a customer with three open "billing dispute" tickets should not receive the same outreach as
+      one with zero open tickets, even if both accounts have identical ARR values and renewal dates.
+    </p>
+
+    <p>This creates what we call a <strong>Per-Account Knowledge Layer</strong>. Instead of CSMs hunting for data across
+      four tools before every call, the platform surfaces automatically:</p>
     <ul>
-      <li><strong>Usage Trends:</strong> Real-time adoption data from your product.</li>
-      <li><strong>Support Sentiment:</strong> AI analysis of Zendesk tickets to flag unhappy users.</li>
-      <li><strong>Engagement Recency:</strong> When was the last time someone actually talked to this account?</li>
-      <li><strong>Contract Reality:</strong> ARR, renewal dates, and expansion opportunities synced directly from your CRM.</li>
+      <li><strong>Usage Trends:</strong> Real-time adoption data showing which features are being used, by how many
+        users, and whether that usage is growing or declining.</li>
+      <li><strong>Support Sentiment:</strong> AI analysis of Zendesk tickets to flag accounts with high frustration
+        signals — even when tickets are technically "resolved."</li>
+      <li><strong>Engagement Recency:</strong> The last time someone from your team actually communicated with this
+        account — email, call, or Slack message.</li>
+      <li><strong>Contract Reality:</strong> ARR, renewal date, tier, expansion history, and open opportunities synced
+        directly from your CRM in real time.</li>
+      <li><strong>Stakeholder Map:</strong> Who the champion contact is, when they last logged in, and whether there
+        have been any personnel changes in the account.</li>
     </ul>
 
     <h2>Step 2: Design Your Customer Journeys</h2>
     <p>
-      A great CS operation is proactive, not reactive. Use our **Visual Journey Builder** to map out the entire customer lifecycle. You can create branching paths based on real customer behavior:
+      A great CS operation is proactive rather than reactive. With your data foundation in place, the next step is
+      mapping out the customer lifecycle and configuring automated journeys that trigger at the right moments.
     </p>
-    <ul>
-      <li><strong>The Perfect Onboarding:</strong> Trigger check-ins at Day 7, 14, and 30 to ensure successful activation.</li>
-      <li><strong>The Adoption Guard:</strong> Automatically alert CSMs in Slack if a customer's usage drops by more than 20%.</li>
-      <li><strong>The Renewal Engine:</strong> Launch T-90, T-60, and T-30 sequences that draft personalized AI outreach for your review.</li>
-    </ul>
+    <p>
+      Open the Visual Journey Builder and start with the journey that protects the most ARR for your team: the renewal
+      sequence. The builder uses a 2D canvas where you can drag and connect steps — emails, Slack messages, CSM task
+      assignments, wait periods, and branch conditions.
+    </p>
+    <p>
+      The renewal sequence most teams start with follows the 90-60-30 framework that consistently outperforms ad-hoc
+      follow-up approaches:
+    </p>
 
-    <div class="callout">
-      <strong>Visual Strategy:</strong>
-      <p class="mt-2">Our 2D canvas makes it easy to see exactly how your customers move through your success playbooks. No complex code, just logical branching based on customer health.</p>
+    <div style="margin: 1.5rem 0;">
+      <div class="timeline-row">
+        <div class="timeline-badge">T-90</div>
+        <div class="timeline-body">
+          <h4>Relationship check-in (not a renewal push)</h4>
+          <p>AI drafts a personalized email asking what is going well and what challenges the account is working
+            through. This opens a dialogue 90 days before renewal — early enough to actually fix problems rather than
+            just surface them. CSM approves in the daily queue before send.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-badge">T-60</div>
+        <div class="timeline-body">
+          <h4>Value recap with account-specific milestones</h4>
+          <p>The AI pulls real usage data from the account and drafts an email summarising outcomes, adoption
+            milestones, and — where warranted — a natural lead into expansion conversation. The goal is anchoring the
+            customer's mental model around ROI before commercial terms come up.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-badge">T-30</div>
+        <div class="timeline-body">
+          <h4>Commercial conversation trigger</h4>
+          <p>Introduce renewal terms and request a call. For accounts with health scores below 60, this step
+            automatically branches — instead of a standard email, a Slack alert goes to the CSM to initiate a direct
+            champion outreach manually.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-badge">T-14</div>
+        <div class="timeline-body">
+          <h4>Confirmation or escalation</h4>
+          <p>For accounts that have confirmed renewal, send a confirmation and next steps. For accounts that have gone
+            silent despite all prior touchpoints, trigger an executive escalation alert in Slack and pause automated
+            outreach — manual intervention takes over at this point.</p>
+        </div>
+      </div>
     </div>
 
-    <h2>Step 3: Direct Feedback via the Survey Engine</h2>
     <p>
-      Don't just guess how your customers feel. Renewal360 includes a **Native Survey Engine** for NPS and CSAT collection. 
+      Once the renewal sequence is live, build your secondary journeys. The onboarding journey protects first-year
+      renewal rates by ensuring activation happens within the first 30 days. The at-risk intervention journey triggers
+      automatically when health score drops below your configured threshold — regardless of where the account sits in
+      the renewal calendar.
+    </p>
+
+    <h2>Step 3: Collect Direct Feedback via the Survey Engine</h2>
+    <p>
+      Health scores built purely from behavioral signals are valuable, but they are incomplete. A customer can have
+      healthy usage metrics while sitting on a decision to not renew because of a relationship or pricing issue that no
+      product data will surface.
+    </p>
+    <p>
+      Renewal360 includes a native Survey Engine for NPS and CSAT collection. Surveys are delivered through the same
+      sequence infrastructure — meaning you can trigger them from the Journey Builder based on account behavior, renewal
+      timeline, or manual CSM action.
     </p>
     <ul>
-      <li><strong>Automated Triggers:</strong> Send surveys after a support ticket is closed or 45 days before a renewal.</li>
-      <li><strong>Health Score Integration:</strong> Survey results feed directly back into the account's health score.</li>
-      <li><strong>Closing the Loop:</strong> Low scores automatically trigger an "Escalation" task for the CSM.</li>
+      <li><strong>Trigger: 45 days before renewal.</strong> An NPS survey identifies advocates (potential case study or
+        expansion candidates) and detractors (accounts that need immediate human attention) well before the commercial
+        conversation starts.</li>
+      <li><strong>Trigger: 24 hours after support ticket resolved.</strong> A CSAT survey captures real sentiment while
+        the experience is fresh — not two months later in an annual review.</li>
+      <li><strong>Trigger: 30 days after onboarding completion.</strong> A pulse check identifies activation gaps early
+        enough to actually address them in the critical first renewal cycle.</li>
     </ul>
+    <p>
+      Survey results feed directly back into the health score. An NPS score of 9 or 10 raises the account's health
+      calculation. A score of 6 or below triggers an automatic "Escalation" task assignment to the CSM with priority
+      flagging. No manual routing required — the moment a low score comes in, the right person is notified.
+    </p>
 
     <h2>Step 4: Execute with Human-in-the-Loop AI</h2>
     <p>
-      The biggest bottleneck in any CS operation is manual writing. Renewal360 solves this with AI that drafts your outreach while keeping you in control.
+      The biggest operational bottleneck in any CS team is the time it takes to write good outreach. Not templates —
+      genuinely personalized emails that reference the specific customer's situation, usage, and relationship history.
+      Most CSMs can write 5-8 of these well before quality degrades due to time pressure.
     </p>
     <p>
-      Every email lands in your **Approval Queue**. You can approve, edit, or reject the AI's work in seconds. This allows a single CSM to manage 5x more accounts without losing the personal touch that prevents churn.
+      Renewal360's AI drafting engine removes this constraint. For every email that a Journey triggers, the AI reads the
+      account's full knowledge layer — CRM data, support history, usage trends, survey scores, previous email threads —
+      and produces a draft that reads like a CSM wrote it specifically for that account.
+    </p>
+    <p>
+      Every draft goes to the Approval Queue before it leaves the platform. The CSM sees the draft, the account context
+      it was built from, and any relevant flags (open tickets, recent usage changes, prior email thread) in a single
+      view. Approval, edit, or rejection takes seconds. Rejections feed back into the AI to improve future drafts for
+      similar accounts.
     </p>
 
     <div class="step-card">
+      <div class="step-num">Key Feature</div>
       <h3>Reply-Aware Automation</h3>
-      <p>The moment a customer responds to any sequence, Renewal360 stops the automation and notifies you in Slack. Your team only spends time on active conversations that need their expertise.</p>
+      <p>The moment a customer responds to any email in a sequence, Renewal360 stops the automation for that account and
+        notifies the assigned CSM via Slack. No further automated emails are sent until the CSM manually resumes or
+        closes the sequence. Your team only spends time on live conversations — not on managing automation exceptions.
+      </p>
     </div>
 
-    <h2>Step 5: Run Your Syncs from the Executive Dashboard</h2>
     <p>
-      Stop spending hours preparing for weekly syncs. Use our **Executive Dashboard** to see:
+      This means a CSM managing 150 accounts never has to worry about a customer receiving an automated follow-up email
+      after they have already replied and started a direct conversation. The system knows. The sequence pauses. The CSM
+      takes over.
+    </p>
+
+    <h2>Step 5: Run Leadership Syncs from the Executive Dashboard</h2>
+    <p>
+      The final piece of a consolidated CS operation is eliminating the weekly reporting effort that most CS leaders
+      dread. Compiling ARR-at-risk numbers from Salesforce, cross-referencing with health scores from a CS platform,
+      pulling email performance from a separate tool, and formatting it into a board-ready slide — this work adds no
+      value. It just transfers information that already exists in multiple systems into one document.
+    </p>
+    <p>
+      Renewal360's Executive Dashboard maintains this view continuously and automatically. Walk into your Monday
+      leadership sync and share your screen. The data is live.
     </p>
     <ul>
-      <li><strong>ARR-at-Risk:</strong> The real dollar value tied to upcoming renewals.</li>
-      <li><strong>Renewal Pipeline:</strong> A clear 12-month forecast of your retention revenue.</li>
-      <li><strong>Team Performance:</strong> Track approval rates, response times, and saved ARR per CSM.</li>
+      <li><strong>ARR-at-Risk:</strong> The real dollar value tied to accounts with health scores below your configured
+        risk threshold, broken down by renewal month.</li>
+      <li><strong>Renewal Pipeline:</strong> A 12-month forward view of ARR coming up for renewal, with status
+        indicators showing which accounts are on track, at-risk, or already in active renewal conversations.</li>
+      <li><strong>Team Performance:</strong> Approval rates, average time-to-approve, outreach response rates, and saved
+        ARR per CSM — giving managers visibility into both efficiency and outcomes.</li>
+      <li><strong>Health Score Distribution:</strong> A snapshot of your entire customer base segmented by health score
+        bracket, so you can see if the overall portfolio is trending better or worse month-over-month.</li>
     </ul>
 
+    <div class="callout">
+      <strong>The weekly sync shift:</strong>
+      <p class="mt-2">Teams that move their leadership sync to the Renewal360 dashboard report cutting prep time from
+        2-3 hours per week to under 15 minutes — while providing more accurate and timely data than any manual report
+        could.</p>
+    </div>
+
+    <h2>Building a Weekly CS Rhythm in Renewal360</h2>
     <p>
-      By moving your entire operation into Renewal360, you replace "hoping for the best" with a repeatable, scalable engine for customer success.
+      Once your journeys are configured and your integrations are live, the platform settles into a rhythm that replaces
+      the fragmented multi-tool workflow most teams currently run. Here is what a typical week looks like:
+    </p>
+    <ul>
+      <li><strong>Daily (10 minutes):</strong> Review and approve the morning's AI-drafted emails in the Approval Queue.
+        Respond to any Slack alerts triggered overnight for at-risk accounts or dropped usage signals.</li>
+      <li><strong>Monday (20 minutes):</strong> Open the Executive Dashboard to review the week's renewal pipeline. Flag
+        any accounts that need escalation or manual intervention. Assign CSM tasks directly from the dashboard.</li>
+      <li><strong>Wednesday (30 minutes):</strong> Review survey responses that came in during the week. For any NPS
+        detractors, the escalation tasks are already created — focus on planning the intervention, not tracking who
+        needs it.</li>
+      <li><strong>Friday (15 minutes):</strong> Check the weekly health score movement report. Identify accounts that
+        have improved or declined significantly. Adjust sequence priorities or reassign accounts as needed.</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Can we migrate our existing renewal data into Renewal360?</h3>
+      <p>Yes. The CRM OAuth sync handles the majority of active accounts automatically. For historical data or accounts
+        not in your CRM, a CSV import is available. Bulk imports of up to 5,000 accounts are supported in a single
+        operation.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can multiple CSMs work in the platform simultaneously?</h3>
+      <p>Yes. Each CSM has their own account assignments, approval queues, and task lists. Managers have visibility
+        across all CSMs and can reassign accounts or review any CSM's approval history. Role-based access controls
+        prevent cross-account data exposure.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How does Renewal360 handle accounts that go silent mid-sequence?</h3>
+      <p>The platform tracks engagement at each touchpoint. If an account shows zero email opens across three
+        consecutive sequence emails, the system flags it as "unresponsive" and can trigger a different branch — such as
+        a Slack-based CSM task to attempt a direct call, or an executive escalation alert.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can we build journeys for onboarding and not just renewals?</h3>
+      <p>Yes. The Visual Journey Builder supports any lifecycle stage — onboarding, adoption, expansion, and renewal.
+        Most teams build three to five journeys: a welcome sequence, a 30-day activation check-in, an at-risk
+        intervention, a renewal sequence, and an expansion trigger for high-health accounts at usage cap.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does the AI learn from our edits to improve over time?</h3>
+      <p>Yes. When a CSM edits an AI draft before approval, the edit is captured as feedback for that account segment.
+        Over time, the AI drafts become progressively more aligned with your team's tone and the specific patterns that
+        resonate with your customer base.</p>
+    </div>
+
+    <p>
+      By moving your entire CS operation into Renewal360, you replace "hoping for the best" with a repeatable,
+      measurable, and scalable engine for customer success. The tools stay out of your way. The insights surface
+      automatically. Your team focuses on relationships — not administration.
     </p>
 
     <p>
       <a href="/contact" class="blog-cta-link">Book a platform walkthrough to see it in action</a>
     </p>
+
+    <p style="margin-top: 2.5rem; font-size: 0.85rem; color: #9ca3af;">
+      Related reading:
+      <a href="/blog/how-to-automate-saas-renewal-emails" style="color: #2563eb;">How to Automate SaaS Renewal
+        Emails</a> ·
+      <a href="/blog/customer-success-platform-for-growing-saas" style="color: #2563eb;">The CS Platform Built for
+        Growing SaaS</a> ·
+      <a href="/blog/zendesk-hubspot-salesforce-cs-platform-comparison" style="color: #2563eb;">Zendesk, HubSpot, and
+        Salesforce: The CS Integration Guide</a>
+    </p>
   </main>
 </body>
+
 </html>

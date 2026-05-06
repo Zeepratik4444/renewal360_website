@@ -1,13 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zendesk, HubSpot, & Salesforce: Choosing the Right CS Platform Integration | Renewal360</title>
-  <meta name="description" content="How to choose a Customer Success platform based on your existing CRM and support stack. Why deep integrations are the secret to preventing churn." />
+  <title>Zendesk, HubSpot & Salesforce: The Complete CS Platform Integration Guide | Renewal360</title>
+  <meta name="description"
+    content="How to choose the right CS platform based on your existing Zendesk, HubSpot, or Salesforce stack. A detailed comparison of native CS tools vs. purpose-built platforms like Renewal360, with integration architecture explained." />
+  <meta property="og:title" content="Zendesk, HubSpot & Salesforce: The Complete CS Platform Integration Guide" />
+  <meta property="og:description"
+    content="How to choose a Customer Success platform based on your existing CRM and support stack. Why deep integrations are the secret to preventing churn." />
+  <meta property="og:url" content="https://renewal360.in/blog/zendesk-hubspot-salesforce-cs-platform-comparison" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://renewal360.in/blog/zendesk-hubspot-salesforce-cs-platform-comparison" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Lora', serif;
+    }
+
+    .prose-content p {
+      margin-bottom: 1.25rem;
+      line-height: 1.8;
+      color: #374151;
+    }
+
+    .prose-content h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #111827;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .prose-content h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1d4ed8;
+      margin: 1.75rem 0 0.5rem;
+    }
+
+    .prose-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.25rem;
+    }
+
+    .prose-content ul li {
+      padding: 0.3rem 0 0.3rem 1.75rem;
+      position: relative;
+      color: #374151;
+      line-height: 1.7;
+    }
+
+    .prose-content ul li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+      font-weight: 600;
+    }
+
+    .step-card {
+      background: #f0f7ff;
+      border-left: 4px solid #2563eb;
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .step-card .step-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #2563eb;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: #1e3a8a;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .step-card p {
+      color: #374151;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .callout {
+      background: #1e3a8a;
+      color: white;
+      border-radius: 0.75rem;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+    }
+
+    .callout p {
+      color: #bfdbfe;
+      margin: 0;
+    }
+
+    .callout strong {
+      color: white;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-right: 0.5rem;
+    }
+
+    .comparison-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .comparison-table th {
+      background: #1e3a8a;
+      color: white;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .comparison-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid #e5e7eb;
+      color: #374151;
+      vertical-align: top;
+    }
+
+    .comparison-table tr:nth-child(even) td {
+      background: #f9fafb;
+    }
+
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .blog-cta-link {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+
+    .blog-cta-link:hover {
+      background: #1d4ed8;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e5e7eb;
+      padding: 1.25rem 0;
+    }
+
+    .faq-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111827;
+      margin: 0 0 0.5rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: #4b5563;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .signal-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .signal-card h4 {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #111827;
+      margin: 0 0 0.4rem;
+    }
+
+    .signal-card p {
+      color: #6b7280;
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Zendesk, HubSpot & Salesforce: The Complete CS Platform Integration Guide",
+    "description": "How to choose the right CS platform based on your existing Zendesk, HubSpot, or Salesforce stack.",
+    "author": { "@type": "Organization", "name": "Renewal360" },
+    "publisher": { "@type": "Organization", "name": "Renewal360", "url": "https://renewal360.in" },
+    "url": "https://renewal360.in/blog/zendesk-hubspot-salesforce-cs-platform-comparison",
+    "datePublished": "2026-04-10"
+  }
+  </script>
 </head>
+
 <body class="bg-white text-gray-900">
+
+  <nav class="border-b border-gray-100 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
+    <a href="/" class="text-xl font-bold text-blue-600" style="font-family:'Lora',serif;">Renewal360</a>
+    <div class="flex gap-6 text-sm text-gray-500">
+      <a href="/features" class="hover:text-blue-600 transition-colors">Features</a>
+      <a href="/pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
+      <a href="/contact" class="hover:text-blue-600 transition-colors">Start Pilot</a>
+    </div>
+  </nav>
+
   <header class="max-w-3xl mx-auto px-6 pt-16 pb-10">
     <div class="mb-5">
       <span class="tag">Integrations</span>
@@ -15,85 +253,334 @@
       <span class="tag">Buying Guide</span>
     </div>
     <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-      Zendesk, HubSpot, & Salesforce:
+      Zendesk, HubSpot, and Salesforce:
       <span class="text-blue-600">The Modern CS Integration Guide</span>
     </h1>
     <p class="text-xl text-gray-500 leading-relaxed">
-      Your CS platform is only as good as the data it can see. Here is how to build a unified view of your customers without the "integration tax."
+      Your CS platform is only as good as the data it can see. Here is how to build a unified customer view across your
+      support, CRM, and success tools — without the "integration tax" that kills most implementations.
     </p>
+    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
+      <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm"
+        style="font-family:'Lora',serif;">R</div>
+      <div>
+        <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
+        <div class="text-xs text-gray-400">11 min read · April 2026</div>
+      </div>
+    </div>
   </header>
 
   <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+
     <p>
-      In modern SaaS, customer success is a team sport. Your support team uses <strong>Zendesk</strong>, your sales team uses <strong>Salesforce</strong> or <strong>HubSpot</strong>, and your CS team is often left trying to bridge the gap.
+      In modern SaaS, preventing churn is a team sport. Your support team lives in <strong>Zendesk</strong>. Your sales
+      team built their workflow around <strong>Salesforce</strong> or <strong>HubSpot</strong>. Your CS team is
+      somewhere in between — trying to bridge the gap with a combination of browser tabs, exported CSVs, and Slack
+      messages that say "hey, can you check if this account is at risk?"
     </p>
     <p>
-      Choosing a CS platform shouldn't mean adding another data silo. It should mean unifying your existing ones. Here is how Renewal360 integrates with your core stack to create a "Customer 360" view.
+      The most common question we hear from growing CS teams evaluating platforms is not "what features do you have?" It
+      is "how does it connect to what we already use?" This guide answers that question in depth — walking through how
+      Renewal360 integrates with each of the three most common tools in a SaaS CS stack, what data flows where, and why
+      integration architecture matters far more than feature lists when it comes to preventing churn.
     </p>
 
-    <h2>The CRM Connection: Salesforce & HubSpot</h2>
+    <h2>Why Integration Architecture Determines CS Outcomes</h2>
     <p>
-      A CS platform needs to know who the customer is, what they pay, and when they renew. Renewal360 uses OAuth-based integrations with Salesforce and HubSpot to pull this data automatically.
+      A CS platform's value is a direct function of the quality and completeness of the data it can act on. A platform
+      that can access only your CRM contacts and renewal dates can tell you when to reach out — but it cannot tell you
+      <em>why</em> an account is at risk, or adapt its outreach based on what is actually happening with the customer.
+    </p>
+    <p>
+      The most common failure pattern we see in CS integrations is what we call the <strong>"one-way read"
+        problem</strong>: the CS platform pulls data from your CRM during initial setup, uses that snapshot to configure
+      health scores, and then slowly drifts out of sync as reality changes. New contacts are added in Salesforce but not
+      reflected in the CS platform. Support tickets escalate in Zendesk but the health score does not update until
+      someone runs a manual re-sync.
+    </p>
+    <p>
+      By the time the CSM looks at the account health dashboard, the data is three weeks old. The score says "healthy"
+      because it was healthy three weeks ago — before the customer filed two high-priority tickets, before their
+      champion contact left the company, and before product usage dropped 40%.
+    </p>
+
+    <div class="callout">
+      <strong>The Renewal360 integration principle:</strong>
+      <p class="mt-2">All integrations are bi-directional and continuous. We do not read your data once — we maintain a
+        live sync that updates health scores, triggers sequence actions, and routes Slack alerts in real time as your
+        customer reality changes. Stale data causes churn. Live data prevents it.</p>
+    </div>
+
+    <h2>The CRM Connection: Salesforce and HubSpot</h2>
+    <p>
+      CRM is the foundation of customer identity. Before Renewal360 can score, sequence, or surface an account, it needs
+      to know who the customer is, what they pay, when their contract renews, and who the key contacts are. Both
+      Salesforce and HubSpot integrations handle this through OAuth 2.0 — no engineering work, no API tokens to manage,
+      no custom Zapier flows to maintain.
+    </p>
+
+    <h3>Salesforce Integration: What Gets Synced</h3>
+    <p>
+      The Salesforce connector maps to your Account, Contact, Opportunity, and Contract objects. Custom fields are fully
+      supported — if you track a custom "tier" field or a custom "implementation date" field on your Account object, you
+      can map those directly into Renewal360's health scoring engine as additional weighted signals.
     </p>
     <ul>
-      <li><strong>Salesforce:</strong> Map any custom object or field to drive health scores.</li>
-      <li><strong>HubSpot:</strong> Sync contacts and deal stages in real time.</li>
+      <li><strong>Account object:</strong> Account name, industry, region, owner CSM assignment, custom metadata fields
+      </li>
+      <li><strong>Opportunity object:</strong> ARR value, close date, renewal date, contract term, expansion
+        opportunities</li>
+      <li><strong>Contact object:</strong> Champion contact name, email, title, last activity date, executive sponsor
+        linkage</li>
+      <li><strong>Activity history:</strong> Logged calls, emails, and notes from your Salesforce timeline pulled into
+        Renewal360's account activity feed</li>
     </ul>
-
-    <h2>The Support Signal: Zendesk</h2>
     <p>
-      Support tickets are often the earliest indicator of churn. If a customer has three open "High Priority" tickets, they shouldn't be receiving a "Happy Renewal" email. 
+      Changes in Salesforce propagate to Renewal360 within minutes. When a deal is marked "Closed-Won" in Salesforce,
+      the account automatically enrolls in Renewal360's onboarding journey. When a renewal date is updated, the active
+      sequence recalibrates its timing. When a champion contact is replaced, the system flags the account for CSM
+      review.
+    </p>
+
+    <h3>HubSpot Integration: What Gets Synced</h3>
+    <p>
+      HubSpot's data model is contact-centric rather than account-centric, which requires a slightly different mapping
+      approach. Renewal360 handles this automatically — grouping contacts by company association and treating the
+      company record as the account-level entity for health scoring purposes.
+    </p>
+    <ul>
+      <li><strong>Company record:</strong> Account identity, ARR (from deal value), renewal date, lifecycle stage</li>
+      <li><strong>Contact records:</strong> All associated contacts, with the primary contact flagged as the outreach
+        target</li>
+      <li><strong>Deal records:</strong> Contract value, close date, deal stage — mapped to Renewal360's renewal
+        pipeline</li>
+      <li><strong>Email activity:</strong> HubSpot-logged email activity pulled into the account engagement timeline
+      </li>
+    </ul>
+    <p>
+      For teams using HubSpot's built-in sequence tools, Renewal360 replaces that functionality with a more capable
+      branching system — while continuing to log all outreach back to HubSpot contact records so your sales team's CRM
+      view stays accurate.
+    </p>
+
+    <h2>The Support Signal: Zendesk Integration</h2>
+    <p>
+      Support tickets are often the earliest and most reliable indicator of churn risk. A customer who has filed three
+      high-priority tickets in the past 30 days is fundamentally different from one with zero open issues — even if both
+      accounts have identical product usage metrics and renewal dates.
     </p>
     <p>
-      Renewal360's **Zendesk integration** does more than just show tickets. It analyzes ticket sentiment and volume to automatically adjust the account's health score. If support load is high, the system flags the CSM and can even pause automated outreach until the issues are resolved.
+      The problem is that most CS platforms treat Zendesk as a data display layer: they show tickets in a sidebar.
+      Renewal360 treats Zendesk as an intelligence signal: we analyze tickets and use them to actively adjust account
+      health scores and trigger sequence actions.
+    </p>
+
+    <div class="signal-card">
+      <h4>Signal: Ticket Volume</h4>
+      <p>A spike in ticket volume (more than 3 tickets in 7 days) automatically lowers the account's health score and
+        triggers a CSM Slack alert. The severity depends on account tier — enterprise accounts get immediate alerts, SMB
+        accounts get daily digest notifications.</p>
+    </div>
+    <div class="signal-card">
+      <h4>Signal: Ticket Sentiment</h4>
+      <p>Renewal360's AI reads ticket descriptions and classifies them by emotional tone — frustrated, neutral, or
+        satisfied. A "resolved" ticket with frustrated language scores differently than a genuinely resolved support
+        interaction. The cumulative sentiment across the past 30 days feeds directly into the health score.</p>
+    </div>
+    <div class="signal-card">
+      <h4>Signal: Resolution Time</h4>
+      <p>Tickets open for more than 5 business days flag a separate "support lag" signal. High-priority tickets with
+        long resolution times correlate strongly with churn in the next 90 days — flagging them proactively gives your
+        support and CS teams time to coordinate an intervention.</p>
+    </div>
+    <div class="signal-card">
+      <h4>Signal: Sequence Pause Trigger</h4>
+      <p>If an account has two or more open unresolved tickets, Renewal360 automatically pauses any active renewal
+        sequences for that account. A customer with open complaints should not receive a "happy renewal" email — pausing
+        ensures the support issue is resolved before CS outreach resumes.</p>
+    </div>
+
+    <h2>How the Three-Way Integration Creates a Customer 360 View</h2>
+    <p>
+      The value of connecting all three tools simultaneously is greater than the sum of the individual integrations.
+      When Salesforce, HubSpot, and Zendesk all feed into a single health scoring engine, the system can identify churn
+      risk patterns that no individual data source would surface alone.
+    </p>
+    <p>
+      Consider this example: An account has healthy product usage metrics. Their Salesforce record shows the renewal is
+      75 days out. In isolation, both signals look fine. But Zendesk shows the champion contact filed two "billing
+      dispute" tickets last week, and the HubSpot timeline shows zero CSM-initiated contact in 45 days. The combined
+      signal — support friction + engagement gap at T-75 — is a high-risk pattern that triggers a specific intervention
+      sequence automatically.
     </p>
 
     <div class="comparison-table-wrap">
       <table class="comparison-table">
         <thead>
           <tr>
-            <th>Feature</th>
-            <th>Native CRM "CS" Tools</th>
+            <th>Capability</th>
+            <th>Native CRM CS Tools</th>
             <th>Renewal360 Integration</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Health Scoring</td>
-            <td>Basic / Manual</td>
-            <td>Multi-factor (Usage + Support + Email)</td>
+            <td>Basic / Manual — typically just renewal date and deal value</td>
+            <td>Multi-factor: usage + support sentiment + engagement recency + payment history + NPS</td>
           </tr>
           <tr>
-            <td>AI Email Outreach</td>
-            <td>Generic Templates</td>
-            <td>Account-specific AI drafts</td>
+            <td>Sequence Logic</td>
+            <td>Linear drip — fires on schedule regardless of account behavior</td>
+            <td>Branching — adapts based on health score, reply detection, and trigger events</td>
+          </tr>
+          <tr>
+            <td>AI Email Drafting</td>
+            <td>Generic templates with merge fields</td>
+            <td>Account-specific drafts built from full knowledge layer — usage data, support history, prior emails</td>
           </tr>
           <tr>
             <td>Reply Detection</td>
-            <td>None</td>
-            <td>Automatic sequence pause</td>
+            <td>None — sequences continue after customer replies</td>
+            <td>IMAP monitoring — sequences pause immediately on reply, CSM notified via Slack</td>
           </tr>
           <tr>
-            <td>Executive View</td>
-            <td>Complex Reports</td>
-            <td>Real-time ARR-at-risk dashboard</td>
+            <td>Support Signal Integration</td>
+            <td>Ticket list display only</td>
+            <td>Sentiment analysis, health score impact, sequence pause trigger, escalation routing</td>
+          </tr>
+          <tr>
+            <td>Bi-directional Sync</td>
+            <td>One-way read from CRM at setup</td>
+            <td>Continuous live sync — changes in CRM propagate to Renewal360 within minutes</td>
+          </tr>
+          <tr>
+            <td>Executive Reporting</td>
+            <td>Complex report builder — requires manual configuration per report</td>
+            <td>Live ARR-at-Risk dashboard with 12-month renewal pipeline — no configuration required</td>
+          </tr>
+          <tr>
+            <td>Approval Workflow</td>
+            <td>None — emails send automatically or require manual individual scheduling</td>
+            <td>Human-in-the-Loop Approval Queue — every AI draft reviewed before send</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <h2>Why Integrations Fail (And How We Fixed It)</h2>
+    <h2>Why Most Integration Approaches Fail</h2>
     <p>
-      Most integrations fail because they are "one-way syncs" that create stale data. Renewal360 uses **bi-directional intelligence**. We don't just read your CRM; we use those signals to drive actions in the real world—sending emails, booking meetings on Google/Microsoft calendars, and alerting your team in Slack.
+      The most common way teams try to solve the "data fragmentation" problem is with point-to-point integrations — a
+      Zapier flow between Zendesk and Slack, a Salesforce webhook pushing to a spreadsheet, a HubSpot sequence that
+      sometimes fires and sometimes does not. This approach creates a different fragmentation problem: a network of
+      brittle connections that each require maintenance and each have their own failure modes.
+    </p>
+    <p>
+      The second common failure is treating integrations as a one-time configuration step. You connect the tools, data
+      flows for a while, and then someone changes a field name in Salesforce or a Zendesk API update breaks the mapping
+      — and the CS team does not notice for three weeks because everything looks normal on the surface.
     </p>
 
+    <div class="step-card">
+      <div class="step-num">How Renewal360 Handles This</div>
+      <h3>Resilient Integration Architecture</h3>
+      <p>All integrations use OAuth 2.0 with automatic token refresh. Field mappings include validation alerts — if a
+        mapped Salesforce field is renamed or deleted, you see an immediate notification in Renewal360 before it affects
+        health scoring. Integration health is displayed on the platform's status dashboard so nothing drifts silently.
+      </p>
+    </div>
+
+    <h2>Planning Your Integration: A Decision Framework</h2>
     <p>
-      If your team is struggling to see the "Full Picture," it's time to move past basic CRM views and toward a truly integrated CS platform.
+      If you are evaluating CS platforms based on your existing stack, here is a quick framework for thinking through
+      what to prioritize:
+    </p>
+
+    <h3>If your primary CRM is Salesforce</h3>
+    <p>
+      Prioritize custom object mapping support and bi-directional sync for activity logging. Salesforce implementations
+      vary significantly by company — the right CS platform should handle non-standard configurations without requiring
+      you to flatten your data model.
+    </p>
+
+    <h3>If your primary CRM is HubSpot</h3>
+    <p>
+      Prioritize company-level health scoring and deal stage automation. HubSpot's contact-centric model needs a CS
+      platform that intelligently aggregates contact signals to the account level without losing individual contact
+      context.
+    </p>
+
+    <h3>If your support desk is Zendesk</h3>
+    <p>
+      Prioritize sentiment analysis and health score integration — not just ticket display. A CS platform that treats
+      Zendesk as a data visualization tool is missing the most valuable signal your support system produces.
+    </p>
+
+    <h3>If you use Slack for team communication</h3>
+    <p>
+      Prioritize proactive alerting over weekly digest reports. At-risk signals, reply notifications, and approval queue
+      summaries should reach your team where they already work — not require a separate login to a dashboard they will
+      check infrequently.
+    </p>
+
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>Do we need both Salesforce and HubSpot connected, or just one?</h3>
+      <p>Renewal360 works with either as your primary CRM — you do not need both. If your org uses HubSpot for marketing
+        and Salesforce for sales, you can designate one as the primary account data source and use the other for
+        supplementary signals only.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What happens if our Zendesk has custom ticket fields?</h3>
+      <p>Custom ticket fields are fully supported. During Zendesk setup, you map your custom fields to Renewal360's
+        signal categories. For example, a custom "Product Area" field can be mapped to drive product-specific health
+        score adjustments.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Can Renewal360 write data back to Salesforce, or is it read-only?</h3>
+      <p>Renewal360 can log activities back to Salesforce — including outreach emails sent, sequence enrollments, and
+        health score changes. This keeps your Salesforce account timeline accurate for your sales team without requiring
+        them to use Renewal360 directly.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does the integration work if we are on Zendesk Suite vs. Zendesk Support?</h3>
+      <p>Yes. The Renewal360 Zendesk integration works across all Zendesk plan tiers. Features available depend on your
+        Zendesk subscription — for example, full ticket analytics require the Zendesk Suite plan for API access to all
+        ticket metadata.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How does Renewal360 handle accounts that are in both HubSpot and Salesforce?</h3>
+      <p>If your org has both systems, you designate a primary CRM for account identity and a secondary for
+        supplementary data. Renewal360 deduplicates accounts by domain matching and merges signals from both sources
+        into a single health score view.</p>
+    </div>
+    <div class="faq-item">
+      <h3>We use Freshdesk instead of Zendesk. Is that supported?</h3>
+      <p>Freshdesk integration is on our active roadmap. In the meantime, Freshdesk data can be piped into Renewal360
+        via webhook for real-time ticket signal ingestion. Contact our team for setup guidance specific to your
+        Freshdesk configuration.</p>
+    </div>
+
+    <p>
+      If your team is struggling to get a full picture of customer health across your Zendesk, Salesforce, and HubSpot
+      data — it is not a data problem. It is an integration architecture problem. Renewal360 was built to solve exactly
+      that.
     </p>
 
     <p>
       <a href="/contact" class="blog-cta-link">Connect your stack and see the difference in 7 days</a>
     </p>
+
+    <p style="margin-top: 2.5rem; font-size: 0.85rem; color: #9ca3af;">
+      Related reading:
+      <a href="/blog/how-to-automate-saas-renewal-emails" style="color: #2563eb;">How to Automate SaaS Renewal
+        Emails</a> ·
+      <a href="/blog/how-to-run-your-entire-cs-operation-in-renewal360" style="color: #2563eb;">How to Run Your Entire
+        CS Operation in Renewal360</a> ·
+      <a href="/blog/customer-success-platform-for-growing-saas" style="color: #2563eb;">The CS Platform Built for
+        Growing SaaS Teams</a>
+    </p>
   </main>
 </body>
+
 </html>
