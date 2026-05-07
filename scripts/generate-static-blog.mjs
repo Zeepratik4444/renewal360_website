@@ -129,6 +129,14 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${escapedTitle}" />
   <meta name="twitter:description" content="${escapedDescription}" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:image" content="https://renewal360.in/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://renewal360.in/og-image.png" />
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <style>
     :root { color-scheme: light; }
@@ -246,7 +254,7 @@ function renderPost(post) {
 		description: post.description,
 		url: `${siteUrl}${canonicalPath}`,
 		datePublished: post.publishedAt,
-		dateModified: post.publishedAt,
+		dateModified: "2026-05-07",
 		author: {
 			"@type": "Organization",
 			name: "Renewal360",
