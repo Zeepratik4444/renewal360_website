@@ -194,12 +194,12 @@ export function Blog9Page() {
                     <h2 className="text-xl font-bold text-gray-900 mb-4">Related Reading</h2>
                     <ul className="space-y-2">
                         <li>
-                            <Link to="/blog/customer-success-platform-for-growing-saas" className="text-blue-600 hover:underline">
+                            <Link to="/blog/$slug" params={{ slug: "customer-success-platform-for-growing-saas" }} className="text-blue-600 hover:underline">
                                 The CS Platform Built for Growing SaaS Teams
                             </Link>
                         </li>
                         <li>
-                            <Link to="/blog/zendesk-hubspot-salesforce-cs-platform-comparison" className="text-blue-600 hover:underline">
+                            <Link to="/blog/$slug" params={{ slug: "zendesk-hubspot-salesforce-cs-platform-comparison" }} className="text-blue-600 hover:underline">
                                 Zendesk, HubSpot and Salesforce: The Modern CS Integration Guide
                             </Link>
                         </li>

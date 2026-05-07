@@ -197,12 +197,12 @@ export function Blog10Page() {
                     <h2 className="text-xl font-bold text-gray-900 mb-4">Related Reading</h2>
                     <ul className="space-y-2">
                         <li>
-                            <Link to="/blog/customer-success-platform-for-growing-saas" className="text-blue-600 hover:underline">
+                            <Link to="/blog/$slug" params={{ slug: "customer-success-platform-for-growing-saas" }} className="text-blue-600 hover:underline">
                                 The CS Platform Built for Growing SaaS Teams
                             </Link>
                         </li>
                         <li>
-                            <Link to="/blog/how-to-run-your-entire-cs-operation-in-renewal360" className="text-blue-600 hover:underline">
+                            <Link to="/blog/$slug" params={{ slug: "how-to-run-your-entire-cs-operation-in-renewal360" }} className="text-blue-600 hover:underline">
                                 How to Run Your Entire CS Operation in Renewal360
                             </Link>
                         </li>

@@ -9,7 +9,6 @@ Disallow: /login
 Disallow: /register
 Disallow: /payment-success
 Disallow: /set-password
-Disallow: /dist/
 Disallow: /dashboard
 Disallow: /settings
 
@@ -28,7 +27,6 @@ Disallow: /login
 Disallow: /register
 Disallow: /payment-success
 Disallow: /set-password
-Disallow: /dist/
 Disallow: /dashboard
 Disallow: /settings
 
@@ -111,7 +109,6 @@ Disallow: /login
 Disallow: /register
 Disallow: /payment-success
 Disallow: /set-password
-Disallow: /dist/
 Disallow: /dashboard
 Disallow: /settings
 
