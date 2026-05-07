@@ -3,9 +3,15 @@
 # ── Google ──────────────────────────────────────────
 User-agent: Googlebot
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /login
+Disallow: /register
 Disallow: /payment-success
 Disallow: /set-password
 Disallow: /dist/
+Disallow: /dashboard
+Disallow: /settings
 
 User-agent: Googlebot-Image
 Allow: /
@@ -16,18 +22,31 @@ Allow: /
 # ── Bing / Microsoft ────────────────────────────────
 User-agent: Bingbot
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /login
+Disallow: /register
 Disallow: /payment-success
 Disallow: /set-password
 Disallow: /dist/
+Disallow: /dashboard
+Disallow: /settings
 
 # ── OpenAI ──────────────────────────────────────────
 User-agent: GPTBot
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /login
+Disallow: /register
 Disallow: /payment-success
 Disallow: /set-password
+Disallow: /dashboard
+Disallow: /settings
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /api/
 Disallow: /payment-success
 Disallow: /set-password
 
@@ -37,6 +56,7 @@ Allow: /
 # ── Anthropic / Claude ───────────────────────────────
 User-agent: ClaudeBot
 Allow: /
+Disallow: /api/
 Disallow: /payment-success
 Disallow: /set-password
 
@@ -46,6 +66,7 @@ Allow: /
 # ── Perplexity ───────────────────────────────────────
 User-agent: PerplexityBot
 Allow: /
+Disallow: /api/
 Disallow: /payment-success
 Disallow: /set-password
 
@@ -75,11 +96,23 @@ Disallow: /
 User-agent: BLEXBot
 Disallow: /
 
+User-agent: SplitSignalBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
 # ── Catch-all fallback ───────────────────────────────
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /login
+Disallow: /register
 Disallow: /payment-success
 Disallow: /set-password
 Disallow: /dist/
+Disallow: /dashboard
+Disallow: /settings
 
 Sitemap: https://renewal360.in/sitemap.xml

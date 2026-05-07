@@ -42,6 +42,9 @@ npm run build || error "Build FAILED - check $LOGFILE"
 log "Build successful"
 
 # Step 6: Nginx reload
+log "Syncing nginx config..."
+sudo cp "$APP_DIR/services/nginx/renewal360.in.conf" /etc/nginx/sites-available/renewal360.in
+sudo ln -sf /etc/nginx/sites-available/renewal360.in /etc/nginx/sites-enabled/renewal360.in
 sudo nginx -t && sudo nginx -s reload || error "Nginx reload failed"
 log "Nginx reloaded"
 

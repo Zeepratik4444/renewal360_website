@@ -233,12 +233,36 @@
     "datePublished": "2026-04-10"
   }
   </script>
+
+  <!-- ── Favicon & PWA ─────────────────────────────────────── -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#1d4ed8" />
+
+  <!-- ── Open Graph image ──────────────────────────────────── -->
+  <meta property="og:image" content="https://renewal360.in/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Zendesk, HubSpot & Salesforce CS Platform Integration Guide" />
+  <meta property="og:site_name" content="Renewal360" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- ── Twitter / X card image ────────────────────────────── -->
+  <meta name="twitter:image" content="https://renewal360.in/og-image.png" />
+  <meta name="twitter:image:alt" content="Zendesk, HubSpot & Salesforce CS Platform Integration Guide" />
+  <meta name="twitter:site" content="@renewal360in" />
 </head>
 
 <body class="bg-white text-gray-900">
 
   <nav class="border-b border-gray-100 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
-    <a href="/" class="text-xl font-bold text-blue-600" style="font-family:'Lora',serif;">Renewal360</a>
+    <a href="/" style="text-decoration:none;display:flex;align-items:center;gap:10px;">
+      <img src="/apple-touch-icon.png" alt="Renewal360 logo" width="32" height="32"
+        style="border-radius:8px;flex-shrink:0;" />
+      <span
+        style="font-family:'Lora',serif;font-size:1.2rem;font-weight:700;color:#1d4ed8;letter-spacing:-0.01em;">Renewal360</span>
+    </a>
     <div class="flex gap-6 text-sm text-gray-500">
       <a href="/features" class="hover:text-blue-600 transition-colors">Features</a>
       <a href="/pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
@@ -581,6 +605,14 @@
         Growing SaaS Teams</a>
     </p>
   </main>
+</body>
+
+</html>
+
+<footer class="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
+  <p>© 2026 Renewal360 · <a href="/terms" class="hover:text-blue-600">Terms</a> · <a href="/contact"
+      class="hover:text-blue-600">Contact</a></p>
+</footer>
 </body>
 
 </html>
