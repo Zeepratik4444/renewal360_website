@@ -2,7 +2,7 @@
 set -eo pipefail
 
 APP_DIR="/home/ubuntu/home/renewal360_website"
-BRANCH="v002"
+BRANCH="main"
 LOGFILE="/tmp/renewal360-deploy.log"
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
 
