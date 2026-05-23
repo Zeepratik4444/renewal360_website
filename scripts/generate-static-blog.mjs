@@ -199,6 +199,44 @@ function stripTags(html) {
 		.trim();
 }
 
+function htmlToMarkdown(html) {
+	let text = html
+		.replace(/<script[\s\S]*?<\/script>/gi, "")
+		.replace(/<style[\s\S]*?<\/style>/gi, "");
+
+	const articleContent = text.match(/<article[\s\S]*?<\/article>/gi)?.[0] || text;
+	text = articleContent;
+
+	text = text
+		.replace(/<h1[^>]*>([\s\S]*?)<\/h1>/gi, "\n# $1\n\n")
+		.replace(/<h2[^>]*>([\s\S]*?)<\/h2>/gi, "\n## $1\n\n")
+		.replace(/<h3[^>]*>([\s\S]*?)<\/h3>/gi, "\n### $1\n\n")
+		.replace(/<h4[^>]*>([\s\S]*?)<\/h4>/gi, "\n#### $1\n\n")
+		.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, "- $1\n")
+		.replace(/<ul[^>]*>([\s\S]*?)<\/ul>/gi, "\n$1\n")
+		.replace(/<ol[^>]*>([\s\S]*?)<\/ol>/gi, "\n$1\n")
+		.replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, "**$1**")
+		.replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, "**$1**")
+		.replace(/<em[^>]*>([\s\S]*?)<\/em>/gi, "*$1*")
+		.replace(/<i[^>]*>([\s\S]*?)<\/i>/gi, "*$1*")
+		.replace(/<code[^>]*>([\s\S]*?)<\/code>/gi, "`$1`")
+		.replace(/<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi, "[$2]($1)")
+		.replace(/<p[^>]*>([\s\S]*?)<\/p>/gi, "$1\n\n")
+		.replace(/<br\s*\/?>/gi, "\n")
+		.replace(/<hr\s*\/?>/gi, "\n---\n\n")
+		.replace(/<[^>]+>/g, " ")
+		.replace(/&nbsp;/g, " ")
+		.replace(/&amp;/g, "&")
+		.replace(/&lt;/g, "<")
+		.replace(/&gt;/g, ">")
+		.replace(/&quot;/g, "\"")
+		.replace(/&#39;/g, "'")
+		.replace(/\n\s*\n\s*\n/g, "\n\n")
+		.trim();
+
+	return text;
+}
+
 function pageShell({ title, description, canonicalPath, body, schema }) {
 	const canonicalUrl = `${siteUrl}${canonicalPath}`;
 	const escapedTitle = escapeHtml(title);
@@ -499,3 +537,124 @@ for (const post of posts) {
 }
 
 console.log(`Generated ${posts.length + 1} static blog pages in public/blog`);
+
+// ── Generate llms.txt & llms-full.txt ─────────────────────────────────────
+const publicDir = path.join(root, "public");
+
+const staticLlmsIntro = `# Renewal360
+> The CS platform that actually prevents churn.
+
+Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop losing renewals and scale customer success. It integrates with your CRM, support desk, and email to provide multi-factor health scoring, AI-drafted outreach, and real-time executive visibility—all live in 7 days.
+
+## Product
+
+- Homepage: https://renewal360.in/
+- Features: https://renewal360.in/features
+- Pricing: https://renewal360.in/pricing
+- How It Works: https://renewal360.in/how-it-works
+- FAQ: https://renewal360.in/faq
+- Contact / Book Demo: https://renewal360.in/contact
+
+## Who It's For
+
+- SaaS Customer Success Managers (CSMs) managing 50–500 accounts
+- VP Revenue Operations tracking ARR at risk
+- SaaS founders and CEOs who want churn visibility without hiring 3 more CSMs
+- Teams currently managing renewals in spreadsheets or manually in Salesforce/HubSpot
+
+## Key Capabilities
+
+- Multi-factor health scoring (product usage, sentiment, engagement, support tickets)
+- AI-drafted renewal emails at T-90, T-60, T-30, T-7 milestones
+- Human approval workflow — review, edit, or reject before sending
+- Reply-aware sequence stopping (no emails after customer responds)
+- Executive dashboard — pipeline, ARR at risk, team performance
+- CRM integrations: Salesforce, HubSpot, Google Sheets
+- Email integrations: Gmail, Outlook, Microsoft Teams, Slack
+- Setup time: 7 days. No 6-month implementation.
+
+## Pricing
+
+- Free pilot: 25 accounts, no credit card required
+- Paid plans in INR — built for Indian SaaS market
+- Full pricing: https://renewal360.in/pricing
+
+## Compared To
+
+- Gainsight: enterprise-only, $30k+/year, 3–6 month setup → Renewal360 is 1/5th the price, live in 7 days
+- Totango: mid-market focus, complex onboarding → Renewal360 is simpler, faster
+- ChurnZero: US-focused, no INR pricing → Renewal360 built for Indian SaaS teams
+- Spreadsheets: manual, error-prone, no AI → Renewal360 fully automates the workflow
+`;
+
+const staticLlmsOutro = `
+## Company
+
+- Product: Renewal360 (renewal360.in)
+- Market: B2B SaaS, India-first, global-ready
+- Built for: SaaS companies with 50–5000 managed accounts
+
+## Full Platform Capabilities
+
+### Customer Intelligence
+- Per-account knowledge layer with historical context
+- Multi-factor health scoring (usage, email engagement, support sentiment, CRM signals)
+- Custom fields and data enrichment
+- Performance snapshots and trend tracking
+
+### Lifecycle Management
+- Enrollment workflows across full customer lifecycle
+- Touchpoint tracking and logging
+- Calendar integration for renewal scheduling
+- Survey engine for NPS and CSAT collection
+
+### AI & Automation
+- Gemini-powered email drafting personalised per account
+- Reply-aware sequences (auto-stops on customer reply)
+- AI helper with configurable LLM settings
+- Approval queue — human review before every send
+
+### Integrations
+- CRM: Salesforce (OAuth), HubSpot (OAuth)
+- Support: Zendesk (OAuth)
+- Communication: Slack, Microsoft Teams, Outlook (Microsoft Graph)
+- Email: Gmail (OAuth), IMAP
+- Calendar: Google Calendar, Microsoft Calendar
+
+### Enterprise Features
+- SSO (Single Sign-On)
+- MFA (Multi-Factor Authentication)
+- RBAC (Role-Based Access Control)
+- Multi-tenant architecture
+- Billing and subscription management
+
+### Analytics & Reporting
+- Executive ARR dashboard
+- Renewal pipeline visibility
+- Team performance metrics
+- Analytics module
+`;
+
+const blogList = posts
+	.map((post) => `- [${post.title}](https://renewal360.in/blog/${post.slug}): ${post.description}`)
+	.join("\n");
+
+const llmsTxtContent = `${staticLlmsIntro}\n## Blog\n\n${blogList}\n${staticLlmsOutro}`;
+fs.writeFileSync(path.join(publicDir, "llms.txt"), llmsTxtContent);
+
+let llmsFullTxtContent = `${staticLlmsIntro}\n## Blog\n\n${blogList}\n${staticLlmsOutro}\n\n---\n\n# Blog Articles Full Content\n\n`;
+
+for (const post of posts) {
+	const sourceHtml = fs.readFileSync(path.join(sourceDir, post.source), "utf8");
+	const articleHtml = extractArticleHtml(sourceHtml);
+	const markdownContent = htmlToMarkdown(articleHtml);
+
+	llmsFullTxtContent += `## [${post.title}](https://renewal360.in/blog/${post.slug})\n\n`;
+	llmsFullTxtContent += `*Published: ${post.publishedAt} | Read Time: ${post.readTime}*\n\n`;
+	llmsFullTxtContent += `${markdownContent}\n\n---\n\n`;
+}
+
+fs.writeFileSync(path.join(publicDir, "llms-full.txt"), llmsFullTxtContent);
+
+console.log("Generated public/llms.txt and public/llms-full.txt");
+
