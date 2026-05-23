@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eo pipefail
 
+# Step 0: starting the script
+
+
 APP_DIR="/home/ubuntu/home/renewal360_website"
 BRANCH="main"
 LOGFILE="/tmp/renewal360-deploy.log"
