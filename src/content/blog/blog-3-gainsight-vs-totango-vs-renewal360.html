@@ -233,7 +233,64 @@
       font-size: 0.95rem;
       line-height: 1.7;
     }
-  </style>
+  
+<style>
+  .verdict-box {
+    border: 1.5px solid #2563eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1.75rem;
+    margin: 0 0 2rem 0;
+    background: #f0f7ff;
+  }
+  .verdict-box .verdict-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.6rem;
+  }
+  .verdict-box .verdict-answer {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.5;
+    margin-bottom: 1.1rem;
+  }
+  .verdict-box .verdict-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .verdict-box .verdict-col-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+  .verdict-box .verdict-for .verdict-col-label { color: #059669; }
+  .verdict-box .verdict-not .verdict-col-label { color: #9ca3af; }
+  .verdict-box .verdict-col-body {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #374151;
+  }
+  .verdict-box .verdict-bottom {
+    border-top: 1px solid #bfdbfe;
+    padding-top: 0.85rem;
+    font-size: 0.875rem;
+    color: #374151;
+    line-height: 1.6;
+  }
+  .verdict-box .verdict-bottom strong { color: #1e3a8a; }
+  @media (max-width: 640px) {
+    .verdict-box .verdict-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+</style>
 
   <!-- ── Favicon & PWA ─────────────────────────────────────── -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -299,6 +356,25 @@
   </header>
 
   <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+
+<div class="verdict-box" id="verdict" itemscope itemtype="https://schema.org/Question">
+  <meta itemprop="name" content="Gainsight vs Totango vs Renewal360: which CS platform is right for growing SaaS teams?" />
+  <div class="verdict-label">Quick verdict</div>
+  <div class="verdict-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+    <span itemprop="text">For growing SaaS teams that need a working renewal process fast: <strong>Renewal360</strong> — live in 7 days, no dedicated admin required. For mature enterprise CS orgs with RevOps support and a 3–6 month implementation budget: <strong>Gainsight</strong>. For mid-market teams building structured customer growth programs: <strong>Totango</strong>.</span>
+  </div>
+  <div class="verdict-grid">
+    <div class="verdict-for">
+      <div class="verdict-col-label">Renewal360 is right if you are</div>
+      <div class="verdict-col-body">A SaaS team with 50–5,000 accounts and 1–5 CSMs. Renewals are slipping. You need AI-drafted outreach, risk signals, and human-approved sends — live in days, not months.</div>
+    </div>
+    <div class="verdict-not">
+      <div class="verdict-col-label">Look elsewhere if you need</div>
+      <div class="verdict-col-body">Enterprise lifecycle orchestration, dedicated CS Ops support, complex multi-product health models, or a Salesforce-native platform with thousands of existing integrations.</div>
+    </div>
+  </div>
+  <div class="verdict-bottom"><strong>Bottom line:</strong> You do not need more dashboards. You need a system that turns risk signals into approved, sent emails. That is the job Renewal360 was built to do.</div>
+</div>
     <p>
       Gainsight and Totango are established customer success platforms. They can be excellent choices for mature CS
       organizations with dedicated operations support, large headcounts, and the budget and time for multi-month

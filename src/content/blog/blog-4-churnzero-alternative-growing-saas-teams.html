@@ -28,7 +28,7 @@
   }
   </script>
 
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -233,6 +233,80 @@
       font-size: 0.95rem;
       line-height: 1.7;
     }
+
+    <style>.verdict-box {
+      border: 1.5px solid #2563eb;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 0 0 2rem 0;
+      background: #f0f7ff;
+    }
+
+    .verdict-box .verdict-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-bottom: 0.6rem;
+    }
+
+    .verdict-box .verdict-answer {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.5;
+      margin-bottom: 1.1rem;
+    }
+
+    .verdict-box .verdict-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .verdict-box .verdict-col-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .verdict-box .verdict-for .verdict-col-label {
+      color: #059669;
+    }
+
+    .verdict-box .verdict-not .verdict-col-label {
+      color: #9ca3af;
+    }
+
+    .verdict-box .verdict-col-body {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .verdict-box .verdict-bottom {
+      border-top: 1px solid #bfdbfe;
+      padding-top: 0.85rem;
+      font-size: 0.875rem;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .verdict-box .verdict-bottom strong {
+      color: #1e3a8a;
+    }
+
+    @media (max-width: 640px) {
+      .verdict-box .verdict-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
   </style>
 
   <!-- ── Favicon & PWA ─────────────────────────────────────── -->
@@ -288,8 +362,7 @@
       dashboards — Renewal360 may be the sharper first move for your team.
     </p>
     <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
-      <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40"
-        class="w-10 h-10 rounded-full"
+      <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40" class="w-10 h-10 rounded-full"
         style="flex-shrink:0;object-fit:contain;" />
       <div>
         <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
@@ -299,6 +372,32 @@
   </header>
 
   <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+
+    <div class="verdict-box" id="verdict" itemscope itemtype="https://schema.org/Question">
+      <meta itemprop="name" content="Is Renewal360 a good ChurnZero alternative for growing SaaS teams?" />
+      <div class="verdict-label">Quick verdict</div>
+      <div class="verdict-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <span itemprop="text">Yes — if your problem is missed renewal action, not missing data. Renewal360 is a focused
+          renewal execution engine: risk signals, AI-drafted outreach, CSM approval, sent email. ChurnZero is a broad CS
+          command centre built for teams with dedicated CS operations support and a longer implementation
+          horizon.</span>
+      </div>
+      <div class="verdict-grid">
+        <div class="verdict-for">
+          <div class="verdict-col-label">Switch to Renewal360 if</div>
+          <div class="verdict-col-body">You have 1–3 CSMs, renewals are slipping through the cracks, and you need a
+            working process this month — not a 3-month platform rollout. No dedicated CS Ops person required.</div>
+        </div>
+        <div class="verdict-not">
+          <div class="verdict-col-label">Stay with ChurnZero if</div>
+          <div class="verdict-col-body">You need full lifecycle orchestration, NPS programs, complex playbooks, and have
+            a CS Ops person to manage configuration and ongoing admin.</div>
+        </div>
+      </div>
+      <div class="verdict-bottom"><strong>Bottom line:</strong> ChurnZero shows the dashboard. Renewal360 sends the
+        email. If the gap between "account at risk" and "CSM acted" is your actual problem, Renewal360 is the faster
+        fix.</div>
+    </div>
     <p>
       If you are evaluating a ChurnZero alternative, the real question is not "which platform has the longest feature
       list?" It is "which tool gets our renewal process under control fastest — and keeps CSMs focused on conversations

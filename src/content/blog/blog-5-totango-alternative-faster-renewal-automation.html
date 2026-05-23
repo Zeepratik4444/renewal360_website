@@ -28,7 +28,7 @@
   }
   </script>
 
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -223,6 +223,80 @@
       font-size: 0.95rem;
       line-height: 1.7;
     }
+
+    <style>.verdict-box {
+      border: 1.5px solid #2563eb;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 0 0 2rem 0;
+      background: #f0f7ff;
+    }
+
+    .verdict-box .verdict-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-bottom: 0.6rem;
+    }
+
+    .verdict-box .verdict-answer {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.5;
+      margin-bottom: 1.1rem;
+    }
+
+    .verdict-box .verdict-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .verdict-box .verdict-col-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .verdict-box .verdict-for .verdict-col-label {
+      color: #059669;
+    }
+
+    .verdict-box .verdict-not .verdict-col-label {
+      color: #9ca3af;
+    }
+
+    .verdict-box .verdict-col-body {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .verdict-box .verdict-bottom {
+      border-top: 1px solid #bfdbfe;
+      padding-top: 0.85rem;
+      font-size: 0.875rem;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .verdict-box .verdict-bottom strong {
+      color: #1e3a8a;
+    }
+
+    @media (max-width: 640px) {
+      .verdict-box .verdict-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
   </style>
 
   <!-- ── Favicon & PWA ─────────────────────────────────────── -->
@@ -278,8 +352,7 @@
       fixed now — risk signals, AI drafts, human approval, and action before silence turns into churn.
     </p>
     <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
-      <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40"
-        class="w-10 h-10 rounded-full"
+      <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40" class="w-10 h-10 rounded-full"
         style="flex-shrink:0;object-fit:contain;" />
       <div>
         <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
@@ -289,6 +362,33 @@
   </header>
 
   <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+
+    <div class="verdict-box" id="verdict" itemscope itemtype="https://schema.org/Question">
+      <meta itemprop="name" content="Is Renewal360 a good Totango alternative for renewal automation?" />
+      <div class="verdict-label">Quick verdict</div>
+      <div class="verdict-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <span itemprop="text">Yes — if renewal execution is your priority over broad customer growth programs.
+          Renewal360 gets lean SaaS teams from at-risk signal to approved, sent email in the same workflow. Totango is
+          the stronger choice for teams building multi-touch digital journeys, customer growth programs, and value
+          delivery at scale.</span>
+      </div>
+      <div class="verdict-grid">
+        <div class="verdict-for">
+          <div class="verdict-col-label">Renewal360 fits if you are</div>
+          <div class="verdict-col-body">A lean CS team (1–5 people) where renewals are actively slipping. You need
+            action-first workflows: risk detection → AI draft → CSM approval → send. Live in 7 days.</div>
+        </div>
+        <div class="verdict-not">
+          <div class="verdict-col-label">Totango fits better if you need</div>
+          <div class="verdict-col-body">Structured customer growth programs, digital onboarding journeys, broad
+            lifecycle orchestration, or a platform built around customer health across the full post-sales lifecycle —
+            not just renewals.</div>
+        </div>
+      </div>
+      <div class="verdict-bottom"><strong>Bottom line:</strong> Totango excels at customer growth visibility. Renewal360
+        excels at getting renewal action done before the window closes. The right pick depends on which problem is
+        costing you more right now.</div>
+    </div>
     <p>
       Searching for a Totango alternative usually means you already recognise that customer success needs more
       structure. The real question is whether you need a broad customer growth platform first — or a focused,

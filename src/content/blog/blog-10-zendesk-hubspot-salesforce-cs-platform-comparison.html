@@ -221,6 +221,80 @@
       margin: 0;
       line-height: 1.6;
     }
+
+    <style>.verdict-box {
+      border: 1.5px solid #2563eb;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 0 0 2rem 0;
+      background: #f0f7ff;
+    }
+
+    .verdict-box .verdict-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-bottom: 0.6rem;
+    }
+
+    .verdict-box .verdict-answer {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #111827;
+      line-height: 1.5;
+      margin-bottom: 1.1rem;
+    }
+
+    .verdict-box .verdict-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .verdict-box .verdict-col-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .verdict-box .verdict-for .verdict-col-label {
+      color: #059669;
+    }
+
+    .verdict-box .verdict-not .verdict-col-label {
+      color: #9ca3af;
+    }
+
+    .verdict-box .verdict-col-body {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: #374151;
+    }
+
+    .verdict-box .verdict-bottom {
+      border-top: 1px solid #bfdbfe;
+      padding-top: 0.85rem;
+      font-size: 0.875rem;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .verdict-box .verdict-bottom strong {
+      color: #1e3a8a;
+    }
+
+    @media (max-width: 640px) {
+      .verdict-box .verdict-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
   </style>
   <script type="application/ld+json">
   {
@@ -236,7 +310,7 @@
   }
   </script>
 
-<script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -302,8 +376,7 @@
       support, CRM, and success tools — without the "integration tax" that kills most implementations.
     </p>
     <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
-      <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40"
-        class="w-10 h-10 rounded-full"
+      <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40" class="w-10 h-10 rounded-full"
         style="flex-shrink:0;object-fit:contain;" />
       <div>
         <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
@@ -314,6 +387,33 @@
 
   <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
+
+    <div class="verdict-box" id="verdict" itemscope itemtype="https://schema.org/Question">
+      <meta itemprop="name" content="Does Renewal360 integrate with Zendesk, HubSpot, and Salesforce?" />
+      <div class="verdict-label">Quick verdict</div>
+      <div class="verdict-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <span itemprop="text">Yes — Renewal360 has native bidirectional integrations with all three. It reads account
+          health signals from Zendesk tickets, syncs renewal timelines and contacts from HubSpot or Salesforce, and
+          writes outcomes back. It does not replace any of these tools. It adds the renewal automation layer they are
+          not built to provide.</span>
+      </div>
+      <div class="verdict-grid">
+        <div class="verdict-for">
+          <div class="verdict-col-label">Renewal360 adds what is missing</div>
+          <div class="verdict-col-body">Zendesk handles support. HubSpot handles pipeline. Salesforce handles CRM. None
+            of them automatically detect renewal risk, draft account-specific outreach, or route approvals before emails
+            send.</div>
+        </div>
+        <div class="verdict-not">
+          <div class="verdict-col-label">What Renewal360 does not do</div>
+          <div class="verdict-col-body">It does not replace your CRM, ticketing system, or billing tool. It is
+            purpose-built to sit on top of your existing stack and handle renewal execution specifically.</div>
+        </div>
+      </div>
+      <div class="verdict-bottom"><strong>Bottom line:</strong> If your CS team already lives in Zendesk, HubSpot, or
+        Salesforce, Renewal360 connects to what you have and adds the one layer those tools are missing: automated,
+        human-approved renewal outreach.</div>
+    </div>
     <p>
       In modern SaaS, preventing churn is a team sport. Your support team lives in <strong>Zendesk</strong>. Your sales
       team built their workflow around <strong>Salesforce</strong> or <strong>HubSpot</strong>. Your CS team is
