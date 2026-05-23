@@ -8,6 +8,11 @@ import howRenewal360WorksHtml from "@/content/blog/blog-7-how-renewal360-works.h
 import customerSuccessPlatformHtml from "@/content/blog/blog-8-customer-success-platform-for-growing-saas.html?raw";
 import runCsOperationHtml from "@/content/blog/blog-9-how-to-run-your-entire-cs-operation-in-renewal360.html?raw";
 import integrationsComparisonHtml from "@/content/blog/blog-10-zendesk-hubspot-salesforce-cs-platform-comparison.html?raw";
+import signsBrokenHtml from "@/content/blog/blog-11-signs-your-renewal-process-is-quietly-broken.html?raw";
+import hiddenCostHtml from "@/content/blog/blog-12-hidden-cost-of-manual-renewal-process.html?raw";
+import buildPlaybookHtml from "@/content/blog/blog-13-how-to-build-a-renewal-playbook-from-scratch.html?raw";
+import csMetricsHtml from "@/content/blog/blog-14-cs-metrics-every-saas-team-should-track.html?raw";
+import setupGuideHtml from "@/content/blog/blog-15-renewal360-setup-guide-live-in-7-days.html?raw";
 
 export type BlogPost = {
 	slug: string;
@@ -136,5 +141,60 @@ export const blogPosts: BlogPost[] = [
 		publishedAt: "May 2026",
 		accent: "blue",
 		contentHtml: integrationsComparisonHtml,
+	},
+	{
+		slug: "signs-your-renewal-process-is-quietly-broken",
+		title: "7 Signs Your Renewal Process Is Quietly Broken",
+		summary:
+			"Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is broken, and what each one costs you.",
+		tags: ["Renewal Process", "Customer Success", "SaaS Churn"],
+		readTime: "9 min read",
+		publishedAt: "May 2026",
+		accent: "blue",
+		contentHtml: signsBrokenHtml,
+	},
+	{
+		slug: "hidden-cost-of-manual-renewal-process",
+		title: "The Hidden Cost of a Manual Renewal Process",
+		summary:
+			"Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn.",
+		tags: ["RevOps", "Customer Success", "SaaS Retention"],
+		readTime: "10 min read",
+		publishedAt: "May 2026",
+		accent: "blue",
+		contentHtml: hiddenCostHtml,
+	},
+	{
+		slug: "how-to-build-a-renewal-playbook-from-scratch",
+		title: "How to Build a Renewal Playbook from Scratch",
+		summary:
+			"A practical, step-by-step guide to building a renewal playbook from scratch — covering timing, segmentation, health signals, sequence design, and escalation tracks.",
+		tags: ["Playbook", "Customer Success", "Renewal Automation"],
+		readTime: "12 min read",
+		publishedAt: "May 2026",
+		accent: "blue",
+		contentHtml: buildPlaybookHtml,
+	},
+	{
+		slug: "cs-metrics-every-saas-team-should-track",
+		title: "5 CS Metrics Every SaaS Team Should Track (and One to Ignore)",
+		summary:
+			"The CS metrics that actually predict renewal outcomes — and the one most teams obsess over that doesn't. A data-first guide for CS and RevOps leaders.",
+		tags: ["CS Metrics", "RevOps", "Customer Success"],
+		readTime: "10 min read",
+		publishedAt: "May 2026",
+		accent: "blue",
+		contentHtml: csMetricsHtml,
+	},
+	{
+		slug: "renewal360-setup-guide-live-in-7-days",
+		title: "Renewal360 Setup Guide: Live in 7 Days",
+		summary:
+			"A day-by-day guide to getting Renewal360 fully operational in 7 days — CRM connection, health scoring, first sequences live, and your team running independently.",
+		tags: ["Setup Guide", "Renewal360", "Onboarding"],
+		readTime: "11 min read",
+		publishedAt: "May 2026",
+		accent: "blue",
+		contentHtml: setupGuideHtml,
 	},
 ];

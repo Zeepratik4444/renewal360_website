@@ -113,6 +113,57 @@ const posts = [
 		readTime: "8 min read",
 		publishedAt: "2026-05-07",
 	},
+	// ── Posts added 2026-05-20 ───────────────────────────────────────────
+	{
+		slug: "signs-your-renewal-process-is-quietly-broken",
+		source: "blog-11-signs-your-renewal-process-is-quietly-broken.html",
+		title: "7 Signs Your Renewal Process Is Quietly Broken",
+		description:
+			"Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is broken, and what each one costs you.",
+		tags: ["Renewal Process", "Customer Success", "SaaS Churn"],
+		readTime: "9 min read",
+		publishedAt: "2026-05-20",
+	},
+	{
+		slug: "hidden-cost-of-manual-renewal-process",
+		source: "blog-12-hidden-cost-of-manual-renewal-process.html",
+		title: "The Hidden Cost of a Manual Renewal Process",
+		description:
+			"Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn.",
+		tags: ["RevOps", "Customer Success", "SaaS Retention"],
+		readTime: "10 min read",
+		publishedAt: "2026-05-20",
+	},
+	{
+		slug: "how-to-build-a-renewal-playbook-from-scratch",
+		source: "blog-13-how-to-build-a-renewal-playbook-from-scratch.html",
+		title: "How to Build a Renewal Playbook from Scratch",
+		description:
+			"A practical, step-by-step guide to building a renewal playbook from scratch — covering timing, segmentation, health signals, sequence design, and escalation tracks.",
+		tags: ["Playbook", "Customer Success", "Renewal Automation"],
+		readTime: "12 min read",
+		publishedAt: "2026-05-20",
+	},
+	{
+		slug: "cs-metrics-every-saas-team-should-track",
+		source: "blog-14-cs-metrics-every-saas-team-should-track.html",
+		title: "5 CS Metrics Every SaaS Team Should Track (and One to Ignore)",
+		description:
+			"The CS metrics that actually predict renewal outcomes — and the one most teams obsess over that doesn't. A data-first guide for CS and RevOps leaders.",
+		tags: ["CS Metrics", "RevOps", "Customer Success"],
+		readTime: "10 min read",
+		publishedAt: "2026-05-20",
+	},
+	{
+		slug: "renewal360-setup-guide-live-in-7-days",
+		source: "blog-15-renewal360-setup-guide-live-in-7-days.html",
+		title: "Renewal360 Setup Guide: Live in 7 Days",
+		description:
+			"A day-by-day guide to getting Renewal360 fully operational in 7 days — CRM connection, health scoring, first sequences live, and your team running independently.",
+		tags: ["Setup Guide", "Renewal360", "Onboarding"],
+		readTime: "11 min read",
+		publishedAt: "2026-05-20",
+	},
 ];
 
 function escapeHtml(value) {

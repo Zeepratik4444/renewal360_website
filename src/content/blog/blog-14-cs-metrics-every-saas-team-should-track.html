@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5 CS Metrics Every SaaS Team Should Track (and One to Ignore) | Renewal360 Blog</title>
+    <meta name="description"
+        content="The CS metrics that actually predict renewal outcomes — and the one most teams obsess over that doesn't. A data-first guide for CS and RevOps leaders." />
+    <meta property="og:title" content="5 CS Metrics Every SaaS Team Should Track (and One to Ignore)" />
+    <meta property="og:description"
+        content="The CS metrics that actually predict renewal outcomes — and the one most teams obsess over that doesn't." />
+    <meta property="og:url" content="https://renewal360.in/blog/cs-metrics-every-saas-team-should-track" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://renewal360.in/blog/cs-metrics-every-saas-team-should-track" />
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "5 CS Metrics Every SaaS Team Should Track (and One to Ignore)",
+    "description": "The CS metrics that actually predict renewal outcomes — and the one most teams obsess over that doesn't.",
+    "author": { "@type": "Organization", "name": "Renewal360" },
+    "publisher": { "@type": "Organization", "name": "Renewal360", "url": "https://renewal360.in" },
+    "url": "https://renewal360.in/blog/cs-metrics-every-saas-team-should-track",
+    "datePublished": "2026-05-20",
+    "dateModified": "2026-05-20"
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Renewal360",
+    "url": "https://renewal360.in",
+    "logo": "https://renewal360.in/favicon-96x96.png",
+    "sameAs": ["https://renewal360.in"]
+  }
+  </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Lora', serif;
+        }
+
+        .prose-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.8;
+            color: #374151;
+        }
+
+        .prose-content h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #111827;
+            margin: 2.5rem 0 1rem;
+        }
+
+        .prose-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #111827;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .prose-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.25rem;
+        }
+
+        .prose-content ul li {
+            padding: 0.3rem 0 0.3rem 1.75rem;
+            position: relative;
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .prose-content ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            margin-right: 0.5rem;
+        }
+
+        .metric-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.75rem;
+            margin: 1.5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #2563eb;
+        }
+
+        .metric-card.green::before {
+            background: #16a34a;
+        }
+
+        .metric-card.purple::before {
+            background: #8b5cf6;
+        }
+
+        .metric-card.amber::before {
+            background: #f59e0b;
+        }
+
+        .metric-card.red::before {
+            background: #ef4444;
+        }
+
+        .metric-num {
+            font-family: 'Lora', serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-name {
+            font-family: 'Lora', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111827;
+            margin: 0 0 0.75rem;
+        }
+
+        .metric-card p {
+            font-size: 0.95rem;
+            color: #6b7280;
+            line-height: 1.7;
+            margin: 0 0 0.75rem;
+        }
+
+        .metric-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .benchmark-row {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .benchmark {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.9rem;
+            font-size: 0.82rem;
+        }
+
+        .benchmark strong {
+            color: #111827;
+        }
+
+        .benchmark span {
+            color: #6b7280;
+        }
+
+        .ignore-card {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 0.75rem;
+            padding: 1.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .ignore-card h3 {
+            color: #dc2626;
+            margin: 0 0 0.75rem;
+        }
+
+        .ignore-card p {
+            margin: 0 0 0.75rem;
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .ignore-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.25rem 0.75rem;
+        }
+
+        .stat-box .num {
+            font-family: 'Lora', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .stat-box .label {
+            font-size: 0.78rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+            line-height: 1.4;
+        }
+
+        .callout-dark {
+            background: #111827;
+            color: white;
+            border-radius: 0.75rem;
+            padding: 1.75rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .callout-dark h3 {
+            color: white;
+            margin: 0 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .callout-dark p {
+            color: #9ca3af;
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 640px) {
+            .stat-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <meta property="og:image" content="https://renewal360.in/og-image.png" />
+    <meta property="og:site_name" content="Renewal360" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:image" content="https://renewal360.in/og-image.png" />
+    <meta name="twitter:site" content="@renewal360in" />
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <nav class="border-b border-gray-100 px-6 py-4 flex items-center justify-between max-w-6xl mx-auto">
+        <a href="/" style="text-decoration:none;display:flex;align-items:center;gap:10px;">
+            <img src="/favicon-96x96.png" alt="Renewal360 logo" width="32" height="32"
+                style="border-radius:8px;flex-shrink:0;" />
+            <span
+                style="font-family:'Lora',serif;font-size:1.2rem;font-weight:700;color:#1d4ed8;letter-spacing:-0.01em;">Renewal360</span>
+        </a>
+        <div class="flex gap-6 text-sm text-gray-500">
+            <a href="/features" class="hover:text-blue-600 transition-colors">Features</a>
+            <a href="/pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
+            <a href="/contact" class="hover:text-blue-600 transition-colors">Start Pilot</a>
+        </div>
+    </nav>
+
+    <header class="max-w-3xl mx-auto px-6 pt-16 pb-10">
+        <div class="mb-5">
+            <span class="tag">CS Metrics</span>
+            <span class="tag">RevOps</span>
+            <span class="tag">Customer Success</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            5 CS Metrics Every SaaS Team Should Track
+            <span class="text-blue-600"> (and One to Ignore)</span>
+        </h1>
+        <p class="text-xl text-gray-500 leading-relaxed">
+            Most CS teams are measuring the wrong things — or measuring the right things in ways that tell them nothing
+            actionable. Here are the five metrics that actually predict renewal outcomes, and the one that gets the most
+            attention but provides the least signal.
+        </p>
+        <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
+            <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40" class="w-10 h-10 rounded-full"
+                style="flex-shrink:0;object-fit:contain;" />
+            <div>
+                <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
+                <div class="text-xs text-gray-400">10 min read · May 2026</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+
+        <div class="stat-row">
+            <div class="stat-box">
+                <div class="num">110%+</div>
+                <div class="label">Net Revenue Retention target that separates good CS orgs from great ones</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">90 days</div>
+                <div class="label">Time-to-first-value target for mid-market SaaS onboarding, after which churn risk
+                    rises sharply</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">$2–4M</div>
+                <div class="label">Typical ARR-per-CSM capacity range for mid-market SaaS; below $1.5M signals a
+                    resourcing problem</div>
+            </div>
+        </div>
+
+        <p>
+            The problem with CS metrics isn't a shortage of options — it's that most teams measure what's easy to report
+            rather than what's predictive of outcomes. GRR, NRR, health score, CSAT, NPS, QBR completion rate,
+            time-to-value,
+            CSM capacity... the list is long. The signal-to-noise ratio is low.
+        </p>
+        <p>
+            These are the five metrics with the highest correlation to renewal performance in practice, with the
+            benchmarks
+            that make each one actionable — and the one popular metric that most teams should stop treating as a leading
+            indicator.
+        </p>
+
+        <h2>Metric 1: Gross Revenue Retention (GRR)</h2>
+        <div class="metric-card">
+            <div class="metric-num">Metric 1</div>
+            <div class="metric-name">Gross Revenue Retention</div>
+            <p>GRR measures the percentage of recurring revenue retained from existing customers, excluding any
+                expansion.
+                It's the floor metric for your CS organisation — the number that tells you whether you're actually
+                keeping
+                what you've won, before any expansion activity flatters the picture.</p>
+            <p>The reason GRR matters more than many teams acknowledge: NRR can look healthy at 105% even while
+                underlying
+                churn is damaging the base, because expansion from other accounts masks it. GRR strips that out. A team
+                with
+                85% GRR and 115% NRR is growing on top of a leaking foundation.</p>
+            <div class="benchmark-row">
+                <div class="benchmark"><strong>SMB:</strong> <span>80–85% is healthy</span></div>
+                <div class="benchmark"><strong>Mid-market:</strong> <span>85–90%</span></div>
+                <div class="benchmark"><strong>Enterprise:</strong> <span>90–95%+</span></div>
+            </div>
+        </div>
+
+        <h2>Metric 2: Net Revenue Retention (NRR)</h2>
+        <div class="metric-card green">
+            <div class="metric-num">Metric 2</div>
+            <div class="metric-name">Net Revenue Retention</div>
+            <p>NRR measures the total revenue retained and expanded from your existing customer base over a period — it
+                includes expansions, upsells, and cross-sells, minus contraction and churn. It's the metric investors
+                care
+                most about for growth-stage SaaS because it tells you whether the business can grow from its existing
+                base alone.</p>
+            <p>NRR above 100% means the existing customer base is growing in revenue terms even before a single new
+                customer is acquired. Above 120% indicates a CS and expansion motion that compounds meaningfully year
+                over year. Below 95% is a structural warning sign regardless of how good new logo growth looks.</p>
+            <div class="benchmark-row">
+                <div class="benchmark"><strong>Good:</strong> <span>100–110%</span></div>
+                <div class="benchmark"><strong>Great:</strong> <span>110–120%</span></div>
+                <div class="benchmark"><strong>Best-in-class:</strong> <span>120%+</span></div>
+            </div>
+        </div>
+
+        <h2>Metric 3: Time-to-First-Value (TTFV)</h2>
+        <div class="metric-card purple">
+            <div class="metric-num">Metric 3</div>
+            <div class="metric-name">Time-to-First-Value</div>
+            <p>TTFV measures how long it takes a new customer to reach their first meaningful outcome with your product
+                —
+                the moment where they've experienced enough value to justify the purchase. It's a leading indicator for
+                first-year renewal: customers who reach TTFV quickly renew at significantly higher rates than those who
+                don't.</p>
+            <p>The specific definition of "first value" varies by product, but the principle is consistent: customers
+                who haven't experienced a clear win within 90 days of going live are significantly more likely to churn
+                at their first renewal. TTFV is the metric that connects the onboarding motion to renewal outcomes —
+                which is why most CS teams should be measuring it but most aren't.</p>
+            <div class="benchmark-row">
+                <div class="benchmark"><strong>Target:</strong> <span>Under 30 days for SMB</span></div>
+                <div class="benchmark"><strong>Mid-market:</strong> <span>30–60 days</span></div>
+                <div class="benchmark"><strong>Enterprise:</strong> <span>60–90 days</span></div>
+            </div>
+        </div>
+
+        <h2>Metric 4: Health Score Accuracy</h2>
+        <div class="metric-card amber">
+            <div class="metric-num">Metric 4</div>
+            <div class="metric-name">Health Score Accuracy</div>
+            <p>Health score accuracy measures how well your health scoring model actually predicts renewal outcomes.
+                It's calculated by comparing health score predictions (which accounts were "high risk" 90 days before
+                renewal) against actual outcomes (which accounts churned). Most teams build a health score and never
+                validate whether it's predictive.</p>
+            <p>A health score that isn't calibrated isn't a risk management tool — it's a false confidence generator.
+                Quarterly retrospectives comparing predicted risk tier to actual renewal outcome are the only way to
+                know
+                whether the model is working. Well-calibrated models identify 70–80% of churned accounts as high-risk
+                90 days before renewal. Poorly calibrated models are random.</p>
+            <div class="benchmark-row">
+                <div class="benchmark"><strong>Target:</strong> <span>70%+ of churned accounts flagged high-risk at
+                        T-90</span></div>
+                <div class="benchmark"><strong>Review cycle:</strong> <span>Quarterly calibration</span></div>
+            </div>
+        </div>
+
+        <h2>Metric 5: CSM ARR Capacity Ratio</h2>
+        <div class="metric-card">
+            <div class="metric-num">Metric 5</div>
+            <div class="metric-name">CSM ARR Capacity Ratio</div>
+            <p>CSM ARR capacity ratio measures the total ARR managed per CSM. It's a resourcing and efficiency metric:
+                too low means you're over-resourced relative to ARR managed; too high means CSMs are stretched thin and
+                renewal quality degrades under load. It's the metric that should drive headcount planning decisions.</p>
+            <p>The ratio varies significantly by ACV and product complexity — enterprise-focused CSMs managing $100K+
+                accounts will have lower ratios than SMB CSMs managing hundreds of accounts. What matters is tracking
+                the ratio over time and correlating changes with renewal rate changes. A team that's grown its ratio
+                from $1.5M to $3M per CSM without renewal rate improvement has capacity problems, not execution
+                problems.</p>
+            <div class="benchmark-row">
+                <div class="benchmark"><strong>SMB:</strong> <span>$500K–$1.5M per CSM</span></div>
+                <div class="benchmark"><strong>Mid-market:</strong> <span>$2M–$4M per CSM</span></div>
+                <div class="benchmark"><strong>Enterprise:</strong> <span>$4M–$8M per CSM</span></div>
+            </div>
+        </div>
+
+        <div class="callout-dark">
+            <h3>The metric that connects all five</h3>
+            <p>
+                These five metrics don't operate in isolation — they form a chain. TTFV predicts first-year GRR. GRR +
+                expansion
+                gives NRR. Health score accuracy determines whether your team is working on the right accounts. CSM
+                capacity
+                ratio determines whether each CSM has enough bandwidth to execute well on the accounts they own. A team
+                that
+                tracks all five together has a complete picture. A team that tracks any one in isolation has a partial
+                signal.
+            </p>
+        </div>
+
+        <h2>The one to ignore: Raw NPS as a churn predictor</h2>
+
+        <div class="ignore-card">
+            <h3>Why NPS is a lagging indicator masquerading as a leading one</h3>
+            <p>Net Promoter Score is the metric CS teams are most likely to report to the board and least likely to act
+                on in time. Here's the specific problem: NPS surveys are typically sent quarterly or annually. By the
+                time
+                a low NPS response surfaces, the customer is often already 30–60 days past the point where intervention
+                would have been effective.</p>
+            <p>NPS also has a significant collection problem: response rates for B2B SaaS surveys average 15–30%, which
+                means the NPS score your team reviews is built from less than a third of your accounts. The accounts
+                that
+                bother responding are systematically different from the ones that don't — and the ones that don't
+                respond
+                are more likely to churn.</p>
+            <p>This doesn't mean NPS is worthless — it's a useful relationship health indicator over long time periods.
+                But using it as a real-time churn prediction tool is a category error. For operational renewal
+                management,
+                product usage trends and stakeholder engagement frequency are 4–6 weeks more leading than NPS, which
+                means
+                they leave you more time to act.</p>
+            <p><strong>Use NPS for:</strong> relationship health benchmarking, post-QBR feedback, long-term trend
+                analysis.
+                <strong>Don't use it for:</strong> real-time churn risk identification or renewal pipeline management.
+            </p>
+        </div>
+
+        <h2>What good looks like when all five are working</h2>
+        <p>
+            A CS team that's tracking all five metrics and acting on them has a specific operational signature: TTFV is
+            measured from day one and drives onboarding accountability, GRR and NRR are reviewed monthly rather than
+            quarterly, health score predictions are validated against outcomes and adjusted, CSM ratios are used to
+            drive
+            headcount conversations before capacity becomes a problem rather than after. NPS is reviewed as context, not
+            as action trigger.
+        </p>
+        <p>
+            The difference between that team and one tracking the same five metrics but not acting on them is the
+            infrastructure: can you see health score changes in real time? Does usage decline automatically trigger
+            an intervention? Is leadership looking at ARR at risk by tier in a live view, or in a slide deck that's
+            two weeks old? The metrics themselves are table stakes. The infrastructure that surfaces them and routes
+            action is the actual competitive advantage.
+        </p>
+
+        <div
+            style="background: linear-gradient(135deg, #1e3a8a, #2563eb); border-radius: 1rem; padding: 2.5rem; margin: 3rem 0; text-align: center;">
+            <h2 style="color: white; margin: 0 0 0.75rem; font-size: 1.6rem; font-family: 'Lora', serif;">
+                See your renewal metrics in a live dashboard
+            </h2>
+            <p style="color: #bfdbfe; margin: 0 0 1.5rem; font-size: 1rem;">
+                Renewal360 surfaces GRR, NRR, health score accuracy, and ARR-at-risk in a single view — updated
+                in real time from your CRM. Start with 25 accounts, no credit card required.
+            </p>
+            <a href="/contact"
+                style="display: inline-block; background: white; color: #1d4ed8; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">
+                Start Free Pilot →
+            </a>
+        </div>
+
+    </main>
+
+    <section style="max-width:48rem;margin:0 auto;padding:0 1.5rem 3rem;" itemscope
+        itemtype="https://schema.org/FAQPage">
+        <h2 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:#111827;margin-bottom:1rem;">
+            Frequently Asked Questions
+        </h2>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                What's the difference between GRR and NRR, and which matters more?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    GRR (Gross Revenue Retention) measures retention only — the percentage of existing ARR retained
+                    without
+                    counting expansion. NRR (Net Revenue Retention) includes expansion, upsells, and cross-sells, minus
+                    churn
+                    and contraction. Both matter, but they answer different questions: GRR tells you how well you're
+                    retaining
+                    what you've won; NRR tells you whether the existing customer base is growing. GRR is the better
+                    leading
+                    indicator for process health because expansion can mask churn problems in the NRR number.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                How do I define "first value" for Time-to-First-Value at my company?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    First value is the earliest repeatable product event that correlates with first-year renewal. To
+                    find it,
+                    pull your renewed accounts from the last 12 months and look at which product actions they all
+                    completed
+                    within the first 90 days. Then pull your churned accounts and look at which of those actions they
+                    didn't
+                    complete. The difference is your "aha moment" — and the time it takes to reach that event is your
+                    TTFV
+                    baseline. Common examples include: first automated sequence sent, first renewal saved, first
+                    dashboard
+                    viewed by three or more users.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                How many accounts should one CSM manage?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Account count is less useful than ARR capacity ratio because it ignores account complexity. A CSM
+                    managing
+                    20 enterprise accounts at $200K ACV is stretched; a CSM managing 100 SMB accounts at $8K ACV may be
+                    under-utilised. The ARR capacity ratio benchmarks in this article are a better starting point. If a
+                    CSM's
+                    ratio exceeds the benchmark range for their segment and renewal rate is declining, that's a
+                    resourcing
+                    signal — not an execution problem.
+                </p>
+            </div>
+        </div>
+        <div style="padding:1.25rem 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                Should NPS ever be used in renewal decisions?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    NPS is useful as one input into health scoring — not as a standalone renewal predictor. If you
+                    include
+                    NPS in a health score model alongside usage trends, engagement frequency, and support sentiment, it
+                    adds
+                    signal. Used in isolation to flag renewal risk, it provides too much lag and too low a response rate
+                    to
+                    be reliable. The practical rule: act on NPS as a relationship data point; don't wait for NPS to tell
+                    you
+                    an account is at risk.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <p style="max-width:48rem;margin:0 auto 2.5rem;padding:0 1.5rem;font-size:0.85rem;color:#9ca3af;">
+        Related reading:
+        <a href="/blog/how-to-build-a-renewal-playbook-from-scratch" style="color:#2563eb;">How to Build a Renewal
+            Playbook from Scratch</a> ·
+        <a href="/blog/why-saas-companies-lose-renewals" style="color:#2563eb;">Why SaaS Companies Lose Renewals</a> ·
+        <a href="/blog/renewal360-setup-guide-live-in-7-days" style="color:#2563eb;">Renewal360 Setup Guide: Live in 7
+            Days</a>
+    </p>
+
+    <footer class="border-t border-gray-100 py-8 text-center text-sm text-gray-400">
+        <p>© 2026 Renewal360 · <a href="/terms" class="hover:text-blue-600">Terms</a> · <a href="/contact"
+                class="hover:text-blue-600">Contact</a></p>
+    </footer>
+
+</body>
+
+</html>

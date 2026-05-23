@@ -78,13 +78,22 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# ── Block junk / scraper bots ────────────────────────
+# ── SEO Tools (unblocked for backlink & keyword monitoring) ──────────
 User-agent: AhrefsBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /settings
 
 User-agent: SemrushBot
-Disallow: /
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /settings
 
+# ── Block pure junk / scraper bots ───────────────────
 User-agent: MJ12bot
 Disallow: /
 

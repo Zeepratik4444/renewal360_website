@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Build a Renewal Playbook from Scratch | Renewal360 Blog</title>
+  <meta name="description" content="A practical, step-by-step guide to building a renewal playbook from scratch — covering timing, segmentation, health signals, sequence design, and escalation tracks." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://renewal360.in/blog/how-to-build-a-renewal-playbook-from-scratch" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Renewal360" />
+  <meta property="og:url" content="https://renewal360.in/blog/how-to-build-a-renewal-playbook-from-scratch" />
+  <meta property="og:title" content="How to Build a Renewal Playbook from Scratch | Renewal360 Blog" />
+  <meta property="og:description" content="A practical, step-by-step guide to building a renewal playbook from scratch — covering timing, segmentation, health signals, sequence design, and escalation tracks." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Build a Renewal Playbook from Scratch | Renewal360 Blog" />
+  <meta name="twitter:description" content="A practical, step-by-step guide to building a renewal playbook from scratch — covering timing, segmentation, health signals, sequence design, and escalation tracks." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:image" content="https://renewal360.in/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://renewal360.in/og-image.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Build a Renewal Playbook from Scratch","description":"A practical, step-by-step guide to building a renewal playbook from scratch — covering timing, segmentation, health signals, sequence design, and escalation tracks.","url":"https://renewal360.in/blog/how-to-build-a-renewal-playbook-from-scratch","datePublished":"2026-05-20","dateModified":"2026-05-13","author":{"@type":"Organization","name":"Renewal360","url":"https://renewal360.in"},"publisher":{"@type":"Organization","name":"Renewal360","url":"https://renewal360.in"},"keywords":"Playbook, Customer Success, Renewal Automation","articleBody":"Playbook Customer Success Renewal Automation How to Build a Renewal Playbook from Scratch Most CS teams have renewal instincts. Fewer have renewal systems. This is the practical guide to turning institutional knowledge into a documented, repeatable playbook — one that works whether your best CSM is on call or on holiday. Renewal360 Team 12 min read · May 2026 90 days Minimum lead time your playbook should trigger for standard renewals 5 signals The health scoring inputs that reliably predict renewal risk for most SaaS products 3 tracks Minimum sequence tracks a complete renewal playbook needs: healthy, at-risk, escalated A renewal playbook is not a list of email templates. It's a decision system — a set of documented rules that determine what happens, when, for which accounts, and who owns it. Done right, it takes the institutional knowledge that lives in your best CSM's head and turns it into something the whole team can execute consistently. This guide covers the five components of a functional renewal playbook, in the order you should build them. Each section includes the specific questions you need to answer before moving to the next. Step 1: Define your renewal segments Step 1 of 5 Segment before you sequence The most common mistake in renewal playbook design is building a single sequence and applying it to all accounts. Segmentation — deciding which accounts get which treatment — has to come first, because every subsequent decision (timing, touch frequency, escalation path) depends on which segment an account is in. At minimum, build two dimensions: ARR tier and risk level. ARR tier determines the commercial weight of the renewal (how much attention it deserves). Risk level determines the urgency and track (healthy, at-risk, or escalated). Segment ARR Range Outreach Start Touch Frequency Escalation Owner Enterprise $100K+ 120 days Weekly touchpoints VP CS + AE Mid-market $20K–$100K 90 days Bi-weekly Senior CSM SMB Under $20K 60 days Automated + CSM review CSM queue Add a risk modifier: any account regardless of ARR tier that crosses a health score threshold drops into the escalation track immediately, overriding the standard timing. A $15K account showing three concurrent churn signals at T-100 gets treated like a mid-market account, not left on the standard SMB track. Step 2: Define your health scoring signals Step 2 of 5 Pick 4–5 signals, weight them, set your threshold Health scoring collapses to a single question: what behaviours in the 60–90 days before renewal are predictive of churn at your specific company? The signals vary by product, but the categories that matter most for most SaaS products are consistent. Product usage trend Is weekly/monthly active usage increasing, flat, or declining over the last 60 days? Decline rate matters more than absolute level. Champion engagement Is the primary contact still logging in? Has the champion changed? Engagement frequency of the key decision-maker is a leading indicator. Support ticket sentiment Volume, resolution time, and tone of recent support tickets. Unresolved or negatively-toned tickets in the last 30 days are a strong signal. Payment reliability Late payments, failed charges, or invoice disputes in the last 2 billing cycles. Not a standalone signal, but strong when combined with others. NPS or CSAT recency Most recent survey response score and trend. A score drop of 20+ points since last survey is a significant risk flag. Stakeholder breadth How many users across the account are actively using the product? Single-user adoption at the account level is a concentration risk. Assign each signal a weight based on its historical correlation with churn at your company. Score each account 0–100. Set a threshold — typically 65 — below which an account enters the at-risk track. Set a secondary threshold — typically 45 — below which an account enters the escalation track. Revisit the weights quarterly as you accumulate more outcome data. Step 3: Map your sequence timing and branching logic Step 3 of 5 Build sequences that adapt — not timers that fire regardless A renewal sequence is not a drip. A drip fires on a fixed schedule. A sequence fires on a schedule, then adapts based on what actually happens — a reply, a health score change, a click, an escalation. That distinction is the difference between automation that helps and automation that damages the relationship. For each segment, map the sequence as a decision tree, not a list. The nodes are: touchpoint fired"}</script>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111827; background: #fff; }
+    a { color: inherit; }
+    .site-nav { border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); z-index: 10; }
+    .site-nav-inner { max-width: 72rem; margin: 0 auto; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { color: #2563eb; font-weight: 800; font-size: 1.35rem; text-decoration: none; }
+    .nav-links { display: flex; gap: 1.25rem; color: #4b5563; font-size: .95rem; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: #2563eb; }
+    header, main { max-width: 48rem; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+    header { padding-top: 4rem; padding-bottom: 2.5rem; }
+    main { padding-bottom: 5rem; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+    h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); line-height: 1.05; margin: 0 0 1.5rem; color: #111827; }
+    h2 { font-size: 1.65rem; margin: 2.5rem 0 1rem; }
+    h3 { font-size: 1.15rem; margin: 1.5rem 0 .5rem; }
+    p { color: #374151; line-height: 1.8; margin: 0 0 1.25rem; }
+    ul { list-style: none; padding: 0; margin: 0 0 1.25rem; }
+    li { color: #374151; line-height: 1.7; padding: .3rem 0 .3rem 1.6rem; position: relative; }
+    li::before { content: "->"; position: absolute; left: 0; color: #2563eb; font-weight: 700; }
+    .text-blue-600 { color: #2563eb; }
+    .text-gray-500 { color: #6b7280; }
+    .text-gray-400 { color: #9ca3af; }
+    .text-gray-900 { color: #111827; }
+    .text-xl { font-size: 1.25rem; }
+    .text-sm { font-size: .875rem; }
+    .text-xs { font-size: .75rem; }
+    .font-bold { font-weight: 700; }
+    .font-semibold { font-weight: 600; }
+    .leading-relaxed { line-height: 1.7; }
+    .leading-tight { line-height: 1.1; }
+    .mb-5 { margin-bottom: 1.25rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mt-2 { margin-top: .5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .pt-6 { padding-top: 1.5rem; }
+    .border-t { border-top: 1px solid #e5e7eb; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .gap-4 { gap: 1rem; }
+    .w-10 { width: 2.5rem; }
+    .h-10 { height: 2.5rem; }
+    .rounded-full { border-radius: 999px; }
+    .bg-blue-100 { background: #dbeafe; }
+    .text-blue-700 { color: #1d4ed8; }
+    .justify-center { justify-content: center; }
+    .tag { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: .75rem; font-weight: 700; padding: .25rem .75rem; border-radius: 999px; margin: 0 .5rem .5rem 0; }
+    .step-card, .ai-fix { background: #f0f7ff; border-left: 4px solid #2563eb; border-radius: 0 .5rem .5rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .step-num { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #2563eb; margin-bottom: .25rem; }
+    .callout, .callout-dark { background: #111827; color: #fff; border-radius: .75rem; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .callout { background: #1e3a8a; }
+    .callout p, .callout-dark p { color: #bfdbfe; margin: 0; }
+    .reason-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; margin: 1.25rem 0; position: relative; overflow: hidden; }
+    .reason-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: #ef4444; }
+    .reason-card.amber::before { background: #f59e0b; }
+    .reason-card.slate::before { background: #64748b; }
+    .stat-row, .before-after { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+    .before-after { grid-template-columns: repeat(2, 1fr); }
+    .stat-box { text-align: center; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.25rem .75rem; }
+    .num { font-family: Georgia, "Times New Roman", serif; font-size: 1.75rem; font-weight: 700; color: #2563eb; }
+    .label { font-size: .78rem; color: #6b7280; margin-top: .25rem; line-height: 1.4; }
+    .timeline-row { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start; }
+    .timeline-badge { width: 56px; height: 56px; flex: 0 0 auto; background: #2563eb; color: #fff; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: .85rem; text-align: center; line-height: 1.2; }
+    .timeline-body h4 { margin: 0 0 .25rem; }
+    .timeline-body p { margin: 0; color: #6b7280; font-size: .9rem; line-height: 1.6; }
+    .comparison-table-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; border: 1px solid #e5e7eb; border-radius: .75rem; }
+    .comparison-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: .9rem; }
+    .comparison-table th, .comparison-table td { border-bottom: 1px solid #e5e7eb; padding: .95rem; text-align: left; vertical-align: top; color: #374151; }
+    .comparison-table th { background: #f8fafc; color: #111827; font-weight: 700; }
+    .comparison-table tr:last-child td { border-bottom: 0; }
+    .comparison-table td:first-child { font-weight: 700; color: #111827; }
+    .blog-cta-link, .button { display: inline-flex; align-items: center; border-radius: .5rem; background: #2563eb; color: #fff; font-weight: 700; padding: .85rem 1.1rem; text-decoration: none; }
+    .blog-cta-link:hover, .button:hover { background: #1d4ed8; }
+    .post-grid { max-width: 72rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .post-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; text-decoration: none; display: block; }
+    .post-card:hover { border-color: #bfdbfe; box-shadow: 0 18px 35px rgba(15, 23, 42, .08); }
+    .post-card h2 { font-size: 1.25rem; margin: .75rem 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    @media (max-width: 780px) {
+      .nav-links { display: none; }
+      .stat-row, .before-after, .post-grid { grid-template-columns: 1fr; }
+      header { padding-top: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">Renewal360</a>
+      <div class="nav-links">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Request Demo</a>
+      </div>
+    </div>
+  </nav>
+  <header class="max-w-3xl mx-auto px-6 pt-16 pb-10">
+        <div class="mb-5">
+            <span class="tag">Playbook</span>
+            <span class="tag">Customer Success</span>
+            <span class="tag">Renewal Automation</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            How to Build a Renewal Playbook
+            <span class="text-blue-600"> from Scratch</span>
+        </h1>
+        <p class="text-xl text-gray-500 leading-relaxed">
+            Most CS teams have renewal instincts. Fewer have renewal systems. This is the practical guide to turning
+            institutional knowledge into a documented, repeatable playbook — one that works whether your best CSM is
+            on call or on holiday.
+        </p>
+        <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
+            <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40" class="w-10 h-10 rounded-full"
+                style="flex-shrink:0;object-fit:contain;" />
+            <div>
+                <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
+                <div class="text-xs text-gray-400">12 min read · May 2026</div>
+            </div>
+        </div>
+    </header><main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+
+        <div class="stat-row">
+            <div class="stat-box">
+                <div class="num">90 days</div>
+                <div class="label">Minimum lead time your playbook should trigger for standard renewals</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">5 signals</div>
+                <div class="label">The health scoring inputs that reliably predict renewal risk for most SaaS products
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="num">3 tracks</div>
+                <div class="label">Minimum sequence tracks a complete renewal playbook needs: healthy, at-risk,
+                    escalated</div>
+            </div>
+        </div>
+
+        <p>
+            A renewal playbook is not a list of email templates. It's a decision system — a set of documented rules that
+            determine what happens, when, for which accounts, and who owns it. Done right, it takes the institutional
+            knowledge that lives in your best CSM's head and turns it into something the whole team can execute
+            consistently.
+        </p>
+        <p>
+            This guide covers the five components of a functional renewal playbook, in the order you should build them.
+            Each section includes the specific questions you need to answer before moving to the next.
+        </p>
+
+        <h2>Step 1: Define your renewal segments</h2>
+        <div class="step-card">
+            <div class="step-num">Step 1 of 5</div>
+            <h3>Segment before you sequence</h3>
+            <p>The most common mistake in renewal playbook design is building a single sequence and applying it to all
+                accounts. Segmentation — deciding which accounts get which treatment — has to come first, because every
+                subsequent decision (timing, touch frequency, escalation path) depends on which segment an account is
+                in.</p>
+            <p>At minimum, build two dimensions: ARR tier and risk level. ARR tier determines the commercial weight of
+                the renewal (how much attention it deserves). Risk level determines the urgency and track (healthy,
+                at-risk,
+                or escalated).</p>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Segment</th>
+                        <th>ARR Range</th>
+                        <th>Outreach Start</th>
+                        <th>Touch Frequency</th>
+                        <th>Escalation Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Enterprise</strong></td>
+                        <td>$100K+</td>
+                        <td>120 days</td>
+                        <td>Weekly touchpoints</td>
+                        <td>VP CS + AE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mid-market</strong></td>
+                        <td>$20K–$100K</td>
+                        <td>90 days</td>
+                        <td>Bi-weekly</td>
+                        <td>Senior CSM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SMB</strong></td>
+                        <td>Under $20K</td>
+                        <td>60 days</td>
+                        <td>Automated + CSM review</td>
+                        <td>CSM queue</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            Add a risk modifier: any account regardless of ARR tier that crosses a health score threshold drops into the
+            escalation track immediately, overriding the standard timing. A $15K account showing three concurrent churn
+            signals at T-100 gets treated like a mid-market account, not left on the standard SMB track.
+        </p>
+
+        <h2>Step 2: Define your health scoring signals</h2>
+        <div class="step-card green">
+            <div class="step-num">Step 2 of 5</div>
+            <h3>Pick 4–5 signals, weight them, set your threshold</h3>
+            <p>Health scoring collapses to a single question: what behaviours in the 60–90 days before renewal are
+                predictive of churn at your specific company? The signals vary by product, but the categories that
+                matter
+                most for most SaaS products are consistent.</p>
+        </div>
+
+        <div class="signal-grid">
+            <div class="signal-box">
+                <div class="signal-name">Product usage trend</div>
+                <div class="signal-desc">Is weekly/monthly active usage increasing, flat, or declining over the last 60
+                    days? Decline rate matters more than absolute level.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">Champion engagement</div>
+                <div class="signal-desc">Is the primary contact still logging in? Has the champion changed? Engagement
+                    frequency of the key decision-maker is a leading indicator.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">Support ticket sentiment</div>
+                <div class="signal-desc">Volume, resolution time, and tone of recent support tickets. Unresolved or
+                    negatively-toned tickets in the last 30 days are a strong signal.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">Payment reliability</div>
+                <div class="signal-desc">Late payments, failed charges, or invoice disputes in the last 2 billing
+                    cycles. Not a standalone signal, but strong when combined with others.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">NPS or CSAT recency</div>
+                <div class="signal-desc">Most recent survey response score and trend. A score drop of 20+ points since
+                    last survey is a significant risk flag.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">Stakeholder breadth</div>
+                <div class="signal-desc">How many users across the account are actively using the product? Single-user
+                    adoption at the account level is a concentration risk.</div>
+            </div>
+        </div>
+
+        <p>
+            Assign each signal a weight based on its historical correlation with churn at your company. Score each
+            account 0–100. Set a threshold — typically 65 — below which an account enters the at-risk track. Set a
+            secondary threshold — typically 45 — below which an account enters the escalation track. Revisit the weights
+            quarterly as you accumulate more outcome data.
+        </p>
+
+        <h2>Step 3: Map your sequence timing and branching logic</h2>
+        <div class="step-card purple">
+            <div class="step-num">Step 3 of 5</div>
+            <h3>Build sequences that adapt — not timers that fire regardless</h3>
+            <p>A renewal sequence is not a drip. A drip fires on a fixed schedule. A sequence fires on a schedule, then
+                adapts based on what actually happens — a reply, a health score change, a click, an escalation. That
+                distinction is the difference between automation that helps and automation that damages the
+                relationship.</p>
+        </div>
+
+        <p>
+            For each segment, map the sequence as a decision tree, not a list. The nodes are: touchpoint fired →
+            response detected? → if yes: pause and route to CSM. If no: is health score still above threshold? → if
+            yes: next scheduled touchpoint. If no: escalate and move to escalation track. This logic should be written
+            down before it's built into any tool.
+        </p>
+
+        <div class="callout-dark">
+            <h3>The three non-negotiable sequence rules</h3>
+            <p>
+                1. Every sequence pauses immediately when the customer replies — no exceptions.<br />
+                2. Every email passes through CSM approval before sending — AI-drafted or template-based.<br />
+                3. Health score changes override the sequence timeline — a score drop overrides "next email at T-60."
+            </p>
+        </div>
+
+        <h2>Step 4: Build your escalation tracks before you need them</h2>
+        <div class="step-card amber">
+            <div class="step-num">Step 4 of 5</div>
+            <h3>The escalation protocol has to exist before an account enters it</h3>
+            <p>Escalation track design is the part most playbooks get wrong — because it gets built reactively. An
+                account hits a crisis point, and the team improvises an escalation response. By the time the executive
+                sponsor is looped in, the optimal response window has already closed. The escalation protocol has to be
+                documented before any account needs it.</p>
+        </div>
+
+        <p>The escalation track needs four things defined in advance:</p>
+        <ul>
+            <li><strong>Trigger conditions</strong> — the specific signal combinations that move an account into
+                escalation (health score below threshold, or specific manual override)</li>
+            <li><strong>Owner assignment</strong> — who owns the escalated account immediately and who is looped in at
+                what stage</li>
+            <li><strong>Response SLA</strong> — maximum time between escalation trigger and first owner action (24 hours
+                is a reasonable standard)</li>
+            <li><strong>Resolution criteria</strong> — what outcome closes the escalation (renewal committed, account
+                moved to active risk, or specific decision date set)</li>
+        </ul>
+
+        <h2>Step 5: Build your leadership visibility layer</h2>
+        <div class="step-card">
+            <div class="step-num">Step 5 of 5</div>
+            <h3>The playbook is only complete when leadership can act on it in real time</h3>
+            <p>A renewal playbook that produces good CSM-level execution but no leadership visibility isn't a system —
+                it's a better version of the old manual process. The final layer of the playbook defines what leadership
+                can see, how current it is, and what decisions they can make from it without asking the CS team.</p>
+        </div>
+
+        <p>
+            At minimum, leadership needs three views: total ARR renewing by month over the next 90 days, ARR by risk
+            tier (healthy / at-risk / escalated), and per-CSM renewal pipeline health. These aren't reporting views —
+            they're intervention triggers. When the VP of CS sees that 30% of next quarter's renewal ARR is in the
+            at-risk tier in January, they can reallocate CSM bandwidth in February. That's the value of the visibility
+            layer: it turns lagging indicators into leading actions.
+        </p>
+
+        <h2>What a complete playbook looks like on one page</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>What it defines</th>
+                        <th>Who owns it</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Segmentation rules</strong></td>
+                        <td>Which tier each account belongs to and why</td>
+                        <td>VP CS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Health scoring model</strong></td>
+                        <td>5 signals, weights, and risk thresholds</td>
+                        <td>CS Ops / RevOps</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sequence map</strong></td>
+                        <td>Timing, content, branching logic per tier</td>
+                        <td>CS Team</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Escalation protocol</strong></td>
+                        <td>Triggers, owners, SLAs, resolution criteria</td>
+                        <td>VP CS + AE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Leadership dashboard</strong></td>
+                        <td>ARR at risk by tier, per-CSM pipeline, 90-day forecast</td>
+                        <td>CS Ops</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            A playbook that covers all five components converts the renewal motion from something that depends on
+            individual CSM quality to something that runs consistently at the system level. New CSMs onboard faster.
+            Coverage during absence doesn't degrade. Leadership can resource proactively. The process itself becomes
+            a competitive advantage.
+        </p>
+
+        <div
+            style="background: linear-gradient(135deg, #1e3a8a, #2563eb); border-radius: 1rem; padding: 2.5rem; margin: 3rem 0; text-align: center;">
+            <h2 style="color: white; margin: 0 0 0.75rem; font-size: 1.6rem; font-family: 'Lora', serif;">
+                Ready to run this playbook in a system that executes it automatically?
+            </h2>
+            <p style="color: #bfdbfe; margin: 0 0 1.5rem; font-size: 1rem;">
+                Renewal360 implements the segmentation, health scoring, sequences, escalation tracks, and leadership
+                dashboard from this playbook — configured to your accounts in 7 days. No credit card required.
+            </p>
+            <a href="/contact"
+                style="display: inline-block; background: white; color: #1d4ed8; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">
+                Start Free Pilot →
+            </a>
+        </div>
+
+    </main>
+</body>
+</html>

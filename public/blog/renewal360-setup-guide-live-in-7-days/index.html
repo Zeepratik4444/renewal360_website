@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renewal360 Setup Guide: Live in 7 Days | Renewal360 Blog</title>
+  <meta name="description" content="A day-by-day guide to getting Renewal360 fully operational in 7 days — CRM connection, health scoring, first sequences live, and your team running independently." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://renewal360.in/blog/renewal360-setup-guide-live-in-7-days" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Renewal360" />
+  <meta property="og:url" content="https://renewal360.in/blog/renewal360-setup-guide-live-in-7-days" />
+  <meta property="og:title" content="Renewal360 Setup Guide: Live in 7 Days | Renewal360 Blog" />
+  <meta property="og:description" content="A day-by-day guide to getting Renewal360 fully operational in 7 days — CRM connection, health scoring, first sequences live, and your team running independently." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Renewal360 Setup Guide: Live in 7 Days | Renewal360 Blog" />
+  <meta name="twitter:description" content="A day-by-day guide to getting Renewal360 fully operational in 7 days — CRM connection, health scoring, first sequences live, and your team running independently." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:image" content="https://renewal360.in/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://renewal360.in/og-image.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Renewal360 Setup Guide: Live in 7 Days","description":"A day-by-day guide to getting Renewal360 fully operational in 7 days — CRM connection, health scoring, first sequences live, and your team running independently.","url":"https://renewal360.in/blog/renewal360-setup-guide-live-in-7-days","datePublished":"2026-05-20","dateModified":"2026-05-13","author":{"@type":"Organization","name":"Renewal360","url":"https://renewal360.in"},"publisher":{"@type":"Organization","name":"Renewal360","url":"https://renewal360.in"},"keywords":"Setup Guide, Renewal360, Onboarding","articleBody":"Setup Guide Renewal360 Onboarding Renewal360 Setup Guide: Live in 7 Days From first login to live sequences running on real accounts — a day-by-day guide to getting Renewal360 fully operational. No implementation partner required. Average setup time: 3–4 hours across the week. Renewal360 Team 11 min read · May 2026 7 days Typical time from first login to live sequences on 25 accounts 3–4 hrs Total active setup time required across the 7-day period Day 7 When your first AI-drafted approval queue appears — ready for CSM review Before you start: what you need Admin access to your CRM (Salesforce or HubSpot) for the OAuth connection A list of your first 25 pilot accounts with renewal dates and ARR — from your CRM or a spreadsheet The sending email address for renewal outreach (can be a shared mailbox or individual CSM address) One CSM who will own the approval queue during the pilot Day 1: CRM connection and data mapping Day 1 · ~45 minutes Connect your CRM and map the fields that matter Target: CRM connected and fields mapped by end of day Renewal360 connects to Salesforce and HubSpot via OAuth — no API keys required. The connection takes about 10 minutes. The field mapping takes longer and is worth doing carefully, because it determines the quality of the data your health scores and AI drafts will be built on. Map these fields as a minimum: renewal date (or contract end date), ARR (or MRR), primary contact name and email, account owner, company name, and industry. Optional but recommended: last login date, NPS score, open support ticket count, and account tier label if you have one in your CRM already. OAuth connection to CRM completed Renewal date field mapped and confirmed correct on 5 test accounts ARR / contract value field mapped Primary contact and email fields mapped Optional enrichment fields mapped where available Day 2: Account import and initial health scoring Day 2 · ~40 minutes Import your 25 pilot accounts and configure health scoring signals Target: 25 accounts imported with initial health scores calculated Import your pilot accounts either directly from the CRM sync or via CSV if you want to control the initial set precisely. 25 accounts is the recommended starting size — enough to get meaningful data, small enough to manage carefully during the pilot. Configure the five health scoring signals with default weights as a starting point. You'll calibrate these after your first renewal cycle, so getting them perfect now isn't the goal. The goal is having a working model that produces differentiated scores across your 25 accounts — not a flat distribution where everything scores 70. 25 pilot accounts imported Renewal dates visible and correct for all accounts 5 health scoring signals configured (usage trend, engagement, support, payment, NPS) Initial health scores visible — confirm at least 3 segments exist (healthy / at-risk / escalated) Day 3: Segment setup and tier assignment Day 3 · ~30 minutes Define your ARR tiers and assign each account Target: every account assigned to a named segment with a sequence track Create your ARR-based segments — typically 2–3 tiers for a 25-account pilot. Name them clearly: Enterprise, Mid-market, SMB, or whatever labels match your internal language. Set the ARR thresholds for each tier. Assign each of your 25 accounts to the correct segment — the CRM sync should auto-assign most of them based on the ARR field you mapped on Day 1. The segment assignment determines which sequence each account enters. Spend 10 minutes reviewing the auto-assignments and correcting any that are wrong before moving to Day 4. 2–3 segments created with ARR thresholds defined All 25 accounts assigned to a segment Manual overrides applied for any accounts that don't fit the ARR-based assignment Escalation threshold (health score minimum) set per segment Day 4: Sequence design and email templates Day 4 · ~60 minutes Build your first two sequences — healthy track and at-risk track Target: healthy and at-risk sequences built for your primary segment Start with one segment — your mid-market or primary tier — and build two sequence tracks: healthy and at-risk. The healthy track is a standard 3-touch sequence (T-90, T-60, T-30). The at-risk track adds frequency and an escalation branch. For each sequence step, write a brief email brief — 2–3 sentences describing what the email should communicate and any specific account context to reference. The AI uses this brief to generate the personalised draft when t"}</script>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111827; background: #fff; }
+    a { color: inherit; }
+    .site-nav { border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); z-index: 10; }
+    .site-nav-inner { max-width: 72rem; margin: 0 auto; padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .brand { color: #2563eb; font-weight: 800; font-size: 1.35rem; text-decoration: none; }
+    .nav-links { display: flex; gap: 1.25rem; color: #4b5563; font-size: .95rem; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: #2563eb; }
+    header, main { max-width: 48rem; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+    header { padding-top: 4rem; padding-bottom: 2.5rem; }
+    main { padding-bottom: 5rem; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
+    h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); line-height: 1.05; margin: 0 0 1.5rem; color: #111827; }
+    h2 { font-size: 1.65rem; margin: 2.5rem 0 1rem; }
+    h3 { font-size: 1.15rem; margin: 1.5rem 0 .5rem; }
+    p { color: #374151; line-height: 1.8; margin: 0 0 1.25rem; }
+    ul { list-style: none; padding: 0; margin: 0 0 1.25rem; }
+    li { color: #374151; line-height: 1.7; padding: .3rem 0 .3rem 1.6rem; position: relative; }
+    li::before { content: "->"; position: absolute; left: 0; color: #2563eb; font-weight: 700; }
+    .text-blue-600 { color: #2563eb; }
+    .text-gray-500 { color: #6b7280; }
+    .text-gray-400 { color: #9ca3af; }
+    .text-gray-900 { color: #111827; }
+    .text-xl { font-size: 1.25rem; }
+    .text-sm { font-size: .875rem; }
+    .text-xs { font-size: .75rem; }
+    .font-bold { font-weight: 700; }
+    .font-semibold { font-weight: 600; }
+    .leading-relaxed { line-height: 1.7; }
+    .leading-tight { line-height: 1.1; }
+    .mb-5 { margin-bottom: 1.25rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mt-2 { margin-top: .5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .pt-6 { padding-top: 1.5rem; }
+    .border-t { border-top: 1px solid #e5e7eb; }
+    .flex { display: flex; }
+    .items-center { align-items: center; }
+    .gap-4 { gap: 1rem; }
+    .w-10 { width: 2.5rem; }
+    .h-10 { height: 2.5rem; }
+    .rounded-full { border-radius: 999px; }
+    .bg-blue-100 { background: #dbeafe; }
+    .text-blue-700 { color: #1d4ed8; }
+    .justify-center { justify-content: center; }
+    .tag { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: .75rem; font-weight: 700; padding: .25rem .75rem; border-radius: 999px; margin: 0 .5rem .5rem 0; }
+    .step-card, .ai-fix { background: #f0f7ff; border-left: 4px solid #2563eb; border-radius: 0 .5rem .5rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .step-num { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #2563eb; margin-bottom: .25rem; }
+    .callout, .callout-dark { background: #111827; color: #fff; border-radius: .75rem; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .callout { background: #1e3a8a; }
+    .callout p, .callout-dark p { color: #bfdbfe; margin: 0; }
+    .reason-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; margin: 1.25rem 0; position: relative; overflow: hidden; }
+    .reason-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: #ef4444; }
+    .reason-card.amber::before { background: #f59e0b; }
+    .reason-card.slate::before { background: #64748b; }
+    .stat-row, .before-after { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 2rem 0; }
+    .before-after { grid-template-columns: repeat(2, 1fr); }
+    .stat-box { text-align: center; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.25rem .75rem; }
+    .num { font-family: Georgia, "Times New Roman", serif; font-size: 1.75rem; font-weight: 700; color: #2563eb; }
+    .label { font-size: .78rem; color: #6b7280; margin-top: .25rem; line-height: 1.4; }
+    .timeline-row { display: flex; gap: 1rem; margin-bottom: 1rem; align-items: flex-start; }
+    .timeline-badge { width: 56px; height: 56px; flex: 0 0 auto; background: #2563eb; color: #fff; border-radius: 999px; display: flex; align-items: center; justify-content: center; font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: .85rem; text-align: center; line-height: 1.2; }
+    .timeline-body h4 { margin: 0 0 .25rem; }
+    .timeline-body p { margin: 0; color: #6b7280; font-size: .9rem; line-height: 1.6; }
+    .comparison-table-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; border: 1px solid #e5e7eb; border-radius: .75rem; }
+    .comparison-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: .9rem; }
+    .comparison-table th, .comparison-table td { border-bottom: 1px solid #e5e7eb; padding: .95rem; text-align: left; vertical-align: top; color: #374151; }
+    .comparison-table th { background: #f8fafc; color: #111827; font-weight: 700; }
+    .comparison-table tr:last-child td { border-bottom: 0; }
+    .comparison-table td:first-child { font-weight: 700; color: #111827; }
+    .blog-cta-link, .button { display: inline-flex; align-items: center; border-radius: .5rem; background: #2563eb; color: #fff; font-weight: 700; padding: .85rem 1.1rem; text-decoration: none; }
+    .blog-cta-link:hover, .button:hover { background: #1d4ed8; }
+    .post-grid { max-width: 72rem; margin: 0 auto; padding: 3rem 1.5rem 5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .post-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; text-decoration: none; display: block; }
+    .post-card:hover { border-color: #bfdbfe; box-shadow: 0 18px 35px rgba(15, 23, 42, .08); }
+    .post-card h2 { font-size: 1.25rem; margin: .75rem 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    @media (max-width: 780px) {
+      .nav-links { display: none; }
+      .stat-row, .before-after, .post-grid { grid-template-columns: 1fr; }
+      header { padding-top: 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a class="brand" href="/">Renewal360</a>
+      <div class="nav-links">
+        <a href="/features">Features</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/blog">Blog</a>
+        <a href="/contact">Request Demo</a>
+      </div>
+    </div>
+  </nav>
+  <header class="max-w-3xl mx-auto px-6 pt-16 pb-10">
+        <div class="mb-5">
+            <span class="tag">Setup Guide</span>
+            <span class="tag">Renewal360</span>
+            <span class="tag">Onboarding</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+            Renewal360 Setup Guide:
+            <span class="text-blue-600"> Live in 7 Days</span>
+        </h1>
+        <p class="text-xl text-gray-500 leading-relaxed">
+            From first login to live sequences running on real accounts — a day-by-day guide to getting Renewal360
+            fully operational. No implementation partner required. Average setup time: 3–4 hours across the week.
+        </p>
+        <div class="flex items-center gap-4 mt-8 pt-6 border-t border-gray-100">
+            <img src="/favicon-96x96.png" alt="Renewal360 logo" width="40" height="40" class="w-10 h-10 rounded-full"
+                style="flex-shrink:0;object-fit:contain;" />
+            <div>
+                <div class="font-semibold text-sm text-gray-900">Renewal360 Team</div>
+                <div class="text-xs text-gray-400">11 min read · May 2026</div>
+            </div>
+        </div>
+    </header><main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+
+        <div class="stat-row">
+            <div class="stat-box">
+                <div class="num">7 days</div>
+                <div class="label">Typical time from first login to live sequences on 25 accounts</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">3–4 hrs</div>
+                <div class="label">Total active setup time required across the 7-day period</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">Day 7</div>
+                <div class="label">When your first AI-drafted approval queue appears — ready for CSM review</div>
+            </div>
+        </div>
+
+        <div class="prereqs">
+            <h3>Before you start: what you need</h3>
+            <ul>
+                <li>Admin access to your CRM (Salesforce or HubSpot) for the OAuth connection</li>
+                <li>A list of your first 25 pilot accounts with renewal dates and ARR — from your CRM or a spreadsheet
+                </li>
+                <li>The sending email address for renewal outreach (can be a shared mailbox or individual CSM address)
+                </li>
+                <li>One CSM who will own the approval queue during the pilot</li>
+            </ul>
+        </div>
+
+        <h2>Day 1: CRM connection and data mapping</h2>
+        <div class="day-card">
+            <div class="day-label">Day 1 · ~45 minutes</div>
+            <h3>Connect your CRM and map the fields that matter</h3>
+            <div class="time-badge">Target: CRM connected and fields mapped by end of day</div>
+            <p>Renewal360 connects to Salesforce and HubSpot via OAuth — no API keys required. The connection takes
+                about 10 minutes. The field mapping takes longer and is worth doing carefully, because it determines the
+                quality of the data your health scores and AI drafts will be built on.</p>
+            <p>Map these fields as a minimum: renewal date (or contract end date), ARR (or MRR), primary contact name
+                and email, account owner, company name, and industry. Optional but recommended: last login date, NPS
+                score,
+                open support ticket count, and account tier label if you have one in your CRM already.</p>
+            <ul class="day-checklist">
+                <li>OAuth connection to CRM completed</li>
+                <li>Renewal date field mapped and confirmed correct on 5 test accounts</li>
+                <li>ARR / contract value field mapped</li>
+                <li>Primary contact and email fields mapped</li>
+                <li>Optional enrichment fields mapped where available</li>
+            </ul>
+        </div>
+
+        <h2>Day 2: Account import and initial health scoring</h2>
+        <div class="day-card">
+            <div class="day-label">Day 2 · ~40 minutes</div>
+            <h3>Import your 25 pilot accounts and configure health scoring signals</h3>
+            <div class="time-badge">Target: 25 accounts imported with initial health scores calculated</div>
+            <p>Import your pilot accounts either directly from the CRM sync or via CSV if you want to control the
+                initial
+                set precisely. 25 accounts is the recommended starting size — enough to get meaningful data, small
+                enough
+                to manage carefully during the pilot.</p>
+            <p>Configure the five health scoring signals with default weights as a starting point. You'll calibrate
+                these after your first renewal cycle, so getting them perfect now isn't the goal. The goal is having a
+                working model that produces differentiated scores across your 25 accounts — not a flat distribution
+                where
+                everything scores 70.</p>
+            <ul class="day-checklist">
+                <li>25 pilot accounts imported</li>
+                <li>Renewal dates visible and correct for all accounts</li>
+                <li>5 health scoring signals configured (usage trend, engagement, support, payment, NPS)</li>
+                <li>Initial health scores visible — confirm at least 3 segments exist (healthy / at-risk / escalated)
+                </li>
+            </ul>
+        </div>
+
+        <h2>Day 3: Segment setup and tier assignment</h2>
+        <div class="day-card">
+            <div class="day-label">Day 3 · ~30 minutes</div>
+            <h3>Define your ARR tiers and assign each account</h3>
+            <div class="time-badge">Target: every account assigned to a named segment with a sequence track</div>
+            <p>Create your ARR-based segments — typically 2–3 tiers for a 25-account pilot. Name them clearly:
+                Enterprise, Mid-market, SMB, or whatever labels match your internal language. Set the ARR thresholds
+                for each tier. Assign each of your 25 accounts to the correct segment — the CRM sync should auto-assign
+                most of them based on the ARR field you mapped on Day 1.</p>
+            <p>The segment assignment determines which sequence each account enters. Spend 10 minutes reviewing
+                the auto-assignments and correcting any that are wrong before moving to Day 4.</p>
+            <ul class="day-checklist">
+                <li>2–3 segments created with ARR thresholds defined</li>
+                <li>All 25 accounts assigned to a segment</li>
+                <li>Manual overrides applied for any accounts that don't fit the ARR-based assignment</li>
+                <li>Escalation threshold (health score minimum) set per segment</li>
+            </ul>
+        </div>
+
+        <h2>Day 4: Sequence design and email templates</h2>
+        <div class="day-card">
+            <div class="day-label">Day 4 · ~60 minutes</div>
+            <h3>Build your first two sequences — healthy track and at-risk track</h3>
+            <div class="time-badge">Target: healthy and at-risk sequences built for your primary segment</div>
+            <p>Start with one segment — your mid-market or primary tier — and build two sequence tracks: healthy and
+                at-risk. The healthy track is a standard 3-touch sequence (T-90, T-60, T-30). The at-risk track adds
+                frequency and an escalation branch.</p>
+            <p>For each sequence step, write a brief email brief — 2–3 sentences describing what the email should
+                communicate and any specific account context to reference. The AI uses this brief to generate the
+                personalised draft when the sequence activates on a specific account. You don't write the final email
+                here — you write the instruction set that the AI uses to write it.</p>
+            <ul class="day-checklist">
+                <li>Healthy track: 3 touchpoints mapped at T-90, T-60, T-30</li>
+                <li>At-risk track: 4–5 touchpoints with compressed timing and escalation branch</li>
+                <li>Email brief written for each sequence step</li>
+                <li>Branching logic set: reply detection → pause; health drop → escalate</li>
+            </ul>
+        </div>
+
+        <div class="callout-dark">
+            <h3>The most common setup mistake at Day 4</h3>
+            <p>
+                Teams spend too long writing the email briefs and trying to perfect the copy before any real account
+                data
+                is flowing. The AI draft quality improves significantly once it has actual account context to work with
+                —
+                usage data, industry, recent support interactions. Write adequate briefs on Day 4, then refine them
+                after
+                you see the first AI drafts on Day 7. Iteration beats perfection at this stage.
+            </p>
+        </div>
+
+        <h2>Day 5: Approval queue and inbox connection</h2>
+        <div class="day-card">
+            <div class="day-label">Day 5 · ~30 minutes</div>
+            <h3>Connect the sending inbox and configure the CSM approval queue</h3>
+            <div class="time-badge">Target: inbox connected, reply detection active, approval queue assigned</div>
+            <p>Connect the sending email account via OAuth (Gmail or Outlook). This enables both outbound sending and
+                the IMAP reply detection that pauses sequences when a customer responds. Test reply detection by sending
+                a test sequence to an internal email address and replying — confirm the sequence pauses before Day 7.
+            </p>
+            <p>Assign the approval queue to the CSM who will own the pilot. Set their notification preference — the
+                default is Slack notification when new drafts are waiting. If Slack isn't connected, email notification
+                works equally well.</p>
+            <ul class="day-checklist">
+                <li>Sending inbox connected via OAuth</li>
+                <li>Reply detection tested and confirmed working</li>
+                <li>Approval queue assigned to pilot CSM</li>
+                <li>Notification preference configured (Slack or email)</li>
+                <li>Daily digest enabled for leadership if applicable</li>
+            </ul>
+        </div>
+
+        <h2>Day 6: Dashboard configuration and alert thresholds</h2>
+        <div class="day-card">
+            <div class="day-label">Day 6 · ~25 minutes</div>
+            <h3>Set up the renewal pipeline dashboard and health alerts</h3>
+            <div class="time-badge">Target: dashboard visible and showing 25 accounts with correct risk tiers</div>
+            <p>Configure the renewal pipeline dashboard with your three primary views: ARR renewing by month (next 90
+                days), accounts by health tier, and per-CSM pipeline summary. For the pilot, the "per-CSM" view will
+                just show one CSM — but building the view correctly now means it scales without reconfiguration.</p>
+            <p>Set alert thresholds: which health score drop should trigger a Slack alert to the account owner?
+                The default is a drop of 15+ points in 7 days. Adjust based on your scoring scale. Set a separate
+                threshold for executive alerts — health score below 40 on any account over $50K ARR is a reasonable
+                starting point.</p>
+            <ul class="day-checklist">
+                <li>ARR-by-month view showing next 90 days of renewals</li>
+                <li>Health tier distribution visible across all 25 accounts</li>
+                <li>Account-level alerts configured for health score drops</li>
+                <li>Executive alert threshold set for high-value at-risk accounts</li>
+            </ul>
+        </div>
+
+        <h2>Day 7: First accounts go live</h2>
+        <div class="day-card">
+            <div class="day-label">Day 7 · ~30 minutes</div>
+            <h3>Activate sequences and review your first AI drafts</h3>
+            <div class="time-badge">Target: sequences active on all 25 accounts, first drafts in the approval queue
+            </div>
+            <p>Activate sequences on all 25 accounts. For accounts with renewal dates within 90 days, the first
+                touchpoint will be queued for immediate AI draft generation. The approval queue will start populating
+                within a few minutes — your CSM will see the first drafts ready for review.</p>
+            <p>Review the first 3–5 drafts together with the pilot CSM. Note anything that looks off in the
+                personalisation — this is usually a field mapping issue from Day 1 rather than a model quality problem.
+                Fix any mapping issues and regenerate. The goal by end of Day 7 is at least one approved and sent email.
+            </p>
+            <ul class="day-checklist">
+                <li>Sequences activated on all 25 accounts</li>
+                <li>First AI drafts visible in approval queue</li>
+                <li>At least one draft reviewed, edited if needed, and sent</li>
+                <li>Reply detection confirmed working on a live account</li>
+                <li>Dashboard showing correct status for all active accounts</li>
+            </ul>
+        </div>
+
+        <h2>Week 2: Calibrate and expand</h2>
+        <p>
+            By the end of day 7, the core system is live. Week 2 is calibration: reviewing the AI draft quality across
+            account types, adjusting health scoring weights if the distribution looks flat, and expanding to additional
+            account segments once the primary tier is running smoothly.
+        </p>
+        <p>
+            Most teams expand from 25 to their full account base within 3–4 weeks. The pilot period exists to validate
+            that the setup is correct before scaling — not because the system needs 3 weeks to work, but because
+            catching
+            a misconfigured field on 25 accounts is a 10-minute fix, and catching it on 200 accounts requires more work.
+        </p>
+
+        <div
+            style="background: linear-gradient(135deg, #1e3a8a, #2563eb); border-radius: 1rem; padding: 2.5rem; margin: 3rem 0; text-align: center;">
+            <h2 style="color: white; margin: 0 0 0.75rem; font-size: 1.6rem; font-family: 'Lora', serif;">
+                Ready to start your 7-day setup?
+            </h2>
+            <p style="color: #bfdbfe; margin: 0 0 1.5rem; font-size: 1rem;">
+                Start the 30-day free pilot with 25 accounts — no credit card, no implementation partner, no long-term
+                commitment. Get your first sequences live this week.
+            </p>
+            <a href="/contact"
+                style="display: inline-block; background: white; color: #1d4ed8; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">
+                Start Free Pilot →
+            </a>
+        </div>
+
+    </main>
+</body>
+</html>
