@@ -169,6 +169,23 @@ export function PricingPage() {
 					))}
 				</div>
 
+				{/* Supportive validation links */}
+				<div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 text-sm text-gray-600 mb-12 py-4 bg-gray-50/50 rounded-xl border border-gray-100 max-w-4xl mx-auto">
+					<div className="flex items-center gap-2">
+						<span className="text-gray-500">Comparing options?</span>
+						<Link to="/blog/$slug" params={{ slug: "gainsight-vs-totango-vs-renewal360" }} className="text-blue-600 font-semibold hover:underline">
+							Read Gainsight vs Totango vs Renewal360 &rarr;
+						</Link>
+					</div>
+					<span className="hidden md:inline text-gray-300">|</span>
+					<div className="flex items-center gap-2">
+						<span className="text-gray-500">Wondering about setup?</span>
+						<Link to="/blog/$slug" params={{ slug: "renewal360-setup-guide-live-in-7-days" }} className="text-blue-600 font-semibold hover:underline">
+							See our 7-Day Setup Guide &rarr;
+						</Link>
+					</div>
+				</div>
+
 				{/* Add-on block */}
 				<div className="bg-blue-50 rounded-lg p-8 text-center mb-16 max-w-2xl mx-auto border border-blue-100">
 					<h2 className="text-lg font-semibold text-blue-900 mb-2">

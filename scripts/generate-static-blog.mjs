@@ -113,13 +113,12 @@ const posts = [
 		readTime: "8 min read",
 		publishedAt: "2026-05-07",
 	},
-	// ── Posts added 2026-05-20 ───────────────────────────────────────────
 	{
 		slug: "signs-your-renewal-process-is-quietly-broken",
 		source: "blog-11-signs-your-renewal-process-is-quietly-broken.html",
 		title: "7 Signs Your Renewal Process Is Quietly Broken",
 		description:
-			"Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is broken, and what each one costs you.",
+			"Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.",
 		tags: ["Renewal Process", "Customer Success", "SaaS Churn"],
 		readTime: "9 min read",
 		publishedAt: "2026-05-20",
@@ -129,7 +128,7 @@ const posts = [
 		source: "blog-12-hidden-cost-of-manual-renewal-process.html",
 		title: "The Hidden Cost of a Manual Renewal Process",
 		description:
-			"Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn.",
+			"Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.",
 		tags: ["RevOps", "Customer Success", "SaaS Retention"],
 		readTime: "10 min read",
 		publishedAt: "2026-05-20",
@@ -139,7 +138,7 @@ const posts = [
 		source: "blog-13-how-to-build-a-renewal-playbook-from-scratch.html",
 		title: "How to Build a Renewal Playbook from Scratch",
 		description:
-			"A practical, step-by-step guide to building a renewal playbook from scratch — covering timing, segmentation, health signals, sequence design, and escalation tracks.",
+			"A practical, step-by-step guide to building a renewal playbook — covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.",
 		tags: ["Playbook", "Customer Success", "Renewal Automation"],
 		readTime: "12 min read",
 		publishedAt: "2026-05-20",
@@ -149,7 +148,7 @@ const posts = [
 		source: "blog-14-cs-metrics-every-saas-team-should-track.html",
 		title: "5 CS Metrics Every SaaS Team Should Track (and One to Ignore)",
 		description:
-			"The CS metrics that actually predict renewal outcomes — and the one most teams obsess over that doesn't. A data-first guide for CS and RevOps leaders.",
+			"The CS metrics that actually predict renewal outcomes — GRR, NRR, TTFV, health score accuracy, and CSM capacity — plus the one most teams obsess over that doesn't deliver real signal.",
 		tags: ["CS Metrics", "RevOps", "Customer Success"],
 		readTime: "10 min read",
 		publishedAt: "2026-05-20",
@@ -159,9 +158,19 @@ const posts = [
 		source: "blog-15-renewal360-setup-guide-live-in-7-days.html",
 		title: "Renewal360 Setup Guide: Live in 7 Days",
 		description:
-			"A day-by-day guide to getting Renewal360 fully operational in 7 days — CRM connection, health scoring, first sequences live, and your team running independently.",
+			"A day-by-day guide to getting Renewal360 fully operational — CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.",
 		tags: ["Setup Guide", "Renewal360", "Onboarding"],
 		readTime: "11 min read",
+		publishedAt: "2026-05-20",
+	},
+	{
+		slug: "renewal360-vs-spreadsheets-honest-comparison",
+		source: "blog-16-renewal360-vs-spreadsheets-honest-comparison.html",
+		title: "Renewal360 vs Spreadsheets: The Honest Comparison",
+		description:
+			"What spreadsheets do well, the three specific ways they break down at scale, and a worked ROI example for when switching to a dedicated renewal system pays for itself.",
+		tags: ["Comparison", "Renewal360", "SaaS Tools"],
+		readTime: "10 min read",
 		publishedAt: "2026-05-20",
 	},
 ];
@@ -300,9 +309,83 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
     .post-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; text-decoration: none; display: block; }
     .post-card:hover { border-color: #bfdbfe; box-shadow: 0 18px 35px rgba(15, 23, 42, .08); }
     .post-card h2 { font-size: 1.25rem; margin: .75rem 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+    /* New blog components styling (11-16) */
+    .sign-card, .cost-card, .metric-card, .day-card, .comp-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; margin: 1.5rem 0; position: relative; overflow: hidden; background: #ffffff; }
+    .sign-card::before, .cost-card::before, .metric-card::before, .day-card::before, .comp-card::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #2563eb; }
+    .sign-card.amber::before, .cost-card.amber::before, .metric-card.amber::before, .comp-card.amber::before { background: #f59e0b; }
+    .sign-card.slate::before, .cost-card.slate::before, .metric-card.slate::before { background: #64748b; }
+    .sign-card.purple::before, .metric-card.purple::before { background: #8b5cf6; }
+    .metric-card.red::before { background: #ef4444; }
+    .comp-card.green::before, .metric-card.green::before { background: #16a34a; }
+    .sign-card h3, .cost-card h3, .metric-card h3, .day-card h3, .comp-card h3 { margin: 0 0 0.5rem 0 !important; color: #111827; font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 1.15rem; }
+    .sign-card p, .cost-card p, .metric-card p, .day-card p, .comp-card p { margin: 0 0 0.75rem 0; font-size: 0.95rem; color: #374151; line-height: 1.7; }
+    .sign-card p:last-child, .cost-card p:last-child, .metric-card p:last-child, .day-card p:last-child, .comp-card p:last-child { margin-bottom: 0; }
+    .what-it-costs { background: #fef2f2; border-radius: 0 0.75rem 0.75rem 0; border-left: 4px solid #ef4444; padding: 1rem 1.25rem; margin-top: 0.75rem; font-size: 0.9rem; color: #991b1b; }
+    .what-it-costs strong { display: block; margin-bottom: 0.25rem; }
+    .callout-amber { background: #fffbeb; border: 1px solid #fde68a; border-radius: 0.75rem; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .callout-amber h3 { color: #92400e; margin: 0 0 0.5rem; font-size: 1rem; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+    .callout-amber p { margin: 0; color: #451a03; font-size: 0.95rem; line-height: 1.7; }
+    .checklist { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 0.75rem; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .checklist h3 { color: #14532d; margin: 0 0 0.75rem; font-size: 1rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 600; }
+    .checklist ul { list-style: none; padding: 0; margin: 0; }
+    .checklist ul li { padding: 0.3rem 0 0.3rem 1.75rem; position: relative; color: #14532d; font-size: 0.9rem; line-height: 1.6; }
+    .checklist ul li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+    .cost-number { display: inline-block; background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.5rem; padding: 0.75rem 1.25rem; margin-top: 0.75rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.4rem; font-weight: 700; color: #dc2626; }
+    .cost-number span { display: block; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 0.75rem; color: #4b5563; font-weight: 400; margin-top: 0.15rem; }
+    .total-box { background: #111827; color: white; border-radius: 1rem; padding: 2rem; margin: 2rem 0; }
+    .total-box h3 { color: white; margin: 0 0 0.5rem; font-size: 1.1rem; }
+    .total-box .big-number { font-family: Georgia, "Times New Roman", serif; font-size: 3rem; font-weight: 700; color: #ef4444; line-height: 1; margin: 0.5rem 0; }
+    .total-box p { color: #d1d5db; margin: 0; font-size: 0.9rem; line-height: 1.7; }
+    .callout-blue { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 0.75rem; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .callout-blue h3 { color: #1e40af; margin: 0 0 0.5rem; font-size: 1rem; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+    .callout-blue p { margin: 0; color: #1e3a8a; font-size: 0.95rem; line-height: 1.7; }
+    .signal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1rem 0; }
+    .signal-box { background: #f8faff; border: 1px solid #dbeafe; border-radius: 0.5rem; padding: 0.75rem 1rem; }
+    .signal-box .signal-name { font-weight: 600; font-size: 0.85rem; color: #1e40af; }
+    .signal-box .signal-desc { font-size: 0.8rem; color: #4b5563; margin-top: 0.2rem; line-height: 1.5; }
+    .metric-num, .day-label { font-size: 0.75rem; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem; }
+    .metric-name { font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; font-weight: 700; color: #111827; margin: 0 0 0.75rem; }
+    .benchmark-row { display: flex; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
+    .benchmark { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 0.5rem 0.9rem; font-size: 0.82rem; }
+    .benchmark strong { color: #111827; }
+    .benchmark span { color: #4b5563; }
+    .ignore-card { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.75rem; padding: 1.75rem; margin: 1.5rem 0; }
+    .ignore-card h3 { color: #dc2626; margin: 0 0 0.75rem; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+    .ignore-card p { margin: 0 0 0.75rem; color: #374151; font-size: 0.95rem; line-height: 1.7; }
+    .day-checklist { list-style: none !important; padding: 0 !important; margin: 0.5rem 0 0 !important; }
+    .day-checklist li { padding: 0.25rem 0 0.25rem 1.5rem !important; position: relative; font-size: 0.88rem !important; color: #374151 !important; line-height: 1.6 !important; }
+    .day-checklist li::before { content: "✓" !important; position: absolute; left: 0; color: #16a34a !important; font-weight: 700; }
+    .time-badge { display: inline-block; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 999px; padding: 0.2rem 0.75rem; font-size: 0.75rem; color: #15803d; font-weight: 600; margin-bottom: 0.75rem; }
+    .prereqs { background: #fffbeb; border: 1px solid #fde68a; border-radius: 0.75rem; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .prereqs h3 { color: #92400e; margin: 0 0 0.75rem; font-size: 1.1rem; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+    .prereqs ul { list-style: none; padding: 0; margin: 0; }
+    .prereqs ul li { padding: 0.25rem 0 0.25rem 1.5rem; position: relative; font-size: 0.9rem; color: #78350f; line-height: 1.6; }
+    .prereqs ul li::before { content: "→"; position: absolute; left: 0; color: #d97706; font-weight: 700; }
+    .verdict-box { background: #f0f7ff; border: 2px solid #2563eb; border-radius: 1rem; padding: 1.75rem 2rem; margin: 0 0 2.5rem; }
+    .verdict-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #2563eb; margin-bottom: 0.5rem; }
+    .verdict-headline { font-family: Georgia, "Times New Roman", serif; font-size: 1.25rem; font-weight: 700; color: #111827; margin: 0 0 0.75rem; }
+    .verdict-body { font-size: 0.95rem; color: #374151; line-height: 1.7; margin: 0; }
+    .verdict-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+    .pill { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 999px; }
+    .pill-blue { background: #dbeafe; color: #1e40af; }
+    .pill-green { background: #dcfce7; color: #166534; }
+    .pill-amber { background: #fef9c3; color: #854d0e; }
+    .roi-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 0.75rem; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .roi-box h3 { color: #14532d; margin: 0 0 0.75rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-weight: 600; font-size: 1rem; }
+    .roi-row { display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid #dcfce7; font-size: 0.9rem; }
+    .roi-row:last-child { border-bottom: none; font-weight: 700; }
+    .roi-label { color: #374151; }
+    .roi-value { color: #166534; font-weight: 600; }
+    .roi-value.red { color: #dc2626; }
+    .roi-value.bold { color: #14532d; font-size: 1rem; }
+    .yes-cell { color: #16a34a; font-weight: 600; }
+    .no-cell { color: #dc2626; font-weight: 600; }
+    .partial-cell { color: #d97706; font-weight: 600; }
+
     @media (max-width: 780px) {
       .nav-links { display: none; }
-      .stat-row, .before-after, .post-grid { grid-template-columns: 1fr; }
+      .stat-row, .before-after, .post-grid, .signal-grid { grid-template-columns: 1fr; }
       header { padding-top: 3rem; }
     }
   </style>

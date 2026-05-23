@@ -80,6 +80,15 @@ export function FeaturesPage() {
 							At T-90+ days: Engagement carries 38% weight. At T-7 days: Momentum carries 45% weight.
 							The model adapts — so a quiet-but-healthy account isn't flagged as a crisis.
 						</p>
+						<div className="mt-4">
+							<Link
+								to="/blog/$slug"
+								params={{ slug: "customer-success-platform-for-growing-saas" }}
+								className="text-blue-600 font-semibold hover:underline text-sm inline-flex items-center gap-1"
+							>
+								Learn more: The CS platform built for growing SaaS &rarr;
+							</Link>
+						</div>
 					</div>
 					<MockCard bg="bg-red-50">
 						<div className="text-sm font-semibold text-gray-700 mb-4">Health Score Breakdown</div>
@@ -144,6 +153,15 @@ export function FeaturesPage() {
 							"High-value at-risk accounts trigger an Escalate decision, creating a CSM task instead of sending automation",
 							"Sequence analytics track open rates, reply rates, and step-level performance per template",
 						]} />
+						<div className="mt-4">
+							<Link
+								to="/blog/$slug"
+								params={{ slug: "what-is-renewal-automation" }}
+								className="text-blue-600 font-semibold hover:underline text-sm inline-flex items-center gap-1"
+							>
+								Learn more: What is renewal automation? &rarr;
+							</Link>
+						</div>
 					</div>
 				</div>
 
