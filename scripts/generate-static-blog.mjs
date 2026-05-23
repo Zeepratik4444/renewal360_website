@@ -81,6 +81,38 @@ const posts = [
 		readTime: "10 min read",
 		publishedAt: "2026-04-30",
 	},
+	// ── Posts added 2026-05-07 ───────────────────────────────────────────
+	{
+		slug: "customer-success-platform-for-growing-saas",
+		source: "blog-8-customer-success-platform-for-growing-saas.html",
+		title: "The Customer Success Platform Built for Growing SaaS Teams",
+		description:
+			"Why growing SaaS teams are abandoning spreadsheets and expensive enterprise CS tools for action-focused platforms like Renewal360. Learn the three pillars of modern customer success and how to go live in 7 days.",
+		tags: ["Strategy", "Customer Success", "SaaS Growth"],
+		readTime: "8 min read",
+		publishedAt: "2026-05-07",
+	},
+	{
+		slug: "how-to-run-your-entire-cs-operation-in-renewal360",
+		source: "blog-9-how-to-run-your-entire-cs-operation-in-renewal360.html",
+		title: "How to Run Your Entire CS Operation in Renewal360",
+		description:
+			"A complete guide to using Renewal360 as your primary Customer Success operating system — from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.",
+		tags: ["Tutorial", "Operations", "Best Practices"],
+		readTime: "9 min read",
+		publishedAt: "2026-05-07",
+	},
+	{
+		slug: "zendesk-hubspot-salesforce-cs-platform-comparison",
+		source: "blog-10-zendesk-hubspot-salesforce-cs-platform-comparison.html",
+		title:
+			"Already Using Zendesk, HubSpot or Salesforce? Here's the CS Platform Gap They Don't Fill",
+		description:
+			"Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add — and why.",
+		tags: ["Integrations", "Technology", "Buying Guide"],
+		readTime: "8 min read",
+		publishedAt: "2026-05-07",
+	},
 ];
 
 function escapeHtml(value) {
@@ -254,7 +286,7 @@ function renderPost(post) {
 		description: post.description,
 		url: `${siteUrl}${canonicalPath}`,
 		datePublished: post.publishedAt,
-		dateModified: "2026-05-07",
+		dateModified: "2026-05-13",
 		author: {
 			"@type": "Organization",
 			name: "Renewal360",
@@ -285,7 +317,7 @@ function renderBlogIndex() {
   <div>${post.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
   <h2>${escapeHtml(post.title)}</h2>
   <p>${escapeHtml(post.description)}</p>
-  <p class="text-sm text-gray-500">${post.readTime} - April 2026</p>
+  <p class="text-sm text-gray-500">${post.readTime} · ${post.publishedAt.slice(0, 7)}</p>
 </a>`,
 		)
 		.join("\n");

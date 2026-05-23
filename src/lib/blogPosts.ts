@@ -23,11 +23,12 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
 	{
 		slug: "how-renewal360-works",
+		// Title matches the pre-rendered static HTML served to Google
 		title:
-			"How Renewal360 Works: The CS Platform Built for SaaS Retention",
+			"How Renewal360 Works: The Renewal Automation Process Built to Prevent Silent Churn",
 		summary:
-			"See how Renewal360 works as a full CS platform—from health scoring and lifecycle management to AI-drafted renewal outreach and enterprise integrations.",
-		tags: ["How It Works", "CS Platform", "Customer Success"],
+			"See how Renewal360 turns CRM data, renewal milestones, AI-drafted outreach, smart guards, and human approval into an action-first renewal workflow.",
+		tags: ["How It Works", "Renewal Automation", "Customer Success"],
 		readTime: "8 min read",
 		publishedAt: "April 2026",
 		accent: "blue",
@@ -68,8 +69,9 @@ export const blogPosts: BlogPost[] = [
 	},
 	{
 		slug: "gainsight-vs-totango-vs-renewal360",
+		// Title matches the pre-rendered static HTML served to Google
 		title:
-			"Gainsight vs Totango vs Renewal360 - Which CS Platform is Right for You?",
+			"Gainsight vs Totango vs Renewal360 - Which Renewal Automation Tool is Right for You?",
 		summary:
 			"A buyer-focused comparison for SaaS teams deciding whether they need a broad enterprise platform or an execution-focused CS engine.",
 		tags: ["Comparison", "Gainsight Alternative", "Totango Alternative"],
@@ -104,10 +106,10 @@ export const blogPosts: BlogPost[] = [
 		slug: "customer-success-platform-for-growing-saas",
 		title: "The Customer Success Platform Built for Growing SaaS Teams",
 		summary:
-			"Why growing SaaS teams are moving away from spreadsheets and complex enterprise tools toward action-focused CS platforms like Renewal360.",
+			"Why growing SaaS teams are abandoning spreadsheets and expensive enterprise CS tools for action-focused platforms like Renewal360. Learn the three pillars of modern customer success and how to go live in 7 days.",
 		tags: ["Strategy", "Customer Success", "SaaS Growth"],
 		readTime: "8 min read",
-		publishedAt: "April 2026",
+		publishedAt: "May 2026",
 		accent: "blue",
 		contentHtml: customerSuccessPlatformHtml,
 	},
@@ -115,21 +117,23 @@ export const blogPosts: BlogPost[] = [
 		slug: "how-to-run-your-entire-cs-operation-in-renewal360",
 		title: "How to Run Your Entire CS Operation in Renewal360",
 		summary:
-			"A guide to using Renewal360 as your primary Customer Success operating system, from health scoring to lifecycle automation.",
+			"A complete guide to using Renewal360 as your primary Customer Success operating system — from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.",
 		tags: ["Tutorial", "Operations", "Best Practices"],
 		readTime: "9 min read",
-		publishedAt: "April 2026",
+		publishedAt: "May 2026",
 		accent: "blue",
 		contentHtml: runCsOperationHtml,
 	},
 	{
 		slug: "zendesk-hubspot-salesforce-cs-platform-comparison",
-		title: "Zendesk, HubSpot, & Salesforce: Choosing the Right CS Platform Integration",
+		// Title matches the pre-rendered static HTML served to Google
+		title:
+			"Already Using Zendesk, HubSpot or Salesforce? Here's the CS Platform Gap They Don't Fill",
 		summary:
-			"How to choose a Customer Success platform based on your existing CRM and support stack. Why deep integrations are the secret to preventing churn.",
+			"Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add — and why.",
 		tags: ["Integrations", "Technology", "Buying Guide"],
 		readTime: "8 min read",
-		publishedAt: "April 2026",
+		publishedAt: "May 2026",
 		accent: "blue",
 		contentHtml: integrationsComparisonHtml,
 	},

@@ -6,6 +6,7 @@ export function TermsPage() {
 	useSEO({
 		title: "Terms of Service & Privacy Policy - Renewal360",
 		description: "Terms of Service & Privacy Policy for Renewal360.",
+		noIndex: true,
 	});
 
 	return (

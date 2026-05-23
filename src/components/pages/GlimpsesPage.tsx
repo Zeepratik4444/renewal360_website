@@ -17,7 +17,7 @@ function ExpandableImage({ src, alt, containerClassName = "" }: { src: string; a
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<>
-			<div 
+			<div
 				className={`relative rounded-2xl overflow-hidden border border-gray-200 shadow-xl bg-gray-50 flex min-h-[300px] items-center justify-center text-gray-400 cursor-pointer group hover:shadow-2xl hover:border-blue-200 transition-all duration-300 ${containerClassName}`}
 				onClick={() => setIsOpen(true)}
 			>
@@ -27,22 +27,22 @@ function ExpandableImage({ src, alt, containerClassName = "" }: { src: string; a
 				</div>
 			</div>
 			{isOpen && (
-				<div 
-					className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 md:p-8 animate-in fade-in duration-200" 
+				<div
+					className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 md:p-8 animate-in fade-in duration-200"
 					onClick={() => setIsOpen(false)}
 				>
 					<div className="relative max-w-7xl w-full h-full flex flex-col items-center justify-center">
-						<button 
+						<button
 							className="absolute top-4 right-0 md:right-8 text-white/70 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors backdrop-blur-md z-[101]"
 							onClick={(e) => { e.stopPropagation(); setIsOpen(false); }}
 						>
 							<X className="h-6 w-6" />
 						</button>
-						<img 
-							src={src} 
-							alt={alt} 
-							className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl ring-1 ring-white/10" 
-							onClick={(e) => e.stopPropagation()} 
+						<img
+							src={src}
+							alt={alt}
+							className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl ring-1 ring-white/10"
+							onClick={(e) => e.stopPropagation()}
 						/>
 					</div>
 				</div>
@@ -55,6 +55,7 @@ export function GlimpsesPage() {
 	useSEO({
 		title: "Platform Glimpses - Renewal360",
 		description: "Executive visibility, finally. Stop relying on spreadsheets. Renewal360 gives leadership a real-time, unified platform to identify risk.",
+		noIndex: true,
 	});
 
 	return (

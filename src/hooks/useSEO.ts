@@ -10,9 +10,15 @@ interface SEOProps {
 	canonicalPath?: string;
 	/** Override og:image for a specific page (optional) */
 	ogImage?: string;
+	/**
+	 * Set to true for pages that should not appear in Google search results.
+	 * Examples: /terms, /privacy, /glimpses, /login, /dashboard
+	 * Sets <meta name="robots" content="noindex, nofollow">
+	 */
+	noIndex?: boolean;
 }
 
-export function useSEO({ title, description, canonicalPath, ogImage }: SEOProps) {
+export function useSEO({ title, description, canonicalPath, ogImage, noIndex = false }: SEOProps) {
 	useEffect(() => {
 		const path = canonicalPath ?? window.location.pathname;
 		const canonicalUrl = `${BASE_URL}${path === "/" ? "/" : path.replace(/\/$/, "")}`;
@@ -42,6 +48,19 @@ export function useSEO({ title, description, canonicalPath, ogImage }: SEOProps)
 			}
 			el.setAttribute("href", href);
 		};
+
+		// ─── Helper: remove <meta> tag ─────────────────────────────
+		const removeMeta = (attr: string, key: string) => {
+			document.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`)?.remove();
+		};
+
+		// ─── Robots (noindex) ──────────────────────────────────────
+		if (noIndex) {
+			setMeta("name", "robots", "noindex, nofollow");
+		} else {
+			// Ensure the default indexing directive is set (or restored)
+			setMeta("name", "robots", "index, follow");
+		}
 
 		// ─── Standard SEO ──────────────────────────────────────────
 		setMeta("name", "description", description);
@@ -75,6 +94,8 @@ export function useSEO({ title, description, canonicalPath, ogImage }: SEOProps)
 			document.title = defaultTitle;
 			setMeta("name", "description", defaultDesc);
 			setLink("canonical", defaultUrl);
+			// Restore default robots on unmount
+			setMeta("name", "robots", "index, follow");
 			setMeta("property", "og:title", defaultTitle);
 			setMeta("property", "og:description", defaultDesc);
 			setMeta("property", "og:url", defaultUrl);
@@ -85,5 +106,5 @@ export function useSEO({ title, description, canonicalPath, ogImage }: SEOProps)
 			setMeta("name", "twitter:image", DEFAULT_OG_IMAGE);
 			setMeta("name", "twitter:image:alt", defaultTitle);
 		};
-	}, [title, description, canonicalPath, ogImage]);
+	}, [title, description, canonicalPath, ogImage, noIndex]);
 }
