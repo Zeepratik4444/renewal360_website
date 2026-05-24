@@ -48,6 +48,46 @@
     "sameAs": ["https://renewal360.in"]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I keep using my spreadsheet while piloting Renewal360?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — the 30-day pilot is specifically designed for running Renewal360 alongside your existing process rather than replacing it immediately. Most teams start with 25 accounts in Renewal360 while continuing to manage the rest via spreadsheet. This makes the comparison concrete: after 30 days you can see exactly how the Renewal360 accounts performed vs the spreadsheet-managed accounts in terms of outreach timing, CSM time, and renewal outcomes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to migrate from a spreadsheet to Renewal360?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The data migration takes 30–60 minutes — it's a CSV import of your account list with renewal dates, ARR, and contact information. The configuration work (health scoring, sequences, approval queue) takes an additional 2–3 hours across the 7-day setup period. The total is 7 days calendar time and about 3–4 hours of active work. Nothing about your spreadsheet process needs to change until you're confident the Renewal360 setup is working correctly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the main risk of switching too early?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The main risk of switching before the process is mature enough is that you automate a poorly-designed renewal process and scale the problems. If your segmentation, health scoring, and escalation logic aren't solid, automation executes them at higher volume, faster, and less visibly than manual execution. The setup guide includes a design step before any automation is activated precisely to prevent this. Teams that spend a day on the playbook design before building the tool sequences get significantly better results than teams that start with the tool and design as they go."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Renewal360 more expensive than alternatives like Gainsight or ChurnZero?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Renewal360 is significantly less expensive than Gainsight or ChurnZero, which typically start at $30,000–$50,000+ annually for mid-market teams and require multi-month implementation timelines. Renewal360 is designed for CS teams that need a complete renewal execution system without enterprise platform overhead — pricing starts at a fraction of the cost of broader CS platforms, and the 7-day implementation removes the need for an implementation partner. For teams who need the full breadth of Gainsight or ChurnZero, those platforms serve a different use case."
+        }
+      }
+    ]
+  }
+  </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -423,6 +463,10 @@
 
     <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
+        <p class="direct-answer">
+          While spreadsheets offer flexibility and zero initial cost, they fail to monitor risk continuously or respond dynamically to customer replies at scale. Dedicated systems like Renewal360 automate outreach, track multi-factor health, and provide executive pipeline visibility, paying for themselves once a team manages 30+ accounts or $2M+ ARR. It serves as a complete Customer Success operating platform with bulk options, integrations, and sequence creation tools.
+        </p>
+
         <!-- Verdict box — cited by AI engines -->
         <div class="verdict-box" itemscope itemtype="https://schema.org/Question">
             <div class="verdict-label">Quick verdict</div>
@@ -540,63 +584,53 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Renewal date tracking</td>
-                        <td class="yes-cell">✓ Yes</td>
-                        <td class="yes-cell">✓ Yes (live CRM sync)</td>
+                        <td>Starting price</td>
+                        <td class="yes-cell">Free</td>
+                        <td class="yes-cell">INR plans, free pilot</td>
                     </tr>
                     <tr>
-                        <td>Manual email reminders</td>
-                        <td class="yes-cell">✓ Yes (manual)</td>
-                        <td class="yes-cell">✓ Yes (automated)</td>
+                        <td>Setup time</td>
+                        <td class="yes-cell">20 minutes</td>
+                        <td class="partial-cell">7 days</td>
+                    </tr>
+                    <tr>
+                        <td>INR pricing</td>
+                        <td class="yes-cell">N/A</td>
+                        <td class="yes-cell">✅</td>
+                    </tr>
+                    <tr>
+                        <td>Human approval queue</td>
+                        <td class="no-cell">❌ No</td>
+                        <td class="yes-cell">✅ (for AI-drafted outreach)</td>
                     </tr>
                     <tr>
                         <td>Automated outreach sequences</td>
-                        <td class="no-cell">✗ No</td>
-                        <td class="yes-cell">✓ Yes (branching logic)</td>
+                        <td class="no-cell">❌ No</td>
+                        <td class="yes-cell">✓ Yes (Visual Journey Builder)</td>
                     </tr>
                     <tr>
                         <td>Continuous health monitoring</td>
-                        <td class="no-cell">✗ No</td>
+                        <td class="no-cell">❌ No</td>
                         <td class="yes-cell">✓ Yes (5-signal health score)</td>
                     </tr>
                     <tr>
                         <td>Reply detection / sequence pause</td>
-                        <td class="no-cell">✗ No</td>
+                        <td class="no-cell">❌ No</td>
                         <td class="yes-cell">✓ Yes (IMAP monitoring)</td>
                     </tr>
                     <tr>
-                        <td>AI-drafted personalised emails</td>
-                        <td class="no-cell">✗ No</td>
-                        <td class="yes-cell">✓ Yes (CSM approval queue)</td>
-                    </tr>
-                    <tr>
-                        <td>Escalation track routing</td>
-                        <td class="partial-cell">~ Manual only</td>
-                        <td class="yes-cell">✓ Automatic on health threshold</td>
+                        <td>Bulk options & approvals</td>
+                        <td class="no-cell">❌ No</td>
+                        <td class="yes-cell">✓ Yes (bulk action queue)</td>
                     </tr>
                     <tr>
                         <td>Live ARR-at-risk dashboard</td>
-                        <td class="no-cell">✗ No</td>
+                        <td class="no-cell">❌ No</td>
                         <td class="yes-cell">✓ Yes (real-time)</td>
                     </tr>
                     <tr>
-                        <td>Per-CSM performance view</td>
-                        <td class="partial-cell">~ Manual pivot tables</td>
-                        <td class="yes-cell">✓ Built-in</td>
-                    </tr>
-                    <tr>
-                        <td>Setup time</td>
-                        <td class="yes-cell">✓ 20 minutes</td>
-                        <td class="partial-cell">~ 7 days</td>
-                    </tr>
-                    <tr>
-                        <td>Cost</td>
-                        <td class="yes-cell">✓ Free</td>
-                        <td class="partial-cell">~ Paid (pilot free)</td>
-                    </tr>
-                    <tr>
                         <td>Scales past 30 accounts without degradation</td>
-                        <td class="no-cell">✗ No</td>
+                        <td class="no-cell">❌ No</td>
                         <td class="yes-cell">✓ Yes</td>
                     </tr>
                 </tbody>

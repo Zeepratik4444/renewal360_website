@@ -237,10 +237,20 @@ function htmlToMarkdown(html) {
 	return text;
 }
 
-function pageShell({ title, description, canonicalPath, body, schema }) {
+function pageShell({ title, description, canonicalPath, body, schema, schemas }) {
 	const canonicalUrl = `${siteUrl}${canonicalPath}`;
 	const escapedTitle = escapeHtml(title);
 	const escapedDescription = escapeHtml(description);
+
+	const allSchemas = [];
+	if (schema) allSchemas.push(schema);
+	if (schemas && Array.isArray(schemas)) {
+		allSchemas.push(...schemas);
+	}
+
+	const schemaScripts = allSchemas
+		.map((s) => `<script type="application/ld+json">${JSON.stringify(s)}</script>`)
+		.join("\n  ");
 
 	return `<!DOCTYPE html>
 <html lang="en">
@@ -267,7 +277,7 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:image" content="https://renewal360.in/og-image.png" />
-  <script type="application/ld+json">${JSON.stringify(schema)}</script>
+  ${schemaScripts}
   <style>
     :root { color-scheme: light; }
     * { box-sizing: border-box; }
@@ -347,6 +357,19 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
     .post-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; text-decoration: none; display: block; }
     .post-card:hover { border-color: #bfdbfe; box-shadow: 0 18px 35px rgba(15, 23, 42, .08); }
     .post-card h2 { font-size: 1.25rem; margin: .75rem 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+    .direct-answer {
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #111827;
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
 
     /* New blog components styling (11-16) */
     .sign-card, .cost-card, .metric-card, .day-card, .comp-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; margin: 1.5rem 0; position: relative; overflow: hidden; background: #ffffff; }
@@ -446,12 +469,26 @@ function pageShell({ title, description, canonicalPath, body, schema }) {
 `;
 }
 
+function extractSchemas(html) {
+	const matches = html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi);
+	const schemas = [];
+	for (const match of matches) {
+		try {
+			const parsed = JSON.parse(match[1].trim());
+			schemas.push(parsed);
+		} catch (e) {
+			// Ignore parsing issues
+		}
+	}
+	return schemas;
+}
+
 function renderPost(post) {
 	const sourceHtml = fs.readFileSync(path.join(sourceDir, post.source), "utf8");
 	const articleHtml = extractArticleHtml(sourceHtml);
 	const canonicalPath = `/blog/${post.slug}`;
 	const plainText = stripTags(articleHtml).slice(0, 4500);
-	const schema = {
+	const blogPostingSchema = {
 		"@context": "https://schema.org",
 		"@type": "BlogPosting",
 		headline: post.title,
@@ -473,12 +510,20 @@ function renderPost(post) {
 		articleBody: plainText,
 	};
 
+	const fileSchemas = extractSchemas(sourceHtml);
+	const filteredFileSchemas = fileSchemas.filter(
+		(s) =>
+			s["@type"] !== "Article" &&
+			s["@type"] !== "BlogPosting" &&
+			s["@type"] !== "Organization",
+	);
+
 	return pageShell({
 		title: `${post.title} | Renewal360 Blog`,
 		description: post.description,
 		canonicalPath,
 		body: articleHtml,
-		schema,
+		schemas: [blogPostingSchema, ...filteredFileSchemas],
 	});
 }
 

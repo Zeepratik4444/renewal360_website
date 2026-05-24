@@ -40,6 +40,46 @@
   ]
 }
 </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can Renewal360 scale to handle a growing CS team as we hire?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The platform supports multiple CSMs, manager-level visibility across all accounts, role-based access controls, and account reassignment workflows. As your team grows from 1 CSM to 10, the automation layer scales with you — each new CSM gets their own approval queue and account assignments without additional configuration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "We already use HubSpot Sequences — why do we need Renewal360?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HubSpot Sequences are linear drip tools — they send on a schedule without branching logic, health score integration, reply detection, or AI drafting. Renewal360 adds branching sequences that adapt based on account health changes, pause automatically when a customer replies, and draft each email with real account context rather than generic merge fields. The two tools serve different purposes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Renewal360 write data back to our CRM, or is it read-only?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bi-directional. Renewal360 reads your CRM data continuously and writes outreach activity — emails sent, sequence status, health score changes — back to Salesforce or HubSpot contact records automatically. Your sales team's CRM view stays accurate without requiring them to use Renewal360 directly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if a CSM leaves and their accounts need to be reassigned?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Account reassignment in Renewal360 is a one-click operation from the admin dashboard. The new CSM inherits the account's active sequences, health score history, and approval queue. Sequences that were mid-flight can be paused, continued, or restarted depending on where the account is in its renewal lifecycle."
+        }
+      }
+    ]
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
@@ -363,6 +403,10 @@
 
   <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
+    <p class="direct-answer">
+      While Totango excels at broad lifecycle and customer growth visibility, it can take weeks to configure. Renewal360 is a fast Totango alternative designed specifically to stop renewal leaks immediately through automated sequences, AI email drafts, and a CSM approval queue that goes live in 7 days. It functions as a complete customer success lifecycle tool with health scoring, bulk actions, and direct integrations.
+    </p>
+
     <div class="verdict-box" id="verdict" itemscope itemtype="https://schema.org/Question">
       <meta itemprop="name" content="Is Renewal360 a good Totango alternative for renewal automation?" />
       <div class="verdict-label">Quick verdict</div>
@@ -408,7 +452,7 @@
         before it reaches the customer.</p>
     </div>
 
-    <h2>The problem with broad platforms when renewals are actively leaking</h2>
+    <h2>What is the problem with broad CS platforms when renewals are actively leaking?</h2>
     <p>
       Broad CS platforms give you visibility across the customer lifecycle — that is genuinely valuable. But visibility
       is only half the job when your renewal process is already struggling. Renewals are won when someone acts early
@@ -424,57 +468,67 @@
       churn right now, that timeline is a real cost.
     </p>
 
-    <h2>How Renewal360 compares to Totango for lean teams</h2>
+    <h2>How does Renewal360 compare to Totango for lean teams?</h2>
     <div class="comparison-table-wrap">
       <table class="comparison-table">
         <thead>
           <tr>
-            <th>Need</th>
+            <th>Criteria</th>
             <th>Totango</th>
             <th>Renewal360</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Broad CS program management across large post-sales org</td>
-            <td>Strong fit — built for structured customer growth programs</td>
-            <td>Execution-focused — handles the full CS lifecycle with action emphasis</td>
+            <td>Starting price</td>
+            <td>from ~$15,000/yr</td>
+            <td>INR plans, free pilot</td>
           </tr>
           <tr>
-            <td>AI-drafted renewal emails with human approval</td>
-            <td>Evaluate based on current digital program and AI feature tier</td>
-            <td>Core workflow — every AI draft reviewed by CSM before it reaches the customer</td>
+            <td>Setup time</td>
+            <td>4–8 weeks</td>
+            <td>7 days</td>
           </tr>
           <tr>
-            <td>Branching sequence logic based on account health changes</td>
-            <td>Available via customer journey configuration — requires setup time</td>
-            <td>Visual Journey Builder — drag-and-drop, no code, live in hours not weeks</td>
+            <td>INR pricing</td>
+            <td>❌</td>
+            <td>✅</td>
           </tr>
           <tr>
-            <td>Reply-aware IMAP monitoring</td>
-            <td>Evaluate based on current feature set</td>
-            <td>Built in — sequences pause immediately when a customer responds</td>
+            <td>Human approval queue</td>
+            <td>❌</td>
+            <td>✅ (for AI-drafted outreach)</td>
           </tr>
           <tr>
-            <td>Time to first live renewal sequence</td>
-            <td>Typically several weeks of configuration and onboarding</td>
-            <td>7 days from CRM connection to first approved email sent</td>
+            <td>Primary focus</td>
+            <td>Broad customer growth and value delivery journeys</td>
+            <td>Full customer success lifecycle — health scoring, visual sequences, bulk approvals, and pipelines</td>
           </tr>
           <tr>
-            <td>India-friendly pricing and support</td>
-            <td>Not specifically positioned around Indian market or INR billing</td>
-            <td>INR pricing, Razorpay billing, India business-hour support</td>
+            <td>Visual sequence builder</td>
+            <td>Available (complex customer journey setups)</td>
+            <td>Built-in (drag-and-drop Visual Journey Builder)</td>
           </tr>
           <tr>
-            <td>Free pilot without sales process</td>
-            <td>Demo and evaluation via contact with sales team</td>
-            <td>Free pilot for 25 accounts — no credit card, no sales call required</td>
+            <td>Continuous health scoring</td>
+            <td>Yes (scheduled recalculations)</td>
+            <td>Yes (5-signal real-time health score)</td>
+          </tr>
+          <tr>
+            <td>Reply-aware sequence pausing</td>
+            <td>Requires custom integration</td>
+            <td>Yes (automated IMAP detection pauses sequences instantly)</td>
+          </tr>
+          <tr>
+            <td>Bulk options & approvals</td>
+            <td>Yes</td>
+            <td>Yes (daily approval queue with bulk actions)</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <h2>What the first 7 days in Renewal360 actually look like</h2>
+    <h2>What do the first 7 days in Renewal360 actually look like?</h2>
     <p>
       The 7-day setup timeline is not marketing shorthand — it reflects how the integrations are actually structured.
       Here is what happens:
@@ -512,7 +566,7 @@
         immediately and sends a Slack alert.</p>
     </div>
 
-    <h2>When Totango is still the right choice</h2>
+    <h2>When is Totango still the right choice for customer success?</h2>
     <p>
       Totango is a genuinely strong platform for specific situations. If your organisation needs to standardise customer
       success across a post-sales team of 15+ CSMs, build structured customer growth programs that span multiple product
@@ -525,7 +579,7 @@
       wider platform adds overhead before it adds value.
     </p>
 
-    <h2>When Renewal360 makes more sense as a Totango alternative</h2>
+    <h2>Why does Renewal360 make more sense as a Totango alternative?</h2>
     <p>
       Choose Renewal360 when your renewal process needs to improve in the next 90 days — not after a platform
       implementation cycle. The platform is built for teams that want to start with the highest-impact piece of customer

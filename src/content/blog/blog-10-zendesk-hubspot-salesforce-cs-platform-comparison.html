@@ -322,6 +322,62 @@
   ]
 }
 </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do we need both Salesforce and HubSpot connected, or just one?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Renewal360 works with either as your primary CRM — you do not need both. If your org uses HubSpot for marketing and Salesforce for sales, you can designate one as the primary account data source and use the other for supplementary signals only."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if our Zendesk has custom ticket fields?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Custom ticket fields are fully supported. During Zendesk setup, you map your custom fields to Renewal360's signal categories. For example, a custom 'Product Area' field can be mapped to drive product-specific health score adjustments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Renewal360 write data back to Salesforce, or is it read-only?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Renewal360 can log activities back to Salesforce — including outreach emails sent, sequence enrollments, and health score changes. This keeps your Salesforce account timeline accurate for your sales team without requiring them to use Renewal360 directly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the integration work if we are on Zendesk Suite vs. Zendesk Support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Renewal360 Zendesk integration works across all Zendesk plan tiers. Features available depend on your Zendesk subscription — for example, full ticket analytics require the Zendesk Suite plan for API access to all ticket metadata."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Renewal360 handle accounts that are in both HubSpot and Salesforce?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your org has both systems, you designate a primary CRM for account identity and a secondary for supplementary data. Renewal360 deduplicates accounts by domain matching and merges signals from both sources into a single health score view."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "We use Freshdesk instead of Zendesk. Is that supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Freshdesk integration is on our active roadmap. In the meantime, Freshdesk data can be piped into Renewal360 via webhook for real-time ticket signal ingestion. Contact our team for setup guidance specific to your Freshdesk configuration."
+        }
+      }
+    ]
+  }
+  </script>
 
   <!-- ── Favicon & PWA ─────────────────────────────────────── -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -387,6 +443,9 @@
 
   <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
+    <p class="direct-answer">
+      Zendesk, HubSpot, and Salesforce handle support ticketing, pipeline tracking, and customer contact storage but leave key gaps in renewal execution. Integrating Renewal360 with your existing CRM and ticketing stack adds a bi-directional automation layer that scores customer health, triggers visual sequence journeys, manages approvals, and coordinates bulk operations without replacing your core platforms.
+    </p>
 
     <div class="verdict-box" id="verdict" itemscope itemtype="https://schema.org/Question">
       <meta itemprop="name" content="Does Renewal360 integrate with Zendesk, HubSpot, and Salesforce?" />
