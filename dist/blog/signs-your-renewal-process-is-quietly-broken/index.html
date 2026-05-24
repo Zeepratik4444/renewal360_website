@@ -206,6 +206,50 @@
     .no-cell { color: #dc2626; font-weight: 600; }
     .partial-cell { color: #d97706; font-weight: 600; }
 
+    /* Related Reading styled box */
+    .related-reading-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 3rem 0 2rem;
+    }
+    .related-reading-box h3 {
+      color: #0f172a !important;
+      margin: 0 0 1rem 0 !important;
+      font-size: 1.2rem !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .related-reading-box ul li {
+      padding: 0.4rem 0 0.4rem 1.5rem !important;
+      position: relative !important;
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+      color: #374151 !important;
+    }
+    .related-reading-box ul li::before {
+      content: "→" !important;
+      position: absolute !important;
+      left: 0 !important;
+      color: #2563eb !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul li a {
+      color: #2563eb !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+    .related-reading-box ul li a:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline !important;
+    }
+
     @media (max-width: 780px) {
       .nav-links { display: none; }
       .stat-row, .before-after, .post-grid, .signal-grid { grid-template-columns: 1fr; }
@@ -250,7 +294,9 @@
                 <div class="text-xs text-gray-400">9 min read · May 2026</div>
             </div>
         </div>
-    </header><main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
         <p class="direct-answer">
             A broken SaaS renewal process is typically characterized by late outreach, siloed customer data, and manual email coordination that depends on individual CSM memory. To fix these structural issues, teams need an integrated CS operating system like Renewal360 that coordinates real-time health scoring, automated sequence creation with branching logic, bulk processing options, and direct CRM integrations, all managed through a centralized CSM approval queue.
@@ -495,5 +541,96 @@
         </div>
 
     </main>
+
+    <section style="max-width:48rem;margin:0 auto;padding:0 1.5rem 3rem;" itemscope
+        itemtype="https://schema.org/FAQPage">
+        <h2 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:#111827;margin-bottom:1rem;">
+            Frequently Asked Questions
+        </h2>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                How do I know if my renewal process is broken or just under-resourced?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    The distinction is whether adding more people would fix it. If your process depends on individual
+                    CSM memory,
+                    runs on manual timers, and has no automated risk detection - adding headcount just adds more manual
+                    workers to
+                    a broken system. A structurally sound process scales with more accounts without proportional
+                    headcount growth.
+                    If your team is growing faster than your renewal rate is improving, it's a structural problem.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                What's a healthy gross renewal rate benchmark for SaaS?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    For SMB-focused SaaS, 80–85% GRR is considered healthy. Mid-market SaaS typically targets 85–90%.
+                    Enterprise
+                    SaaS with high ACV should be at 90%+ to be considered best-in-class. Below 80% at any segment is a
+                    structural
+                    signal, not just a bad quarter. Net Revenue Retention (NRR) above 110% is the real marker of a
+                    healthy
+                    expansion and retention engine - GRR is just the floor.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                Can these signs appear even when renewal rates look acceptable?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Yes - this is exactly why these patterns are dangerous. A CS team doing extraordinary individual
+                    work can
+                    maintain acceptable renewal rates while operating on a structurally broken process. The team is
+                    compensating
+                    with effort. The moment that team grows, loses a key person, or manages more accounts, the
+                    structural failure
+                    surfaces. Companies that catch and fix these patterns while renewal rates still look acceptable grow
+                    much more
+                    efficiently than those that wait for a crisis.
+                </p>
+            </div>
+        </div>
+        <div style="padding:1.25rem 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                Where should a CS team start when fixing a broken renewal process?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Start with timing and visibility - those two changes produce the fastest measurable impact. Moving
+                    renewal
+                    outreach from 30-day triggers to 90-day automated sequences, combined with a live health score
+                    dashboard,
+                    addresses Signs 2, 4, and 6 simultaneously. Once those are running, layer in intelligent sequencing
+                    and
+                    reply detection. The goal is a process that works at the same quality whether your best CSM is in
+                    the office
+                    or on holiday.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="related-reading-box">
+				<h3>Related Reading</h3>
+				<ul>
+					<li><a href="/blog/hidden-cost-of-manual-renewal-process" style="color:#2563eb;">The Hidden Cost of a Manual Renewal
+            Process</a></li><li><a href="/blog/how-to-build-a-renewal-playbook-from-scratch" style="color:#2563eb;">How to Build a Renewal
+            Playbook from Scratch</a></li><li><a href="/how-it-works" style="color:#2563eb;">How Renewal360 Works</a></li><li><a href="/features" style="color:#2563eb;">Features</a></li>
+				</ul>
+			</div>
 </body>
 </html>

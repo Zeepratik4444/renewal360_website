@@ -208,6 +208,50 @@
     .no-cell { color: #dc2626; font-weight: 600; }
     .partial-cell { color: #d97706; font-weight: 600; }
 
+    /* Related Reading styled box */
+    .related-reading-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 3rem 0 2rem;
+    }
+    .related-reading-box h3 {
+      color: #0f172a !important;
+      margin: 0 0 1rem 0 !important;
+      font-size: 1.2rem !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .related-reading-box ul li {
+      padding: 0.4rem 0 0.4rem 1.5rem !important;
+      position: relative !important;
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+      color: #374151 !important;
+    }
+    .related-reading-box ul li::before {
+      content: "→" !important;
+      position: absolute !important;
+      left: 0 !important;
+      color: #2563eb !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul li a {
+      color: #2563eb !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+    .related-reading-box ul li a:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline !important;
+    }
+
     @media (max-width: 780px) {
       .nav-links { display: none; }
       .stat-row, .before-after, .post-grid, .signal-grid { grid-template-columns: 1fr; }
@@ -250,7 +294,9 @@
                 <div class="text-xs text-gray-400">10 min read · May 2026</div>
             </div>
         </div>
-    </header><main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
         <p class="direct-answer">
           While spreadsheets offer flexibility and zero initial cost, they fail to monitor risk continuously or respond dynamically to customer replies at scale. Dedicated systems like Renewal360 automate outreach, track multi-factor health, and provide executive pipeline visibility, paying for themselves once a team manages 30+ accounts or $2M+ ARR. It serves as a complete Customer Success operating platform with bulk options, integrations, and sequence creation tools.
@@ -527,5 +573,91 @@
         </div>
 
     </main>
+
+    <section style="max-width:48rem;margin:0 auto;padding:0 1.5rem 3rem;" itemscope
+        itemtype="https://schema.org/FAQPage">
+        <h2 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:#111827;margin-bottom:1rem;">
+            Frequently Asked Questions
+        </h2>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                Can I keep using my spreadsheet while piloting Renewal360?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Yes - the 30-day pilot is specifically designed for running Renewal360 alongside your existing
+                    process
+                    rather than replacing it immediately. Most teams start with 25 accounts in Renewal360 while
+                    continuing
+                    to manage the rest via spreadsheet. This makes the comparison concrete: after 30 days you can see
+                    exactly how the Renewal360 accounts performed vs the spreadsheet-managed accounts in terms of
+                    outreach timing, CSM time, and renewal outcomes.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                How long does it take to migrate from a spreadsheet to Renewal360?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    The data migration takes 30–60 minutes - it's a CSV import of your account list with renewal dates,
+                    ARR, and contact information. The configuration work (health scoring, sequences, approval queue)
+                    takes
+                    an additional 2–3 hours across the 7-day setup period. The total is 7 days calendar time and about
+                    3–4 hours of active work. Nothing about your spreadsheet process needs to change until you're
+                    confident the Renewal360 setup is working correctly.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                What's the main risk of switching too early?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    The main risk of switching before the process is mature enough is that you automate a
+                    poorly-designed
+                    renewal process and scale the problems. If your segmentation, health scoring, and escalation logic
+                    aren't solid, automation executes them at higher volume, faster, and less visibly than manual
+                    execution.
+                    The setup guide includes a design step before any automation is activated precisely to prevent this.
+                    Teams that spend a day on the playbook design before building the tool sequences get significantly
+                    better results than teams that start with the tool and design as they go.
+                </p>
+            </div>
+        </div>
+        <div style="padding:1.25rem 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                Is Renewal360 more expensive than alternatives like Gainsight or ChurnZero?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Renewal360 is significantly less expensive than Gainsight or ChurnZero, which typically start at
+                    $30,000–$50,000+ annually for mid-market teams and require multi-month implementation timelines.
+                    Renewal360 is designed for CS teams that need a complete renewal execution system without enterprise
+                    platform overhead - pricing starts at a fraction of the cost of broader CS platforms, and the 7-day
+                    implementation removes the need for an implementation partner. For teams who need the full breadth
+                    of Gainsight or ChurnZero, those platforms serve a different use case.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="related-reading-box">
+				<h3>Related Reading</h3>
+				<ul>
+					<li><a href="/blog/renewal360-setup-guide-live-in-7-days" style="color:#2563eb;">Renewal360 Setup Guide: Live in 7
+            Days</a></li><li><a href="/blog/hidden-cost-of-manual-renewal-process" style="color:#2563eb;">The Hidden Cost of a Manual Renewal
+            Process</a></li><li><a href="/blog/gainsight-vs-totango-vs-renewal360" style="color:#2563eb;">Gainsight vs Totango vs Renewal360</a></li><li><a href="/pricing" style="color:#2563eb;">Pricing</a></li><li><a href="/features" style="color:#2563eb;">Features</a></li>
+				</ul>
+			</div>
 </body>
 </html>

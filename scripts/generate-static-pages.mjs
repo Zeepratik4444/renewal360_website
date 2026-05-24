@@ -14,8 +14,10 @@
  *      (the CSS <link> and module <script> filenames change on every build).
  *   2. For each core page, writes dist/{route}/index.html with the correct
  *      page-specific <head> metadata + the same SPA body.
- *   3. nginx's existing `try_files $uri $uri/ /index.html` rule will serve
- *      these files directly - no nginx config changes needed.
+ *   3. nginx's `try_files $uri $uri/index.html /index.html` rule will serve
+ *      these files directly without trailing slash redirect loops.
+ *      (Avoid `try_files $uri $uri/ /index.html` which redirects directory
+ *      paths and loops if there's a trailing-slash removal rewrite rule).
  *
  * Result:
  *   - Google and social unfurlers see the correct title, description,

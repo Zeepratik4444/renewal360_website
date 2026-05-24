@@ -207,6 +207,50 @@
     .no-cell { color: #dc2626; font-weight: 600; }
     .partial-cell { color: #d97706; font-weight: 600; }
 
+    /* Related Reading styled box */
+    .related-reading-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 3rem 0 2rem;
+    }
+    .related-reading-box h3 {
+      color: #0f172a !important;
+      margin: 0 0 1rem 0 !important;
+      font-size: 1.2rem !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .related-reading-box ul li {
+      padding: 0.4rem 0 0.4rem 1.5rem !important;
+      position: relative !important;
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+      color: #374151 !important;
+    }
+    .related-reading-box ul li::before {
+      content: "→" !important;
+      position: absolute !important;
+      left: 0 !important;
+      color: #2563eb !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul li a {
+      color: #2563eb !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+    .related-reading-box ul li a:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline !important;
+    }
+
     @media (max-width: 780px) {
       .nav-links { display: none; }
       .stat-row, .before-after, .post-grid, .signal-grid { grid-template-columns: 1fr; }
@@ -249,7 +293,9 @@
                 <div class="text-xs text-gray-400">12 min read · May 2026</div>
             </div>
         </div>
-    </header><main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
         <p class="direct-answer">
             Building a SaaS renewal playbook from scratch requires five steps: defining customer segments, setting health scoring signals, mapping branching sequences, creating escalation protocols, and building a leadership visibility layer. Instead of trying to run these steps manually, teams can use Renewal360 to automate the entire playbook lifecycle with built-in health scores, CRM/helpdesk integrations, visual sequence builders, bulk action options, and a CSM approval queue.
@@ -518,5 +564,93 @@
         </div>
 
     </main>
+
+    <section style="max-width:48rem;margin:0 auto;padding:0 1.5rem 3rem;" itemscope
+        itemtype="https://schema.org/FAQPage">
+        <h2 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:#111827;margin-bottom:1rem;">
+            Frequently Asked Questions
+        </h2>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                How long does it take to build a renewal playbook from scratch?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    A working first version of the five components above - segmentation, health scoring, sequence map,
+                    escalation protocol, and leadership dashboard - takes 2–3 weeks to design and document.
+                    Implementation
+                    into a tool takes an additional 1–2 weeks depending on CRM complexity. Most teams spend longer than
+                    necessary on health score design; a functional starting model with 3–4 signals is better than a
+                    perfect model you haven't shipped yet.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                What's the most important component of a renewal playbook to get right first?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Timing. Moving renewal outreach from 30-day reactive triggers to 90-day proactive sequences has the
+                    single largest impact on renewal rate of any playbook component. You can run a relatively simple
+                    sequence with basic segmentation starting at 90 days and see measurable improvement within one
+                    renewal
+                    cycle. Health scoring and escalation tracks add significant value but are less urgent than fixing
+                    the
+                    lead-time problem first.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                Should a renewal playbook be built in a spreadsheet or a dedicated tool?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Design it in a document or spreadsheet first regardless of where you'll execute it - the design
+                    phase
+                    requires iteration and discussion, and tools that enforce structure too early slow down that
+                    process.
+                    Once the playbook is stable, move execution to a dedicated system. A spreadsheet can run a playbook
+                    up to about 30 accounts, after which the manual tracking overhead defeats the purpose of having a
+                    documented process.
+                </p>
+            </div>
+        </div>
+        <div style="padding:1.25rem 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                How often should a renewal playbook be updated?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Review the health scoring weights quarterly - compare predicted vs actual outcomes for accounts that
+                    churned or renewed, and adjust weights accordingly. Review the full playbook structure every 6
+                    months,
+                    or whenever there's a significant change in product, pricing, or customer segment mix. The
+                    escalation
+                    protocol should be reviewed after every major escalation - at minimum once per quarter for
+                    fast-growing
+                    CS teams.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="related-reading-box">
+				<h3>Related Reading</h3>
+				<ul>
+					<li><a href="/blog/signs-your-renewal-process-is-quietly-broken" style="color:#2563eb;">7 Signs Your Renewal Process
+            Is Quietly Broken</a></li><li><a href="/blog/cs-metrics-every-saas-team-should-track" style="color:#2563eb;">5 CS Metrics Every SaaS Team
+            Should Track</a></li><li><a href="/blog/renewal360-setup-guide-live-in-7-days" style="color:#2563eb;">Renewal360 Setup Guide: Live in 7
+            Days</a></li><li><a href="/how-it-works" style="color:#2563eb;">How Renewal360 Works</a></li><li><a href="/features" style="color:#2563eb;">Features</a></li>
+				</ul>
+			</div>
 </body>
 </html>

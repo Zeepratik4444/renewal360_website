@@ -315,3 +315,24 @@ This pre-renders all routes to static HTML at build time with zero refactoring o
 - Google Search Console property: `sc-domain:renewal360.in`
 - Sitemap: https://renewal360.in/sitemap.xml
 - robots.txt: https://renewal360.in/robots.txt
+
+---
+
+## 10. Nginx Redirect Loop Solution (Trailing Slash Issue)
+
+If the server has a trailing slash removal rewrite rule (e.g., redirecting `/features/` to `/features` for clean SEO URLs), Nginx's default directory redirect behavior (which redirects `/features` to `/features/` since it exists as a folder in `dist/`) will cause an infinite redirect loop.
+
+### How to Fix
+
+Update your Nginx configuration block (usually inside `/etc/nginx/sites-available/` configuration for the site) from:
+```nginx
+try_files $uri $uri/ /index.html;
+```
+To:
+```nginx
+try_files $uri $uri/index.html /index.html;
+```
+
+### Why this works:
+This tells Nginx to check if a file exists (`$uri`), then check if `index.html` exists inside that route folder (`$uri/index.html`), and finally fall back to the main SPA index (`/index.html`). 
+By checking `$uri/index.html` directly rather than `$uri/`, Nginx serves the pre-rendered static page shell for `/features` immediately without issuing a `301/302` directory redirect to the browser to append a trailing slash, completely breaking the loop.

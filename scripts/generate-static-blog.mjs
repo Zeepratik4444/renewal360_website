@@ -184,10 +184,27 @@ function escapeHtml(value) {
 }
 
 function extractArticleHtml(html) {
-	const header = html.match(/<header[\s\S]*?<\/header>/)?.[0] ?? "";
-	const main = html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "";
+	const match = html.match(/<header[\s\S]*?(?=<footer|$)/i);
+	let articleHtml = match ? match[0].trim() : "";
 
-	return `${header}${main}`;
+	articleHtml = articleHtml.replace(
+		/<p[^>]*>\s*Related reading:\s*([\s\S]*?)\s*<\/p>/gi,
+		(_, linksHtml) => {
+			const links = linksHtml
+				.split("·")
+				.map((link) => link.trim())
+				.filter(Boolean);
+
+			return `<div class="related-reading-box">
+				<h3>Related Reading</h3>
+				<ul>
+					${links.map((link) => `<li>${link}</li>`).join("")}
+				</ul>
+			</div>`;
+		},
+	);
+
+	return articleHtml;
 }
 
 function stripTags(html) {
@@ -459,6 +476,50 @@ function pageShell({ title, description, canonicalPath, body, schema, schemas })
     .yes-cell { color: #16a34a; font-weight: 600; }
     .no-cell { color: #dc2626; font-weight: 600; }
     .partial-cell { color: #d97706; font-weight: 600; }
+
+    /* Related Reading styled box */
+    .related-reading-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 3rem 0 2rem;
+    }
+    .related-reading-box h3 {
+      color: #0f172a !important;
+      margin: 0 0 1rem 0 !important;
+      font-size: 1.2rem !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .related-reading-box ul li {
+      padding: 0.4rem 0 0.4rem 1.5rem !important;
+      position: relative !important;
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+      color: #374151 !important;
+    }
+    .related-reading-box ul li::before {
+      content: "→" !important;
+      position: absolute !important;
+      left: 0 !important;
+      color: #2563eb !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul li a {
+      color: #2563eb !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+    .related-reading-box ul li a:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline !important;
+    }
 
     @media (max-width: 780px) {
       .nav-links { display: none; }

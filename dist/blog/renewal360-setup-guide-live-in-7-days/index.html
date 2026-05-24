@@ -207,6 +207,50 @@
     .no-cell { color: #dc2626; font-weight: 600; }
     .partial-cell { color: #d97706; font-weight: 600; }
 
+    /* Related Reading styled box */
+    .related-reading-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 3rem 0 2rem;
+    }
+    .related-reading-box h3 {
+      color: #0f172a !important;
+      margin: 0 0 1rem 0 !important;
+      font-size: 1.2rem !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .related-reading-box ul li {
+      padding: 0.4rem 0 0.4rem 1.5rem !important;
+      position: relative !important;
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+      color: #374151 !important;
+    }
+    .related-reading-box ul li::before {
+      content: "→" !important;
+      position: absolute !important;
+      left: 0 !important;
+      color: #2563eb !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul li a {
+      color: #2563eb !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+    .related-reading-box ul li a:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline !important;
+    }
+
     @media (max-width: 780px) {
       .nav-links { display: none; }
       .stat-row, .before-after, .post-grid, .signal-grid { grid-template-columns: 1fr; }
@@ -248,7 +292,9 @@
                 <div class="text-xs text-gray-400">11 min read · May 2026</div>
             </div>
         </div>
-    </header><main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
         <p class="direct-answer">
             Setting up Renewal360 is a straightforward 7-day process that requires 3–4 hours of active configuration. The timeline covers CRM connection, health score modeling, sequence mapping, inbox OAuth sync, and pilot activation, enabling teams to automate complete CS operations - such as multi-signal health checks, CRM/helpdesk integrations, and visual playbook sequences with bulk management - under a centralized CSM approval queue.
@@ -474,5 +520,88 @@
         </div>
 
     </main>
+
+    <section style="max-width:48rem;margin:0 auto;padding:0 1.5rem 3rem;" itemscope
+        itemtype="https://schema.org/FAQPage">
+        <h2 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:#111827;margin-bottom:1rem;">
+            Frequently Asked Questions
+        </h2>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                Does the 7-day timeline assume full-time setup work?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    No - the total active setup time is 3–4 hours across the 7 days, spread across calendar days to
+                    allow
+                    time for CRM sync and data to populate between steps. Days 4 and 5 (sequence design and inbox setup)
+                    take the most active time. The rest is configuration work that takes 20–45 minutes per session. Most
+                    teams complete this alongside regular CS work rather than treating it as a dedicated project.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                What CRMs does Renewal360 support?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Renewal360 supports Salesforce and HubSpot via native OAuth integrations with live two-way sync.
+                    For teams on other CRMs, data can be imported via CSV with a structured template, and outbound
+                    updates can be pushed back to the CRM via webhook. Custom CRM integrations are available for teams
+                    on enterprise plans with proprietary systems.
+                </p>
+            </div>
+        </div>
+        <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;" itemscope itemprop="mainEntity"
+            itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                Can I start the pilot with fewer than 25 accounts?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    Yes - the 25-account number is a recommendation, not a requirement. Some teams start with 10–15
+                    accounts
+                    that have renewals coming up in the next 90 days to ensure the sequences activate quickly and
+                    produce
+                    visible results during the pilot period. Going below 10 accounts limits the health score
+                    distribution - you need enough accounts to see meaningful variation in risk tiers.
+                </p>
+            </div>
+        </div>
+        <div style="padding:1.25rem 0;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name"
+                style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">
+                What happens after the 30-day pilot?
+            </h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text" style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">
+                    At the end of the 30-day pilot, you'll have a dashboard showing renewal outcomes on the pilot
+                    accounts,
+                    AI draft quality data, and enough health scoring history to validate the model. We review these
+                    together
+                    before any conversion decision. If you move to a paid plan, sequences continue running without
+                    interruption.
+                    If you decide not to continue, all your data is exportable. There's no auto-renewal or credit card
+                    required
+                    to start the pilot.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="related-reading-box">
+				<h3>Related Reading</h3>
+				<ul>
+					<li><a href="/blog/how-to-build-a-renewal-playbook-from-scratch" style="color:#2563eb;">How to Build a Renewal
+            Playbook from Scratch</a></li><li><a href="/blog/how-renewal360-works" style="color:#2563eb;">How Renewal360 Works</a></li><li><a href="/blog/renewal360-vs-spreadsheets-honest-comparison" style="color:#2563eb;">Renewal360 vs
+            Spreadsheets</a></li><li><a href="/pricing" style="color:#2563eb;">Pricing</a></li><li><a href="/how-it-works" style="color:#2563eb;">How It Works</a></li>
+				</ul>
+			</div>
 </body>
 </html>

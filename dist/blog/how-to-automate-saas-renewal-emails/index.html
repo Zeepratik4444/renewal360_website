@@ -207,6 +207,50 @@
     .no-cell { color: #dc2626; font-weight: 600; }
     .partial-cell { color: #d97706; font-weight: 600; }
 
+    /* Related Reading styled box */
+    .related-reading-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.5rem 1.75rem;
+      margin: 3rem 0 2rem;
+    }
+    .related-reading-box h3 {
+      color: #0f172a !important;
+      margin: 0 0 1rem 0 !important;
+      font-size: 1.2rem !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .related-reading-box ul li {
+      padding: 0.4rem 0 0.4rem 1.5rem !important;
+      position: relative !important;
+      font-size: 0.95rem !important;
+      line-height: 1.6 !important;
+      color: #374151 !important;
+    }
+    .related-reading-box ul li::before {
+      content: "→" !important;
+      position: absolute !important;
+      left: 0 !important;
+      color: #2563eb !important;
+      font-weight: 700 !important;
+    }
+    .related-reading-box ul li a {
+      color: #2563eb !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+    .related-reading-box ul li a:hover {
+      color: #1d4ed8 !important;
+      text-decoration: underline !important;
+    }
+
     @media (max-width: 780px) {
       .nav-links { display: none; }
       .stat-row, .before-after, .post-grid, .signal-grid { grid-template-columns: 1fr; }
@@ -247,7 +291,10 @@
         <div class="text-xs text-gray-400">8 min read · April 2026</div>
       </div>
     </div>
-  </header><main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
+  </header>
+
+  <!-- Content -->
+  <main class="max-w-3xl mx-auto px-6 pb-20 prose-content">
 
     <p class="direct-answer">
       SaaS renewal email automation is the process of syncing CRM account data, tracking weighted health signals, and using AI to draft personalized outreach emails at key contract milestones (like T-90, T-60, and T-30 days). By routing these drafts through a CSM approval queue and pausing sequences automatically upon reply, teams prevent human error and keep renewals on track. It is a core workflow within a complete CS operating platform that also features health scoring, bulk actions, and direct integrations.
@@ -444,5 +491,59 @@
         </div>
 
   </main>
+
+  <!-- FAQ -->
+  <section style="margin-top: 3rem;">
+    <h2 style="font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:#111827;margin-bottom:1rem;">Frequently
+      Asked Questions</h2>
+    <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;">
+      <h3 style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">How
+        long does it take to set up renewal email automation?</h3>
+      <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">Most teams are live with their first active
+        sequence in under 7 days. CRM connections are OAuth-based and take minutes. Sequence logic configuration
+        typically takes 1–2 hours using a visual builder with pre-built templates.</p>
+    </div>
+    <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;">
+      <h3 style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">Do
+        AI-drafted renewal emails actually sound personal?</h3>
+      <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">Yes - because they are generated from real
+        account context: usage data, support history, specific features adopted, and prior email threads. The quality is
+        markedly different from merge-field templates. That said, every draft is reviewed and approved by a CSM before
+        sending, which keeps quality high.</p>
+    </div>
+    <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;">
+      <h3 style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">What
+        happens if a customer replies to an automated sequence email?</h3>
+      <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">The sequence pauses immediately via IMAP
+        monitoring and the assigned CSM receives a Slack alert. No further automated emails are sent until the CSM
+        manually resumes or closes the sequence. This prevents the common failure of customers receiving follow-ups
+        after they've already replied.</p>
+    </div>
+    <div style="border-bottom:1px solid #e5e7eb;padding:1.25rem 0;">
+      <h3 style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">Can
+        we use different sequences for different account tiers?</h3>
+      <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">Yes. Most teams build 2–3 sequences segmented
+        by ARR tier or health score bracket. Enterprise accounts ($100K+) get a more intensive sequence with executive
+        escalation steps; SMB accounts get a lighter-touch automated flow. Accounts can also be moved between sequences
+        manually as their situation changes.</p>
+    </div>
+    <div style="padding:1.25rem 0;">
+      <h3 style="font-size:1rem;font-weight:600;color:#111827;margin:0 0 0.5rem;font-family:'DM Sans',sans-serif;">Is
+        renewal automation only useful for annual contracts?</h3>
+      <p style="margin:0;color:#4b5563;font-size:0.95rem;line-height:1.7;">No. The same health scoring and outreach
+        logic applies to monthly contracts, multi-year renewals, and usage-based billing milestones. The trigger windows
+        adjust - monthly contracts start intervention earlier on health signals rather than calendar dates - but the
+        core automation layer works across billing models.</p>
+    </div>
+  </section>
+
+  <div class="related-reading-box">
+				<h3>Related Reading</h3>
+				<ul>
+					<li><a href="/how-it-works" style="color:#2563eb;">See How It Works</a></li><li><a href="/pricing" style="color:#2563eb;">View Pricing</a></li><li><a href="/blog/why-saas-companies-lose-renewals" style="color:#2563eb;">Why SaaS Companies Lose Renewals</a></li>
+				</ul>
+			</div>
+
+  <!-- Footer -->
 </body>
 </html>

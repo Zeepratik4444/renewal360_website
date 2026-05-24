@@ -10,10 +10,27 @@ type BlogPostPageProps = {
 };
 
 function extractArticleHtml(html: string) {
-	const header = html.match(/<header[\s\S]*?<\/header>/)?.[0] ?? "";
-	const main = html.match(/<main[\s\S]*?<\/main>/)?.[0] ?? "";
+	const match = html.match(/<header[\s\S]*?(?=<footer|$)/i);
+	let articleHtml = match ? match[0].trim() : "";
 
-	return `${header}${main}`;
+	articleHtml = articleHtml.replace(
+		/<p[^>]*>\s*Related reading:\s*([\s\S]*?)\s*<\/p>/gi,
+		(_, linksHtml) => {
+			const links = linksHtml
+				.split("·")
+				.map((link: string) => link.trim())
+				.filter(Boolean);
+
+			return `<div class="related-reading-box">
+				<h3>Related Reading</h3>
+				<ul>
+					${links.map((link: string) => `<li>${link}</li>`).join("")}
+				</ul>
+			</div>`;
+		},
+	);
+
+	return articleHtml;
 }
 
 export function BlogPostPage({ slug }: BlogPostPageProps) {
