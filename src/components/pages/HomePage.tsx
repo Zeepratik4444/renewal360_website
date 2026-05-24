@@ -82,12 +82,12 @@ export function HomePage() {
 						<span className="text-blue-600">actually prevents churn.</span>
 					</h1>
 					<p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-						Renewal360 integrates multi-factor health scoring and real-time sentiment tracking to identify churn months before the renewal date. Automatically deploy precise, personalised retention outreach—live in just 7 days.
+						Renewal360 integrates multi-factor health scoring and real-time sentiment tracking to identify churn months before the renewal date. Automatically deploy precise, personalised retention outreach - live in just 7 days.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
 						<Link to="/contact">
 							<Button size="lg" className="text-lg px-8">
-								Start Free Pilot — 25 accounts, no credit card
+								Start Free Pilot - 25 accounts, no credit card
 							</Button>
 						</Link>
 						<Link to="/how-it-works">
@@ -113,14 +113,14 @@ export function HomePage() {
 							Renewals fail for entirely preventable reasons.
 						</h2>
 						<p className="text-lg text-gray-600 max-w-2xl mx-auto">
-							The data from thousands of SaaS companies tells the same story — and most teams are repeating the same costly mistakes.
+							The data from thousands of SaaS companies tells the same story - and most teams are repeating the same costly mistakes.
 						</p>
 					</div>
 
 					{/* Stats row */}
 					<div className="grid grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
 						{[
-							{ num: "58%", label: "Median first-year renewal rate — failed activation is the #1 cause" },
+							{ num: "58%", label: "Median first-year renewal rate - failed activation is the #1 cause" },
 							{ num: "20–30%", label: "Customers churn of failed sentiment analysis in advance" },
 							{ num: "30-35%", label: "Potential profit increase from just 5% better retention (Bain & Co)" },
 						].map((s) => (
@@ -139,7 +139,7 @@ export function HomePage() {
 							</CardHeader>
 							<CardContent>
 								<p className="text-gray-600">
-									CSMs spend 4–5 hours a week just identifying who to email, drafting personalised notes, and updating spreadsheets — time not spent saving accounts.
+									CSMs spend 4–5 hours a week just identifying who to email, drafting personalised notes, and updating spreadsheets - time not spent saving accounts.
 								</p>
 							</CardContent>
 						</Card>
@@ -170,7 +170,7 @@ export function HomePage() {
 					<div className="mt-12 text-center max-w-2xl mx-auto">
 						<p className="text-xl font-semibold text-gray-900">You don't need to hire 3 more CSMs.</p>
 						<p className="text-gray-600 mt-2">
-							You need a smarter platform. Renewal360 gives your existing team AI-powered foresight and automated outreach — so no account ever goes quiet again.
+							You need a smarter platform. Renewal360 gives your existing team AI-powered foresight and automated outreach - so no account ever goes quiet again.
 						</p>
 					</div>
 				</div>
@@ -251,7 +251,7 @@ export function HomePage() {
 						Plugs into the tools your team already uses.
 					</h2>
 					<p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
-						Connect your CRM, email, and communication tools in minutes — not months.
+						Connect your CRM, email, and communication tools in minutes - not months.
 					</p>
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
 						{[

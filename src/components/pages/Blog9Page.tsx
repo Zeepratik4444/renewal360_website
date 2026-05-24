@@ -56,17 +56,17 @@ export function Blog9Page() {
                     <span className="text-blue-600">Renewal360</span>
                 </h1>
                 <p className="text-xl text-gray-500 leading-relaxed">
-                    You do not need five different tools to manage your customers. Here is the complete guide to using Renewal360 as your core Customer Success operating system — from day one onboarding through renewal and expansion.
+                    You do not need five different tools to manage your customers. Here is the complete guide to using Renewal360 as your core Customer Success operating system - from day one onboarding through renewal and expansion.
                 </p>
             </header>
 
             <main className="max-w-3xl mx-auto px-6 pb-20">
                 <div className="prose prose-lg prose-gray max-w-none">
                     <p>
-                        For most growing SaaS teams, Customer Success is not a platform — it is a collection of workarounds. Salesforce tracks contracts. Zendesk handles tickets. Slack carries escalations. Google Sheets holds the renewal calendar. And somewhere in between all of that, a CSM is supposed to proactively drive value for 80 to 150 accounts simultaneously.
+                        For most growing SaaS teams, Customer Success is not a platform - it is a collection of workarounds. Salesforce tracks contracts. Zendesk handles tickets. Slack carries escalations. Google Sheets holds the renewal calendar. And somewhere in between all of that, a CSM is supposed to proactively drive value for 80 to 150 accounts simultaneously.
                     </p>
                     <p>
-                        The fragmentation is not just inefficient. It is where churn hides. When the signal that an account is at risk lives in three different tools, it rarely gets connected into a coherent picture until it is too late. Renewal360 was designed to be the platform that consolidates these signals and translates them into action — automatically, at scale, with humans in control of every customer touchpoint.
+                        The fragmentation is not just inefficient. It is where churn hides. When the signal that an account is at risk lives in three different tools, it rarely gets connected into a coherent picture until it is too late. Renewal360 was designed to be the platform that consolidates these signals and translates them into action - automatically, at scale, with humans in control of every customer touchpoint.
                     </p>
                     <p>Here is how to use it as your complete CS operating system.</p>
 
@@ -75,7 +75,7 @@ export function Blog9Page() {
                         The first thing Renewal360 does when you connect your tools is build a per-account knowledge layer. This is not a simple data sync. It is an active intelligence model that combines signals from multiple sources into a single, continuously updated view of each customer.
                     </p>
                     <p>
-                        Connect your CRM — Salesforce or HubSpot — via OAuth. Renewal360 pulls account details, contract values, renewal dates, and contact records automatically. Connect Zendesk and the platform begins ingesting support ticket history, analysing sentiment, and flagging accounts where support load is high relative to their tier or lifecycle stage.
+                        Connect your CRM - Salesforce or HubSpot - via OAuth. Renewal360 pulls account details, contract values, renewal dates, and contact records automatically. Connect Zendesk and the platform begins ingesting support ticket history, analysing sentiment, and flagging accounts where support load is high relative to their tier or lifecycle stage.
                     </p>
                     <p>The result is a health score per account built on five composite signals:</p>
                     <ul className="space-y-2 my-4">
@@ -91,22 +91,22 @@ export function Blog9Page() {
 
                     <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Step 2: Configure Your Lifecycle Sequences</h2>
                     <p>
-                        Once your intelligence foundation is in place, configure the automated sequences that drive proactive CS at scale. Renewal360 supports sequences for every stage of the customer lifecycle — not just renewals.
+                        Once your intelligence foundation is in place, configure the automated sequences that drive proactive CS at scale. Renewal360 supports sequences for every stage of the customer lifecycle - not just renewals.
                     </p>
 
                     <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Onboarding Sequences</h3>
                     <p>
-                        Configure check-in touchpoints at Day 7, Day 14, and Day 30 of a new customer's lifecycle. These sequences trigger automatically based on the account creation date synced from your CRM. Each touchpoint generates an AI-drafted email personalised to that account's industry, product tier, and onboarding progress — which lands in your approval queue before sending.
+                        Configure check-in touchpoints at Day 7, Day 14, and Day 30 of a new customer's lifecycle. These sequences trigger automatically based on the account creation date synced from your CRM. Each touchpoint generates an AI-drafted email personalised to that account's industry, product tier, and onboarding progress - which lands in your approval queue before sending.
                     </p>
 
                     <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Adoption Sequences</h3>
                     <p>
-                        Set usage thresholds that trigger automatic alerts and outreach when a customer's product engagement drops below a defined level. If a previously active account has not logged in for 14 days, the system flags it, drafts an adoption check-in email, and notifies the assigned CSM in Slack. The CSM reviews the draft, adjusts if needed, and approves — all without needing to manually identify the at-risk account first.
+                        Set usage thresholds that trigger automatic alerts and outreach when a customer's product engagement drops below a defined level. If a previously active account has not logged in for 14 days, the system flags it, drafts an adoption check-in email, and notifies the assigned CSM in Slack. The CSM reviews the draft, adjusts if needed, and approves - all without needing to manually identify the at-risk account first.
                     </p>
 
                     <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Renewal Sequences</h3>
                     <p>
-                        The renewal engine fires outreach automatically at T-90, T-60, T-30, and T-7 before each account's renewal date. Each email is AI-drafted using account-specific context — their current health score, recent support interactions, expansion signals from your CRM, and the relationship history stored in the platform's knowledge layer. Nothing generic. Nothing that reads like a mass email.
+                        The renewal engine fires outreach automatically at T-90, T-60, T-30, and T-7 before each account's renewal date. Each email is AI-drafted using account-specific context - their current health score, recent support interactions, expansion signals from your CRM, and the relationship history stored in the platform's knowledge layer. Nothing generic. Nothing that reads like a mass email.
                     </p>
                     <p>
                         Reply detection runs continuously across all active sequences. The moment a customer responds to any automated email, Renewal360 pauses all further automation for that account and notifies the CSM immediately via Slack or Teams. No follow-up fires into an active conversation.
@@ -114,12 +114,12 @@ export function Blog9Page() {
 
                     <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Expansion Sequences</h3>
                     <p>
-                        Renewal360 can trigger expansion outreach automatically when an account's health score crosses a positive threshold — high usage, positive NPS, recent successful support resolution — identifying the moment when a customer is most likely to respond positively to an upsell conversation.
+                        Renewal360 can trigger expansion outreach automatically when an account's health score crosses a positive threshold - high usage, positive NPS, recent successful support resolution - identifying the moment when a customer is most likely to respond positively to an upsell conversation.
                     </p>
 
                     <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Step 3: Close the Feedback Loop with Surveys</h2>
                     <p>
-                        Customer feedback is only useful if it informs action. Renewal360's native survey engine is integrated directly with the health scoring and automation layers, meaning survey results do not sit in a separate reporting tool — they affect what happens next for each account.
+                        Customer feedback is only useful if it informs action. Renewal360's native survey engine is integrated directly with the health scoring and automation layers, meaning survey results do not sit in a separate reporting tool - they affect what happens next for each account.
                     </p>
                     <p>
                         Configure NPS surveys to trigger automatically 45 days before a renewal. Configure CSAT surveys to fire after a support ticket is marked resolved in Zendesk. Each survey response updates the account's health score in real time. A detractor response automatically creates a CSM task and can trigger a dedicated escalation sequence. A promoter response can feed into an expansion sequence or a referral request workflow.
@@ -130,10 +130,10 @@ export function Blog9Page() {
 
                     <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Step 4: Manage Touchpoints and Relationship History</h2>
                     <p>
-                        Every meaningful interaction with a customer — a call, a QBR, a check-in email, a support escalation, a product training session — should be recorded as a touchpoint inside Renewal360. Quick-log touchpoint entries take seconds to complete and attach automatically to the relevant account.
+                        Every meaningful interaction with a customer - a call, a QBR, a check-in email, a support escalation, a product training session - should be recorded as a touchpoint inside Renewal360. Quick-log touchpoint entries take seconds to complete and attach automatically to the relevant account.
                     </p>
                     <p>
-                        Over time, this builds a complete relationship history per account visible to every member of your CS team. When a CSM is on leave and a customer escalates, their colleague can see the full context of that relationship — every interaction, every survey response, every support ticket, every email in the renewal sequence — without asking anyone or digging through email threads.
+                        Over time, this builds a complete relationship history per account visible to every member of your CS team. When a CSM is on leave and a customer escalates, their colleague can see the full context of that relationship - every interaction, every survey response, every support ticket, every email in the renewal sequence - without asking anyone or digging through email threads.
                     </p>
                     <p>
                         Calendar integration with Google Calendar and Microsoft Outlook means that scheduled meetings, QBRs, and renewal calls sync automatically into Renewal360. The platform becomes the single source of truth for everything that happens with each customer.
@@ -158,13 +158,13 @@ export function Blog9Page() {
                         Renewal360 ships with Role-Based Access Control (RBAC) allowing you to define what different team members can see and do within the platform. A junior CSM manages their assigned accounts and approves emails in their queue. A VP CS sees all accounts, edits sequences, and views team performance metrics. An executive accesses the dashboard and reporting without seeing individual customer communications.
                     </p>
                     <p>
-                        SSO (Single Sign-On) allows your team to log in through your existing identity provider — no new password to manage. MFA (Multi-Factor Authentication) adds a second layer of security for all accounts. Your customer data is stored in a fully isolated multi-tenant architecture — your organisation's data is never co-mingled with another customer's.
+                        SSO (Single Sign-On) allows your team to log in through your existing identity provider - no new password to manage. MFA (Multi-Factor Authentication) adds a second layer of security for all accounts. Your customer data is stored in a fully isolated multi-tenant architecture - your organisation's data is never co-mingled with another customer's.
                     </p>
 
                     <Callout>
                         <strong className="text-gray-900">The result:</strong>
                         <p className="mt-2 text-gray-700">
-                            A single CSM using Renewal360 can manage 3 to 5 times more accounts than they could with manual processes alone — without reducing the quality or personalisation of customer interactions. The platform handles the routine. Humans handle the relationships.
+                            A single CSM using Renewal360 can manage 3 to 5 times more accounts than they could with manual processes alone - without reducing the quality or personalisation of customer interactions. The platform handles the routine. Humans handle the relationships.
                         </p>
                     </Callout>
 
@@ -179,7 +179,7 @@ export function Blog9Page() {
                         <li>Weekly CSV exports for executive reporting</li>
                     </ul>
                     <p>
-                        The integrations with Salesforce, HubSpot, and Zendesk stay — Renewal360 sits on top of your existing stack, not in competition with it. Everything else consolidates into the platform.
+                        The integrations with Salesforce, HubSpot, and Zendesk stay - Renewal360 sits on top of your existing stack, not in competition with it. Everything else consolidates into the platform.
                     </p>
                 </div>
 

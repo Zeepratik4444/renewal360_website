@@ -45,7 +45,7 @@
     p { color: #374151; line-height: 1.8; margin: 0 0 1.25rem; }
     ul { list-style: none; padding: 0; margin: 0 0 1.25rem; }
     li { color: #374151; line-height: 1.7; padding: .3rem 0 .3rem 1.6rem; position: relative; }
-    li::before { content: "->"; position: absolute; left: 0; color: #2563eb; font-weight: 700; }
+    li::before { content: "→"; position: absolute; left: 0; color: #2563eb; font-weight: 700; }
     .text-blue-600 { color: #2563eb; }
     .text-gray-500 { color: #6b7280; }
     .text-gray-400 { color: #9ca3af; }
@@ -74,10 +74,26 @@
     .justify-center { justify-content: center; }
     .tag { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: .75rem; font-weight: 700; padding: .25rem .75rem; border-radius: 999px; margin: 0 .5rem .5rem 0; }
     .step-card, .ai-fix { background: #f0f7ff; border-left: 4px solid #2563eb; border-radius: 0 .5rem .5rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .step-card.green { border-left-color: #16a34a; }
+    .step-card.purple { border-left-color: #8b5cf6; }
+    .step-card.amber { border-left-color: #f59e0b; }
     .step-num { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #2563eb; margin-bottom: .25rem; }
-    .callout, .callout-dark { background: #111827; color: #fff; border-radius: .75rem; padding: 1.5rem 2rem; margin: 2rem 0; }
-    .callout { background: #1e3a8a; }
-    .callout p, .callout-dark p { color: #bfdbfe; margin: 0; }
+    .step-card.green .step-num { color: #16a34a; }
+    .step-card.purple .step-num { color: #8b5cf6; }
+    .step-card.amber .step-num { color: #d97706; }
+    .table-wrapper { overflow-x: auto; margin: 1.5rem 0; border: 1px solid #e5e7eb; border-radius: .75rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    thead tr { background: #f8fafc; }
+    th { padding: 0.75rem 1rem; text-align: left; font-weight: 600; color: #111827; border-bottom: 2px solid #e5e7eb; }
+    td { padding: 0.75rem 1rem; color: #4b5563; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+    tr:hover td { background: #f9fafb; }
+    .callout, .callout-dark { border-radius: .75rem; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .callout { background: #1e3a8a !important; color: #ffffff !important; }
+    .callout-dark { background: #111827 !important; color: #ffffff !important; }
+    .callout p, .callout li, .callout strong, .callout span { color: #bfdbfe !important; margin: 0; }
+    .callout h3, .callout h4 { color: #ffffff !important; margin: 0 0 0.5rem; }
+    .callout-dark p, .callout-dark li, .callout-dark strong, .callout-dark span { color: #e5e7eb !important; margin: 0; }
+    .callout-dark h3, .callout-dark h4 { color: #ffffff !important; margin: 0 0 0.5rem; }
     .reason-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; margin: 1.25rem 0; position: relative; overflow: hidden; }
     .reason-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: #ef4444; }
     .reason-card.amber::before { background: #f59e0b; }
@@ -265,43 +281,43 @@
 <a class="post-card" href="/blog/how-to-run-your-entire-cs-operation-in-renewal360">
   <div><span class="tag">Tutorial</span><span class="tag">Operations</span><span class="tag">Best Practices</span></div>
   <h2>How to Run Your Entire CS Operation in Renewal360</h2>
-  <p>A complete guide to using Renewal360 as your primary Customer Success operating system — from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.</p>
+  <p>A complete guide to using Renewal360 as your primary Customer Success operating system - from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.</p>
   <p class="text-sm text-gray-500">9 min read · 2026-05</p>
 </a>
 <a class="post-card" href="/blog/zendesk-hubspot-salesforce-cs-platform-comparison">
   <div><span class="tag">Integrations</span><span class="tag">Technology</span><span class="tag">Buying Guide</span></div>
   <h2>Already Using Zendesk, HubSpot or Salesforce? Here's the CS Platform Gap They Don't Fill</h2>
-  <p>Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add — and why.</p>
+  <p>Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add - and why.</p>
   <p class="text-sm text-gray-500">8 min read · 2026-05</p>
 </a>
 <a class="post-card" href="/blog/signs-your-renewal-process-is-quietly-broken">
   <div><span class="tag">Renewal Process</span><span class="tag">Customer Success</span><span class="tag">SaaS Churn</span></div>
   <h2>7 Signs Your Renewal Process Is Quietly Broken</h2>
-  <p>Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.</p>
+  <p>Most renewal problems don't announce themselves - they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.</p>
   <p class="text-sm text-gray-500">9 min read · 2026-05</p>
 </a>
 <a class="post-card" href="/blog/hidden-cost-of-manual-renewal-process">
   <div><span class="tag">RevOps</span><span class="tag">Customer Success</span><span class="tag">SaaS Retention</span></div>
   <h2>The Hidden Cost of a Manual Renewal Process</h2>
-  <p>Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.</p>
+  <p>Manual renewal management doesn't just feel inefficient - it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.</p>
   <p class="text-sm text-gray-500">10 min read · 2026-05</p>
 </a>
 <a class="post-card" href="/blog/how-to-build-a-renewal-playbook-from-scratch">
   <div><span class="tag">Playbook</span><span class="tag">Customer Success</span><span class="tag">Renewal Automation</span></div>
   <h2>How to Build a Renewal Playbook from Scratch</h2>
-  <p>A practical, step-by-step guide to building a renewal playbook — covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.</p>
+  <p>A practical, step-by-step guide to building a renewal playbook - covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.</p>
   <p class="text-sm text-gray-500">12 min read · 2026-05</p>
 </a>
 <a class="post-card" href="/blog/cs-metrics-every-saas-team-should-track">
   <div><span class="tag">CS Metrics</span><span class="tag">RevOps</span><span class="tag">Customer Success</span></div>
   <h2>5 CS Metrics Every SaaS Team Should Track (and One to Ignore)</h2>
-  <p>The CS metrics that actually predict renewal outcomes — GRR, NRR, TTFV, health score accuracy, and CSM capacity — plus the one most teams obsess over that doesn't deliver real signal.</p>
+  <p>The CS metrics that actually predict renewal outcomes - GRR, NRR, TTFV, health score accuracy, and CSM capacity - plus the one most teams obsess over that doesn't deliver real signal.</p>
   <p class="text-sm text-gray-500">10 min read · 2026-05</p>
 </a>
 <a class="post-card" href="/blog/renewal360-setup-guide-live-in-7-days">
   <div><span class="tag">Setup Guide</span><span class="tag">Renewal360</span><span class="tag">Onboarding</span></div>
   <h2>Renewal360 Setup Guide: Live in 7 Days</h2>
-  <p>A day-by-day guide to getting Renewal360 fully operational — CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.</p>
+  <p>A day-by-day guide to getting Renewal360 fully operational - CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.</p>
   <p class="text-sm text-gray-500">11 min read · 2026-05</p>
 </a>
 <a class="post-card" href="/blog/renewal360-vs-spreadsheets-honest-comparison">

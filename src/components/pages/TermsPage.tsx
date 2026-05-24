@@ -151,9 +151,9 @@ export function TermsPage() {
 								The Service integrates with or relies on third-party services, including but not limited to:
 							</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
-								<li><strong>Google Cloud Platform</strong> — Infrastructure hosting and AI processing</li>
-								<li><strong>Razorpay</strong> — Payment processing and subscription billing</li>
-								<li><strong>Email delivery services</strong> — Transactional and automated email dispatch</li>
+								<li><strong>Google Cloud Platform</strong> - Infrastructure hosting and AI processing</li>
+								<li><strong>Razorpay</strong> - Payment processing and subscription billing</li>
+								<li><strong>Email delivery services</strong> - Transactional and automated email dispatch</li>
 							</ul>
 							<p className="mt-2">
 								We are not responsible for the availability, accuracy, or practices of third-party services.
@@ -293,7 +293,7 @@ export function TermsPage() {
 							<p>We collect the following categories of information:</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
 								<li><strong>Account Data:</strong> Name, email address, company name, and password (stored as a cryptographic hash) provided during registration</li>
-								<li><strong>Usage Data:</strong> Feature usage, session duration, pages visited, interaction patterns, IP address, browser type, and device identifiers — collected automatically for product improvement and security</li>
+								<li><strong>Usage Data:</strong> Feature usage, session duration, pages visited, interaction patterns, IP address, browser type, and device identifiers - collected automatically for product improvement and security</li>
 								<li><strong>Customer Data:</strong> Renewal records, customer contact information, communication history, and other business data you upload to the platform</li>
 								<li><strong>Payment Data:</strong> Billing information processed securely through Razorpay; we do not store credit card numbers, CVV codes, or full card details on our servers</li>
 								<li><strong>Communication Data:</strong> Information you provide when contacting support, requesting demos, or responding to surveys</li>
@@ -328,7 +328,7 @@ export function TermsPage() {
 							<ul className="list-disc pl-6 mt-2 space-y-1">
 								<li>AI processing is performed in real-time and data is not retained by Google beyond the processing session</li>
 								<li>We do <strong>not</strong> use your data to train or improve third-party AI models</li>
-								<li>AI-generated outputs are suggestions only — you maintain full editorial control</li>
+								<li>AI-generated outputs are suggestions only - you maintain full editorial control</li>
 								<li>All AI processing is subject to Google Cloud's enterprise data processing agreements and ISO 27001, SOC 2 security certifications</li>
 							</ul>
 						</div>
@@ -358,11 +358,11 @@ export function TermsPage() {
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">5. Data Sharing & Sub-Processors</h3>
 							<p>We do not sell your personal data. We share information only with the following categories of recipients:</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
-								<li><strong>Google Cloud Platform</strong> — Infrastructure hosting, data storage, and AI processing (Gemini)</li>
-								<li><strong>Razorpay</strong> — Payment processing and subscription management</li>
-								<li><strong>Email delivery services</strong> — Transactional and automated email dispatch on your behalf</li>
-								<li><strong>Legal & compliance</strong> — When required by law, regulation, subpoena, or valid legal process</li>
-								<li><strong>Business transfers</strong> — In connection with a merger, acquisition, or sale of assets; you will be notified in advance</li>
+								<li><strong>Google Cloud Platform</strong> - Infrastructure hosting, data storage, and AI processing (Gemini)</li>
+								<li><strong>Razorpay</strong> - Payment processing and subscription management</li>
+								<li><strong>Email delivery services</strong> - Transactional and automated email dispatch on your behalf</li>
+								<li><strong>Legal & compliance</strong> - When required by law, regulation, subpoena, or valid legal process</li>
+								<li><strong>Business transfers</strong> - In connection with a merger, acquisition, or sale of assets; you will be notified in advance</li>
 							</ul>
 							<p className="mt-2">
 								All sub-processors are contractually obligated to maintain the confidentiality and security of your data
@@ -376,8 +376,8 @@ export function TermsPage() {
 							<p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, we process your personal data on the following legal bases:</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
 								<li><strong>Contract performance:</strong> To provide the Service you have subscribed to</li>
-								<li><strong>Legitimate interests:</strong> To improve the Service, ensure security, prevent fraud, and conduct analytics — where these interests are not overridden by your rights</li>
-								<li><strong>Consent:</strong> For marketing communications and any optional data processing — you can withdraw consent at any time</li>
+								<li><strong>Legitimate interests:</strong> To improve the Service, ensure security, prevent fraud, and conduct analytics - where these interests are not overridden by your rights</li>
+								<li><strong>Consent:</strong> For marketing communications and any optional data processing - you can withdraw consent at any time</li>
 								<li><strong>Legal obligation:</strong> To comply with applicable laws and regulations</li>
 							</ul>
 						</div>
@@ -460,7 +460,7 @@ export function TermsPage() {
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">11. Cookies & Tracking Technologies</h3>
 							<p>We use the following types of cookies and similar technologies:</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
-								<li><strong>Essential cookies:</strong> Required for authentication, session management, and security — cannot be disabled</li>
+								<li><strong>Essential cookies:</strong> Required for authentication, session management, and security - cannot be disabled</li>
 								<li><strong>Analytics cookies:</strong> Help us understand usage patterns and improve the Service (e.g., page views, feature usage)</li>
 								<li><strong>Preference cookies:</strong> Remember your settings and preferences</li>
 							</ul>

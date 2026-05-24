@@ -70,7 +70,7 @@ export function CheckoutModal({ isOpen, onClose, plan, billingCycle, currency, p
                 amount: order.amount,
                 currency: order.currency,
                 name: "Renewal360",
-                description: `${plan} Plan — ${billingCycle}`,
+                description: `${plan} Plan - ${billingCycle}`,
                 order_id: order.order_id,
                 prefill: {
                     email: order.user_email,

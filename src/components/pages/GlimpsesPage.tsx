@@ -201,7 +201,7 @@ export function GlimpsesPage() {
 									<h2 className="text-2xl font-bold text-gray-900">Sequence Queue & Action Center</h2>
 								</div>
 								<p className="text-lg text-gray-600 mb-6 leading-relaxed">
-									Every AI-drafted email lands in the queue before it's sent. Preview the fully rendered message with live customer data, override the subject or body, force-send immediately, or skip entirely — you're always in control.
+									Every AI-drafted email lands in the queue before it's sent. Preview the fully rendered message with live customer data, override the subject or body, force-send immediately, or skip entirely - you're always in control.
 								</p>
 								<ul className="space-y-3">
 									{["Preview AI-rendered emails with live customer data", "Override, Send Now, or Skip any pending step", "Bulk campaign triggers with one-click enrollment"].map((t) => (
@@ -220,13 +220,13 @@ export function GlimpsesPage() {
 									<div className="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center">
 										<MessageSquare className="text-violet-600 h-5 w-5" />
 									</div>
-									<h2 className="text-2xl font-bold text-gray-900">AI Copilot — Your CS Co-pilot</h2>
+									<h2 className="text-2xl font-bold text-gray-900">AI Copilot - Your CS Co-pilot</h2>
 								</div>
 								<p className="text-lg text-gray-600 mb-6 leading-relaxed">
-									An agentic AI assistant with 16+ tool calls wired to your live data. Ask it to draft an email, create a task, run a risk analysis, or search your portfolio — all through natural conversation. Every write action requires your explicit approval via confirmation cards.
+									An agentic AI assistant with 16+ tool calls wired to your live data. Ask it to draft an email, create a task, run a risk analysis, or search your portfolio - all through natural conversation. Every write action requires your explicit approval via confirmation cards.
 								</p>
 								<ul className="space-y-3">
-									{["Natural language search, inspection, and analysis", "Draft emails, log touchpoints, and create tasks via chat", "Confirmation cards for every write action — nothing runs unreviewed"].map((t) => (
+									{["Natural language search, inspection, and analysis", "Draft emails, log touchpoints, and create tasks via chat", "Confirmation cards for every write action - nothing runs unreviewed"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
 											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
 										</li>
@@ -247,7 +247,7 @@ export function GlimpsesPage() {
 									<h2 className="text-2xl font-bold text-gray-900">Email Sequence Builder</h2>
 								</div>
 								<p className="text-lg text-gray-600 mb-6 leading-relaxed">
-									Design multi-step automated email campaigns with a visual drag-and-drop builder. Clone from pre-built templates, target by renewal cohort, and track open rates and funnel analytics — all without leaving the platform.
+									Design multi-step automated email campaigns with a visual drag-and-drop builder. Clone from pre-built templates, target by renewal cohort, and track open rates and funnel analytics - all without leaving the platform.
 								</p>
 								<ul className="space-y-3">
 									{["Clone from templates or build custom sequences", "Cohort-based enrollment (90-day, 60-day, 30-day)", "Per-step funnel analytics and open rate tracking"].map((t) => (

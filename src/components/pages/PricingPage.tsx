@@ -32,7 +32,7 @@ function ComparisonCell({ value, isGrowth }: { value: string; isGrowth?: boolean
 			</span>
 		);
 	}
-	if (value === "—") {
+	if (value === "-") {
 		return (
 			<span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-100 text-gray-400">
 				<Minus className="h-4 w-4" />
@@ -64,15 +64,15 @@ export function PricingPage() {
 						Simple, Transparent Pricing
 					</h1>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-						Every signup gets <strong>7 days of full Scale access</strong> — then
+						Every signup gets <strong>7 days of full Scale access</strong> - then
 						choose the plan that fits your renewal volume. No hidden fees.
 					</p>
 					<span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium px-4 py-2 rounded-full">
-						Unlimited seats at every tier — no per-user charges
+						Unlimited seats at every tier - no per-user charges
 					</span>
 				</div>
 
-				{/* Billing toggle only — currency is auto-detected */}
+				{/* Billing toggle only - currency is auto-detected */}
 				<div className="flex justify-center mb-12">
 					<Tabs
 						defaultValue="monthly"
@@ -232,7 +232,7 @@ export function PricingPage() {
 
 					<div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
 						<table className="w-full text-left">
-							{/* Table header — plan names */}
+							{/* Table header - plan names */}
 							<thead>
 								<tr className="bg-gray-50 border-b border-gray-200">
 									<th className="py-4 px-6 text-sm font-semibold text-gray-500 uppercase tracking-wider w-[280px] min-w-[200px]">
@@ -306,7 +306,7 @@ export function PricingPage() {
 					<div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
 						{[
 							{ title: "Cancel Anytime", desc: "No long-term contracts" },
-							{ title: "Unlimited Seats", desc: "Invite your whole team — no per-user charges" },
+							{ title: "Unlimited Seats", desc: "Invite your whole team - no per-user charges" },
 							{ title: "7-Day Scale Trial", desc: "Experience every feature before you commit" },
 						].map(({ title, desc }) => (
 							<div key={title} className="flex items-start gap-3">

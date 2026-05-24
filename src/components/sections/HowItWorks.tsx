@@ -14,7 +14,7 @@ export function HowItWorks() {
       time: "100% yours",
       timeLabel: "Control",
       title: "AI Drafts Personalised Outreach",
-      desc: "Renewal360 analyses each account's risk signals and drafts personalised email sequences. Review, edit, approve — or reject. You're always in control of every customer touchpoint."
+      desc: "Renewal360 analyses each account's risk signals and drafts personalised email sequences. Review, edit, approve - or reject. You're always in control of every customer touchpoint."
     },
     {
       num: "03",
@@ -60,7 +60,7 @@ export function HowItWorks() {
         </div>
 
         <p className="text-center text-muted-foreground italic mt-10 max-w-2xl mx-auto text-sm">
-          "Every AI-generated email goes through your team for review before it reaches a customer. Renewal360 handles the intelligence — your team handles the relationship."
+          "Every AI-generated email goes through your team for review before it reaches a customer. Renewal360 handles the intelligence - your team handles the relationship."
         </p>
       </div>
     </section>

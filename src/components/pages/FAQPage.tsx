@@ -12,11 +12,11 @@ export function FAQPage() {
 
 	const faqs = [
 		{ q: "Is Renewal360 a software or a managed service?", a: "It's a powerful AI platform that combines the depth of enterprise software with the ease of a managed service. We handle the AI infrastructure, email delivery, and operational details. You provide your renewal data, approve actions, and track results." },
-		{ q: "Do I have to approve every email the AI writes?", a: "Yes — and that's intentional. Every email goes through your team before reaching a customer. You can edit, approve, or reject any email. Once you're comfortable, you can configure auto-send for lower-risk segments." },
+		{ q: "Do I have to approve every email the AI writes?", a: "Yes - and that's intentional. Every email goes through your team before reaching a customer. You can edit, approve, or reject any email. Once you're comfortable, you can configure auto-send for lower-risk segments." },
 		{ q: "How long does setup take?", a: "About 7 days: Connect data (1–2 days) → Configure templates (1–2 days) → Team training (1 day) → Test batch (1–2 days). Our onboarding team handles the heavy lifting." },
-		{ q: "What happens to my data if I cancel?", a: "We export all your data and email history in a standard format. No lock-in — your data is always yours. You receive a full export within 5 business days." },
+		{ q: "What happens to my data if I cancel?", a: "We export all your data and email history in a standard format. No lock-in - your data is always yours. You receive a full export within 5 business days." },
 		{ q: "Does it work for my industry?", a: "Yes. Renewal360 works for HR software, marketing tools, project management platforms, analytics products, and communication tools. The AI adapts to your specific product and customer base." },
-		{ q: "How is this different from just using our CRM?", a: "Your CRM organises data — it doesn't act on it. Renewal360 reads your CRM data and automatically generates outreach, surfaces at-risk accounts, and tracks whether your renewal emails are working." },
+		{ q: "How is this different from just using our CRM?", a: "Your CRM organises data - it doesn't act on it. Renewal360 reads your CRM data and automatically generates outreach, surfaces at-risk accounts, and tracks whether your renewal emails are working." },
 		{ q: "Is our data secure?", a: "Yes. We're built on SOC 2-ready infrastructure with TLS 1.3 + AES-256 encryption. We only parse fields necessary for renewal conversations and never use your data to train base AI models." },
 	];
 

@@ -7,7 +7,7 @@
  *   Vite produces a single dist/index.html that carries homepage metadata
  *   (title, canonical, OG tags). Every core SPA route that nginx falls back
  *   to via `try_files $uri $uri/ /index.html` therefore serves homepage head
- *   to Google and social crawlers — regardless of the actual route.
+ *   to Google and social crawlers - regardless of the actual route.
  *
  * What it does:
  *   1. Reads dist/index.html to extract the built <body> and hashed asset tags
@@ -15,7 +15,7 @@
  *   2. For each core page, writes dist/{route}/index.html with the correct
  *      page-specific <head> metadata + the same SPA body.
  *   3. nginx's existing `try_files $uri $uri/ /index.html` rule will serve
- *      these files directly — no nginx config changes needed.
+ *      these files directly - no nginx config changes needed.
  *
  * Result:
  *   - Google and social unfurlers see the correct title, description,
@@ -57,7 +57,7 @@ const pages = [
         route: "faq",
         title: "FAQ - Renewal360",
         description:
-            "Frequently asked questions about Renewal360 — setup, integrations, pricing, and how the AI renewal automation works.",
+            "Frequently asked questions about Renewal360 - setup, integrations, pricing, and how the AI renewal automation works.",
     },
     {
         route: "about",
@@ -115,7 +115,7 @@ if (!bodyMatch) {
 const bodyContent = bodyMatch[1];
 
 // ── Shared JSON-LD schema (SoftwareApplication) ────────────────────────────
-// Same as homepage — reinforces product identity on all key pages.
+// Same as homepage - reinforces product identity on all key pages.
 const softwareSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",

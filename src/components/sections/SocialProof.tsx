@@ -2,8 +2,8 @@ export function SocialProof() {
   const trustStats = [
     { num: "90%+", label: "Renewal rate achieved by teams following the 90-60-30 day playbook" },
     { num: "7 days", label: "Average time from signup to first AI-drafted outreach batch sent" },
-    { num: "5×", label: "Cheaper than Gainsight — the most common alternative evaluated by our customers" },
-    { num: "SOC 2", label: "Ready infrastructure — TLS 1.3 + AES-256, data never shared with third parties" },
+    { num: "5×", label: "Cheaper than Gainsight - the most common alternative evaluated by our customers" },
+    { num: "SOC 2", label: "Ready infrastructure - TLS 1.3 + AES-256, data never shared with third parties" },
   ];
 
   return (

@@ -122,3 +122,8 @@ Disallow: /dashboard
 Disallow: /settings
 
 Sitemap: https://renewal360.in/sitemap.xml
+Sitemap: https://renewal360.in/sitemap-blog.xml
+
+# LLM context files
+LLM: https://renewal360.in/llms.txt
+LLM: https://renewal360.in/llms-full.txt

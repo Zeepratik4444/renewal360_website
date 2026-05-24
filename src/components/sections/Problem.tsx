@@ -10,15 +10,15 @@ export function Problem() {
           Renewals fail for entirely preventable reasons.
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          The data from thousands of SaaS companies is sobering — and most teams are repeating the same costly mistakes.
+          The data from thousands of SaaS companies is sobering - and most teams are repeating the same costly mistakes.
         </p>
       </div>
 
       {/* Stats row */}
       <div className="grid grid-cols-3 gap-6 mb-16 max-w-3xl mx-auto">
         {[
-          { num: "58%", label: "Median first-year renewal rate — failed activation is the #1 cause" },
-          { num: "20–30%", label: "Of all churn is involuntary — failed payments, not intent" },
+          { num: "58%", label: "Median first-year renewal rate - failed activation is the #1 cause" },
+          { num: "20–30%", label: "Of all churn is involuntary - failed payments, not intent" },
           { num: "35%", label: "Potential profit increase from just 5% better retention (Bain & Co)" },
         ].map(s => (
           <div key={s.num} className="bg-white rounded-xl border border-border p-6 text-center shadow-sm">
@@ -75,7 +75,7 @@ export function Problem() {
           You don't need to hire 3 more CSMs.
         </p>
         <p className="text-lg text-muted-foreground mt-2">
-          You need a smarter system. Renewal360 gives your existing team AI-powered foresight and automated outreach — so no account ever goes quiet again.
+          You need a smarter system. Renewal360 gives your existing team AI-powered foresight and automated outreach - so no account ever goes quiet again.
         </p>
       </div>
     </section>

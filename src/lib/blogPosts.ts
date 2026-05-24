@@ -123,7 +123,7 @@ export const blogPosts: BlogPost[] = [
 		slug: "how-to-run-your-entire-cs-operation-in-renewal360",
 		title: "How to Run Your Entire CS Operation in Renewal360",
 		summary:
-			"A complete guide to using Renewal360 as your primary Customer Success operating system — from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.",
+			"A complete guide to using Renewal360 as your primary Customer Success operating system - from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.",
 		tags: ["Tutorial", "Operations", "Best Practices"],
 		readTime: "9 min read",
 		publishedAt: "May 2026",
@@ -136,7 +136,7 @@ export const blogPosts: BlogPost[] = [
 		title:
 			"Already Using Zendesk, HubSpot or Salesforce? Here's the CS Platform Gap They Don't Fill",
 		summary:
-			"Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add — and why.",
+			"Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add - and why.",
 		tags: ["Integrations", "Technology", "Buying Guide"],
 		readTime: "8 min read",
 		publishedAt: "May 2026",
@@ -147,7 +147,7 @@ export const blogPosts: BlogPost[] = [
 		slug: "signs-your-renewal-process-is-quietly-broken",
 		title: "7 Signs Your Renewal Process Is Quietly Broken",
 		summary:
-			"Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.",
+			"Most renewal problems don't announce themselves - they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.",
 		tags: ["Renewal Process", "Customer Success", "SaaS Churn"],
 		readTime: "9 min read",
 		publishedAt: "May 2026",
@@ -158,7 +158,7 @@ export const blogPosts: BlogPost[] = [
 		slug: "hidden-cost-of-manual-renewal-process",
 		title: "The Hidden Cost of a Manual Renewal Process",
 		summary:
-			"Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.",
+			"Manual renewal management doesn't just feel inefficient - it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.",
 		tags: ["RevOps", "Customer Success", "SaaS Retention"],
 		readTime: "10 min read",
 		publishedAt: "May 2026",
@@ -169,7 +169,7 @@ export const blogPosts: BlogPost[] = [
 		slug: "how-to-build-a-renewal-playbook-from-scratch",
 		title: "How to Build a Renewal Playbook from Scratch",
 		summary:
-			"A practical, step-by-step guide to building a renewal playbook — covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.",
+			"A practical, step-by-step guide to building a renewal playbook - covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.",
 		tags: ["Playbook", "Customer Success", "Renewal Automation"],
 		readTime: "12 min read",
 		publishedAt: "May 2026",
@@ -180,7 +180,7 @@ export const blogPosts: BlogPost[] = [
 		slug: "cs-metrics-every-saas-team-should-track",
 		title: "5 CS Metrics Every SaaS Team Should Track (and One to Ignore)",
 		summary:
-			"The CS metrics that actually predict renewal outcomes — GRR, NRR, TTFV, health score accuracy, and CSM capacity — plus the one most teams obsess over that doesn't deliver real signal.",
+			"The CS metrics that actually predict renewal outcomes - GRR, NRR, TTFV, health score accuracy, and CSM capacity - plus the one most teams obsess over that doesn't deliver real signal.",
 		tags: ["CS Metrics", "RevOps", "Customer Success"],
 		readTime: "10 min read",
 		publishedAt: "May 2026",
@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
 		slug: "renewal360-setup-guide-live-in-7-days",
 		title: "Renewal360 Setup Guide: Live in 7 Days",
 		summary:
-			"A day-by-day guide to getting Renewal360 fully operational — CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.",
+			"A day-by-day guide to getting Renewal360 fully operational - CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.",
 		tags: ["Setup Guide", "Renewal360", "Onboarding"],
 		readTime: "11 min read",
 		publishedAt: "May 2026",

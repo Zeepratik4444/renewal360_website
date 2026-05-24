@@ -6,7 +6,7 @@ const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.png`;
 interface SEOProps {
 	title: string;
 	description: string;
-	/** Absolute path for this page, e.g. "/pricing" — defaults to current pathname */
+	/** Absolute path for this page, e.g. "/pricing" - defaults to current pathname */
 	canonicalPath?: string;
 	/** Override og:image for a specific page (optional) */
 	ogImage?: string;

@@ -56,14 +56,14 @@ export function Blog8Page() {
           <span className="text-blue-600">Growing SaaS Teams</span>
         </h1>
         <p className="text-xl text-gray-500 leading-relaxed">
-          Most CS platforms were built for the enterprise. We built one for the rest of us — the teams who need to prevent churn without a 6-month implementation project, a dedicated RevOps admin, or a six-figure annual contract.
+          Most CS platforms were built for the enterprise. We built one for the rest of us - the teams who need to prevent churn without a 6-month implementation project, a dedicated RevOps admin, or a six-figure annual contract.
         </p>
       </header>
 
       <main className="max-w-3xl mx-auto px-6 pb-20">
         <div className="prose prose-lg prose-gray max-w-none">
           <p>
-            There is a trap that catches almost every SaaS company between $1M and $10M ARR. You have grown past the point where a spreadsheet can manage your customers. You know accounts are churning silently. Your CSMs are reactive, spending their days firefighting instead of driving value. But when you look at the tools designed to fix this — Gainsight, Totango, ChurnZero — you realise they were built for a company three times your size, at three times your budget, with three times your implementation capacity.
+            There is a trap that catches almost every SaaS company between $1M and $10M ARR. You have grown past the point where a spreadsheet can manage your customers. You know accounts are churning silently. Your CSMs are reactive, spending their days firefighting instead of driving value. But when you look at the tools designed to fix this - Gainsight, Totango, ChurnZero - you realise they were built for a company three times your size, at three times your budget, with three times your implementation capacity.
           </p>
           <p>
             This is the gap Renewal360 was built to fill. Not as a lightweight workaround, but as a full Customer Success platform with the depth of an enterprise system and the speed of a modern SaaS product. Here is what that actually means.
@@ -77,7 +77,7 @@ export function Blog8Page() {
             Both paths lead to the same outcome: by the time a risk signal is visible, the customer has already mentally decided to leave. Usage drops. Support tickets stop being filed because the customer has given up. Outreach goes unanswered. And then the renewal call happens and everyone is surprised.
           </p>
           <p>
-            The fix is not more dashboards. It is a platform that connects your existing tools, builds a real picture of account health across multiple signals, and then helps your team take action before it is too late — automatically, at scale, with humans staying in control of every customer touchpoint.
+            The fix is not more dashboards. It is a platform that connects your existing tools, builds a real picture of account health across multiple signals, and then helps your team take action before it is too late - automatically, at scale, with humans staying in control of every customer touchpoint.
           </p>
 
           <Callout>
@@ -87,23 +87,23 @@ export function Blog8Page() {
             </p>
           </Callout>
 
-          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">A Full CS Platform — Not Just Renewal Automation</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">A Full CS Platform - Not Just Renewal Automation</h2>
           <p>
-            One of the most common misconceptions about Renewal360 is that it only handles renewal emails. The name contributes to that confusion. In reality, the platform covers the entire customer success lifecycle — from onboarding through expansion, with renewals as the highest-stakes moment in that journey.
+            One of the most common misconceptions about Renewal360 is that it only handles renewal emails. The name contributes to that confusion. In reality, the platform covers the entire customer success lifecycle - from onboarding through expansion, with renewals as the highest-stakes moment in that journey.
           </p>
           <p>Here is what the full platform includes:</p>
 
           <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Multi-Factor Health Scoring</h3>
           <p>
-            A single health score built on one data point — say, product logins — is easy to game and easy to misread. Renewal360 calculates account health across five composite signals: product usage trends, email engagement rates, support ticket volume and sentiment, CRM relationship recency, and NPS/CSAT survey results. Each signal is weighted and combined into a single score that updates continuously as new data flows in from your connected tools.
+            A single health score built on one data point - say, product logins - is easy to game and easy to misread. Renewal360 calculates account health across five composite signals: product usage trends, email engagement rates, support ticket volume and sentiment, CRM relationship recency, and NPS/CSAT survey results. Each signal is weighted and combined into a single score that updates continuously as new data flows in from your connected tools.
           </p>
           <p>
-            This means a customer who logs in weekly but has three open high-severity Zendesk tickets and hasn't opened your last four outreach emails will be correctly flagged as at-risk — even if their usage metric alone looks healthy.
+            This means a customer who logs in weekly but has three open high-severity Zendesk tickets and hasn't opened your last four outreach emails will be correctly flagged as at-risk - even if their usage metric alone looks healthy.
           </p>
 
           <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Automated Renewal and Lifecycle Sequences</h3>
           <p>
-            Renewal360 automates the touchpoints that protect your ARR. T-90, T-60, T-30, and T-7 renewal sequences fire automatically based on contract dates synced from your CRM. But the platform goes beyond renewals. You can configure onboarding check-in sequences, adoption nudges triggered by usage drops, QBR preparation workflows, and expansion opportunity alerts — all driven by the same health scoring engine.
+            Renewal360 automates the touchpoints that protect your ARR. T-90, T-60, T-30, and T-7 renewal sequences fire automatically based on contract dates synced from your CRM. But the platform goes beyond renewals. You can configure onboarding check-in sequences, adoption nudges triggered by usage drops, QBR preparation workflows, and expansion opportunity alerts - all driven by the same health scoring engine.
           </p>
           <p>
             Every automated email is AI-drafted and personalised per account using that account's specific context: their industry, their usage pattern, their open support issues, their relationship history. Nothing generic. Nothing that reads like a template.
@@ -114,22 +114,22 @@ export function Blog8Page() {
             Automation without oversight is how CS teams lose trust with their customers. Every AI-drafted email in Renewal360 lands in an approval queue before it reaches any inbox. Your CSMs review, edit, or reject each draft in seconds. The system gives them the leverage to manage far more accounts than they could manually, while keeping them in control of every word that goes out under their name.
           </p>
           <p>
-            The moment a customer replies to any sequence, Renewal360 stops all further automation for that account and notifies the assigned CSM immediately — via Slack, Teams, or email. No follow-up fires into an active conversation. No awkward automated message after a human exchange has already begun.
+            The moment a customer replies to any sequence, Renewal360 stops all further automation for that account and notifies the assigned CSM immediately - via Slack, Teams, or email. No follow-up fires into an active conversation. No awkward automated message after a human exchange has already begun.
           </p>
 
           <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Native Survey Engine</h3>
           <p>
-            Most CS platforms treat NPS and CSAT as bolt-ons. In Renewal360, the survey engine is a first-class feature. You can trigger surveys automatically — after a support ticket closes, at a specific point in the customer lifecycle, or a set number of days before renewal. Survey responses feed directly back into the account's health score. A detractor score automatically creates a CSM task. A promoter score can trigger an expansion sequence. The feedback loop is closed inside the platform, not across three different tools.
+            Most CS platforms treat NPS and CSAT as bolt-ons. In Renewal360, the survey engine is a first-class feature. You can trigger surveys automatically - after a support ticket closes, at a specific point in the customer lifecycle, or a set number of days before renewal. Survey responses feed directly back into the account's health score. A detractor score automatically creates a CSM task. A promoter score can trigger an expansion sequence. The feedback loop is closed inside the platform, not across three different tools.
           </p>
 
           <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Touchpoint and Calendar Management</h3>
           <p>
-            Every meaningful interaction with a customer — a call, a QBR, a check-in email, a support escalation — is logged as a touchpoint inside Renewal360. Calendar integrations with Google Calendar and Microsoft Outlook mean that scheduled meetings sync automatically, and renewal dates appear in your team's calendar without manual entry.
+            Every meaningful interaction with a customer - a call, a QBR, a check-in email, a support escalation - is logged as a touchpoint inside Renewal360. Calendar integrations with Google Calendar and Microsoft Outlook mean that scheduled meetings sync automatically, and renewal dates appear in your team's calendar without manual entry.
           </p>
 
           <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Custom Fields and Data Enrichment</h3>
           <p>
-            Renewal360 supports custom fields at the account level, allowing you to track the metrics that matter for your specific business — whether that is a product-specific adoption score, a custom tier classification, or a field pulled from a data source unique to your stack. These custom fields can feed into health score calculations and trigger automation rules.
+            Renewal360 supports custom fields at the account level, allowing you to track the metrics that matter for your specific business - whether that is a product-specific adoption score, a custom tier classification, or a field pulled from a data source unique to your stack. These custom fields can feed into health score calculations and trigger automation rules.
           </p>
 
           <h3 className="text-xl font-bold text-gray-900 mt-8 mb-3">Enterprise-Grade Security</h3>
@@ -138,16 +138,16 @@ export function Blog8Page() {
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Integrations That Actually Work</h2>
-          <p>Renewal360 connects to the tools your team already uses — not to replace them, but to unify the signals they produce into a single view of each customer.</p>
+          <p>Renewal360 connects to the tools your team already uses - not to replace them, but to unify the signals they produce into a single view of each customer.</p>
           <ul className="space-y-2 my-4">
-            <li><strong>CRM:</strong> Salesforce (OAuth), HubSpot (OAuth) — bidirectional sync of contacts, deals, and renewal dates</li>
-            <li><strong>Support:</strong> Zendesk (OAuth) — ticket sentiment analysis feeding health scores</li>
-            <li><strong>Email:</strong> Gmail (OAuth), Outlook/Microsoft Graph — outreach sent from your own domain</li>
-            <li><strong>Communication:</strong> Slack, Microsoft Teams — real-time alerts and reply notifications</li>
-            <li><strong>Calendar:</strong> Google Calendar, Microsoft Calendar — renewal date sync and meeting scheduling</li>
+            <li><strong>CRM:</strong> Salesforce (OAuth), HubSpot (OAuth) - bidirectional sync of contacts, deals, and renewal dates</li>
+            <li><strong>Support:</strong> Zendesk (OAuth) - ticket sentiment analysis feeding health scores</li>
+            <li><strong>Email:</strong> Gmail (OAuth), Outlook/Microsoft Graph - outreach sent from your own domain</li>
+            <li><strong>Communication:</strong> Slack, Microsoft Teams - real-time alerts and reply notifications</li>
+            <li><strong>Calendar:</strong> Google Calendar, Microsoft Calendar - renewal date sync and meeting scheduling</li>
           </ul>
           <p>
-            All integrations use OAuth — no API keys stored in spreadsheets, no manual exports, no brittle Zapier chains. Connect once, stay connected.
+            All integrations use OAuth - no API keys stored in spreadsheets, no manual exports, no brittle Zapier chains. Connect once, stay connected.
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">7 Days to Value</h2>
@@ -162,7 +162,7 @@ export function Blog8Page() {
 
           <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-4">Who Renewal360 Is Built For</h2>
           <p>
-            Renewal360 is the right platform for SaaS companies managing between 50 and 2,000 customer accounts with a CS team of 1 to 20 people. If you are currently managing renewals in spreadsheets, running CS out of your CRM without a dedicated tool, or stuck in the gap between "too small for Gainsight" and "too big for manual processes" — this is the platform built for your stage.
+            Renewal360 is the right platform for SaaS companies managing between 50 and 2,000 customer accounts with a CS team of 1 to 20 people. If you are currently managing renewals in spreadsheets, running CS out of your CRM without a dedicated tool, or stuck in the gap between "too small for Gainsight" and "too big for manual processes" - this is the platform built for your stage.
           </p>
           <p>
             It is also the right platform for SaaS teams who tried an enterprise CS tool and found themselves spending more time configuring the platform than serving customers. Renewal360 does not require a dedicated admin. It does not require a 3-month onboarding project. It requires a CRM login and 7 days.

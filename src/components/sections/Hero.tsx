@@ -9,7 +9,7 @@ export function Hero() {
       <div className="relative z-10 flex flex-col items-center">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-8 border border-blue-200">
           <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
-          Gainsight alternative built for mid-market — at 1/5th the price
+          Gainsight alternative built for mid-market - at 1/5th the price
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mb-8 leading-[1.1]" style={{fontFamily: "'Syne', sans-serif"}}>
@@ -17,12 +17,12 @@ export function Hero() {
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
-          Renewal360 automatically drafts personalised outreach for every at-risk account — your team just approves and sends. Set up in 7 days, not 7 months.
+          Renewal360 automatically drafts personalised outreach for every at-risk account - your team just approves and sends. Set up in 7 days, not 7 months.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center mb-12">
           <Button size="lg" className="w-full sm:w-auto font-semibold rounded-full px-8 h-12 text-base shadow-lg shadow-blue-200">
-            Start Free Pilot — 25 accounts, no credit card
+            Start Free Pilot - 25 accounts, no credit card
           </Button>
           <Button variant="outline" size="lg" className="w-full sm:w-auto font-semibold rounded-full px-8 h-12 text-base">
             See how it works

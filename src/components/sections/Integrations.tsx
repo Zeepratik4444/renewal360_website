@@ -30,7 +30,7 @@ export function Integrations() {
           Plugs into the tools your team already uses.
         </h2>
         <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-16">
-          Connect your CRM, email, and communication tools in minutes — not months. No ripping and replacing your existing stack.
+          Connect your CRM, email, and communication tools in minutes - not months. No ripping and replacing your existing stack.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">

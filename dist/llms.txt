@@ -1,7 +1,7 @@
 # Renewal360
 > The CS platform that actually prevents churn.
 
-Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop losing renewals and scale customer success. It integrates with your CRM, support desk, and email to provide multi-factor health scoring, AI-drafted outreach, and real-time executive visibility—all live in 7 days.
+Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop losing renewals and scale customer success. It integrates with your CRM, support desk, and email to provide multi-factor health scoring, AI-drafted outreach, and real-time executive visibility - all live in 7 days.
 
 ## Product
 
@@ -23,9 +23,9 @@ Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop l
 
 - Multi-factor health scoring (product usage, sentiment, engagement, support tickets)
 - AI-drafted renewal emails at T-90, T-60, T-30, T-7 milestones
-- Human approval workflow — review, edit, or reject before sending
+- Human approval workflow - review, edit, or reject before sending
 - Reply-aware sequence stopping (no emails after customer responds)
-- Executive dashboard — pipeline, ARR at risk, team performance
+- Executive dashboard - pipeline, ARR at risk, team performance
 - CRM integrations: Salesforce, HubSpot, Google Sheets
 - Email integrations: Gmail, Outlook, Microsoft Teams, Slack
 - Setup time: 7 days. No 6-month implementation.
@@ -33,7 +33,7 @@ Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop l
 ## Pricing
 
 - Free pilot: 25 accounts, no credit card required
-- Paid plans in INR — built for Indian SaaS market
+- Paid plans in INR - built for Indian SaaS market
 - Full pricing: https://renewal360.in/pricing
 
 ## Compared To
@@ -53,13 +53,13 @@ Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop l
 - [How to Automate SaaS Renewal Emails (Step-by-Step)](https://renewal360.in/blog/how-to-automate-saas-renewal-emails): A practical walkthrough of CRM sync, health scoring, branching sequences, AI drafts, reply detection, and human approval workflows.
 - [Why SaaS Companies Lose Renewals - And How AI Fixes It](https://renewal360.in/blog/why-saas-companies-lose-renewals): The five preventable process failures behind renewal churn, and how AI gives CS and RevOps teams earlier signals with better follow-through.
 - [The Customer Success Platform Built for Growing SaaS Teams](https://renewal360.in/blog/customer-success-platform-for-growing-saas): Why growing SaaS teams are abandoning spreadsheets and expensive enterprise CS tools for action-focused platforms like Renewal360. Learn the three pillars of modern customer success and how to go live in 7 days.
-- [How to Run Your Entire CS Operation in Renewal360](https://renewal360.in/blog/how-to-run-your-entire-cs-operation-in-renewal360): A complete guide to using Renewal360 as your primary Customer Success operating system — from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.
-- [Already Using Zendesk, HubSpot or Salesforce? Here's the CS Platform Gap They Don't Fill](https://renewal360.in/blog/zendesk-hubspot-salesforce-cs-platform-comparison): Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add — and why.
-- [7 Signs Your Renewal Process Is Quietly Broken](https://renewal360.in/blog/signs-your-renewal-process-is-quietly-broken): Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.
-- [The Hidden Cost of a Manual Renewal Process](https://renewal360.in/blog/hidden-cost-of-manual-renewal-process): Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.
-- [How to Build a Renewal Playbook from Scratch](https://renewal360.in/blog/how-to-build-a-renewal-playbook-from-scratch): A practical, step-by-step guide to building a renewal playbook — covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.
-- [5 CS Metrics Every SaaS Team Should Track (and One to Ignore)](https://renewal360.in/blog/cs-metrics-every-saas-team-should-track): The CS metrics that actually predict renewal outcomes — GRR, NRR, TTFV, health score accuracy, and CSM capacity — plus the one most teams obsess over that doesn't deliver real signal.
-- [Renewal360 Setup Guide: Live in 7 Days](https://renewal360.in/blog/renewal360-setup-guide-live-in-7-days): A day-by-day guide to getting Renewal360 fully operational — CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.
+- [How to Run Your Entire CS Operation in Renewal360](https://renewal360.in/blog/how-to-run-your-entire-cs-operation-in-renewal360): A complete guide to using Renewal360 as your primary Customer Success operating system - from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.
+- [Already Using Zendesk, HubSpot or Salesforce? Here's the CS Platform Gap They Don't Fill](https://renewal360.in/blog/zendesk-hubspot-salesforce-cs-platform-comparison): Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add - and why.
+- [7 Signs Your Renewal Process Is Quietly Broken](https://renewal360.in/blog/signs-your-renewal-process-is-quietly-broken): Most renewal problems don't announce themselves - they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.
+- [The Hidden Cost of a Manual Renewal Process](https://renewal360.in/blog/hidden-cost-of-manual-renewal-process): Manual renewal management doesn't just feel inefficient - it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.
+- [How to Build a Renewal Playbook from Scratch](https://renewal360.in/blog/how-to-build-a-renewal-playbook-from-scratch): A practical, step-by-step guide to building a renewal playbook - covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.
+- [5 CS Metrics Every SaaS Team Should Track (and One to Ignore)](https://renewal360.in/blog/cs-metrics-every-saas-team-should-track): The CS metrics that actually predict renewal outcomes - GRR, NRR, TTFV, health score accuracy, and CSM capacity - plus the one most teams obsess over that doesn't deliver real signal.
+- [Renewal360 Setup Guide: Live in 7 Days](https://renewal360.in/blog/renewal360-setup-guide-live-in-7-days): A day-by-day guide to getting Renewal360 fully operational - CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.
 - [Renewal360 vs Spreadsheets: The Honest Comparison](https://renewal360.in/blog/renewal360-vs-spreadsheets-honest-comparison): What spreadsheets do well, the three specific ways they break down at scale, and a worked ROI example for when switching to a dedicated renewal system pays for itself.
 
 ## Company
@@ -86,7 +86,7 @@ Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop l
 - Gemini-powered email drafting personalised per account
 - Reply-aware sequences (auto-stops on customer reply)
 - AI helper with configurable LLM settings
-- Approval queue — human review before every send
+- Approval queue - human review before every send
 
 ### Integrations
 - CRM: Salesforce (OAuth), HubSpot (OAuth)

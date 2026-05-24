@@ -7,29 +7,29 @@ const features = [
     icon: "🧠",
     name: "5-Factor AI Risk Scoring",
     persona: "CSM + Exec",
-    outcome: "Know which accounts are actually at risk — not just who hasn't replied in a while",
-    desc: "Scores every account across Engagement Health, Sentiment & Value Realisation, Relationship Depth, Financial Health, and Renewal Momentum. Weights shift dynamically as the renewal date approaches — so a T-7 account and a T-90 account are scored differently.",
+    outcome: "Know which accounts are actually at risk - not just who hasn't replied in a while",
+    desc: "Scores every account across Engagement Health, Sentiment & Value Realisation, Relationship Depth, Financial Health, and Renewal Momentum. Weights shift dynamically as the renewal date approaches - so a T-7 account and a T-90 account are scored differently.",
   },
   {
     icon: "✉️",
     name: "Smart Milestone Sequences",
     persona: "CSM",
-    outcome: "Every account gets the right email at the right time — automatically",
-    desc: "Sequences fire at proportional milestones (25%, 16%, 8%, and 2% of term remaining) rather than fixed day counts — so monthly and annual accounts both get appropriately timed outreach. Four email types: check-in, renewal discussion, renewal reminder, urgent reminder.",
+    outcome: "Every account gets the right email at the right time - automatically",
+    desc: "Sequences fire at proportional milestones (25%, 16%, 8%, and 2% of term remaining) rather than fixed day counts - so monthly and annual accounts both get appropriately timed outreach. Four email types: check-in, renewal discussion, renewal reminder, urgent reminder.",
   },
   {
     icon: "✅",
     name: "Human Approval Queue",
     persona: "CSM + RevOps",
-    outcome: "AI drafts every email. Your team reviews, edits, approves — or skips. Nothing goes out blind.",
-    desc: "Every pending email lands in your approval queue with one-click Send, Edit, or Skip. High-value at-risk accounts trigger an Escalate decision, creating a CSM task and pausing automation — so your team handles the relationship when it matters most.",
+    outcome: "AI drafts every email. Your team reviews, edits, approves - or skips. Nothing goes out blind.",
+    desc: "Every pending email lands in your approval queue with one-click Send, Edit, or Skip. High-value at-risk accounts trigger an Escalate decision, creating a CSM task and pausing automation - so your team handles the relationship when it matters most.",
   },
   {
     icon: "🔀",
     name: "Visual Sequence Builder",
     persona: "RevOps",
     outcome: "Build branching outreach playbooks without writing a line of code",
-    desc: "Drag-and-drop pipeline editor with step types: Email, CSM Task, Slack DM, and In-App Alert. Branches fire based on real signals — customer replied, email opened, link clicked, risk changed to High, or ARR crossed a threshold.",
+    desc: "Drag-and-drop pipeline editor with step types: Email, CSM Task, Slack DM, and In-App Alert. Branches fire based on real signals - customer replied, email opened, link clicked, risk changed to High, or ARR crossed a threshold.",
   },
   {
     icon: "😊",
@@ -49,15 +49,15 @@ const features = [
     icon: "🔗",
     name: "CRM & Email Integrations",
     persona: "RevOps",
-    outcome: "Works with your existing stack — no ripping and replacing",
+    outcome: "Works with your existing stack - no ripping and replacing",
     desc: "Bi-directional sync with Salesforce, HubSpot, and Zendesk. IMAP monitoring reads incoming customer replies to detect sentiment and trigger sequence pauses automatically. Slack webhooks push at-risk alerts and slash-command summaries to your CS channel.",
   },
   {
     icon: "🔒",
     name: "Multi-Tenant RBAC + MFA",
     persona: "Admin",
-    outcome: "Enterprise-grade access control — every org's data stays completely isolated",
-    desc: "Three-level role model: Admin, Manager, and CSM — each with scoped data access. Per-org MFA enforcement, SSO support, JWT-based auth, and a full admin audit log. LLM configuration is per-org so you can bring your own Gemini or OpenAI key.",
+    outcome: "Enterprise-grade access control - every org's data stays completely isolated",
+    desc: "Three-level role model: Admin, Manager, and CSM - each with scoped data access. Per-org MFA enforcement, SSO support, JWT-based auth, and a full admin audit log. LLM configuration is per-org so you can bring your own Gemini or OpenAI key.",
   },
 ];
 
@@ -74,7 +74,7 @@ export function Features() {
         </h2>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           Unlike enterprise platforms that require months to configure, Renewal360 focuses
-          on the capabilities that directly protect ARR — and ships them in a week.
+          on the capabilities that directly protect ARR - and ships them in a week.
         </p>
       </div>
 

@@ -3,11 +3,11 @@ import { useState } from 'react';
 const faqs = [
   {
     q: "Is Renewal360 a software or a managed service?",
-    a: "It's both. The core engine is a powerful AI software platform, but it operates as a managed service — we handle the AI infrastructure, email delivery, and operational details. You provide your renewal data, approve emails, and track results. You don't need a technical team or dedicated admin to run it."
+    a: "It's both. The core engine is a powerful AI software platform, but it operates as a managed service - we handle the AI infrastructure, email delivery, and operational details. You provide your renewal data, approve emails, and track results. You don't need a technical team or dedicated admin to run it."
   },
   {
     q: "Do I have to approve every email the AI writes?",
-    a: "Yes — and that's intentional. Every email goes through your team before reaching a customer. You can edit, approve, or reject any email. You're always in control. Once you're comfortable, you can configure auto-send for lower-risk segments while keeping manual approval for key accounts."
+    a: "Yes - and that's intentional. Every email goes through your team before reaching a customer. You can edit, approve, or reject any email. You're always in control. Once you're comfortable, you can configure auto-send for lower-risk segments while keeping manual approval for key accounts."
   },
   {
     q: "How long does setup take?",
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "What happens to my data if I cancel?",
-    a: "We export all your data and email history in a standard format. No lock-in — your data is always yours. You'll receive a full export within 5 business days of cancellation at no additional cost."
+    a: "We export all your data and email history in a standard format. No lock-in - your data is always yours. You'll receive a full export within 5 business days of cancellation at no additional cost."
   },
   {
     q: "Does it work for my industry?",
@@ -23,11 +23,11 @@ const faqs = [
   },
   {
     q: "How is this different from just using our CRM?",
-    a: "Your CRM organises data — it doesn't act on it. Renewal360 reads your CRM data and automatically generates personalised outreach, surfaces at-risk accounts based on behaviour signals, and tracks whether your renewal emails are working. It's the action layer on top of your system of record."
+    a: "Your CRM organises data - it doesn't act on it. Renewal360 reads your CRM data and automatically generates personalised outreach, surfaces at-risk accounts based on behaviour signals, and tracks whether your renewal emails are working. It's the action layer on top of your system of record."
   },
   {
     q: "Is our data secure?",
-    a: "Yes. We're built on SOC 2-ready infrastructure with TLS 1.3 + AES-256 encryption. We only parse the fields explicitly necessary for renewal conversations — we never use your proprietary data to train base AI models. Your customer data never leaves your region."
+    a: "Yes. We're built on SOC 2-ready infrastructure with TLS 1.3 + AES-256 encryption. We only parse the fields explicitly necessary for renewal conversations - we never use your proprietary data to train base AI models. Your customer data never leaves your region."
   },
 ];
 

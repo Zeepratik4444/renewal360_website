@@ -97,7 +97,7 @@ const posts = [
 		source: "blog-9-how-to-run-your-entire-cs-operation-in-renewal360.html",
 		title: "How to Run Your Entire CS Operation in Renewal360",
 		description:
-			"A complete guide to using Renewal360 as your primary Customer Success operating system — from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.",
+			"A complete guide to using Renewal360 as your primary Customer Success operating system - from health scoring and lifecycle automation to executive reporting and AI-assisted outreach.",
 		tags: ["Tutorial", "Operations", "Best Practices"],
 		readTime: "9 min read",
 		publishedAt: "2026-05-07",
@@ -108,7 +108,7 @@ const posts = [
 		title:
 			"Already Using Zendesk, HubSpot or Salesforce? Here's the CS Platform Gap They Don't Fill",
 		description:
-			"Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add — and why.",
+			"Zendesk handles tickets. HubSpot handles pipeline. Salesforce handles CRM. None of them automate renewals. Here's what CS teams on these stacks actually add - and why.",
 		tags: ["Integrations", "Technology", "Buying Guide"],
 		readTime: "8 min read",
 		publishedAt: "2026-05-07",
@@ -118,7 +118,7 @@ const posts = [
 		source: "blog-11-signs-your-renewal-process-is-quietly-broken.html",
 		title: "7 Signs Your Renewal Process Is Quietly Broken",
 		description:
-			"Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.",
+			"Most renewal problems don't announce themselves - they show up as patterns. Here are 7 signs your renewal process is structurally broken, and what each one costs you before you fix it.",
 		tags: ["Renewal Process", "Customer Success", "SaaS Churn"],
 		readTime: "9 min read",
 		publishedAt: "2026-05-20",
@@ -128,7 +128,7 @@ const posts = [
 		source: "blog-12-hidden-cost-of-manual-renewal-process.html",
 		title: "The Hidden Cost of a Manual Renewal Process",
 		description:
-			"Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.",
+			"Manual renewal management doesn't just feel inefficient - it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn at your company.",
 		tags: ["RevOps", "Customer Success", "SaaS Retention"],
 		readTime: "10 min read",
 		publishedAt: "2026-05-20",
@@ -138,7 +138,7 @@ const posts = [
 		source: "blog-13-how-to-build-a-renewal-playbook-from-scratch.html",
 		title: "How to Build a Renewal Playbook from Scratch",
 		description:
-			"A practical, step-by-step guide to building a renewal playbook — covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.",
+			"A practical, step-by-step guide to building a renewal playbook - covering segmentation, health scoring, sequence design, escalation tracks, and the leadership visibility layer.",
 		tags: ["Playbook", "Customer Success", "Renewal Automation"],
 		readTime: "12 min read",
 		publishedAt: "2026-05-20",
@@ -148,7 +148,7 @@ const posts = [
 		source: "blog-14-cs-metrics-every-saas-team-should-track.html",
 		title: "5 CS Metrics Every SaaS Team Should Track (and One to Ignore)",
 		description:
-			"The CS metrics that actually predict renewal outcomes — GRR, NRR, TTFV, health score accuracy, and CSM capacity — plus the one most teams obsess over that doesn't deliver real signal.",
+			"The CS metrics that actually predict renewal outcomes - GRR, NRR, TTFV, health score accuracy, and CSM capacity - plus the one most teams obsess over that doesn't deliver real signal.",
 		tags: ["CS Metrics", "RevOps", "Customer Success"],
 		readTime: "10 min read",
 		publishedAt: "2026-05-20",
@@ -158,7 +158,7 @@ const posts = [
 		source: "blog-15-renewal360-setup-guide-live-in-7-days.html",
 		title: "Renewal360 Setup Guide: Live in 7 Days",
 		description:
-			"A day-by-day guide to getting Renewal360 fully operational — CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.",
+			"A day-by-day guide to getting Renewal360 fully operational - CRM connection, health scoring, first sequences live, and your team running independently in 7 days and 3–4 hours of active setup.",
 		tags: ["Setup Guide", "Renewal360", "Onboarding"],
 		readTime: "11 min read",
 		publishedAt: "2026-05-20",
@@ -299,7 +299,7 @@ function pageShell({ title, description, canonicalPath, body, schema, schemas })
     p { color: #374151; line-height: 1.8; margin: 0 0 1.25rem; }
     ul { list-style: none; padding: 0; margin: 0 0 1.25rem; }
     li { color: #374151; line-height: 1.7; padding: .3rem 0 .3rem 1.6rem; position: relative; }
-    li::before { content: "->"; position: absolute; left: 0; color: #2563eb; font-weight: 700; }
+    li::before { content: "→"; position: absolute; left: 0; color: #2563eb; font-weight: 700; }
     .text-blue-600 { color: #2563eb; }
     .text-gray-500 { color: #6b7280; }
     .text-gray-400 { color: #9ca3af; }
@@ -328,10 +328,26 @@ function pageShell({ title, description, canonicalPath, body, schema, schemas })
     .justify-center { justify-content: center; }
     .tag { display: inline-block; background: #dbeafe; color: #1d4ed8; font-size: .75rem; font-weight: 700; padding: .25rem .75rem; border-radius: 999px; margin: 0 .5rem .5rem 0; }
     .step-card, .ai-fix { background: #f0f7ff; border-left: 4px solid #2563eb; border-radius: 0 .5rem .5rem 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .step-card.green { border-left-color: #16a34a; }
+    .step-card.purple { border-left-color: #8b5cf6; }
+    .step-card.amber { border-left-color: #f59e0b; }
     .step-num { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #2563eb; margin-bottom: .25rem; }
-    .callout, .callout-dark { background: #111827; color: #fff; border-radius: .75rem; padding: 1.5rem 2rem; margin: 2rem 0; }
-    .callout { background: #1e3a8a; }
-    .callout p, .callout-dark p { color: #bfdbfe; margin: 0; }
+    .step-card.green .step-num { color: #16a34a; }
+    .step-card.purple .step-num { color: #8b5cf6; }
+    .step-card.amber .step-num { color: #d97706; }
+    .table-wrapper { overflow-x: auto; margin: 1.5rem 0; border: 1px solid #e5e7eb; border-radius: .75rem; }
+    table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    thead tr { background: #f8fafc; }
+    th { padding: 0.75rem 1rem; text-align: left; font-weight: 600; color: #111827; border-bottom: 2px solid #e5e7eb; }
+    td { padding: 0.75rem 1rem; color: #4b5563; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+    tr:hover td { background: #f9fafb; }
+    .callout, .callout-dark { border-radius: .75rem; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .callout { background: #1e3a8a !important; color: #ffffff !important; }
+    .callout-dark { background: #111827 !important; color: #ffffff !important; }
+    .callout p, .callout li, .callout strong, .callout span { color: #bfdbfe !important; margin: 0; }
+    .callout h3, .callout h4 { color: #ffffff !important; margin: 0 0 0.5rem; }
+    .callout-dark p, .callout-dark li, .callout-dark strong, .callout-dark span { color: #e5e7eb !important; margin: 0; }
+    .callout-dark h3, .callout-dark h4 { color: #ffffff !important; margin: 0 0 0.5rem; }
     .reason-card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1.5rem; margin: 1.25rem 0; position: relative; overflow: hidden; }
     .reason-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: #ef4444; }
     .reason-card.amber::before { background: #f59e0b; }
@@ -589,7 +605,7 @@ const publicDir = path.join(root, "public");
 const staticLlmsIntro = `# Renewal360
 > The CS platform that actually prevents churn.
 
-Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop losing renewals and scale customer success. It integrates with your CRM, support desk, and email to provide multi-factor health scoring, AI-drafted outreach, and real-time executive visibility—all live in 7 days.
+Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop losing renewals and scale customer success. It integrates with your CRM, support desk, and email to provide multi-factor health scoring, AI-drafted outreach, and real-time executive visibility - all live in 7 days.
 
 ## Product
 
@@ -611,9 +627,9 @@ Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop l
 
 - Multi-factor health scoring (product usage, sentiment, engagement, support tickets)
 - AI-drafted renewal emails at T-90, T-60, T-30, T-7 milestones
-- Human approval workflow — review, edit, or reject before sending
+- Human approval workflow - review, edit, or reject before sending
 - Reply-aware sequence stopping (no emails after customer responds)
-- Executive dashboard — pipeline, ARR at risk, team performance
+- Executive dashboard - pipeline, ARR at risk, team performance
 - CRM integrations: Salesforce, HubSpot, Google Sheets
 - Email integrations: Gmail, Outlook, Microsoft Teams, Slack
 - Setup time: 7 days. No 6-month implementation.
@@ -621,7 +637,7 @@ Renewal360 is an execution-focused CS platform that helps lean SaaS teams stop l
 ## Pricing
 
 - Free pilot: 25 accounts, no credit card required
-- Paid plans in INR — built for Indian SaaS market
+- Paid plans in INR - built for Indian SaaS market
 - Full pricing: https://renewal360.in/pricing
 
 ## Compared To
@@ -657,7 +673,7 @@ const staticLlmsOutro = `
 - Gemini-powered email drafting personalised per account
 - Reply-aware sequences (auto-stops on customer reply)
 - AI helper with configurable LLM settings
-- Approval queue — human review before every send
+- Approval queue - human review before every send
 
 ### Integrations
 - CRM: Salesforce (OAuth), HubSpot (OAuth)

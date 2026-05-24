@@ -46,7 +46,7 @@ export function FeaturesPage() {
 						Built on the 20% of features that protect 80% of your ARR.
 					</h1>
 					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
-						Every feature below exists in the live product — not on a roadmap. Here's exactly how
+						Every feature below exists in the live product - not on a roadmap. Here's exactly how
 						Renewal360 works under the hood.
 					</p>
 				</div>
@@ -61,24 +61,24 @@ export function FeaturesPage() {
 							Risk Intelligence
 						</span>
 						<h2 className="text-3xl font-bold text-gray-900 mb-4">
-							5-Factor AI Risk Scoring — with dynamic weights
+							5-Factor AI Risk Scoring - with dynamic weights
 						</h2>
 						<p className="text-gray-600 mb-6 leading-relaxed">
-							Most tools flag an account as "at risk" simply because no one emailed in 30 days. That's a false positive factory. Renewal360 scores every account across five independent factors — and the weight of each factor shifts automatically as the renewal date approaches.
+							Most tools flag an account as "at risk" simply because no one emailed in 30 days. That's a false positive factory. Renewal360 scores every account across five independent factors - and the weight of each factor shifts automatically as the renewal date approaches.
 						</p>
 						<CheckList
 							color="text-red-500"
 							items={[
-								"<strong>Engagement Health</strong> — activity recency, frequency, and no-reply decay",
-								"<strong>Sentiment & Value Realisation</strong> — LLM-scored ROI signals and relationship quality from email history",
-								"<strong>Relationship Depth</strong> — contact breadth, exec access, champion stability, QBR recency",
-								"<strong>Financial Health</strong> — invoice payment history, overdue invoices, late payment patterns",
-								"<strong>Renewal Momentum</strong> — timeline pressure + explicit renewal commitment signals",
+								"<strong>Engagement Health</strong> - activity recency, frequency, and no-reply decay",
+								"<strong>Sentiment & Value Realisation</strong> - LLM-scored ROI signals and relationship quality from email history",
+								"<strong>Relationship Depth</strong> - contact breadth, exec access, champion stability, QBR recency",
+								"<strong>Financial Health</strong> - invoice payment history, overdue invoices, late payment patterns",
+								"<strong>Renewal Momentum</strong> - timeline pressure + explicit renewal commitment signals",
 							]}
 						/>
 						<p className="text-sm text-gray-500 mt-5 italic">
 							At T-90+ days: Engagement carries 38% weight. At T-7 days: Momentum carries 45% weight.
-							The model adapts — so a quiet-but-healthy account isn't flagged as a crisis.
+							The model adapts - so a quiet-but-healthy account isn't flagged as a crisis.
 						</p>
 						<div className="mt-4">
 							<Link
@@ -120,7 +120,7 @@ export function FeaturesPage() {
 				{/* ── 2. Smart Milestone Sequences ── */}
 				<div className="grid md:grid-cols-2 gap-12 items-center">
 					<MockCard bg="bg-blue-50">
-						<div className="text-sm font-semibold text-gray-700 mb-4">Renewal Sequence — Acme Corp (Annual)</div>
+						<div className="text-sm font-semibold text-gray-700 mb-4">Renewal Sequence - Acme Corp (Annual)</div>
 						{[
 							{ days: "T-91 days", type: "Early Check-in", status: "Sent ✓", color: "border-green-400 bg-green-50" },
 							{ days: "T-60 days", type: "Renewal Discussion", status: "Sent ✓", color: "border-green-400 bg-green-50" },
@@ -135,21 +135,21 @@ export function FeaturesPage() {
 								<span className="text-xs text-gray-600">{status}</span>
 							</div>
 						))}
-						<div className="text-xs text-gray-400 mt-3 text-center">Monthly accounts get proportionally timed sequences — not the same fixed dates</div>
+						<div className="text-xs text-gray-400 mt-3 text-center">Monthly accounts get proportionally timed sequences - not the same fixed dates</div>
 					</MockCard>
 					<div>
 						<span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold uppercase tracking-widest mb-4">
 							Email Sequences
 						</span>
 						<h2 className="text-3xl font-bold text-gray-900 mb-4">
-							Smart milestone sequences — proportional to each account's term
+							Smart milestone sequences - proportional to each account's term
 						</h2>
 						<p className="text-gray-600 mb-6 leading-relaxed">
-							Fixed day counts ("email at T-60, T-30, T-7") don't work for monthly accounts. Renewal360 fires outreach at proportional milestones — 25%, 16%, 8%, and 2% of the contract term remaining — so every account gets appropriately timed outreach regardless of billing cycle.
+							Fixed day counts ("email at T-60, T-30, T-7") don't work for monthly accounts. Renewal360 fires outreach at proportional milestones - 25%, 16%, 8%, and 2% of the contract term remaining - so every account gets appropriately timed outreach regardless of billing cycle.
 						</p>
 						<CheckList items={[
 							"Four email types: check-in, renewal discussion, renewal reminder, urgent reminder",
-							"Sequences pause automatically when a customer replies — no awkward follow-ups mid-conversation",
+							"Sequences pause automatically when a customer replies - no awkward follow-ups mid-conversation",
 							"High-value at-risk accounts trigger an Escalate decision, creating a CSM task instead of sending automation",
 							"Sequence analytics track open rates, reply rates, and step-level performance per template",
 						]} />
@@ -175,12 +175,12 @@ export function FeaturesPage() {
 							Visual drag-and-drop sequence builder with branching logic
 						</h2>
 						<p className="text-gray-600 mb-6 leading-relaxed">
-							Build your own renewal playbooks without touching code. The pipeline editor supports four step types and branches based on real customer signals — not just time delays.
+							Build your own renewal playbooks without touching code. The pipeline editor supports four step types and branches based on real customer signals - not just time delays.
 						</p>
 						<CheckList color="text-purple-600" items={[
 							"<strong>Step types:</strong> Email, CSM Task, Slack DM, In-App Alert",
 							"<strong>Branch conditions:</strong> Customer replied, No reply after delay, Email opened, Link clicked, Risk changed to High, ARR above threshold",
-							"Clone and customise templates — or start from a pre-built library",
+							"Clone and customise templates - or start from a pre-built library",
 							"Variable injection with @-mention custom fields (e.g. {{account_name}}, {{arr}}, {{renewal_date}})",
 						]} />
 					</div>
@@ -188,7 +188,7 @@ export function FeaturesPage() {
 						<div className="text-sm font-semibold text-gray-700 mb-4">Sequence Flow Builder</div>
 						<div className="space-y-2">
 							{[
-								{ icon: "✉️", label: "Email — Renewal Discussion", sub: "Day 0", color: "border-blue-300" },
+								{ icon: "✉️", label: "Email - Renewal Discussion", sub: "Day 0", color: "border-blue-300" },
 								{ icon: "↓", label: "", sub: "Wait 5 days", color: "border-transparent", small: true },
 								{ icon: "🔀", label: "Branch: Customer replied?", sub: "Condition", color: "border-purple-300" },
 							].map((s, i) =>
@@ -206,7 +206,7 @@ export function FeaturesPage() {
 							)}
 							<div className="grid grid-cols-2 gap-2 mt-1">
 								<div className="p-3 bg-green-50 border border-green-300 rounded-lg text-xs">
-									<div className="font-semibold text-green-700 mb-1">✓ Yes — replied</div>
+									<div className="font-semibold text-green-700 mb-1">✓ Yes - replied</div>
 									<div className="text-gray-600">Pause sequence → CSM task created</div>
 								</div>
 								<div className="p-3 bg-orange-50 border border-orange-300 rounded-lg text-xs">
@@ -269,13 +269,13 @@ export function FeaturesPage() {
 							AI drafts every email. Humans decide what goes out.
 						</h2>
 						<p className="text-gray-600 mb-6 leading-relaxed">
-							Every pending email lands in your team's approval queue with full context — account ARR, risk level, and the AI-generated draft. One click to send, edit, or skip. High-value at-risk accounts trigger an Escalate decision that creates a CSM task and cancels the automation.
+							Every pending email lands in your team's approval queue with full context - account ARR, risk level, and the AI-generated draft. One click to send, edit, or skip. High-value at-risk accounts trigger an Escalate decision that creates a CSM task and cancels the automation.
 						</p>
 						<CheckList color="text-teal-600" items={[
 							"Four decisions per step: <strong>Send, Skip, Pause, Escalate</strong>",
-							"Escalation creates a CSM task and pauses automation — so your team handles high-stakes accounts directly",
+							"Escalation creates a CSM task and pauses automation - so your team handles high-stakes accounts directly",
 							"Sequence pauses automatically when a customer reply is detected via IMAP monitoring",
-							"Full audit trail — every decision (by whom, when, what action) is logged",
+							"Full audit trail - every decision (by whom, when, what action) is logged",
 						]} />
 					</div>
 				</div>
@@ -287,20 +287,20 @@ export function FeaturesPage() {
 							NPS Surveys
 						</span>
 						<h2 className="text-3xl font-bold text-gray-900 mb-4">
-							Direct customer sentiment — not just inferred from email activity
+							Direct customer sentiment - not just inferred from email activity
 						</h2>
 						<p className="text-gray-600 mb-6 leading-relaxed">
-							A customer who hasn't emailed in 45 days isn't necessarily unhappy — they might have just signed a 3-year deal. NPS surveys give you direct satisfaction data that feeds directly into the risk score, eliminating the false positives that waste your team's time.
+							A customer who hasn't emailed in 45 days isn't necessarily unhappy - they might have just signed a 3-year deal. NPS surveys give you direct satisfaction data that feeds directly into the risk score, eliminating the false positives that waste your team's time.
 						</p>
 						<CheckList color="text-yellow-600" items={[
 							"Auto-triggered at T-45 days before renewal, 7 days post-onboarding, and after support ticket resolution",
 							"Promoter scores (9–10) reduce risk level and add positive health signal",
 							"Detractor scores (0–6) immediately flag the account and alert the assigned CSM",
-							"Survey builder with custom templates — build once, deploy across all accounts",
+							"Survey builder with custom templates - build once, deploy across all accounts",
 						]} />
 					</div>
 					<MockCard bg="bg-yellow-50">
-						<div className="text-sm font-semibold text-gray-700 mb-4">Customer Satisfaction — TechCorp</div>
+						<div className="text-sm font-semibold text-gray-700 mb-4">Customer Satisfaction - TechCorp</div>
 						<div className="bg-white rounded-xl p-5 border border-yellow-100 mb-3">
 							<div className="flex items-center gap-4 mb-3">
 								<div className="text-4xl font-extrabold text-green-600">9</div>
@@ -348,14 +348,14 @@ export function FeaturesPage() {
 							Executive Dashboard
 						</span>
 						<h2 className="text-3xl font-bold text-gray-900 mb-4">
-							See revenue at risk — not just renewal counts
+							See revenue at risk - not just renewal counts
 						</h2>
 						<p className="text-gray-600 mb-6 leading-relaxed">
-							"25 renewals at High Risk" means nothing to a CFO. The executive dashboard translates risk into ARR — so leadership can see exactly how much revenue is at stake, who's responsible for it, and what's been done.
+							"25 renewals at High Risk" means nothing to a CFO. The executive dashboard translates risk into ARR - so leadership can see exactly how much revenue is at stake, who's responsible for it, and what's been done.
 						</p>
 						<CheckList color="text-orange-500" items={[
 							"Revenue pipeline broken down by High / Medium / Healthy with dollar values and account counts",
-							"6-month renewal forecast — see ARR at risk per upcoming month",
+							"6-month renewal forecast - see ARR at risk per upcoming month",
 							"CSM leaderboard by ARR saved, response rate, and accounts managed",
 							"KPI cards: Total ARR, 90/60/30-day pipeline, weighted health score distribution",
 						]} />
@@ -369,18 +369,18 @@ export function FeaturesPage() {
 							Integrations
 						</span>
 						<h2 className="text-3xl font-bold text-gray-900 mb-4">
-							Connects to your CRM, inbox, and Slack — in hours, not months
+							Connects to your CRM, inbox, and Slack - in hours, not months
 						</h2>
 						<p className="text-gray-600 mb-6 leading-relaxed">
-							Renewal360 reads from and writes back to the tools you already use. No ripping and replacing your stack — and no manual data entry.
+							Renewal360 reads from and writes back to the tools you already use. No ripping and replacing your stack - and no manual data entry.
 						</p>
 						<CheckList color="text-indigo-600" items={[
-							"<strong>Salesforce</strong> — bi-directional opportunity sync (Scale plan)",
-							"<strong>HubSpot</strong> — deal and contact sync, renewal date pull (Growth+)",
-							"<strong>Zendesk</strong> — support ticket volume feeds into the Financial Health factor",
-							"<strong>IMAP Email Monitoring</strong> — reads incoming replies to detect sentiment and auto-pause sequences",
-							"<strong>Slack</strong> — at-risk alerts, daily digest, and slash-command account summaries",
-							"<strong>Google Sheets</strong> — simple CSV-style import for teams not on a CRM (all plans)",
+							"<strong>Salesforce</strong> - bi-directional opportunity sync (Scale plan)",
+							"<strong>HubSpot</strong> - deal and contact sync, renewal date pull (Growth+)",
+							"<strong>Zendesk</strong> - support ticket volume feeds into the Financial Health factor",
+							"<strong>IMAP Email Monitoring</strong> - reads incoming replies to detect sentiment and auto-pause sequences",
+							"<strong>Slack</strong> - at-risk alerts, daily digest, and slash-command account summaries",
+							"<strong>Google Sheets</strong> - simple CSV-style import for teams not on a CRM (all plans)",
 						]} />
 					</div>
 					<MockCard bg="bg-indigo-50">
@@ -455,7 +455,7 @@ export function FeaturesPage() {
 					<div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-20 pointer-events-none" />
 					<h2 className="text-3xl font-bold mb-4">See it with your own accounts.</h2>
 					<p className="text-gray-300 mb-8 max-w-xl mx-auto">
-						Free pilot — 25 accounts, no credit card, up and running in 7 days.
+						Free pilot - 25 accounts, no credit card, up and running in 7 days.
 						Our onboarding team handles the setup.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
