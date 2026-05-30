@@ -5,6 +5,8 @@ import { CheckCircle2 } from "lucide-react";
 import executiveSummaryDashboard from "@/assets/dashboard-summary.png";
 import { useSEO } from "@/hooks/useSEO";
 import { SiSalesforce, SiHubspot, SiZendesk, SiGmail, SiSlack } from "react-icons/si";
+import { WhoThisIsFor } from "@/components/FunnelCTA";
+import { trackCtaClick } from "@/lib/analytics";
 
 /* ── Reusable check list ── */
 function CheckList({ items, color = "text-blue-600" }: { items: string[]; color?: string }) {
@@ -53,6 +55,13 @@ export function FeaturesPage() {
 			</section>
 
 			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-28">
+				<WhoThisIsFor
+					items={[
+						"SaaS teams with renewal risk hidden across CRM, inbox, and spreadsheets",
+						"CS teams that need playbooks without a long enterprise rollout",
+						"Leaders who want ARR-at-risk visibility before customers churn",
+					]}
+				/>
 
 				{/* ── 1. 5-Factor Risk Scoring ── */}
 				<div className="grid md:grid-cols-2 gap-12 items-center">
@@ -450,6 +459,28 @@ export function FeaturesPage() {
 					</div>
 				</div>
 
+				<div className="grid md:grid-cols-3 gap-5">
+					{[
+						{
+							title: "Guided setup",
+							desc: "Import accounts, map renewal fields, and configure your first workflow in 7 days.",
+						},
+						{
+							title: "CRM-first workflow",
+							desc: "Keep Salesforce, HubSpot, or Sheets as the source of truth while Renewal360 runs the renewal motion.",
+						},
+						{
+							title: "Clear replacement path",
+							desc: "Graduate from spreadsheets or simplify a heavy CS platform without losing executive visibility.",
+						},
+					].map(({ title, desc }) => (
+						<div key={title} className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+							<h2 className="text-base font-bold text-gray-900">{title}</h2>
+							<p className="mt-2 text-sm leading-relaxed text-gray-600">{desc}</p>
+						</div>
+					))}
+				</div>
+
 				{/* ── CTA ── */}
 				<div className="bg-gray-900 rounded-2xl p-12 text-center text-white relative overflow-hidden">
 					<div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full blur-[100px] opacity-20 pointer-events-none" />
@@ -460,12 +491,35 @@ export function FeaturesPage() {
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link to="/contact">
-							<Button size="lg" className="text-lg px-8 bg-blue-500 hover:bg-blue-600 border-none">
+							<Button
+								size="lg"
+								className="text-lg px-8 bg-blue-500 hover:bg-blue-600 border-none"
+								onClick={() =>
+									trackCtaClick({
+										cta_text: "Start Free Pilot",
+										cta_location: "features_bottom_cta",
+										funnel_stage: "decision",
+										target_url: "/contact",
+									})
+								}
+							>
 								Start Free Pilot →
 							</Button>
 						</Link>
 						<Link to="/pricing">
-							<Button size="lg" variant="outline" className="text-lg px-8 border-white/30 text-white hover:bg-white/10 bg-transparent">
+							<Button
+								size="lg"
+								variant="outline"
+								className="text-lg px-8 border-white/30 text-white hover:bg-white/10 bg-transparent"
+								onClick={() =>
+									trackCtaClick({
+										cta_text: "View pricing",
+										cta_location: "features_bottom_cta",
+										funnel_stage: "consideration",
+										target_url: "/pricing",
+									})
+								}
+							>
 								View pricing
 							</Button>
 						</Link>

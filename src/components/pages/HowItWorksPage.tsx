@@ -3,6 +3,8 @@ import { Zap, Target, Mail, Shield, BarChart3 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { useSEO } from "@/hooks/useSEO";
+import { WhoThisIsFor } from "@/components/FunnelCTA";
+import { trackCtaClick } from "@/lib/analytics";
 
 export function HowItWorksPage() {
 	useSEO({
@@ -66,6 +68,15 @@ export function HowItWorksPage() {
 						Behind the scenes, Renewal360's AI engine continuously monitors every account, crafts intelligent outreach, and escalates at-risk revenue - so your team focuses only on what matters.
 					</p>
 				</div>
+				<div className="mb-16">
+					<WhoThisIsFor
+						items={[
+							"Teams ready to move from manual reminders to monitored renewal workflows",
+							"CS and RevOps leaders who need CRM-connected health scoring",
+							"SaaS operators who want guided setup instead of a long implementation",
+						]}
+					/>
+				</div>
 
 				<div className="relative max-w-3xl mx-auto">
 					{/* Vertical connector line */}
@@ -92,18 +103,63 @@ export function HowItWorksPage() {
 					))}
 				</div>
 
+				<div className="mt-14 grid md:grid-cols-3 gap-5">
+					{[
+						{
+							title: "Setup time",
+							desc: "Most pilots go live in 7 days with 3-4 hours of active setup from your team.",
+						},
+						{
+							title: "Integrations",
+							desc: "Connect CRM, inbox, and Slack so renewal data stays where your team already works.",
+						},
+						{
+							title: "Replacement path",
+							desc: "Start with 25 accounts, then move spreadsheet or enterprise-tool workflows into Renewal360.",
+						},
+					].map(({ title, desc }) => (
+						<div key={title} className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+							<h2 className="text-base font-bold text-gray-900">{title}</h2>
+							<p className="mt-2 text-sm leading-relaxed text-gray-600">{desc}</p>
+						</div>
+					))}
+				</div>
+
 				<div className="mt-16 text-center max-w-2xl mx-auto">
 					<p className="text-gray-500 italic text-base leading-relaxed bg-white p-6 rounded-xl border border-gray-100 shadow-sm mb-8">
 						"Renewal360 doesn't just send emails - it thinks about each account the way your best CSM would. It just does it for every account, every milestone, simultaneously."
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link to="/contact">
-							<Button size="lg" className="text-lg px-8 bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
+							<Button
+								size="lg"
+								className="text-lg px-8 bg-blue-600 hover:bg-blue-700 text-white shadow-lg"
+								onClick={() =>
+									trackCtaClick({
+										cta_text: "Start Free Pilot",
+										cta_location: "how_it_works_bottom_cta",
+										funnel_stage: "decision",
+										target_url: "/contact",
+									})
+								}
+							>
 								Start Free Pilot →
 							</Button>
 						</Link>
 						<Link to="/glimpses">
-							<Button size="lg" variant="outline" className="text-lg px-8 border-gray-300 text-gray-700 hover:bg-gray-50 bg-white shadow-sm">
+							<Button
+								size="lg"
+								variant="outline"
+								className="text-lg px-8 border-gray-300 text-gray-700 hover:bg-gray-50 bg-white shadow-sm"
+								onClick={() =>
+									trackCtaClick({
+										cta_text: "View Glimpses",
+										cta_location: "how_it_works_bottom_cta",
+										funnel_stage: "consideration",
+										target_url: "/glimpses",
+									})
+								}
+							>
 								View Glimpses
 							</Button>
 						</Link>

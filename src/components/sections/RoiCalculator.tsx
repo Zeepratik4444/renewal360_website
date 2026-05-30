@@ -3,10 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calculator, ArrowRight, TrendingUp } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import { trackCtaClick, trackEvent } from "@/lib/analytics";
 
 export function RoiCalculator() {
   const [arr, setArr] = useState(5000000); // Default $5M
   const [improvement, setImprovement] = useState(3); // Default 3%
+  const [hasTrackedUse, setHasTrackedUse] = useState(false);
 
   const retainedRevenue = arr * (improvement / 100);
   const roiMultiplier = (retainedRevenue / 5988).toFixed(1);
@@ -17,6 +19,15 @@ export function RoiCalculator() {
       currency: 'USD',
       maximumFractionDigits: 0,
     }).format(value);
+  };
+
+  const trackCalculatorUse = () => {
+    if (hasTrackedUse) return;
+    setHasTrackedUse(true);
+    trackEvent("roi_calculator_used", {
+      cta_location: "roi_calculator",
+      funnel_stage: "consideration",
+    });
   };
 
   return (
@@ -73,7 +84,10 @@ export function RoiCalculator() {
                     max="50000000" 
                     step="500000" 
                     value={arr} 
-                    onChange={(e) => setArr(Number(e.target.value))}
+                    onChange={(e) => {
+                      trackCalculatorUse();
+                      setArr(Number(e.target.value));
+                    }}
                     className="w-full h-2 bg-blue-950 rounded-lg appearance-none cursor-pointer accent-blue-500"
                   />
                   <div className="flex justify-between text-xs text-blue-400 mt-2">
@@ -98,7 +112,10 @@ export function RoiCalculator() {
                     max="10" 
                     step="0.5" 
                     value={improvement} 
-                    onChange={(e) => setImprovement(Number(e.target.value))}
+                    onChange={(e) => {
+                      trackCalculatorUse();
+                      setImprovement(Number(e.target.value));
+                    }}
                     className="w-full h-2 bg-blue-950 rounded-lg appearance-none cursor-pointer accent-emerald-500"
                   />
                   <div className="flex justify-between text-xs text-blue-400 mt-2">
@@ -128,7 +145,17 @@ export function RoiCalculator() {
                 </div>
 
                 <Link to="/contact" className="block mt-6">
-                  <Button className="w-full bg-white text-blue-900 hover:bg-gray-100 text-lg py-6 font-bold">
+                  <Button
+                    className="w-full bg-white text-blue-900 hover:bg-gray-100 text-lg py-6 font-bold"
+                    onClick={() =>
+                      trackCtaClick({
+                        cta_text: "Start reclaiming revenue",
+                        cta_location: "roi_calculator",
+                        funnel_stage: "decision",
+                        target_url: "/contact",
+                      })
+                    }
+                  >
                     Start reclaiming revenue <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
