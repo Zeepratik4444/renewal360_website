@@ -146,6 +146,8 @@ How It Works
         Renewal360 is designed as a comprehensive Customer Success Operating System - not a notification tool, not a
         reporting layer, but a full end-to-end execution platform that moves accounts forward automatically.
 
+      [View the product workflow page →](/how-it-works)
+
 ## What are the 5 core layers of the Renewal360 operating system?
 
       Renewal360 is built as five integrated layers that work together to turn passive account data into proactive
@@ -397,6 +399,8 @@ ChurnZero Alternative
         approval, send the email, and save the renewal - without adding weeks of configuration work before the first
         account is protected.
 
+      [See the Renewal360 plans built for growing SaaS teams →](/pricing)
+
 ## What do growing teams actually need from a Customer Success platform?
 
       Before evaluating any platform, it helps to be precise about the gap you are trying to close. Most growing CS
@@ -636,6 +640,8 @@ Totango Alternative
         operational step after insight - what needs to happen, what should the email say, and who needs to approve it
         before it reaches the customer.
 
+      [See how the Renewal360 workflow moves from signal to action →](/how-it-works)
+
 ## What is the problem with broad CS platforms when renewals are actively leaking?
 
       Broad CS platforms give you visibility across the customer lifecycle - that is genuinely valuable. But visibility
@@ -856,6 +862,8 @@ Renewal Automation
       Renewal automation turns renewal data into action. Not another dashboard where someone has to
         remember to look. A workflow that helps the right follow-up happen at the right time - automatically, and with
         human oversight at every customer touchpoint.
+
+      [See the features that make renewal automation work →](/features)
 
 ## What does a complete renewal automation system include?
 
@@ -1091,6 +1099,8 @@ Comparison
       **The short version:**
       You do not need more data sitting in a dashboard. You need a system to turn data into action - draft the email, flag the risk, stop the sequence, alert the CSM, and move the renewal forward. That is the job
         Renewal360 was built to do.
+
+      [Compare Renewal360 pricing against enterprise CS platforms →](/pricing)
 
 ## How do Gainsight, Totango, and Renewal360 compare side-by-side?
 
@@ -1340,6 +1350,8 @@ Automation
         champion contact in 45 days. Two open support tickets unresolved for 10+ days. The system flags this
         automatically and escalates it from a standard sequence to a high-risk intervention track - before your CSM even
         opens their laptop.
+
+      [See how Renewal360 turns risk signals into approved renewal actions →](/how-it-works)
 
        Step 3 
       
@@ -1671,6 +1683,8 @@ Churn Prevention
         in a complete renewal automation system pays back inside the first renewal cycle for most companies that
         implement it properly.
 
+      [Explore the health scoring and renewal automation features →](/features)
+
 ## What separates systems that work from tools that don't
 
     The renewal automation market is crowded with point solutions. The differentiators that actually matter:
@@ -1816,6 +1830,8 @@ Strategy
       We built a platform that delivers enterprise-grade intelligence with startup-grade agility. You do
         not need to redesign your process to fit the tool. Renewal360 connects to your existing CRM and support
         workflows - and is live in 7 days, not 7 months.
+
+      [Explore the Renewal360 platform features →](/features)
 
 ## Three Pillars of a Modern CS Platform for Growing SaaS
 
@@ -2052,6 +2068,8 @@ Tutorial
       **What this means in practice:**
       Teams that consolidate onto Renewal360 typically eliminate 8-12 hours of manual weekly effort per
         CSM - time that shifts directly into account conversations, QBRs, and expansion discussions.
+
+      [Talk to Renewal360 about your CS operating model →](/contact)
 
 ## Step 1: Build Your Intelligence Foundation
 
@@ -2355,6 +2373,8 @@ Integrations
       All integrations are bi-directional and continuous. We do not read your data once - we maintain a
         live sync that updates health scores, triggers sequence actions, and routes Slack alerts in real time as your
         customer reality changes. Stale data causes churn. Live data prevents it.
+
+      [See Renewal360's CRM and workflow features →](/features)
 
 ## The CRM Connection: Salesforce and HubSpot
 
@@ -2776,6 +2796,8 @@ Renewal Process
                 until it
                 doesn't - and when it stops working, it stops all at once.
 
+                [See how Renewal360 replaces manual renewal effort with system design →](/how-it-works)
+
 ## How many of these apply to your team right now?
 
             Most CS teams reading this will recognise at least three or four. Some will recognise all seven and realise
@@ -2886,8 +2908,6 @@ Renewal Process
             Process](/blog/hidden-cost-of-manual-renewal-process)
 - [How to Build a Renewal
             Playbook from Scratch](/blog/how-to-build-a-renewal-playbook-from-scratch)
-- [How Renewal360 Works](/how-it-works)
-- [Features](/features)
 
 ---
 
@@ -2991,6 +3011,8 @@ RevOps
                 $20K - it's $20K plus the NRR delta, plus the cost of acquiring a replacement customer to fill the gap.
                 At a typical CAC of 12–18 months of contract value, the true cost of one churned $20K account is closer
                 to $30–36K when you factor in replacement acquisition cost.
+
+                [Compare that hidden cost against Renewal360 pricing →](/pricing)
 
 ## Cost 3: Missed expansion revenue
 
@@ -3268,6 +3290,8 @@ Playbook
                 2. Every email passes through CSM approval before sending - AI-drafted or template-based.
 
                 3. Health score changes override the sequence timeline - a score drop overrides "next email at T-60."
+
+                [See the Renewal360 features that operationalize these rules →](/features)
 
 ## Step 4: Build your escalation tracks before you need them
 
@@ -3555,6 +3579,8 @@ CS Metrics
                 tracks all five together has a complete picture. A team that tracks any one in isolation has a partial
                 signal.
 
+                [See how Renewal360 connects health scores, ARR risk, and CSM capacity →](/features)
+
 ## The one to ignore: Raw NPS as a churn predictor
 
 ### Why NPS is a lagging indicator masquerading as a leading one
@@ -3823,6 +3849,8 @@ Setup Guide
                 is flowing. The AI draft quality improves significantly once it has actual account context to work with - usage data, industry, recent support interactions. Write adequate briefs on Day 4, then refine them
                 after
                 you see the first AI drafts on Day 7. Iteration beats perfection at this stage.
+
+                [Start a Renewal360 pilot with guided setup →](/contact)
 
 ## Day 5: Approval queue and inbox connection
 
@@ -4156,6 +4184,10 @@ Comparison
                 somewhere between 30–50 accounts or $2–3M ARR. Earlier if your ACV is high; later if your ACV is low and
                 churn rate is already good.
 
+                [Compare Renewal360 pricing against the spreadsheet cost →](/pricing)
+
+                [Read the hidden-cost breakdown →](/blog/hidden-cost-of-manual-renewal-process)
+
 ## The ROI calculation: a worked example
 
             Company: $4M ARR, 3 CSMs, 90 accounts, $44K average ACV. Currently on spreadsheets. Gross renewal rate: 82%.
@@ -4259,13 +4291,10 @@ Comparison
 
 ### Related Reading
 
-					- [Renewal360 Setup Guide: Live in 7
-            Days](/blog/renewal360-setup-guide-live-in-7-days)
-- [The Hidden Cost of a Manual Renewal
+					- [The Hidden Cost of a Manual Renewal
             Process](/blog/hidden-cost-of-manual-renewal-process)
-- [Gainsight vs Totango vs Renewal360](/blog/gainsight-vs-totango-vs-renewal360)
-- [Pricing](/pricing)
-- [Features](/features)
+- [Renewal360 Setup Guide: Live in 7
+            Days](/blog/renewal360-setup-guide-live-in-7-days)
 
 ---
 

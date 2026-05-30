@@ -38,40 +38,46 @@ const siteUrl = "https://renewal360.in";
 // ── Core pages to generate ─────────────────────────────────────────────────
 const pages = [
     {
-        route: "features",
-        title: "Features - Renewal360",
+        route: "",
+        title: "Renewal360 — Automate SaaS Renewals Before Accounts Go At-Risk",
         description:
-            "Built on the 20% of features that protect 80% of your ARR. Here's exactly how Renewal360 works under the hood.",
+            "Renewal360 helps growing SaaS teams automate renewals before accounts go at-risk with health scoring, CRM integrations, and playbooks without Gainsight complexity.",
+    },
+    {
+        route: "features",
+        title: "Features — Health Scoring, Playbooks & CRM Integrations | Renewal360",
+        description:
+            "Explore Renewal360 features for growing SaaS teams: account health scoring, renewal playbooks, CRM integrations, and executive visibility without Gainsight complexity.",
     },
     {
         route: "pricing",
-        title: "Pricing - Renewal360",
+        title: "Pricing — Renewal Automation Built for Growing SaaS Teams | Renewal360",
         description:
-            "Simple, transparent pricing. Every signup gets 7 days of full Scale access.",
+            "See Renewal360 pricing for growing SaaS teams that need renewal automation, health scoring, and CRM-integrated playbooks without Gainsight-level cost or setup.",
     },
     {
         route: "how-it-works",
-        title: "How It Works - Renewal360",
+        title: "How Renewal360 Works — From Health Score to Closed Renewal | Renewal360",
         description:
-            "Behind the scenes, Renewal360's AI engine continuously monitors every account, crafts intelligent outreach, and escalates at-risk revenue.",
+            "See how Renewal360 turns CRM data into health scores, AI-drafted renewal playbooks, and closed renewals for SaaS teams outgrowing spreadsheets or Totango.",
     },
     {
         route: "faq",
-        title: "FAQ - Renewal360",
+        title: "FAQ — Renewal360 Setup, Integrations & Pricing Questions",
         description:
-            "Frequently asked questions about Renewal360 - setup, integrations, pricing, and how the AI renewal automation works.",
+            "Answers to Renewal360 setup, CRM integration, pricing, security, and renewal automation questions for SaaS teams comparing Gainsight, Totango, or spreadsheets.",
     },
     {
         route: "about",
-        title: "About Us - Renewal360",
+        title: "About Renewal360 — Built for SaaS Teams That Outgrew Spreadsheets",
         description:
-            "Built by Customer Success practitioners who understand the renewal grind firsthand.",
+            "Meet Renewal360, built for SaaS customer success teams that outgrew spreadsheets and need renewal automation without enterprise CS platform overhead.",
     },
     {
         route: "contact",
-        title: "Contact Us - Renewal360",
+        title: "Contact Renewal360 — Start Your SaaS Renewal Automation Pilot",
         description:
-            "Request a trial. Let's discuss how Renewal360 can help automate your renewal process.",
+            "Talk to Renewal360 about renewal automation for growing SaaS teams replacing spreadsheets or evaluating Gainsight and Totango alternatives.",
     },
 ];
 
@@ -220,10 +226,11 @@ function buildPageHtml({ route, title, description }) {
 let count = 0;
 for (const page of pages) {
     const outDir = path.join(distDir, page.route);
+    const outputPath = page.route ? `dist/${page.route}/index.html` : "dist/index.html";
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, "index.html"), buildPageHtml(page));
     count++;
-    console.log(`  ✓ dist/${page.route}/index.html`);
+    console.log(`  ✓ ${outputPath}`);
 }
 
 console.log(`\nGenerated ${count} static page shells in dist/`);

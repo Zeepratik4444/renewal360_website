@@ -59,8 +59,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export function HomePage() {
 	useSEO({
-		title: "Renewal360 - The CS Platform That Prevents Churn",
-		description: "The Customer Success platform built for SaaS teams who can't afford Gainsight.",
+		title: "Renewal360 — Automate SaaS Renewals Before Accounts Go At-Risk",
+		description: "Renewal360 helps growing SaaS teams automate renewals before accounts go at-risk with health scoring, CRM integrations, and playbooks without Gainsight complexity.",
 	});
 
 	return (

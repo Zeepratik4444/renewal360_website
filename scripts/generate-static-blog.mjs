@@ -191,7 +191,7 @@ function extractArticleHtml(html) {
 		/<p[^>]*>\s*Related reading:\s*([\s\S]*?)\s*<\/p>/gi,
 		(_, linksHtml) => {
 			const links = linksHtml
-				.split("·")
+				.split(/(?:Â·|·)/)
 				.map((link) => link.trim())
 				.filter(Boolean);
 
@@ -572,7 +572,7 @@ function renderPost(post) {
 		description: post.description,
 		url: `${siteUrl}${canonicalPath}`,
 		datePublished: post.publishedAt,
-		dateModified: "2026-05-13",
+		dateModified: post.publishedAt,
 		author: {
 			"@type": "Organization",
 			name: "Renewal360",

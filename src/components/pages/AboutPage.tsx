@@ -5,8 +5,8 @@ import { useSEO } from "@/hooks/useSEO";
 
 export function AboutPage() {
 	useSEO({
-		title: "About Us - Renewal360",
-		description: "Built by Customer Success Practitioners who understand the renewal grind firsthand.",
+		title: "About Renewal360 — Built for SaaS Teams That Outgrew Spreadsheets",
+		description: "Meet Renewal360, built for SaaS customer success teams that outgrew spreadsheets and need renewal automation without enterprise CS platform overhead.",
 	});
 
 	return (

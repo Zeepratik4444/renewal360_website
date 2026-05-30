@@ -11,8 +11,8 @@ import { useSEO } from "@/hooks/useSEO";
 
 export function ContactPage() {
 	useSEO({
-		title: "Contact Us - Renewal360",
-		description: "Request a Trial. Let's discuss how Renewal360 can help automate your renewal process.",
+		title: "Contact Renewal360 — Start Your SaaS Renewal Automation Pilot",
+		description: "Talk to Renewal360 about renewal automation for growing SaaS teams replacing spreadsheets or evaluating Gainsight and Totango alternatives.",
 	});
 
 	const [formData, setFormData] = useState({

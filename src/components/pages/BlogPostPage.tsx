@@ -17,7 +17,7 @@ function extractArticleHtml(html: string) {
 		/<p[^>]*>\s*Related reading:\s*([\s\S]*?)\s*<\/p>/gi,
 		(_, linksHtml) => {
 			const links = linksHtml
-				.split("·")
+				.split(/(?:Â·|·)/)
 				.map((link: string) => link.trim())
 				.filter(Boolean);
 
