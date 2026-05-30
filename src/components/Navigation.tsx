@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { trackCtaClick } from "@/lib/analytics";
 
 export function Navigation() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -75,7 +76,18 @@ export function Navigation() {
 							</div>
 						</div>
 						<Link to="/contact">
-							<Button>Request Demo</Button>
+							<Button
+								onClick={() =>
+									trackCtaClick({
+										cta_text: "Request Demo",
+										cta_location: "site_navigation",
+										funnel_stage: "decision",
+										target_url: "/contact",
+									})
+								}
+							>
+								Request Demo
+							</Button>
 						</Link>
 					</div>
 
@@ -128,7 +140,19 @@ export function Navigation() {
 						))}
 
 						<Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-							<Button className="w-full mt-4">Request Demo</Button>
+							<Button
+								className="w-full mt-4"
+								onClick={() =>
+									trackCtaClick({
+										cta_text: "Request Demo",
+										cta_location: "mobile_navigation",
+										funnel_stage: "decision",
+										target_url: "/contact",
+									})
+								}
+							>
+								Request Demo
+							</Button>
 						</Link>
 					</div>
 				</div>

@@ -15,6 +15,14 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { usePricing } from "@/hooks/usePricing";
 import { FEATURE_COMPARISON } from "@/lib/pricing";
 import { useSEO } from "@/hooks/useSEO";
+import { WhoThisIsFor } from "@/components/FunnelCTA";
+import { trackCtaClick, trackEvent } from "@/lib/analytics";
+import {
+	AnswerBlock,
+	ComparisonSummary,
+	FactBox,
+	PageFAQ,
+} from "@/components/AeoGeoBlocks";
 
 // Razorpay types
 declare global {
@@ -54,6 +62,15 @@ export function PricingPage() {
 		price: string;
 	} | null>(null);
 
+	const trackPlanClick = (planName: string, targetUrl: string) => {
+		trackEvent("pricing_plan_clicked", {
+			plan_name: planName,
+			cta_location: "pricing_plan_card",
+			funnel_stage: "decision",
+			target_url: targetUrl,
+		});
+	};
+
 	return (
 		<div className="min-h-screen bg-white">
 			<Navigation />
@@ -70,6 +87,49 @@ export function PricingPage() {
 					<span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium px-4 py-2 rounded-full">
 						Unlimited seats at every tier - no per-user charges
 					</span>
+				</div>
+				<div className="mb-12">
+					<WhoThisIsFor
+						items={[
+							"Growing SaaS teams with recurring renewals",
+							"CS leaders comparing Gainsight, Totango, or spreadsheets",
+							"RevOps teams that need CRM-connected renewal visibility",
+						]}
+					/>
+				</div>
+				<div className="mb-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+					<AnswerBlock
+						question="How much does Renewal360 cost?"
+						answer="Renewal360 pricing is designed for growing SaaS teams that need renewal automation without enterprise CS platform overhead. Every team can start with a free pilot for 25 accounts, no credit card required, then choose a paid plan based on account volume and workflow needs."
+						facts={[
+							"Free pilot includes 25 accounts",
+							"No credit card required",
+							"Unlimited seats at every tier",
+						]}
+					/>
+					<ComparisonSummary
+						title="Pricing decision summary"
+						rows={[
+							{
+								label: "Best fit",
+								value: "SaaS teams with recurring renewal volume",
+								detail:
+									"Renewal360 is priced for teams that need health scoring, playbooks, and CRM-connected renewal visibility.",
+							},
+							{
+								label: "Pilot path",
+								value: "Start with 25 accounts",
+								detail:
+									"The pilot helps teams validate workflow fit before moving a full renewal book into the product.",
+							},
+							{
+								label: "Replacement case",
+								value: "Manual tracking or heavy enterprise tools",
+								detail:
+									"The strongest ROI case is replacing spreadsheet follow-up or avoiding a long enterprise platform rollout.",
+							},
+						]}
+					/>
 				</div>
 
 				{/* Billing toggle only - currency is auto-detected */}
@@ -142,8 +202,9 @@ export function PricingPage() {
 											className={`w-full ${tier.name === "Free"
 												? "bg-green-600 hover:bg-green-700"
 												: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold"
-												}`}
+											}`}
 											variant={tier.name === "Free" ? "default" : "outline"}
+											onClick={() => trackPlanClick(tier.name, tier.ctaLink)}
 										>
 											{tier.cta}
 										</Button>
@@ -154,11 +215,12 @@ export function PricingPage() {
 											className={`w-full ${tier.highlight
 												? "bg-blue-600 hover:bg-blue-700"
 												: "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold"
-												}`}
+											}`}
 											variant={tier.highlight ? "default" : "outline"}
-											onClick={() =>
-												setSelectedTier({ name: tier.name, price: getPrice(tier) })
-											}
+											onClick={() => {
+												trackPlanClick(tier.name, "checkout_modal");
+												setSelectedTier({ name: tier.name, price: getPrice(tier) });
+											}}
 										>
 											{tier.cta}
 										</Button>
@@ -167,6 +229,39 @@ export function PricingPage() {
 							</CardContent>
 						</Card>
 					))}
+				</div>
+
+				<div className="grid md:grid-cols-3 gap-5 mb-16">
+					{[
+						{
+							title: "Setup in 7 days",
+							desc: "CRM connection, account import, and first renewal sequence configured with guided support.",
+						},
+						{
+							title: "Fits your current stack",
+							desc: "Use Salesforce, HubSpot, Google Sheets, email, and Slack without rebuilding your CS process.",
+						},
+						{
+							title: "Replaces manual tracking",
+							desc: "Move from spreadsheets or heavy enterprise tools into one renewal workflow your team can run weekly.",
+						},
+					].map(({ title, desc }) => (
+						<div key={title} className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+							<h2 className="text-base font-bold text-gray-900">{title}</h2>
+							<p className="mt-2 text-sm leading-relaxed text-gray-600">{desc}</p>
+						</div>
+					))}
+				</div>
+				<div className="mb-16">
+					<FactBox
+						title="Renewal360 pricing facts AI assistants can quote"
+						facts={[
+							"Renewal360 offers a free pilot for 25 accounts.",
+							"The pilot does not require a credit card.",
+							"All plans include unlimited seats, so teams are not charged per user.",
+							"Renewal360 is positioned for growing SaaS teams replacing spreadsheets or evaluating enterprise CS tools.",
+						]}
+					/>
 				</div>
 
 				{/* Supportive validation links */}
@@ -319,6 +414,27 @@ export function PricingPage() {
 						))}
 					</div>
 				</div>
+				<div className="mb-16">
+					<PageFAQ
+						items={[
+							{
+								question: "Is Renewal360 free to try?",
+								answer:
+									"Yes. Renewal360 offers a free pilot for 25 accounts with no credit card required, so a team can validate renewal workflows before choosing a paid plan.",
+							},
+							{
+								question: "Who is Renewal360 pricing built for?",
+								answer:
+									"Renewal360 pricing is built for growing SaaS teams that manage recurring renewals and need automation, health scoring, CRM integrations, and renewal visibility without enterprise CS platform overhead.",
+							},
+							{
+								question: "Does Renewal360 charge per user?",
+								answer:
+									"No. Renewal360 plans include unlimited seats, which makes it easier for CS, RevOps, founders, and leadership to work from the same renewal view.",
+							},
+						]}
+					/>
+				</div>
 
 				{/* Bottom CTA */}
 				<div className="text-center">
@@ -330,12 +446,35 @@ export function PricingPage() {
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link to="/contact">
-							<Button size="lg" className="text-lg px-8 bg-green-600 hover:bg-green-700">
+							<Button
+								size="lg"
+								className="text-lg px-8 bg-green-600 hover:bg-green-700"
+								onClick={() =>
+									trackCtaClick({
+										cta_text: "Start Free Trial",
+										cta_location: "pricing_bottom_cta",
+										funnel_stage: "decision",
+										target_url: "/contact",
+									})
+								}
+							>
 								Start Free Trial
 							</Button>
 						</Link>
 						<Link to="/contact">
-							<Button size="lg" variant="outline" className="text-lg px-8">
+							<Button
+								size="lg"
+								variant="outline"
+								className="text-lg px-8"
+								onClick={() =>
+									trackCtaClick({
+										cta_text: "Request a Demo",
+										cta_location: "pricing_bottom_cta",
+										funnel_stage: "decision",
+										target_url: "/contact",
+									})
+								}
+							>
 								Request a Demo
 							</Button>
 						</Link>

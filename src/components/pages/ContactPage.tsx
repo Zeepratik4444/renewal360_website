@@ -5,9 +5,12 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
-import { Mail } from "lucide-react";
+import { CheckCircle2, Mail } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useSEO } from "@/hooks/useSEO";
+import { WhoThisIsFor } from "@/components/FunnelCTA";
+import { trackEvent } from "@/lib/analytics";
+import { AnswerBlock, FactBox } from "@/components/AeoGeoBlocks";
 
 export function ContactPage() {
 	useSEO({
@@ -26,6 +29,17 @@ export function ContactPage() {
 	const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 	const [submitMessage, setSubmitMessage] = useState<string>("");
 	const [acceptTerms, setAcceptTerms] = useState(false);
+	const [hasStartedForm, setHasStartedForm] = useState(false);
+
+	const trackFormStarted = () => {
+		if (hasStartedForm) return;
+		setHasStartedForm(true);
+		trackEvent("form_started", {
+			form_type: "pilot_request",
+			funnel_stage: "decision",
+			cta_location: "contact_form",
+		});
+	};
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -57,6 +71,11 @@ export function ContactPage() {
 
 			setSubmitStatus("success");
 			setSubmitMessage(data.message); // Set the dynamic message
+			trackEvent("form_submitted", {
+				form_type: "pilot_request",
+				funnel_stage: "decision",
+				cta_location: "contact_form",
+			});
 			setFormData({
 				companyName: "",
 				contactPersonName: "",
@@ -78,14 +97,43 @@ export function ContactPage() {
 			<Navigation />
 
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-				<div className="text-center mb-16">
+				<div className="text-center mb-10">
 					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-						Request a Trial
+						Start your Renewal360 pilot
 					</h1>
 					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
-						Let's discuss how Renewal360 can help automate your renewal
-						process. Start with a 7-day pilot.
+						Test renewal automation with 25 accounts, no credit card, and guided setup
+						from a team that understands SaaS renewal workflows.
 					</p>
+				</div>
+				<div className="mb-12 max-w-5xl mx-auto">
+					<WhoThisIsFor
+						items={[
+							"SaaS teams managing 25+ upcoming renewals",
+							"CS teams replacing spreadsheets or manual CRM follow-up",
+							"Leaders who need renewal visibility before quarter end",
+						]}
+					/>
+				</div>
+				<div className="mb-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+					<AnswerBlock
+						question="What is included in a Renewal360 pilot?"
+						answer="A Renewal360 pilot lets a SaaS team test renewal automation with 25 accounts, no credit card, guided CRM or spreadsheet import, and a first renewal workflow configured around its actual renewal process."
+						facts={[
+							"25 pilot accounts",
+							"No credit card required",
+							"Guided setup for the first workflow",
+						]}
+					/>
+					<FactBox
+						title="Pilot fit signals"
+						facts={[
+							"You manage recurring SaaS renewals.",
+							"Renewal follow-up is tracked in spreadsheets, CRM notes, or memory.",
+							"Leadership needs visibility into ARR at risk.",
+							"You want a focused pilot before a broad platform rollout.",
+						]}
+					/>
 				</div>
 
 				<div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
@@ -93,11 +141,15 @@ export function ContactPage() {
 						<Card>
 							<CardHeader>
 								<CardTitle className="text-2xl">
-									Schedule Your Trial
+									Request your free pilot
 								</CardTitle>
 							</CardHeader>
 							<CardContent>
-								<form onSubmit={handleSubmit} className="space-y-6">
+								<form
+									onSubmit={handleSubmit}
+									onFocusCapture={trackFormStarted}
+									className="space-y-6"
+								>
 									<div className="space-y-2">
 										<Label htmlFor="companyName">
 											Company Name <span className="text-red-500">*</span>
@@ -213,7 +265,7 @@ export function ContactPage() {
 										className="w-full"
 										disabled={isSubmitting || !acceptTerms}
 									>
-										{isSubmitting ? "Submitting..." : "Request Trial"}
+										{isSubmitting ? "Submitting..." : "Start Free Pilot"}
 									</Button>
 								</form>
 							</CardContent>
@@ -233,11 +285,11 @@ export function ContactPage() {
 										</div>
 										<div>
 											<div className="font-semibold text-gray-900">
-												We'll Review Your Needs
+												We review your renewal setup
 											</div>
 											<div className="text-sm text-gray-600">
-												We'll analyze your renewal volume and process to ensure
-												Renewal360 is a good fit
+												We look at your account count, CRM, renewal volume, and
+												current follow-up process.
 											</div>
 										</div>
 									</div>
@@ -248,10 +300,11 @@ export function ContactPage() {
 										</div>
 										<div>
 											<div className="font-semibold text-gray-900">
-												Start Your Free Trial
+												You start a 25-account pilot
 											</div>
 											<div className="text-sm text-gray-600">
-												7-day full access to test with your actual renewal data
+												No credit card required. Use real renewal data with guided
+												setup from our team.
 											</div>
 										</div>
 									</div>
@@ -262,10 +315,11 @@ export function ContactPage() {
 										</div>
 										<div>
 											<div className="font-semibold text-gray-900">
-												Start Your Trial
+												Your first workflow goes live
 											</div>
 											<div className="text-sm text-gray-600">
-												Get instant access to your trial account and import your renewals
+												Connect your CRM or import a spreadsheet, then launch your
+												first renewal playbook.
 											</div>
 										</div>
 									</div>
@@ -293,14 +347,21 @@ export function ContactPage() {
 						<Card className="bg-gray-50">
 							<CardContent className="pt-6">
 								<h3 className="font-semibold text-gray-900 mb-3">
-									Perfect For:
+									Pilot includes
 								</h3>
-								<ul className="space-y-2 text-sm text-gray-600">
-									<li>✓ SaaS companies with 25+ annual renewals</li>
-									<li>✓ CS teams of 1-5 people</li>
-									<li>✓ Founders wearing the CS hat</li>
-									<li>✓ Teams spending 10+ hours/month on renewal follow-ups</li>
-									<li>✓ Companies looking to scale without hiring</li>
+								<ul className="space-y-3 text-sm text-gray-600">
+									{[
+										"25 accounts included",
+										"No credit card required",
+										"Guided CRM or spreadsheet import",
+										"First renewal sequence configured",
+										"Fit check around CRM, account count, and renewal volume",
+									].map((item) => (
+										<li key={item} className="flex items-start gap-2">
+											<CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 shrink-0" />
+											<span>{item}</span>
+										</li>
+									))}
 								</ul>
 							</CardContent>
 						</Card>

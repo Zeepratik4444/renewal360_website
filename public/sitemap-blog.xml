@@ -1,234 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xsi:schemaLocation="
-          http://www.sitemaps.org/schemas/sitemap/0.9
-          http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
-          http://www.google.com/schemas/sitemap-image/1.1
-          http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
-
-  <!-- ═══════════════════════════════════════════════════════════════════
-       BLOG INDEX
-       Declared at 0.9 — it's the entry point for the entire content
-       cluster. Weekly changefreq signals active content publishing.
-  ════════════════════════════════════════════════════════════════════ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://renewal360.in/blog</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>Renewal360 Blog — SaaS Renewal Automation &amp; Customer Success Guides</image:title>
-      <image:caption>Practical guides on renewal automation, churn prevention, customer success workflows, and AI-powered retention for SaaS teams.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- ═══════════════════════════════════════════════════════════════════
-       TIER 1 — COMPARISON / ALTERNATIVE POSTS (0.9)
-       Bottom-of-funnel. Buyer is actively comparing tools.
-       These are the highest commercial-intent pages on the site.
-       Google already surfaces some of these — priority 0.9 matches
-       their conversion value and crawl-budget weight.
-  ════════════════════════════════════════════════════════════════════ -->
-  <url>
-    <loc>https://renewal360.in/blog/gainsight-vs-totango-vs-renewal360</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>Gainsight vs Totango vs Renewal360 — Which Renewal Automation Tool is Right for You?</image:title>
-      <image:caption>A buyer-focused comparison of Gainsight, Totango, and Renewal360 for SaaS renewal automation. Includes pricing, setup time, and ICP fit.</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://renewal360.in/blog/churnzero-alternative-growing-saas-teams</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>ChurnZero Alternative for Growing SaaS Teams</image:title>
-      <image:caption>Why growing SaaS teams switch from ChurnZero to lighter renewal automation platforms. Feature comparison and ICP fit guide.</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://renewal360.in/blog/totango-alternative-faster-renewal-automation</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>Totango Alternative for Faster Renewal Automation</image:title>
-      <image:caption>A focused comparison for teams that want AI-assisted renewal follow-up and action-first workflows without a broad platform rollout.</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://renewal360.in/blog/zendesk-hubspot-salesforce-cs-platform-comparison</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>Zendesk, HubSpot &amp; Salesforce: The Complete CS Platform Integration Guide</image:title>
-      <image:caption>How to choose the right CS platform based on your existing Zendesk, HubSpot, or Salesforce stack. Detailed integration architecture explained.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- ═══════════════════════════════════════════════════════════════════
-       TIER 2 — PRODUCT & PLATFORM POSTS (0.8)
-       Middle-of-funnel. Buyer understands the problem, evaluating
-       whether Renewal360 is the right solution. Internal link targets
-       for comparison posts and the homepage.
-  ════════════════════════════════════════════════════════════════════ -->
-  <url>
-    <loc>https://renewal360.in/blog/customer-success-platform-for-growing-saas</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>The Customer Success Platform Built for Growing SaaS Teams</image:title>
-      <image:caption>Why growing SaaS teams are abandoning spreadsheets and expensive enterprise CS tools for action-focused platforms like Renewal360.</image:caption>
-    </image:image>
   </url>
-
-  <url>
-    <loc>https://renewal360.in/blog/how-to-run-your-entire-cs-operation-in-renewal360</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>How to Run Your Entire CS Operation in Renewal360</image:title>
-      <image:caption>A complete guide to using Renewal360 as your primary Customer Success operating system — health scoring, lifecycle automation, and AI outreach.</image:caption>
-    </image:image>
-  </url>
-
   <url>
     <loc>https://renewal360.in/blog/how-renewal360-works</loc>
-    <lastmod>2026-05-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>How Renewal360 Works — The Renewal Automation Process Built to Prevent Silent Churn</image:title>
-      <image:caption>Step-by-step walkthrough of how Renewal360 syncs CRM data, scores accounts, drafts AI outreach, and routes approvals before anything sends.</image:caption>
-    </image:image>
-  </url>
-
-  <!-- ═══════════════════════════════════════════════════════════════════
-       TIER 3 — AWARENESS & EDUCATION POSTS (0.7)
-       Top-of-funnel. Buyer is problem-aware, not yet solution-aware.
-       These pull broad search volume and feed into Tier 1 & 2 via
-       internal links. Lower commercial intent = lower priority.
-  ════════════════════════════════════════════════════════════════════ -->
-  <url>
-    <loc>https://renewal360.in/blog/how-to-automate-saas-renewal-emails</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>How to Automate SaaS Renewal Emails (Step-by-Step)</image:title>
-      <image:caption>A practical walkthrough of CRM sync, health scoring, branching sequences, AI drafts, reply detection, and human approval for renewal email automation.</image:caption>
-    </image:image>
   </url>
-
   <url>
-    <loc>https://renewal360.in/blog/why-saas-companies-lose-renewals</loc>
-    <lastmod>2026-05-22</lastmod>
+    <loc>https://renewal360.in/blog/churnzero-alternative-growing-saas-teams</loc>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>Why SaaS Companies Lose Renewals — And How AI Fixes It</image:title>
-      <image:caption>The five preventable process failures behind renewal churn, and how AI gives CS and RevOps teams earlier signals with better follow-through.</image:caption>
-    </image:image>
   </url>
-
+  <url>
+    <loc>https://renewal360.in/blog/totango-alternative-faster-renewal-automation</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://renewal360.in/blog/what-is-renewal-automation</loc>
-    <lastmod>2026-05-22</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>What is Renewal Automation? And Why Your CS Team Needs It</image:title>
-      <image:caption>A plain-English guide to renewal automation — why reminder emails are not enough and how action-first workflows reduce churn risk for SaaS teams.</image:caption>
-    </image:image>
   </url>
-
-
+  <url>
+    <loc>https://renewal360.in/blog/gainsight-vs-totango-vs-renewal360</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renewal360.in/blog/how-to-automate-saas-renewal-emails</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renewal360.in/blog/why-saas-companies-lose-renewals</loc>
+    <lastmod>2026-04-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renewal360.in/blog/customer-success-platform-for-growing-saas</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renewal360.in/blog/how-to-run-your-entire-cs-operation-in-renewal360</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://renewal360.in/blog/zendesk-hubspot-salesforce-cs-platform-comparison</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://renewal360.in/blog/signs-your-renewal-process-is-quietly-broken</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>7 Signs Your Renewal Process Is Quietly Broken</image:title>
-      <image:caption>Most renewal problems don't announce themselves — they show up as patterns. Here are 7 signs your renewal process is broken, and what each one costs you.</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://renewal360.in/blog/hidden-cost-of-manual-renewal-process</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>The Hidden Cost of a Manual Renewal Process</image:title>
-      <image:caption>Manual renewal management doesn't just feel inefficient — it has a calculable cost. Here's how to put real numbers on CSM time, missed expansions, and preventable churn.</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://renewal360.in/blog/how-to-build-a-renewal-playbook-from-scratch</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>How to Build a Renewal Playbook from Scratch</image:title>
-      <image:caption>A practical, step-by-step guide to building a renewal playbook from scratch — covering timing, segmentation, health signals, sequence design, and escalation tracks.</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://renewal360.in/blog/cs-metrics-every-saas-team-should-track</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>5 CS Metrics Every SaaS Team Should Track (and One to Ignore)</image:title>
-      <image:caption>The CS metrics that actually predict renewal outcomes — and the one most teams obsess over that doesn't. A data-first guide for CS and RevOps leaders.</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://renewal360.in/blog/renewal360-setup-guide-live-in-7-days</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>Renewal360 Setup Guide: Live in 7 Days</image:title>
-      <image:caption>A day-by-day guide to getting Renewal360 fully operational in 7 days — CRM connection, health scoring, first sequences live, and your team running independently.</image:caption>
-    </image:image>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://renewal360.in/blog/renewal360-vs-spreadsheets-honest-comparison</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://renewal360.in/og-image.png</image:loc>
-      <image:title>Renewal360 vs Spreadsheets: The Honest Comparison</image:title>
-      <image:caption>A direct, honest comparison of Renewal360 vs spreadsheet-based renewal management — what spreadsheets do well, where they break down, and when switching makes financial sense.</image:caption>
-    </image:image>
+    <priority>0.7</priority>
   </url>
 </urlset>
