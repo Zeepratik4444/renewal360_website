@@ -135,6 +135,20 @@ const softwareSchema = JSON.stringify({
         "The Customer Success platform built for SaaS teams who can't afford Gainsight. Automate workflows, health scoring, and get executive-level visibility.",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
+    audience: {
+        "@type": "Audience",
+        audienceType: "Growing SaaS customer success and RevOps teams",
+    },
+    featureList: [
+        "Account health scoring",
+        "Renewal playbooks",
+        "AI-drafted renewal outreach",
+        "Human approval workflow",
+        "CRM and spreadsheet import",
+        "ARR-at-risk dashboard",
+    ],
+    keywords:
+        "renewal automation, SaaS renewals, customer success platform, renewal playbooks, ARR at risk",
     offers: {
         "@type": "Offer",
         priceCurrency: "INR",
@@ -179,6 +193,13 @@ function organizationSchema() {
         name: "Renewal360",
         url: siteUrl,
         logo: `${siteUrl}/brand-logo.png`,
+        knowsAbout: [
+            "SaaS renewal automation",
+            "Customer success operations",
+            "Renewal playbooks",
+            "ARR at risk",
+            "CRM-integrated customer success workflows",
+        ],
     };
 }
 
@@ -227,36 +248,89 @@ function pricingSchema() {
     };
 }
 
-function faqSchema() {
+const pageFaqs = {
+    pricing: [
+        {
+            question: "Is Renewal360 free to try?",
+            answer:
+                "Yes. Renewal360 offers a free pilot for 25 accounts with no credit card required, so a team can validate renewal workflows before choosing a paid plan.",
+        },
+        {
+            question: "Who is Renewal360 pricing built for?",
+            answer:
+                "Renewal360 pricing is built for growing SaaS teams that manage recurring renewals and need automation, health scoring, CRM integrations, and renewal visibility without enterprise CS platform overhead.",
+        },
+        {
+            question: "Does Renewal360 charge per user?",
+            answer:
+                "No. Renewal360 plans include unlimited seats, which makes it easier for CS, RevOps, founders, and leadership to work from the same renewal view.",
+        },
+    ],
+    features: [
+        {
+            question: "What are Renewal360's core features?",
+            answer:
+                "Renewal360's core features are account health scoring, renewal playbooks, AI-drafted outreach, human approval queues, CRM and email integrations, Slack alerts, and ARR-at-risk dashboards.",
+        },
+        {
+            question: "Does Renewal360 replace a CRM?",
+            answer:
+                "No. Renewal360 is designed to work around your CRM or spreadsheet source of truth and add the renewal workflow layer that turns account data into actions.",
+        },
+        {
+            question: "How is Renewal360 different from enterprise CS platforms?",
+            answer:
+                "Renewal360 focuses on renewal execution for growing SaaS teams, with faster setup and fewer enterprise platform layers than broad tools like Gainsight or Totango.",
+        },
+    ],
+    "how-it-works": [
+        {
+            question: "Does Renewal360 send emails automatically?",
+            answer:
+                "Renewal360 can draft and schedule renewal outreach, but the workflow is built around human approval so teams can review, edit, skip, pause, or escalate before customer-facing messages go out.",
+        },
+        {
+            question: "What data does Renewal360 need to start?",
+            answer:
+                "Renewal360 needs account names, renewal dates, ARR or contract value, owner information, and contact data from a CRM or spreadsheet to start a pilot workflow.",
+        },
+        {
+            question: "How fast can a team see the first renewal workflow?",
+            answer:
+                "The product is designed for a 7-day guided setup path that gets the first renewal workflow live with a limited pilot account set.",
+        },
+    ],
+    faq: [
+        {
+            question: "How quickly can Renewal360 go live?",
+            answer:
+                "Most teams can start a guided pilot in 7 days after connecting CRM data or importing a spreadsheet.",
+        },
+        {
+            question: "Does Renewal360 integrate with Salesforce and HubSpot?",
+            answer:
+                "Renewal360 supports CRM-connected renewal workflows, including Salesforce, HubSpot, and spreadsheet-based imports for teams not yet ready for a full CRM setup.",
+        },
+        {
+            question: "Is a credit card required for the pilot?",
+            answer:
+                "No. The free pilot is designed for 25 accounts and does not require a credit card.",
+        },
+    ],
+};
+
+function faqSchema(items) {
     return {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: [
-            {
-                "@type": "Question",
-                name: "How quickly can Renewal360 go live?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Most teams can start a guided pilot in 7 days after connecting CRM data or importing a spreadsheet.",
-                },
+        mainEntity: items.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: item.answer,
             },
-            {
-                "@type": "Question",
-                name: "Does Renewal360 integrate with Salesforce and HubSpot?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Renewal360 supports CRM-connected renewal workflows, including Salesforce, HubSpot, and spreadsheet-based imports for teams not yet ready for a full CRM setup.",
-                },
-            },
-            {
-                "@type": "Question",
-                name: "Is a credit card required for the pilot?",
-                acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "No. The free pilot is designed for 25 accounts and does not require a credit card.",
-                },
-            },
-        ],
+        })),
     };
 }
 
@@ -269,8 +343,8 @@ function buildSchemaScripts(page) {
     if (page.route === "pricing") {
         schemas.push(pricingSchema());
     }
-    if (page.route === "faq") {
-        schemas.push(faqSchema());
+    if (pageFaqs[page.route]) {
+        schemas.push(faqSchema(pageFaqs[page.route]));
     }
 
     return schemas

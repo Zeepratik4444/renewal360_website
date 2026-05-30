@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useSEO } from "@/hooks/useSEO";
 import { WhoThisIsFor } from "@/components/FunnelCTA";
 import { trackCtaClick } from "@/lib/analytics";
+import { AnswerBlock, FactBox, PageFAQ } from "@/components/AeoGeoBlocks";
 
 export function HowItWorksPage() {
 	useSEO({
@@ -77,6 +78,26 @@ export function HowItWorksPage() {
 						]}
 					/>
 				</div>
+				<div className="mb-16 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+					<AnswerBlock
+						question="How does Renewal360 work?"
+						answer="Renewal360 works by importing CRM or spreadsheet renewal data, calculating account health and renewal risk, drafting outreach with AI, routing messages through human approval, and showing leadership which accounts and ARR need attention."
+						facts={[
+							"Connect CRM or import accounts",
+							"Score risk before renewal deadlines",
+							"Approve every customer-facing email",
+						]}
+					/>
+					<FactBox
+						title="Setup facts"
+						facts={[
+							"Typical pilot setup target is 7 days.",
+							"Teams can begin with 25 pilot accounts.",
+							"Renewal360 keeps the CRM or spreadsheet as the source of truth.",
+							"Human approval is part of the workflow before outreach is sent.",
+						]}
+					/>
+				</div>
 
 				<div className="relative max-w-3xl mx-auto">
 					{/* Vertical connector line */}
@@ -123,6 +144,28 @@ export function HowItWorksPage() {
 							<p className="mt-2 text-sm leading-relaxed text-gray-600">{desc}</p>
 						</div>
 					))}
+				</div>
+				<div className="mt-14">
+					<PageFAQ
+						title="How-it-works questions buyers ask"
+						items={[
+							{
+								question: "Does Renewal360 send emails automatically?",
+								answer:
+									"Renewal360 can draft and schedule renewal outreach, but the workflow is built around human approval so teams can review, edit, skip, pause, or escalate before customer-facing messages go out.",
+							},
+							{
+								question: "What data does Renewal360 need to start?",
+								answer:
+									"Renewal360 needs account names, renewal dates, ARR or contract value, owner information, and contact data from a CRM or spreadsheet to start a pilot workflow.",
+							},
+							{
+								question: "How fast can a team see the first renewal workflow?",
+								answer:
+									"The product is designed for a 7-day guided setup path that gets the first renewal workflow live with a limited pilot account set.",
+							},
+						]}
+					/>
 				</div>
 
 				<div className="mt-16 text-center max-w-2xl mx-auto">

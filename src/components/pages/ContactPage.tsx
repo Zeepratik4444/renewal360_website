@@ -10,6 +10,7 @@ import { Link } from "@tanstack/react-router";
 import { useSEO } from "@/hooks/useSEO";
 import { WhoThisIsFor } from "@/components/FunnelCTA";
 import { trackEvent } from "@/lib/analytics";
+import { AnswerBlock, FactBox } from "@/components/AeoGeoBlocks";
 
 export function ContactPage() {
 	useSEO({
@@ -111,6 +112,26 @@ export function ContactPage() {
 							"SaaS teams managing 25+ upcoming renewals",
 							"CS teams replacing spreadsheets or manual CRM follow-up",
 							"Leaders who need renewal visibility before quarter end",
+						]}
+					/>
+				</div>
+				<div className="mb-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+					<AnswerBlock
+						question="What is included in a Renewal360 pilot?"
+						answer="A Renewal360 pilot lets a SaaS team test renewal automation with 25 accounts, no credit card, guided CRM or spreadsheet import, and a first renewal workflow configured around its actual renewal process."
+						facts={[
+							"25 pilot accounts",
+							"No credit card required",
+							"Guided setup for the first workflow",
+						]}
+					/>
+					<FactBox
+						title="Pilot fit signals"
+						facts={[
+							"You manage recurring SaaS renewals.",
+							"Renewal follow-up is tracked in spreadsheets, CRM notes, or memory.",
+							"Leadership needs visibility into ARR at risk.",
+							"You want a focused pilot before a broad platform rollout.",
 						]}
 					/>
 				</div>

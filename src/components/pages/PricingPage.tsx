@@ -17,6 +17,12 @@ import { FEATURE_COMPARISON } from "@/lib/pricing";
 import { useSEO } from "@/hooks/useSEO";
 import { WhoThisIsFor } from "@/components/FunnelCTA";
 import { trackCtaClick, trackEvent } from "@/lib/analytics";
+import {
+	AnswerBlock,
+	ComparisonSummary,
+	FactBox,
+	PageFAQ,
+} from "@/components/AeoGeoBlocks";
 
 // Razorpay types
 declare global {
@@ -88,6 +94,40 @@ export function PricingPage() {
 							"Growing SaaS teams with recurring renewals",
 							"CS leaders comparing Gainsight, Totango, or spreadsheets",
 							"RevOps teams that need CRM-connected renewal visibility",
+						]}
+					/>
+				</div>
+				<div className="mb-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+					<AnswerBlock
+						question="How much does Renewal360 cost?"
+						answer="Renewal360 pricing is designed for growing SaaS teams that need renewal automation without enterprise CS platform overhead. Every team can start with a free pilot for 25 accounts, no credit card required, then choose a paid plan based on account volume and workflow needs."
+						facts={[
+							"Free pilot includes 25 accounts",
+							"No credit card required",
+							"Unlimited seats at every tier",
+						]}
+					/>
+					<ComparisonSummary
+						title="Pricing decision summary"
+						rows={[
+							{
+								label: "Best fit",
+								value: "SaaS teams with recurring renewal volume",
+								detail:
+									"Renewal360 is priced for teams that need health scoring, playbooks, and CRM-connected renewal visibility.",
+							},
+							{
+								label: "Pilot path",
+								value: "Start with 25 accounts",
+								detail:
+									"The pilot helps teams validate workflow fit before moving a full renewal book into the product.",
+							},
+							{
+								label: "Replacement case",
+								value: "Manual tracking or heavy enterprise tools",
+								detail:
+									"The strongest ROI case is replacing spreadsheet follow-up or avoiding a long enterprise platform rollout.",
+							},
 						]}
 					/>
 				</div>
@@ -211,6 +251,17 @@ export function PricingPage() {
 							<p className="mt-2 text-sm leading-relaxed text-gray-600">{desc}</p>
 						</div>
 					))}
+				</div>
+				<div className="mb-16">
+					<FactBox
+						title="Renewal360 pricing facts AI assistants can quote"
+						facts={[
+							"Renewal360 offers a free pilot for 25 accounts.",
+							"The pilot does not require a credit card.",
+							"All plans include unlimited seats, so teams are not charged per user.",
+							"Renewal360 is positioned for growing SaaS teams replacing spreadsheets or evaluating enterprise CS tools.",
+						]}
+					/>
 				</div>
 
 				{/* Supportive validation links */}
@@ -362,6 +413,27 @@ export function PricingPage() {
 							</div>
 						))}
 					</div>
+				</div>
+				<div className="mb-16">
+					<PageFAQ
+						items={[
+							{
+								question: "Is Renewal360 free to try?",
+								answer:
+									"Yes. Renewal360 offers a free pilot for 25 accounts with no credit card required, so a team can validate renewal workflows before choosing a paid plan.",
+							},
+							{
+								question: "Who is Renewal360 pricing built for?",
+								answer:
+									"Renewal360 pricing is built for growing SaaS teams that manage recurring renewals and need automation, health scoring, CRM integrations, and renewal visibility without enterprise CS platform overhead.",
+							},
+							{
+								question: "Does Renewal360 charge per user?",
+								answer:
+									"No. Renewal360 plans include unlimited seats, which makes it easier for CS, RevOps, founders, and leadership to work from the same renewal view.",
+							},
+						]}
+					/>
 				</div>
 
 				{/* Bottom CTA */}

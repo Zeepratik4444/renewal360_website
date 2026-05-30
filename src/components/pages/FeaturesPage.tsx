@@ -7,6 +7,7 @@ import { useSEO } from "@/hooks/useSEO";
 import { SiSalesforce, SiHubspot, SiZendesk, SiGmail, SiSlack } from "react-icons/si";
 import { WhoThisIsFor } from "@/components/FunnelCTA";
 import { trackCtaClick } from "@/lib/analytics";
+import { AnswerBlock, FactBox, PageFAQ } from "@/components/AeoGeoBlocks";
 
 /* ── Reusable check list ── */
 function CheckList({ items, color = "text-blue-600" }: { items: string[]; color?: string }) {
@@ -62,6 +63,26 @@ export function FeaturesPage() {
 						"Leaders who want ARR-at-risk visibility before customers churn",
 					]}
 				/>
+				<div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+					<AnswerBlock
+						question="What does Renewal360 do?"
+						answer="Renewal360 helps growing SaaS teams prevent missed renewals by combining account health scoring, AI-drafted renewal outreach, human approval workflows, CRM integrations, and executive ARR-at-risk visibility in one renewal operating system."
+						facts={[
+							"Health scoring for renewal risk",
+							"Human-approved AI renewal emails",
+							"CRM, email, and Slack workflow support",
+						]}
+					/>
+					<FactBox
+						title="Quote-ready product facts"
+						facts={[
+							"Renewal360 is built for SaaS renewal automation.",
+							"The product supports Salesforce, HubSpot, Google Sheets, email, and Slack workflows.",
+							"Teams can start with a 25-account pilot.",
+							"The guided setup target is 7 days.",
+						]}
+					/>
+				</div>
 
 				{/* ── 1. 5-Factor Risk Scoring ── */}
 				<div className="grid md:grid-cols-2 gap-12 items-center">
@@ -480,6 +501,26 @@ export function FeaturesPage() {
 						</div>
 					))}
 				</div>
+				<PageFAQ
+					title="Feature questions buyers ask"
+					items={[
+						{
+							question: "What are Renewal360's core features?",
+							answer:
+								"Renewal360's core features are account health scoring, renewal playbooks, AI-drafted outreach, human approval queues, CRM and email integrations, Slack alerts, and ARR-at-risk dashboards.",
+						},
+						{
+							question: "Does Renewal360 replace a CRM?",
+							answer:
+								"No. Renewal360 is designed to work around your CRM or spreadsheet source of truth and add the renewal workflow layer that turns account data into actions.",
+						},
+						{
+							question: "How is Renewal360 different from enterprise CS platforms?",
+							answer:
+								"Renewal360 focuses on renewal execution for growing SaaS teams, with faster setup and fewer enterprise platform layers than broad tools like Gainsight or Totango.",
+						},
+					]}
+				/>
 
 				{/* ── CTA ── */}
 				<div className="bg-gray-900 rounded-2xl p-12 text-center text-white relative overflow-hidden">
