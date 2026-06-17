@@ -59,8 +59,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export function HomePage() {
 	useSEO({
-		title: "Renewal360 — Automate SaaS Renewals Before Accounts Go At-Risk",
-		description: "Renewal360 helps growing SaaS teams automate renewals before accounts go at-risk with health scoring, CRM integrations, and playbooks without Gainsight complexity.",
+		title: "Renewal360 — Enterprise CS Platform for AI-Powered Renewal Management",
+		description: "Renewal360 gives enterprise CS teams AI risk scoring, autonomous inbound email handling, and playbook automation to protect ARR at scale — without the complexity of Gainsight.",
 	});
 
 	return (
@@ -73,7 +73,7 @@ export function HomePage() {
 					{/* Competitive badge */}
 					<div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-8 border border-blue-200">
 						<span className="h-2 w-2 rounded-full bg-blue-600 animate-pulse inline-block"></span>
-						The Customer Success platform built for growing SaaS teams
+						The Customer Success platform built for enterprise SaaS teams
 					</div>
 
 					<h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -82,7 +82,7 @@ export function HomePage() {
 						<span className="text-blue-600">actually prevents churn.</span>
 					</h1>
 					<p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-						Renewal360 integrates multi-factor health scoring and real-time sentiment tracking to identify churn months before the renewal date. Automatically deploy precise, personalised retention outreach - live in just 7 days.
+						AI spots which accounts are at risk 90 days before the renewal. Autonomous email handling manages the inbox. Your CSMs focus on the relationships that actually move the number.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
 						<Link to="/contact">
@@ -120,9 +120,9 @@ export function HomePage() {
 					{/* Stats row */}
 					<div className="grid grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
 						{[
-							{ num: "58%", label: "Median first-year renewal rate - failed activation is the #1 cause" },
-							{ num: "20–30%", label: "Customers churn of failed sentiment analysis in advance" },
-							{ num: "30-35%", label: "Potential profit increase from just 5% better retention (Bain & Co)" },
+							{ num: "58%", label: "Median first-year renewal rate — failed activation and missed signals are the #1 cause" },
+							{ num: "20–30%", label: "Of customers signal churn intent weeks before they say anything — most teams miss it" },
+							{ num: "30–35%", label: "Potential profit increase from just 5% better retention (Bain & Company)" },
 						].map((s) => (
 							<div key={s.num} className="bg-white rounded-xl border border-gray-200 p-5 text-center shadow-sm">
 								<div className="text-2xl font-bold text-blue-600 mb-2">{s.num}</div>
@@ -215,11 +215,12 @@ export function HomePage() {
 							Everything you need. Nothing you don't.
 						</h2>
 					</div>
-					<div className="grid md:grid-cols-3 gap-6 mb-10">
+					<div className="grid md:grid-cols-2 gap-6 mb-10">
 						{[
-							{ icon: <Mail className="h-6 w-6 text-blue-600" />, name: "Lifecycle Sequences", desc: "Context-aware automated outreach for onboarding, adoption, and renewals." },
-							{ icon: <BarChart3 className="h-6 w-6 text-blue-600" />, name: "Executive Visibility", desc: "Real-time ARR-at-risk dashboards, team performance, and renewal pipeline metrics." },
-							{ icon: <CheckCircle2 className="h-6 w-6 text-blue-600" />, name: "Human-in-the-Loop AI", desc: "Leverage AI to draft personalized outreach while keeping your CSMs in full control." },
+							{ icon: <Target className="h-6 w-6 text-blue-600" />, name: "Know which accounts are at risk 90 days out — not 9", desc: "AI-powered risk scoring across usage, sentiment, support health, and engagement recency surfaces deteriorating accounts before they tell you. Your team acts early instead of reacting late." },
+							{ icon: <Mail className="h-6 w-6 text-blue-600" />, name: "AI handles the inbox. Your CSMs handle the relationships.", desc: "Support and TAM agents read every inbound customer email, draft responses from your knowledge base, and auto-send high-confidence replies — escalating to your CSM only when human judgement is needed." },
+							{ icon: <BookOpen className="h-6 w-6 text-blue-600" />, name: "Your best playbooks outlive your best rep.", desc: "Journey builder, sequence templates, org-level knowledge base, and NPS surveys mean your CS motion is documented, automated, and consistent — regardless of who's on the account." },
+							{ icon: <BarChart3 className="h-6 w-6 text-blue-600" />, name: "ARR clarity your board will actually trust.", desc: "Real-time ARR-at-risk forecasting, per-CSM performance, renewal pipeline, and churn exposure — always live from the source, never hand-crafted in a spreadsheet the night before." },
 						].map((f) => (
 							<Card key={f.name} className="hover:-translate-y-1 transition-transform duration-200">
 								<CardHeader>
