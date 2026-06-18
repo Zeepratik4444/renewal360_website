@@ -153,3 +153,4 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
 		</div>
 	);
 }
+

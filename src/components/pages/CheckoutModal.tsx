@@ -247,3 +247,4 @@ export function CheckoutModal({ isOpen, onClose, plan, billingCycle, currency, p
         </Dialog>
     );
 }
+
