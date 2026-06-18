@@ -73,7 +73,7 @@ export function HomePage() {
 					{/* Competitive badge */}
 					<div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-8 border border-blue-200">
 						<span className="h-2 w-2 rounded-full bg-blue-600 animate-pulse inline-block"></span>
-						The Customer Success platform built for enterprise SaaS teams
+						The Customer Success platform built for growing enterprise SaaS teams
 					</div>
 
 					<h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
