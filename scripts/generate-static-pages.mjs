@@ -41,9 +41,9 @@ const currentContentLastmod = "2026-05-30";
 const pages = [
     {
         route: "",
-        title: "Renewal360 — Automate SaaS Renewals Before Accounts Go At-Risk",
+        title: "Renewal360 — Enterprise CS Platform for AI-Powered Renewal Management",
         description:
-            "Renewal360 helps growing SaaS teams automate renewals before accounts go at-risk with health scoring, CRM integrations, and playbooks without Gainsight complexity.",
+            "Renewal360 helps growing SaaS teams protect ARR at scale without the complexity of Gainsight.",
     },
     {
         route: "features",
@@ -132,7 +132,7 @@ const softwareSchema = JSON.stringify({
     name: "Renewal360",
     url: siteUrl,
     description:
-        "The Customer Success platform built for SaaS teams who can't afford Gainsight. Automate workflows, health scoring, and get executive-level visibility.",
+        "Enterprise CS Platform for AI-Powered Renewal Management. Protect ARR at scale without the complexity of Gainsight.",
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     audience: {

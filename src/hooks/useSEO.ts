@@ -86,9 +86,9 @@ export function useSEO({ title, description, canonicalPath, ogImage, noIndex = f
 
 		// ─── Cleanup: restore homepage defaults on unmount ─────────
 		return () => {
-			const defaultTitle = "Renewal360 — Automate SaaS Renewals Before Accounts Go At-Risk";
+			const defaultTitle = "Renewal360 — Enterprise CS Platform for AI-Powered Renewal Management";
 			const defaultDesc =
-				"Renewal360 helps growing SaaS teams automate renewals before accounts go at-risk with health scoring, CRM integrations, and playbooks without Gainsight complexity.";
+				"Renewal360 helps growing SaaS teams protect ARR at scale without the complexity of Gainsight.";
 			const defaultUrl = `${BASE_URL}/`;
 
 			document.title = defaultTitle;
