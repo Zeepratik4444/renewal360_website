@@ -41,43 +41,43 @@ const currentContentLastmod = "2026-05-30";
 const pages = [
     {
         route: "",
-        title: "Renewal360 — Enterprise CS Platform for AI-Powered Renewal Management",
+        title: "Renewal360 | Enterprise CS Platform for AI-Powered Renewal Management",
         description:
             "Renewal360 helps growing SaaS teams protect ARR at scale without the complexity of Gainsight.",
     },
     {
         route: "features",
-        title: "Features — Health Scoring, Playbooks & CRM Integrations | Renewal360",
+        title: "Features - Health Scoring, Playbooks & CRM Integrations | Renewal360",
         description:
             "Explore Renewal360 features for growing SaaS teams: account health scoring, renewal playbooks, CRM integrations, and executive visibility without Gainsight complexity.",
     },
     {
         route: "pricing",
-        title: "Pricing — Renewal Automation Built for Growing SaaS Teams | Renewal360",
+        title: "Pricing - Renewal Automation Built for Growing SaaS Teams | Renewal360",
         description:
             "See Renewal360 pricing for growing SaaS teams that need renewal automation, health scoring, and CRM-integrated playbooks without Gainsight-level cost or setup.",
     },
     {
         route: "how-it-works",
-        title: "How Renewal360 Works — From Health Score to Closed Renewal | Renewal360",
+        title: "How Renewal360 Works - From Health Score to Closed Renewal | Renewal360",
         description:
             "See how Renewal360 turns CRM data into health scores, AI-drafted renewal playbooks, and closed renewals for SaaS teams outgrowing spreadsheets or Totango.",
     },
     {
         route: "faq",
-        title: "FAQ — Renewal360 Setup, Integrations & Pricing Questions",
+        title: "FAQ - Renewal360 Setup, Integrations & Pricing Questions",
         description:
             "Answers to Renewal360 setup, CRM integration, pricing, security, and renewal automation questions for SaaS teams comparing Gainsight, Totango, or spreadsheets.",
     },
     {
         route: "about",
-        title: "About Renewal360 — Built for SaaS Teams That Outgrew Spreadsheets",
+        title: "About Renewal360 - Built for SaaS Teams That Outgrew Spreadsheets",
         description:
             "Meet Renewal360, built for SaaS customer success teams that outgrew spreadsheets and need renewal automation without enterprise CS platform overhead.",
     },
     {
         route: "contact",
-        title: "Contact Renewal360 — Start Your SaaS Renewal Automation Pilot",
+        title: "Contact Renewal360 - Start Your SaaS Renewal Automation Pilot",
         description:
             "Talk to Renewal360 about renewal automation for growing SaaS teams replacing spreadsheets or evaluating Gainsight and Totango alternatives.",
     },
