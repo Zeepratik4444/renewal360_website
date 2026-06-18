@@ -5,7 +5,7 @@ import { useSEO } from "@/hooks/useSEO";
 
 export function AboutPage() {
 	useSEO({
-		title: "About Renewal360 — Built for SaaS Teams That Outgrew Spreadsheets",
+		title: "About Renewal360 - Built for SaaS Teams That Outgrew Spreadsheets",
 		description: "Meet Renewal360, built for SaaS customer success teams that outgrew spreadsheets and need renewal automation without enterprise CS platform overhead.",
 	});
 
@@ -179,4 +179,3 @@ export function AboutPage() {
 		</div>
 	);
 }
-

@@ -34,7 +34,7 @@ function MockCard({ children, bg = "bg-blue-50" }: { children: React.ReactNode; 
 
 export function FeaturesPage() {
 	useSEO({
-		title: "Features — Health Scoring, Playbooks & CRM Integrations | Renewal360",
+		title: "Features - Health Scoring, Playbooks & CRM Integrations | Renewal360",
 		description: "Explore Renewal360 features for growing SaaS teams: account health scoring, renewal playbooks, CRM integrations, and executive visibility without Gainsight complexity.",
 	});
 
@@ -576,4 +576,3 @@ export function FeaturesPage() {
 		</div>
 	);
 }
-

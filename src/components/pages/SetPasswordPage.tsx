@@ -116,4 +116,3 @@ export function SetPasswordPage() {
         </div>
     );
 }
-

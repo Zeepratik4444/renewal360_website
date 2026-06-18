@@ -6,7 +6,7 @@ import { useSEO } from "@/hooks/useSEO";
 
 export function FAQPage() {
 	useSEO({
-		title: "FAQ — Renewal360 Setup, Integrations & Pricing Questions",
+		title: "FAQ - Renewal360 Setup, Integrations & Pricing Questions",
 		description: "Answers to Renewal360 setup, CRM integration, pricing, security, and renewal automation questions for SaaS teams comparing Gainsight, Totango, or spreadsheets.",
 	});
 
@@ -57,4 +57,3 @@ export function FAQPage() {
 		</div>
 	);
 }
-

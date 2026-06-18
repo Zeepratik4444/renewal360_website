@@ -14,7 +14,7 @@ import { AnswerBlock, FactBox } from "@/components/AeoGeoBlocks";
 
 export function ContactPage() {
 	useSEO({
-		title: "Contact Renewal360 — Start Your SaaS Renewal Automation Pilot",
+		title: "Contact Renewal360 - Start Your SaaS Renewal Automation Pilot",
 		description: "Talk to Renewal360 about renewal automation for growing SaaS teams replacing spreadsheets or evaluating Gainsight and Totango alternatives.",
 	});
 
@@ -371,4 +371,3 @@ export function ContactPage() {
 		</div>
 	);
 }
-

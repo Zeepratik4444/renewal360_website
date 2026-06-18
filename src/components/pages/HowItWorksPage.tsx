@@ -9,7 +9,7 @@ import { AnswerBlock, FactBox, PageFAQ } from "@/components/AeoGeoBlocks";
 
 export function HowItWorksPage() {
 	useSEO({
-		title: "How Renewal360 Works — From Health Score to Closed Renewal | Renewal360",
+		title: "How Renewal360 Works - From Health Score to Closed Renewal | Renewal360",
 		description: "See how Renewal360 turns CRM data into health scores, AI-drafted renewal playbooks, and closed renewals for SaaS teams outgrowing spreadsheets or Totango.",
 	});
 
@@ -212,4 +212,3 @@ export function HowItWorksPage() {
 		</div>
 	);
 }
-

@@ -53,7 +53,7 @@ function ComparisonCell({ value, isGrowth }: { value: string; isGrowth?: boolean
 export function PricingPage() {
 	const { currency, isAnnual, setIsAnnual, plans, addOn, getPrice } = usePricing();
 	useSEO({
-		title: "Pricing — Renewal Automation Built for Growing SaaS Teams | Renewal360",
+		title: "Pricing - Renewal Automation Built for Growing SaaS Teams | Renewal360",
 		description: "See Renewal360 pricing for growing SaaS teams that need renewal automation, health scoring, and CRM-integrated playbooks without Gainsight-level cost or setup.",
 	});
 
@@ -484,4 +484,3 @@ export function PricingPage() {
 		</div>
 	);
 }
-

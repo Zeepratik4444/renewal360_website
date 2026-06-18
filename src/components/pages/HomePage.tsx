@@ -59,8 +59,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export function HomePage() {
 	useSEO({
-		title: "Renewal360 — Enterprise CS Platform for AI-Powered Renewal Management",
-		description: "Renewal360 gives enterprise CS teams AI risk scoring, autonomous inbound email handling, and playbook automation to protect ARR at scale — without the complexity of Gainsight.",
+		title: "Renewal360 | Enterprise CS Platform for AI-Powered Renewal Management",
+		description: "Renewal360 gives enterprise CS teams AI risk scoring, autonomous inbound email handling, and playbook automation to protect ARR at scale - without the complexity of Gainsight.",
 	});
 
 	return (
@@ -120,8 +120,8 @@ export function HomePage() {
 					{/* Stats row */}
 					<div className="grid grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
 						{[
-							{ num: "58%", label: "Median first-year renewal rate — failed activation and missed signals are the #1 cause" },
-							{ num: "20–30%", label: "Of customers signal churn intent weeks before they say anything — most teams miss it" },
+							{ num: "58%", label: "Median first-year renewal rate - failed activation and missed signals are the #1 cause" },
+							{ num: "20–30%", label: "Of customers signal churn intent weeks before they say anything - most teams miss it" },
 							{ num: "30–35%", label: "Potential profit increase from just 5% better retention (Bain & Company)" },
 						].map((s) => (
 							<div key={s.num} className="bg-white rounded-xl border border-gray-200 p-5 text-center shadow-sm">
@@ -217,10 +217,10 @@ export function HomePage() {
 					</div>
 					<div className="grid md:grid-cols-2 gap-6 mb-10">
 						{[
-							{ icon: <Target className="h-6 w-6 text-blue-600" />, name: "Know which accounts are at risk 90 days out — not 9", desc: "AI-powered risk scoring across usage, sentiment, support health, and engagement recency surfaces deteriorating accounts before they tell you. Your team acts early instead of reacting late." },
-							{ icon: <Mail className="h-6 w-6 text-blue-600" />, name: "AI handles the inbox. Your CSMs handle the relationships.", desc: "Support and TAM agents read every inbound customer email, draft responses from your knowledge base, and auto-send high-confidence replies — escalating to your CSM only when human judgement is needed." },
-							{ icon: <BookOpen className="h-6 w-6 text-blue-600" />, name: "Your best playbooks outlive your best rep.", desc: "Journey builder, sequence templates, org-level knowledge base, and NPS surveys mean your CS motion is documented, automated, and consistent — regardless of who's on the account." },
-							{ icon: <BarChart3 className="h-6 w-6 text-blue-600" />, name: "ARR clarity your board will actually trust.", desc: "Real-time ARR-at-risk forecasting, per-CSM performance, renewal pipeline, and churn exposure — always live from the source, never hand-crafted in a spreadsheet the night before." },
+							{ icon: <Target className="h-6 w-6 text-blue-600" />, name: "Know which accounts are at risk 90 days out - not 9", desc: "AI-powered risk scoring across usage, sentiment, support health, and engagement recency surfaces deteriorating accounts before they tell you. Your team acts early instead of reacting late." },
+							{ icon: <Mail className="h-6 w-6 text-blue-600" />, name: "AI handles the inbox. Your CSMs handle the relationships.", desc: "Support and TAM agents read every inbound customer email, draft responses from your knowledge base, and auto-send high-confidence replies - escalating to your CSM only when human judgement is needed." },
+							{ icon: <BookOpen className="h-6 w-6 text-blue-600" />, name: "Your best playbooks outlive your best rep.", desc: "Journey builder, sequence templates, org-level knowledge base, and NPS surveys mean your CS motion is documented, automated, and consistent - regardless of who's on the account." },
+							{ icon: <BarChart3 className="h-6 w-6 text-blue-600" />, name: "ARR clarity your board will actually trust.", desc: "Real-time ARR-at-risk forecasting, per-CSM performance, renewal pipeline, and churn exposure - always live from the source, never hand-crafted in a spreadsheet the night before." },
 						].map((f) => (
 							<Card key={f.name} className="hover:-translate-y-1 transition-transform duration-200">
 								<CardHeader>
@@ -421,4 +421,3 @@ export function HomePage() {
 		</div>
 	);
 }
-
