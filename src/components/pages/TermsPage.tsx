@@ -15,9 +15,9 @@ export function TermsPage() {
 
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<h1 className="text-4xl font-bold text-gray-900 mb-2">Terms of Service & Privacy Policy</h1>
-				<p className="text-sm text-gray-500 mb-4">Last updated: September 5, 2026</p>
+				<p className="text-sm text-gray-500 mb-4">Last updated: September 6, 2026</p>
 				<p className="text-sm text-gray-600 mb-12">
-					Nuero Technologies ("Company"), Bengaluru, Karnataka, India · <a href="mailto:hello@renewal360.in" className="text-blue-600 hover:underline">hello@renewal360.in</a>
+					Ganvix Technologies Pvt Ltd ("Company"), B-128, Sector 2, Noida, Uttar Pradesh, India · <a href="mailto:hello@renewal360.in" className="text-blue-600 hover:underline">hello@renewal360.in</a>
 				</p>
 
 				{/* ── TABLE OF CONTENTS ── */}
@@ -53,7 +53,7 @@ export function TermsPage() {
 						<div id="tos-1">
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">1. Acceptance of Terms</h3>
 							<p>
-								By accessing or using Renewal360 ("the Service"), operated by Nuero Technologies ("we", "us", "our"),
+								By accessing or using Renewal360 ("the Service"), operated by Ganvix Technologies Pvt Ltd ("we", "us", "our"),
 								you agree to be bound by these Terms of Service ("Agreement"). If you are using the Service on behalf of an organization,
 								you represent and warrant that you have the authority to bind that organization to this Agreement.
 							</p>
@@ -120,7 +120,7 @@ export function TermsPage() {
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">6. Intellectual Property</h3>
 							<p>
 								The Service, including its design, features, algorithms, AI models, documentation, and all associated
-								intellectual property rights, are and shall remain the exclusive property of Nuero Technologies.
+								intellectual property rights, are and shall remain the exclusive property of Ganvix Technologies Pvt Ltd.
 								Your subscription grants you a limited, non-exclusive, non-transferable, revocable license to use
 								the Service solely for your internal business purposes during the subscription period.
 							</p>
@@ -141,8 +141,11 @@ export function TermsPage() {
 								the accuracy, appropriateness, or completeness of AI-generated outputs.
 							</p>
 							<p className="mt-2">
-								We do not use your Customer Data to train or improve third-party AI models. AI processing is conducted
-								in accordance with Google Cloud's data processing agreements and enterprise-grade security certifications.
+								We have not built, and do not operate, any process that uses your Customer Data to train, fine-tune,
+								or otherwise improve our own AI models. Our AI processing runs on Google Cloud Vertex AI; what that
+								means for the underlying model provider is addressed precisely in Privacy Policy Section 3, since
+								that part rests on our agreement with Google Cloud rather than on something we can independently
+								guarantee.
 							</p>
 						</div>
 
@@ -176,7 +179,7 @@ export function TermsPage() {
 							<p className="text-sm font-semibold text-gray-800 bg-gray-50 p-4 rounded border border-gray-200 uppercase leading-relaxed">
 								THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT WARRANTIES OF ANY KIND,
 								EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY,
-								FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. NUERO TECHNOLOGIES DOES NOT WARRANT
+								FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. GANVIX TECHNOLOGIES PVT LTD DOES NOT WARRANT
 								THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR COMPLETELY SECURE, OR THAT ANY DEFECTS WILL BE
 								CORRECTED. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED FROM THE COMPANY SHALL
 								CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THIS AGREEMENT.
@@ -187,7 +190,7 @@ export function TermsPage() {
 						<div id="tos-10">
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">10. Indemnification</h3>
 							<p>
-								You agree to indemnify, defend, and hold harmless Nuero Technologies, its officers, directors,
+								You agree to indemnify, defend, and hold harmless Ganvix Technologies Pvt Ltd, its officers, directors,
 								employees, agents, and affiliates from and against any and all claims, damages, losses, liabilities,
 								costs, and expenses (including reasonable attorneys' fees) arising out of or in connection with:
 								(i) your use of the Service; (ii) your violation of this Agreement; (iii) your violation of any
@@ -200,7 +203,7 @@ export function TermsPage() {
 						<div>
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">11. Limitation of Liability</h3>
 							<p className="text-sm font-semibold text-gray-800 bg-gray-50 p-4 rounded border border-gray-200 uppercase leading-relaxed">
-								TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL NUERO TECHNOLOGIES, ITS OFFICERS,
+								TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL GANVIX TECHNOLOGIES PVT LTD, ITS OFFICERS,
 								DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR
 								PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION LOSS OF REVENUE, DATA, BUSINESS OPPORTUNITIES, OR
 								GOODWILL, ARISING FROM YOUR USE OF THE SERVICE, WHETHER BASED ON WARRANTY, CONTRACT, TORT, OR ANY
@@ -228,13 +231,13 @@ export function TermsPage() {
 							<p>
 								This Agreement shall be governed by and construed in accordance with the laws of India, without
 								regard to conflict-of-law principles. Any dispute arising out of or relating to this Agreement
-								shall be subject to the exclusive jurisdiction of the courts located in Bengaluru, Karnataka, India.
+								shall be subject to the exclusive jurisdiction of the courts located in Gautam Buddh Nagar, Uttar Pradesh, India.
 							</p>
 							<p className="mt-2">
 								Before initiating any legal proceedings, the parties agree to attempt to resolve any dispute through
 								good-faith negotiation for a period of at least thirty (30) days. If the dispute cannot be resolved
 								through negotiation, either party may pursue arbitration under the Arbitration and Conciliation Act, 1996
-								of India, administered by a sole arbitrator mutually agreed upon, seated in Bengaluru, India. The
+								of India, administered by a sole arbitrator mutually agreed upon, seated in Noida, Uttar Pradesh. The
 								language of arbitration shall be English.
 							</p>
 						</div>
@@ -268,7 +271,7 @@ export function TermsPage() {
 								If any provision of this Agreement is held to be invalid or unenforceable, such provision shall be
 								modified to the minimum extent necessary to make it valid, and the remaining provisions shall continue in
 								full force and effect. This Agreement, together with the Privacy Policy, constitutes the entire agreement
-								between you and Nuero Technologies regarding the Service, and supersedes all prior agreements,
+								between you and Ganvix Technologies Pvt Ltd regarding the Service, and supersedes all prior agreements,
 								communications, and understandings.
 							</p>
 						</div>
@@ -330,14 +333,24 @@ export function TermsPage() {
 						<div id="pp-3">
 							<h3 className="text-lg font-semibold text-gray-900 mb-2">3. AI Data Processing</h3>
 							<p>
-								Your Customer Data is processed by Google Gemini AI models hosted on Google Cloud Platform to generate
-								insights, risk scores, and email content. Key points:
+								Your Customer Data is processed by Google Gemini AI models hosted on Google Cloud Platform (Vertex AI)
+								to generate insights, risk scores, and email content.
+							</p>
+							<p className="mt-2">
+								<strong>By Renewal360:</strong> we have not built, and do not operate, any process that uses
+								your Customer Data to train, fine-tune, or otherwise improve our own AI models. This holds regardless
+								of which plan or feature you use.
+							</p>
+							<p className="mt-2">
+								<strong>By our model provider:</strong> AI processing routed through Google Cloud Vertex AI is
+								governed by our enterprise data processing agreement with Google Cloud. That agreement — not this
+								document alone — is the operative source for whether Google itself retains or uses inference inputs
+								beyond serving the request; enterprise customers may request a copy of the relevant terms from us. We
+								do not independently verify Google's practices beyond what that agreement provides.
 							</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
-								<li>AI processing is performed in real-time and data is not retained by Google beyond the processing session</li>
-								<li>We do <strong>not</strong> use your data to train or improve third-party AI models</li>
 								<li>AI-generated outputs are suggestions only - you maintain full editorial control</li>
-								<li>All AI processing is subject to Google Cloud's enterprise data processing agreements and ISO 27001, SOC 2 security certifications</li>
+								<li>Google Cloud's own infrastructure is ISO 27001 and SOC 2 certified</li>
 							</ul>
 						</div>
 
@@ -605,8 +618,8 @@ export function TermsPage() {
 								please contact us:
 							</p>
 							<div className="mt-3 bg-gray-50 rounded-lg p-4 border border-gray-200 text-sm space-y-2">
-								<p><strong>Nuero Technologies</strong></p>
-								<p>Bengaluru, Karnataka, India</p>
+								<p><strong>Ganvix Technologies Pvt Ltd</strong></p>
+								<p>B-128, Sector 2, Noida, Uttar Pradesh, India</p>
 								<p>
 									General inquiries:{" "}
 									<a href="mailto:hello@renewal360.in" className="text-blue-600 hover:underline">hello@renewal360.in</a>
