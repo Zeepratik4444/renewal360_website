@@ -15,7 +15,7 @@ export function TermsPage() {
 
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<h1 className="text-4xl font-bold text-gray-900 mb-2">Terms of Service & Privacy Policy</h1>
-				<p className="text-sm text-gray-500 mb-4">Last updated: March 29, 2026</p>
+				<p className="text-sm text-gray-500 mb-4">Last updated: September 5, 2026</p>
 				<p className="text-sm text-gray-600 mb-12">
 					Nuero Technologies ("Company"), Bengaluru, Karnataka, India · <a href="mailto:hello@renewal360.in" className="text-blue-600 hover:underline">hello@renewal360.in</a>
 				</p>
@@ -31,11 +31,12 @@ export function TermsPage() {
 						<a href="#tos-7" className="text-gray-600 hover:text-blue-600 py-1 pl-3">7. AI-Generated Content</a>
 						<a href="#pp-3" className="text-gray-600 hover:text-blue-600 py-1 pl-3">3. AI Data Processing</a>
 						<a href="#tos-9" className="text-gray-600 hover:text-blue-600 py-1 pl-3">9. Warranty Disclaimer</a>
-						<a href="#pp-8" className="text-gray-600 hover:text-blue-600 py-1 pl-3">8. International Data Transfers</a>
+						<a href="#pp-4" className="text-gray-600 hover:text-blue-600 py-1 pl-3">4. Google Account Data</a>
 						<a href="#tos-10" className="text-gray-600 hover:text-blue-600 py-1 pl-3">10. Indemnification</a>
-						<a href="#pp-9" className="text-gray-600 hover:text-blue-600 py-1 pl-3">9. GDPR & Data Subject Rights</a>
+						<a href="#pp-9" className="text-gray-600 hover:text-blue-600 py-1 pl-3">9. International Data Transfers</a>
 						<a href="#tos-13" className="text-gray-600 hover:text-blue-600 py-1 pl-3">13. Governing Law</a>
-						<a href="#pp-12" className="text-gray-600 hover:text-blue-600 py-1 pl-3">12. Children's Privacy</a>
+						<a href="#pp-10" className="text-gray-600 hover:text-blue-600 py-1 pl-3">10. GDPR & Data Subject Rights</a>
+						<a href="#pp-13" className="text-gray-600 hover:text-blue-600 py-1 pl-3">13. Children's Privacy</a>
 					</div>
 				</nav>
 
@@ -152,13 +153,17 @@ export function TermsPage() {
 							</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
 								<li><strong>Google Cloud Platform</strong> - Infrastructure hosting and AI processing</li>
+								<li><strong>Google Workspace APIs (Gmail, Calendar, Contacts)</strong> - Optional integration you may connect to sync email, calendar, and contact data for renewal automation; see Privacy Policy Section 4</li>
 								<li><strong>Razorpay</strong> - Payment processing and subscription billing</li>
 								<li><strong>Email delivery services</strong> - Transactional and automated email dispatch</li>
 							</ul>
 							<p className="mt-2">
 								We are not responsible for the availability, accuracy, or practices of third-party services.
 								Your use of those services is subject to their respective terms and privacy policies.
-								We do not endorse and shall not be liable for any third-party service.
+								We do not endorse and shall not be liable for any third-party service. Our use and transfer
+								of information received from Google APIs adheres to the{" "}
+								<a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google API Services User Data Policy</a>,
+								including the Limited Use requirements.
 							</p>
 						</div>
 
@@ -334,8 +339,49 @@ export function TermsPage() {
 						</div>
 
 						{/* PP-4 */}
+						<div id="pp-4">
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">4. Google Account Data (Gmail, Calendar & Contacts)</h3>
+							<p>
+								If you choose to connect a Google Account to Renewal360, you will be asked to grant one or more of the
+								following Google API scopes, each requested only for the specific feature it powers and only after you
+								opt in:
+							</p>
+							<ul className="list-disc pl-6 mt-2 space-y-1">
+								<li><strong>Gmail (read and send):</strong> to import renewal-related email threads for risk analysis and to send renewal, follow-up, and reminder emails from your own inbox - only when you initiate or approve the send</li>
+								<li><strong>Calendar (read):</strong> to identify upcoming renewal-related meetings and set reminders</li>
+								<li><strong>Contacts (read):</strong> to match customer contacts to renewal records</li>
+							</ul>
+							<p className="mt-2">
+								<strong>Limited Use:</strong> Renewal360's use and transfer of information received from Google APIs to
+								any other app will adhere to the{" "}
+								<a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google API Services User Data Policy</a>,
+								including the Limited Use requirements. We do not use Gmail, Calendar, or Contacts data to serve
+								advertisements, and we do not sell or share it with third parties except to provide the feature
+								you requested. Where our AI models (Section 3) process this data to generate suggestions, they do
+								so in real time and do not retain it beyond the processing session, and it is never used to train
+								third-party AI models.
+							</p>
+							<p className="mt-2">
+								<strong>Human access</strong> to your Google data is restricted to what is necessary to operate the
+								Service, and otherwise limited to: (a) instances where you have given us explicit consent, (b) where
+								necessary to investigate abuse, security incidents, or violations of these Terms, or (c) where required
+								to comply with applicable law. Any such access is logged and audited.
+							</p>
+							<p className="mt-2">
+								<strong>Retention & deletion:</strong> Cached copies of Google data (e.g., synced email or calendar
+								metadata) are retained only as long as needed to provide the connected feature, and are deleted within
+								30 days of you disconnecting your Google Account or terminating your subscription, consistent with our
+								Customer Data retention practices (Section 10). You can revoke Renewal360's access to your Google Account
+								at any time at{" "}
+								<a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">myaccount.google.com/permissions</a>.
+								Revoking access disables Google-dependent features but does not delete Customer Data you have already
+								uploaded or created within the Service.
+							</p>
+						</div>
+
+						{/* PP-5 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">4. Data Storage & Security</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">5. Data Storage & Security</h3>
 							<p>
 								Your data is stored on Google Cloud Platform infrastructure. We implement industry-standard
 								security measures including:
@@ -353,9 +399,9 @@ export function TermsPage() {
 							</p>
 						</div>
 
-						{/* PP-5 */}
+						{/* PP-6 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">5. Data Sharing & Sub-Processors</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">6. Data Sharing & Sub-Processors</h3>
 							<p>We do not sell your personal data. We share information only with the following categories of recipients:</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
 								<li><strong>Google Cloud Platform</strong> - Infrastructure hosting, data storage, and AI processing (Gemini)</li>
@@ -370,9 +416,9 @@ export function TermsPage() {
 							</p>
 						</div>
 
-						{/* PP-6 */}
+						{/* PP-7 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">6. Legal Basis for Processing (GDPR)</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">7. Legal Basis for Processing (GDPR)</h3>
 							<p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, we process your personal data on the following legal bases:</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
 								<li><strong>Contract performance:</strong> To provide the Service you have subscribed to</li>
@@ -382,9 +428,9 @@ export function TermsPage() {
 							</ul>
 						</div>
 
-						{/* PP-7 */}
+						{/* PP-8 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">7. Your Rights</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">8. Your Rights</h3>
 							<p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
 								<li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
@@ -404,9 +450,9 @@ export function TermsPage() {
 							</p>
 						</div>
 
-						{/* PP-8 */}
-						<div id="pp-8">
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">8. International Data Transfers</h3>
+						{/* PP-9 */}
+						<div id="pp-9">
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">9. International Data Transfers</h3>
 							<p>
 								Your data may be transferred to, stored in, and processed in countries other than your country of
 								residence, including India, the United States (via Google Cloud infrastructure), and other jurisdictions
@@ -423,25 +469,25 @@ export function TermsPage() {
 							</ul>
 						</div>
 
-						{/* PP-9 */}
-						<div id="pp-9">
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">9. GDPR & Data Subject Rights (EEA/UK)</h3>
+						{/* PP-10 */}
+						<div id="pp-10">
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">10. GDPR & Data Subject Rights (EEA/UK)</h3>
 							<p>
 								If you are a resident of the European Economic Area or the United Kingdom, we act as the <strong>data controller</strong> for
 								personal data collected through registration and website interactions. For Customer Data you upload
 								to the Service, we act as a <strong>data processor</strong> on your behalf.
 							</p>
 							<p className="mt-2">
-								You may exercise your data subject rights (listed in Section 7) by contacting us at{" "}
+								You may exercise your data subject rights (listed in Section 8) by contacting us at{" "}
 								<a href="mailto:privacy@renewal360.in" className="text-blue-600 hover:underline">privacy@renewal360.in</a>.
 								We will verify your identity before processing any request. Enterprise customers requiring a formal
 								Data Processing Agreement (DPA) may request one at the same address.
 							</p>
 						</div>
 
-						{/* PP-10 */}
+						{/* PP-11 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">10. Data Retention</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">11. Data Retention</h3>
 							<p>
 								We retain your personal data for the duration of your active subscription and for a period thereafter
 								as necessary to fulfill the purposes outlined in this Privacy Policy. Specific retention periods:
@@ -455,9 +501,9 @@ export function TermsPage() {
 							</ul>
 						</div>
 
-						{/* PP-11 */}
+						{/* PP-12 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">11. Cookies & Tracking Technologies</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">12. Cookies & Tracking Technologies</h3>
 							<p>We use the following types of cookies and similar technologies:</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
 								<li><strong>Essential cookies:</strong> Required for authentication, session management, and security - cannot be disabled</li>
@@ -471,9 +517,9 @@ export function TermsPage() {
 							</p>
 						</div>
 
-						{/* PP-12 */}
-						<div id="pp-12">
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">12. Children's Privacy</h3>
+						{/* PP-13 */}
+						<div id="pp-13">
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">13. Children's Privacy</h3>
 							<p>
 								The Service is not intended for individuals under the age of 18. We do not knowingly collect personal
 								data from children under 18. If we become aware that we have inadvertently collected data from a minor,
@@ -483,9 +529,9 @@ export function TermsPage() {
 							</p>
 						</div>
 
-						{/* PP-13 */}
+						{/* PP-14 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">13. Data Breach Notification</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">14. Data Breach Notification</h3>
 							<p>
 								In the event of a personal data breach that is likely to result in a risk to your rights and freedoms,
 								we will notify you and any applicable regulatory authorities without undue delay and, where feasible,
@@ -495,9 +541,9 @@ export function TermsPage() {
 							</p>
 						</div>
 
-						{/* PP-14 */}
+						{/* PP-15 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">14. Changes to This Privacy Policy</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">15. Changes to This Privacy Policy</h3>
 							<p>
 								We may update this Privacy Policy from time to time to reflect changes in our practices, technologies,
 								or legal requirements. We will notify you of material changes by posting a notice within the Service
@@ -507,9 +553,9 @@ export function TermsPage() {
 							</p>
 						</div>
 
-						{/* PP-15 */}
+						{/* PP-16 */}
 						<div>
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">15. Contact Us</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">16. Contact Us</h3>
 							<p>
 								If you have any questions, concerns, or requests regarding these Terms of Service or our Privacy Policy,
 								please contact us:
