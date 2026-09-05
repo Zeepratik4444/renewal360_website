@@ -356,22 +356,20 @@ export function TermsPage() {
 
 						{/* PP-4 */}
 						<div id="pp-4">
-							<h3 className="text-lg font-semibold text-gray-900 mb-2">4. Google Account Data (Gmail, Calendar & Contacts)</h3>
+							<h3 className="text-lg font-semibold text-gray-900 mb-2">4. Google Account Data (Gmail & Calendar)</h3>
 							<p>
-								If you choose to connect a Google Account to Renewal360, you will be asked to grant one or more of the
-								following Google API scopes, each requested only for the specific feature it powers and only after you
-								opt in:
+								If you choose to connect a Google Account to Renewal360, you will be asked to grant the following
+								Google API scopes, requested only after you opt in:
 							</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
-								<li><strong>Gmail (read and send):</strong> to import renewal-related email threads for risk analysis and to send renewal, follow-up, and reminder emails from your own inbox - only when you initiate or approve the send</li>
-								<li><strong>Calendar (read):</strong> to identify upcoming renewal-related meetings and set reminders</li>
-								<li><strong>Contacts (read):</strong> to match customer contacts to renewal records</li>
+								<li><strong>Gmail (full account access scope):</strong> to import renewal-related email threads for risk analysis and to send renewal, follow-up, and reminder emails from your own inbox - only when you initiate or approve the send. Google's Gmail scope for this integration is broad by design (it also permits organizing and modifying mail), but Renewal360's actual use is limited to reading messages, marking them as read, and sending mail - we do not delete or otherwise permanently modify the contents of your mailbox</li>
+								<li><strong>Calendar (read-write):</strong> to identify upcoming renewal-related meetings, set reminders, and create calendar events on your request</li>
 							</ul>
 							<p className="mt-2">
 								<strong>Limited Use:</strong> Renewal360's use and transfer of information received from Google APIs to
 								any other app will adhere to the{" "}
 								<a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google API Services User Data Policy</a>,
-								including the Limited Use requirements. We do not use Gmail, Calendar, or Contacts data to serve
+								including the Limited Use requirements. We do not use Gmail or Calendar data to serve
 								advertisements, and we do not sell or share it with third parties except to provide the feature
 								you requested. Where our AI models (Section 3) process this data to generate suggestions, they do
 								so in real time and do not retain it beyond the processing session, and it is never used to train
@@ -404,9 +402,10 @@ export function TermsPage() {
 								it powers and only after you opt in:
 							</p>
 							<ul className="list-disc pl-6 mt-2 space-y-1">
-								<li><strong>Mail.Read:</strong> to import renewal-related Outlook email threads for risk analysis</li>
+								<li><strong>Mail.Read and Mail.ReadWrite:</strong> to import renewal-related Outlook email threads for risk analysis and mark messages as read. The ReadWrite grant is broader than we need day-to-day, but our actual use is limited to reading and marking mail as read - we do not delete or otherwise permanently modify the contents of your mailbox</li>
 								<li><strong>Mail.Send:</strong> to send renewal, follow-up, and reminder emails from your own Outlook mailbox - only when you initiate or approve the send</li>
-								<li><strong>OnlineMeetings / Calendars (read-write):</strong> to create and attach Microsoft Teams meeting links to renewal-related calendar events</li>
+								<li><strong>MailboxSettings.Read:</strong> to read mailbox configuration needed to send and format mail correctly</li>
+								<li><strong>Calendars (read-write):</strong> to identify upcoming renewal-related meetings and create calendar events on your request, including attaching Microsoft Teams meeting links to renewal-related events - there is no separate "Teams" or "OnlineMeetings" permission involved</li>
 							</ul>
 							<p className="mt-2">
 								Our access to and use of this data is subject to the{" "}
@@ -449,6 +448,7 @@ export function TermsPage() {
 								<li>Audit logging of administrative and data access events</li>
 								<li>Regular security assessments and vulnerability scanning</li>
 								<li>Hashed password storage using industry-standard algorithms (bcrypt)</li>
+								<li>Risk scoring is computed strictly per organization - every query in the scoring pipeline is scoped to your organization's own data, with no cross-tenant aggregation or benchmarking against other customers</li>
 							</ul>
 							<p className="mt-2">
 								While we strive to protect your data, no method of transmission over the internet or electronic
