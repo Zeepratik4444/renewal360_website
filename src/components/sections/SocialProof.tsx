@@ -8,7 +8,7 @@ export function SocialProof() {
 
   return (
     <section className="py-16 border-t border-b border-border bg-slate-50/50">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <p className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-12">
           Built for high-growth SaaS teams securing mid-market revenue
         </p>

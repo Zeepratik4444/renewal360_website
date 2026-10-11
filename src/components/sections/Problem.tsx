@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export function Problem() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto">
+    <section className="py-24 px-6 max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <Badge variant="warning" className="mb-4">The Current Reality</Badge>
         <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" style={{ fontFamily: "'Syne', sans-serif" }}>

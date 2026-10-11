@@ -42,10 +42,10 @@ export function FunnelCTA({
 	};
 
 	return (
-		<section className="rounded-lg border border-blue-100 bg-blue-50/70 p-6 md:p-8">
+		<section className="rounded-2xl border border-border bg-card p-6 md:p-10">
 			<div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
 				<div className="max-w-2xl">
-					<p className="text-sm font-semibold text-blue-700">
+					<p className="eyebrow">
 						{stageLabels[stage]}
 					</p>
 					<h2 className="mt-2 text-2xl font-bold text-gray-900">{title}</h2>
@@ -56,7 +56,7 @@ export function FunnelCTA({
 						<div className="mt-5 grid gap-2 sm:grid-cols-3">
 							{proofPoints.map((point) => (
 								<div key={point} className="flex items-start gap-2 text-sm text-gray-700">
-									<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+									<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
 									<span>{point}</span>
 								</div>
 							))}
@@ -65,14 +65,14 @@ export function FunnelCTA({
 				</div>
 				<div className="flex shrink-0 flex-col gap-3 sm:flex-row md:flex-col lg:flex-row">
 					<a href={primary.to} onClick={() => track(primary)}>
-						<Button size="lg" className="w-full sm:w-auto">
+						<Button size="lg" variant="gradient" className="w-full sm:w-auto">
 							{primary.label}
 							<ArrowRight className="ml-2 h-4 w-4" />
 						</Button>
 					</a>
 					{secondary && (
 						<a href={secondary.to} onClick={() => track(secondary)}>
-							<Button size="lg" variant="outline" className="w-full sm:w-auto bg-white">
+							<Button size="lg" variant="outline" className="w-full sm:w-auto">
 								{secondary.label}
 							</Button>
 						</a>
@@ -91,15 +91,15 @@ export function WhoThisIsFor({
 	title?: string;
 }) {
 	return (
-		<section className="rounded-lg border border-gray-200 bg-white p-5 shadow-sm">
+		<section className="rounded-2xl border border-border bg-background p-6">
 			<div className="grid gap-4 md:grid-cols-[180px_1fr] md:items-center">
-				<h2 className="text-sm font-bold uppercase tracking-wide text-gray-500">
+				<h2 className="eyebrow !text-muted-foreground">
 					{title}
 				</h2>
 				<div className="grid gap-3 md:grid-cols-3">
 					{items.map((item) => (
 						<div key={item} className="flex items-start gap-2 text-sm text-gray-700">
-							<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+							<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
 							<span>{item}</span>
 						</div>
 					))}

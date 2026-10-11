@@ -57,13 +57,13 @@ const features = [
     name: "Multi-Tenant RBAC + MFA",
     persona: "Admin",
     outcome: "Enterprise-grade access control - every org's data stays completely isolated",
-    desc: "Three-level role model: Admin, Manager, and CSM - each with scoped data access. Per-org MFA enforcement, SSO support, JWT-based auth, and a full admin audit log. LLM configuration is per-org so you can bring your own Gemini or OpenAI key.",
+    desc: "Three-level role model: Admin, Manager, and CSM - each with scoped data access. Per-org MFA enforcement, SSO support, JWT-based auth, and a full admin audit log. LLM configuration is per-org so you can bring your own model key.",
   },
 ];
 
 export function Features() {
   return (
-    <section className="py-24 max-w-7xl mx-auto px-6">
+    <section className="py-24 max-w-6xl mx-auto px-6">
       <div className="text-center mb-16">
         <Badge className="mb-4">Features</Badge>
         <h2

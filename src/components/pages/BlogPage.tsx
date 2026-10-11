@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpen, CalendarDays, Clock } from "lucide-react";
 import { Navigation } from "@/components/Navigation";
+import { PageGlow } from "@/components/PageGlow";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useSEO } from "@/hooks/useSEO";
@@ -14,16 +15,17 @@ export function BlogPage() {
 	});
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="relative isolate min-h-screen bg-background">
 			<Navigation />
+			<PageGlow />
 
 			<section className="bg-gradient-to-b from-blue-50/50 to-white py-20">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-6 border border-blue-200">
 						<BookOpen className="h-4 w-4" />
 						Renewal360 Blog
 					</div>
-					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-tight">
+					<h1 className="text-5xl tracking-tight text-foreground sm:text-6xl mb-5">
 						Field notes for better SaaS renewals.
 					</h1>
 					<p className="text-lg md:text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -34,7 +36,7 @@ export function BlogPage() {
 			</section>
 
 			<section className="py-12 bg-white">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 						{blogPosts.map((post) => (
 							<Link

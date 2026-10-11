@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { PageGlow } from "@/components/PageGlow";
 import { Link } from "@tanstack/react-router";
 import { useSEO } from "@/hooks/useSEO";
 
@@ -10,8 +11,9 @@ export function TermsPage() {
 	});
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="relative isolate min-h-screen bg-background">
 			<Navigation />
+			<PageGlow />
 
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 				<h1 className="text-4xl font-bold text-gray-900 mb-2">Terms of Service & Privacy Policy</h1>

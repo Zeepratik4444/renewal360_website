@@ -24,8 +24,8 @@ type ComparisonRow = {
 
 export function AnswerBlock({ question, answer, facts = [] }: AnswerBlockProps) {
 	return (
-		<section className="rounded-lg border border-slate-200 bg-slate-50 p-6 md:p-7">
-			<p className="text-xs font-bold uppercase tracking-wide text-slate-500">
+		<section className="rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-7">
+			<p className="eyebrow !text-muted-foreground">
 				Direct answer
 			</p>
 			<h2 className="mt-2 text-2xl font-bold text-slate-950">{question}</h2>
@@ -34,7 +34,7 @@ export function AnswerBlock({ question, answer, facts = [] }: AnswerBlockProps) 
 				<ul className="mt-5 grid gap-3 md:grid-cols-3">
 					{facts.map((fact) => (
 						<li key={fact} className="flex items-start gap-2 text-sm text-slate-700">
-							<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+							<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
 							<span>{fact}</span>
 						</li>
 					))}
@@ -46,12 +46,12 @@ export function AnswerBlock({ question, answer, facts = [] }: AnswerBlockProps) 
 
 export function FactBox({ title, facts }: FactBoxProps) {
 	return (
-		<section className="rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
+		<section className="rounded-2xl border border-blue-100 bg-white p-6">
 			<h2 className="text-lg font-bold text-slate-950">{title}</h2>
 			<div className="mt-4 grid gap-3 md:grid-cols-2">
 				{facts.map((fact) => (
 					<div key={fact} className="flex items-start gap-2 text-sm text-slate-700">
-						<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
+						<CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
 						<span>{fact}</span>
 					</div>
 				))}
@@ -68,7 +68,7 @@ export function ComparisonSummary({
 	rows: ComparisonRow[];
 }) {
 	return (
-		<section className="rounded-lg border border-slate-200 bg-white shadow-sm">
+		<section className="rounded-2xl border border-slate-200 bg-white">
 			<div className="border-b border-slate-200 px-6 py-4">
 				<h2 className="text-lg font-bold text-slate-950">{title}</h2>
 			</div>
@@ -97,7 +97,7 @@ export function PageFAQ({
 	items: FaqItem[];
 }) {
 	return (
-		<section className="rounded-lg border border-slate-200 bg-slate-50 p-6 md:p-8">
+		<section className="rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-8">
 			<h2 className="text-2xl font-bold text-slate-950">{title}</h2>
 			<div className="mt-5 divide-y divide-slate-200">
 				{items.map((item) => (
@@ -105,8 +105,8 @@ export function PageFAQ({
 						<summary className="cursor-pointer list-none text-base font-semibold text-slate-950">
 							<span className="inline-flex w-full items-center justify-between gap-4">
 								{item.question}
-								<span className="text-blue-600 group-open:hidden">+</span>
-								<span className="hidden text-blue-600 group-open:inline">-</span>
+								<span className="text-brand group-open:hidden">+</span>
+								<span className="hidden text-brand group-open:inline">-</span>
 							</span>
 						</summary>
 						<p className="mt-3 text-sm leading-relaxed text-slate-600">

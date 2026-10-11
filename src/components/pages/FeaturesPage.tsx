@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { PageGlow } from "@/components/PageGlow";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
@@ -39,19 +40,23 @@ export function FeaturesPage() {
 	});
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="relative isolate min-h-screen bg-background">
 			<Navigation />
+			<PageGlow />
 
 			{/* Hero */}
-			<section className="bg-gradient-to-b from-blue-50 to-white py-20 text-center px-6">
-				<div className="max-w-4xl mx-auto">
-					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+			<section className="pb-4 pt-14">
+				<div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+					<div className="max-w-4xl">
+					<p className="eyebrow mb-4">Features</p>
+					<h1 className="text-5xl tracking-tight text-foreground sm:text-6xl mb-6">
 						Built on the 20% of features that protect 80% of your ARR.
 					</h1>
-					<p className="text-xl text-gray-600 max-w-2xl mx-auto">
+					<p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
 						Every feature below exists in the live product - not on a roadmap. Here's exactly how
 						Renewal360 works under the hood.
 					</p>
+					</div>
 				</div>
 			</section>
 
@@ -458,7 +463,7 @@ export function FeaturesPage() {
 							<tbody className="divide-y divide-gray-100">
 								{[
 									["5-Factor AI Risk Scoring", "✓ Dynamic weights", "✓ Complex setup required"],
-									["AI Email Drafting", "✓ Built-in (Gemini)", "Add-on, extra cost"],
+									["AI Email Drafting", "✓ Built-in", "Add-on, extra cost"],
 									["Human Approval Workflow", "✓ Every email", "✗"],
 									["Visual Sequence Builder", "✓ Branching logic", "✓ Playbook builder"],
 									["NPS Survey System", "✓ Built-in", "✓"],

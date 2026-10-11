@@ -9,31 +9,32 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { usePricing } from "@/hooks/usePricing";
+import { getYearlyTotal } from "@/lib/pricing";
 
 export function Pricing() {
-  const { isAnnual, setIsAnnual, isDetecting, plans, getPrice } = usePricing();
+  const { currency, isAnnual, setIsAnnual, isDetecting, plans, getPrice } = usePricing();
 
   return (
-    <section className="py-24 bg-slate-50/50">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+    <section className="border-t border-border bg-card py-24 sm:py-32" id="pricing">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-10 max-w-3xl text-center">
+          <p className="eyebrow">Pricing</p>
+          <h2 className="mb-4 mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
             Straightforward pricing. No lock-in.
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg leading-relaxed text-muted-foreground">
             Every signup gets <strong>7 days of full Scale access</strong> - then
-            choose the plan that fits. Unlimited seats at every tier. No credit
-            card required.
+            choose the plan that fits. No credit card required.
           </p>
         </div>
 
         {/* Billing toggle */}
         <div className="flex items-center justify-center mb-12">
-          <div className="flex items-center gap-1 p-1 rounded-full bg-slate-200/70 text-sm font-medium">
+          <div className="flex items-center gap-1 p-1 rounded-full border border-border bg-background text-sm font-medium">
             <button
               onClick={() => setIsAnnual(false)}
               className={`px-4 py-1.5 rounded-full transition-all ${!isAnnual
-                  ? "bg-white shadow text-slate-900"
+                  ? "bg-foreground text-background"
                   : "text-slate-500 hover:text-slate-700"
                 }`}
             >
@@ -42,24 +43,16 @@ export function Pricing() {
             <button
               onClick={() => setIsAnnual(true)}
               className={`flex items-center gap-2 px-4 py-1.5 rounded-full transition-all ${isAnnual
-                  ? "bg-white shadow text-slate-900"
+                  ? "bg-foreground text-background"
                   : "text-slate-500 hover:text-slate-700"
                 }`}
             >
               Yearly
-              <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 py-0.5 rounded-full">
+              <span className="bg-brand-soft text-brand-deep text-xs font-semibold px-2 py-0.5 rounded-full">
                 Save 20%
               </span>
             </button>
           </div>
-        </div>
-
-        {/* Unlimited seats badge */}
-        <div className="flex justify-center mb-6">
-          <span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium px-4 py-2 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-            Unlimited seats at every tier - no per-user charges
-          </span>
         </div>
 
         {/* Plan cards */}
@@ -67,13 +60,13 @@ export function Pricing() {
           {plans.map((plan) => (
             <Card
               key={plan.name}
-              className={`relative flex flex-col transition-transform duration-200 hover:-translate-y-1 ${plan.highlight
-                  ? "border-primary shadow-lg scale-[1.02] z-10"
-                  : "border-border shadow-sm"
+              className={`relative flex flex-col bg-background transition-transform duration-200 hover:-translate-y-1 ${plan.highlight
+                  ? "z-10 border-brand ring-1 ring-brand/30 shadow-[0_30px_60px_-30px_rgb(47_71_214/0.45)]"
+                  : "border-border"
                 }`}
             >
               {plan.highlight && (
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest whitespace-nowrap">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 brand-gradient-bg text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-[0.12em] whitespace-nowrap">
                   {plan.highlightText}
                 </div>
               )}
@@ -81,21 +74,27 @@ export function Pricing() {
               <CardHeader className="text-center pt-8">
                 <CardTitle className="text-xl mb-2">{plan.name}</CardTitle>
 
-                <div className="flex items-baseline justify-center gap-1 mb-1">
-                  <span className="text-4xl font-extrabold">
+                {/* The amount gets a line to itself and scales with the card, so long prices never spill out. */}
+                <div className="@container mb-1">
+                  <p className="whitespace-nowrap text-[length:clamp(1.75rem,15cqw,2.75rem)] font-semibold leading-none tracking-tight tabular-nums">
                     {isDetecting ? "…" : getPrice(plan)}
-                  </span>
-                  <span className="text-muted-foreground font-medium text-sm">
+                  </p>
+                  <p className="mt-2 text-sm font-medium text-muted-foreground">
                     {plan.name === "Free"
-                      ? "/forever"
+                      ? "forever"
                       : isAnnual
-                        ? "/mo (billed annually)"
-                        : "/month"}
-                  </span>
+                        ? "per month, billed yearly"
+                        : "per month"}
+                  </p>
+                  {isAnnual && plan.name !== "Free" && !isDetecting && (
+                    <p className="mt-1 text-xs text-muted-foreground tabular-nums">
+                      {getYearlyTotal(plan, currency)} per year
+                    </p>
+                  )}
                 </div>
 
                 {plan.gainsightNote && (
-                  <p className="text-xs text-green-600 font-medium bg-green-50 px-2 py-1 rounded-full inline-block mt-1">
+                  <p className="text-xs text-brand-deep font-medium bg-brand-soft px-2.5 py-1 rounded-full inline-block mt-1">
                     {plan.gainsightNote}
                   </p>
                 )}
@@ -109,7 +108,7 @@ export function Pricing() {
                 <ul className="space-y-3">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3 text-sm">
-                      <span className="text-green-500 font-bold shrink-0">✓</span>
+                      <span className="text-brand font-bold shrink-0">✓</span>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -120,7 +119,7 @@ export function Pricing() {
                 <Link to={plan.ctaLink} className="w-full">
                   <Button
                     className="w-full"
-                    variant={plan.highlight ? "default" : "outline"}
+                    variant={plan.highlight ? "gradient" : "outline"}
                   >
                     {plan.cta}
                   </Button>
@@ -134,9 +133,9 @@ export function Pricing() {
         </div>
 
         {/* ROI nudge */}
-        <div className="mt-12 bg-blue-50 border border-blue-100 rounded-xl p-6 text-center max-w-2xl mx-auto">
-          <p className="text-sm text-blue-900 font-medium">
-            💡 At just 5% better retention, most teams using Renewal360 recover{" "}
+        <div className="mx-auto mt-12 max-w-2xl rounded-2xl border border-border bg-background p-6 text-center">
+          <p className="text-sm font-medium text-foreground">
+            At just 5% better retention, most teams using Renewal360 recover{" "}
             <strong>2–5× their annual subscription cost</strong> in recovered ARR
             within the first quarter.
           </p>

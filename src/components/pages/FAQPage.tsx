@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { PageGlow } from "@/components/PageGlow";
 import { FAQItem } from "@/components/sections/FAQ";
 import { Button } from "@/components/ui/button";
 import { Link } from "@tanstack/react-router";
@@ -21,16 +22,18 @@ export function FAQPage() {
 	];
 
 	return (
-		<div className="min-h-screen bg-gray-50 flex flex-col font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+		<div className="relative isolate min-h-screen bg-background flex flex-col font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
 			<Navigation />
+			<PageGlow />
 
 			<div className="flex-grow py-20">
 				<div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-12">
-						<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+					<div className="mb-12 max-w-3xl">
+						<p className="eyebrow mb-4">FAQ</p>
+						<h1 className="text-5xl tracking-tight text-foreground sm:text-6xl mb-4">
 							Frequently Asked Questions
 						</h1>
-						<p className="text-xl text-gray-600">
+						<p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
 							Every question we hear from CSMs and RevOps leaders evaluating Renewal360.
 						</p>
 					</div>

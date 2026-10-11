@@ -27,7 +27,7 @@ export function HowItWorks() {
 
   return (
     <section className="py-24 bg-slate-50/50 border-t border-border">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4" style={{fontFamily: "'Syne', sans-serif"}}>
             A managed service that feels like magic.

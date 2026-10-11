@@ -84,8 +84,8 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
 			</div>
 			{answerBlock && (
 				<section className="max-w-3xl mx-auto px-6 pt-8">
-					<div className="rounded-lg border border-slate-200 bg-slate-50 p-6">
-						<p className="text-xs font-bold uppercase tracking-wide text-slate-500">
+					<div className="rounded-2xl border border-border bg-card p-6">
+						<p className="eyebrow !text-muted-foreground">
 							Direct answer
 						</p>
 						<h2 className="mt-2 text-2xl font-bold text-slate-950">
@@ -122,8 +122,8 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
 			/>
 			{nextStep && (
 				<section className="max-w-3xl mx-auto px-6 pb-20">
-					<div className="rounded-lg border border-blue-100 bg-blue-50 p-6">
-						<p className="text-sm font-semibold text-blue-700">
+					<div className="rounded-2xl border border-border bg-card p-8">
+						<p className="eyebrow">
 							Recommended next step
 						</p>
 						<h2 className="mt-2 text-2xl font-bold text-gray-900">
@@ -145,7 +145,7 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
 							}
 							className="mt-5 inline-flex"
 						>
-							<Button>{nextStep.label}</Button>
+							<Button variant="gradient">{nextStep.label}</Button>
 						</a>
 					</div>
 				</section>

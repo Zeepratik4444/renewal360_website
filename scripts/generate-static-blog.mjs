@@ -1131,7 +1131,7 @@ const staticLlmsOutro = `
 - Survey engine for NPS and CSAT collection
 
 ### AI & Automation
-- Gemini-powered email drafting personalised per account
+- AI email drafting personalised per account
 - Reply-aware sequences (auto-stops on customer reply)
 - AI helper with configurable LLM settings
 - Approval queue - human review before every send

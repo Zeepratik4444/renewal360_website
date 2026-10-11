@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden">
+    <section className="relative pt-32 pb-20 px-6 max-w-6xl mx-auto flex flex-col items-center text-center overflow-hidden">
       {/* Subtle gradient background glow */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-100/40 blur-3xl rounded-full pointer-events-none" />
 

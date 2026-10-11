@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Navigation } from "@/components/Navigation";
+import { PageGlow } from "@/components/PageGlow";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, HelpCircle, Check, Minus } from "lucide-react";
@@ -13,7 +14,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { usePricing } from "@/hooks/usePricing";
-import { FEATURE_COMPARISON } from "@/lib/pricing";
+import { FEATURE_COMPARISON, getYearlyTotal } from "@/lib/pricing";
 import { useSEO } from "@/hooks/useSEO";
 import { WhoThisIsFor } from "@/components/FunnelCTA";
 import { trackCtaClick, trackEvent } from "@/lib/analytics";
@@ -72,21 +73,20 @@ export function PricingPage() {
 	};
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="relative isolate min-h-screen bg-background">
 			<Navigation />
+			<PageGlow />
 
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-				<div className="text-center mb-16">
-					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+				<div className="mb-16 max-w-3xl">
+					<p className="eyebrow mb-4">Pricing</p>
+					<h1 className="text-5xl tracking-tight text-foreground sm:text-6xl mb-4">
 						Simple, Transparent Pricing
 					</h1>
-					<p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
+					<p className="text-lg leading-relaxed text-muted-foreground sm:text-xl mb-4">
 						Every signup gets <strong>7 days of full Scale access</strong> - then
 						choose the plan that fits your renewal volume. No hidden fees.
 					</p>
-					<span className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium px-4 py-2 rounded-full">
-						Unlimited seats at every tier - no per-user charges
-					</span>
 				</div>
 				<div className="mb-12">
 					<WhoThisIsFor
@@ -104,7 +104,6 @@ export function PricingPage() {
 						facts={[
 							"Free pilot includes 25 accounts",
 							"No credit card required",
-							"Unlimited seats at every tier",
 						]}
 					/>
 					<ComparisonSummary
@@ -172,15 +171,23 @@ export function PricingPage() {
 
 							<CardHeader>
 								<CardTitle className="text-2xl">{tier.name}</CardTitle>
-								<div className="mt-4">
-									<span className="text-4xl font-bold">{getPrice(tier)}</span>
-									<span className="text-gray-600 text-sm font-medium">
+								{/* The amount gets a line to itself and scales with the card, so long prices never spill out. */}
+								<div className="@container mt-4">
+									<p className="whitespace-nowrap text-[length:clamp(1.75rem,15cqw,2.5rem)] font-bold leading-none tabular-nums">
+										{getPrice(tier)}
+									</p>
+									<p className="mt-2 text-sm font-medium text-gray-600">
 										{tier.name === "Free"
-											? "/forever"
+											? "forever"
 											: isAnnual
-												? "/month (billed annually)"
-												: "/month"}
-									</span>
+												? "per month, billed yearly"
+												: "per month"}
+									</p>
+									{isAnnual && tier.name !== "Free" && (
+										<p className="mt-1 text-xs text-gray-500 tabular-nums">
+											{getYearlyTotal(tier, currency)} per year
+										</p>
+									)}
 								</div>
 								<p className="text-sm text-gray-600 mt-2">{tier.description}</p>
 							</CardHeader>
@@ -258,7 +265,6 @@ export function PricingPage() {
 						facts={[
 							"Renewal360 offers a free pilot for 25 accounts.",
 							"The pilot does not require a credit card.",
-							"All plans include unlimited seats, so teams are not charged per user.",
 							"Renewal360 is positioned for growing SaaS teams replacing spreadsheets or evaluating enterprise CS tools.",
 						]}
 					/>
@@ -401,7 +407,6 @@ export function PricingPage() {
 					<div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
 						{[
 							{ title: "Cancel Anytime", desc: "No long-term contracts" },
-							{ title: "Unlimited Seats", desc: "Invite your whole team - no per-user charges" },
 							{ title: "7-Day Scale Trial", desc: "Experience every feature before you commit" },
 						].map(({ title, desc }) => (
 							<div key={title} className="flex items-start gap-3">
@@ -426,11 +431,6 @@ export function PricingPage() {
 								question: "Who is Renewal360 pricing built for?",
 								answer:
 									"Renewal360 pricing is built for growing SaaS teams that manage recurring renewals and need automation, health scoring, CRM integrations, and renewal visibility without enterprise CS platform overhead.",
-							},
-							{
-								question: "Does Renewal360 charge per user?",
-								answer:
-									"No. Renewal360 plans include unlimited seats, which makes it easier for CS, RevOps, founders, and leadership to work from the same renewal view.",
 							},
 						]}
 					/>

@@ -1,6 +1,7 @@
 import { createRouter, RouterProvider } from "@tanstack/react-router";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
+import { captureAdClick } from "./lib/adClick";
 import { initGtm } from "./lib/analytics";
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
@@ -12,6 +13,7 @@ import { APP_CONFIG } from "./sdk/core/global.ts";
 export { APP_CONFIG }; // for backward compatibility
 
 initGtm();
+captureAdClick();
 
 // QueryClient removed
 // Create a new router instance

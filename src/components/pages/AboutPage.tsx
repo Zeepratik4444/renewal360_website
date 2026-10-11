@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { PageGlow } from "@/components/PageGlow";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Users, Zap } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
@@ -10,15 +11,17 @@ export function AboutPage() {
 	});
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="relative isolate min-h-screen bg-background">
 			<Navigation />
+			<PageGlow />
 
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-				<div className="text-center mb-16">
-					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+				<div className="mb-16 max-w-3xl">
+					<p className="eyebrow mb-4">About</p>
+					<h1 className="text-5xl tracking-tight text-foreground sm:text-6xl mb-4">
 						Built by Customer Success Practitioners
 					</h1>
-					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+					<p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
 						Renewal360 was created by CS professionals who understand the
 						renewal grind firsthand
 					</p>

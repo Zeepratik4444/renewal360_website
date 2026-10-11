@@ -22,15 +22,13 @@ export interface PricingTier {
 
 const FREE_FEATURES = [
     "25 Active Accounts",
-    "Unlimited Seats / Users",
     "AI Renewal Sequences & Email Workflows",
     "Basic Health Scoring",
-    "Google Sheets Integration",
+    "CSV Import",
 ];
 
 const SMB_FEATURES = [
     "200 Active Accounts",
-    "Unlimited Seats / Users",
     "Smart AI Objection Handling",
     "HubSpot + Slack Integration",
     "Onboarding Consultation",
@@ -38,7 +36,6 @@ const SMB_FEATURES = [
 
 const GROWTH_FEATURES = [
     "1,000 Active Accounts",
-    "Unlimited Seats / Users",
     "Revenue at Risk Dashboard & NPS Surveys",
     "Weighted Health Scoring (5-Factor)",
     "Reporting Dashboard & Team Leaderboard",
@@ -46,7 +43,6 @@ const GROWTH_FEATURES = [
 
 const SCALE_FEATURES = [
     "Unlimited Active Accounts",
-    "Unlimited Seats / Users",
     "Salesforce + Pipedrive Integration",
     "Dedicated Success Manager",
     "Priority Slack Support & Custom Reports",
@@ -55,7 +51,7 @@ const SCALE_FEATURES = [
 // ─── Plan Data ────────────────────────────────────────────────────────────────
 // Aligned with Pricing Refactor Strategy (March 2026)
 // Plans: Free → SMB → Growth ⭐ → Scale
-// Core usage lever: Active Accounts | Seats: Unlimited at all tiers
+// Core usage lever: Active Accounts
 
 export const PRICING_DATA: Record<Currency, PricingTier[]> = {
     INR: [
@@ -248,6 +244,25 @@ export const ADD_ONS: Record<Currency, string> = {
     GBP: "£299 / month",
 };
 
+// ─── Yearly total ─────────────────────────────────────────────────────────────
+
+const CURRENCY_LOCALES: Record<Currency, string> = {
+    INR: "en-IN",
+    USD: "en-US",
+    EUR: "en-IE",
+    GBP: "en-GB",
+};
+
+/** What a year costs on annual billing: twelve times the discounted monthly rate. */
+export function getYearlyTotal(tier: PricingTier, currency: Currency): string {
+    const perMonth = Number(tier.yearlyPrice.replace(/[^\d.]/g, ""));
+    return new Intl.NumberFormat(CURRENCY_LOCALES[currency], {
+        style: "currency",
+        currency,
+        maximumFractionDigits: 0,
+    }).format(perMonth * 12);
+}
+
 // ─── Currency symbols (for display) ──────────────────────────────────────────
 
 export const CURRENCY_LABELS: Record<Currency, string> = {
@@ -278,7 +293,6 @@ export const FEATURE_COMPARISON: ComparisonSection[] = [
         category: "Core Usage",
         rows: [
             { feature: "Active Accounts", free: "25", smb: "200", growth: "1,000", scale: "Unlimited" },
-            { feature: "Seats / Users", free: "Unlimited", smb: "Unlimited", growth: "Unlimited", scale: "Unlimited" },
         ],
     },
     {
@@ -303,7 +317,8 @@ export const FEATURE_COMPARISON: ComparisonSection[] = [
     {
         category: "Integrations",
         rows: [
-            { feature: "Google Sheets", free: "✓", smb: "✓", growth: "✓", scale: "✓" },
+            { feature: "CSV Import", free: "✓", smb: "✓", growth: "✓", scale: "✓" },
+            { feature: "Google Sheets", free: "-", smb: "✓", growth: "✓", scale: "✓" },
             { feature: "HubSpot CRM", free: "-", smb: "✓", growth: "✓", scale: "✓" },
             { feature: "Slack Alerts", free: "-", smb: "✓", growth: "✓", scale: "✓" },
             { feature: "Salesforce", free: "-", smb: "-", growth: "-", scale: "✓" },

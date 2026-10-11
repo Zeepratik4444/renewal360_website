@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { PageGlow } from "@/components/PageGlow";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import dashboardSummary from "@/assets/dashboard-summary.png";
@@ -59,15 +60,16 @@ export function GlimpsesPage() {
 	});
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="relative isolate min-h-screen bg-background">
 			<Navigation />
+			<PageGlow />
 
 			<section className="py-24 bg-white" id="glimpses">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-20">
-						<Badge className="mb-4 text-blue-700 bg-blue-100 hover:bg-blue-200">Platform Glimpses</Badge>
-						<h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-							Executive visibility, <span className="text-blue-600">finally</span>.
+						<p className="eyebrow mb-4">Platform Glimpses</p>
+						<h1 className="mb-6 text-5xl tracking-tight text-foreground sm:text-6xl">
+							Executive visibility, <span className="brand-gradient-text">finally</span>.
 						</h1>
 						<p className="text-lg text-gray-600 max-w-2xl mx-auto">
 							Stop relying on spreadsheets. Renewal360 gives leadership and CSMs a real-time, unified platform to identify risk, prioritize actions, and confidently forecast renewals.
@@ -90,7 +92,7 @@ export function GlimpsesPage() {
 								<ul className="space-y-3">
 									{["Track Total ARR vs. At Risk Revenue", "Automatically flag 'Silent Accounts'", "Visual ARR waterfalls for this quarter"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
-											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
+											<CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" /> {t}
 										</li>
 									))}
 								</ul>
@@ -103,8 +105,8 @@ export function GlimpsesPage() {
 							<ExpandableImage src={dashboardRisk} alt="Risk by Plan Tier and Portfolio Health" containerClassName="order-2 md:order-1" />
 							<div className="order-1 md:order-2">
 								<div className="flex items-center gap-3 mb-4">
-									<div className="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center">
-										<PieChart className="text-amber-600 h-5 w-5" />
+									<div className="w-10 h-10 rounded-xl bg-brand-soft flex items-center justify-center">
+										<PieChart className="text-brand-deep h-5 w-5" />
 									</div>
 									<h2 className="text-2xl font-bold text-gray-900">Drill down into Portfolio Health</h2>
 								</div>
@@ -114,7 +116,7 @@ export function GlimpsesPage() {
 								<ul className="space-y-3">
 									{["Real-time count of High / Medium / Low risk", "Risk distribution by Annual vs Multi-year", "Visual doughnut charts for quick absorption"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
-											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
+											<CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" /> {t}
 										</li>
 									))}
 								</ul>
@@ -125,8 +127,8 @@ export function GlimpsesPage() {
 						<div className="grid md:grid-cols-2 gap-12 items-center">
 							<div>
 								<div className="flex items-center gap-3 mb-4">
-									<div className="w-10 h-10 rounded-xl bg-purple-50 flex items-center justify-center">
-										<TrendingUp className="text-purple-600 h-5 w-5" />
+									<div className="w-10 h-10 rounded-xl bg-brand-soft flex items-center justify-center">
+										<TrendingUp className="text-brand-deep h-5 w-5" />
 									</div>
 									<h2 className="text-2xl font-bold text-gray-900">Tactical 6-Month Forecasting</h2>
 								</div>
@@ -136,7 +138,7 @@ export function GlimpsesPage() {
 								<ul className="space-y-3">
 									{["Look ahead up to 6 months", "Color-coded volume charts for renewal dates", "Differentiate between Safe Revenue and At Risk"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
-											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
+											<CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" /> {t}
 										</li>
 									))}
 								</ul>
@@ -159,7 +161,7 @@ export function GlimpsesPage() {
 								<ul className="space-y-3">
 									{["Track renewal momentum across your entire portfolio", "See active AI email sequences at a glance", "Filter by high-risk, upcoming, or passed renewals"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
-											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
+											<CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" /> {t}
 										</li>
 									))}
 								</ul>
@@ -172,18 +174,18 @@ export function GlimpsesPage() {
 							<ExpandableImage src={renewalDetail} alt="Renewal Detail View" containerClassName="order-2 md:order-1" />
 							<div className="order-1 md:order-2">
 								<div className="flex items-center gap-3 mb-4">
-									<div className="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center">
-										<UserCog className="text-indigo-600 h-5 w-5" />
+									<div className="w-10 h-10 rounded-xl bg-brand-soft flex items-center justify-center">
+										<UserCog className="text-brand-deep h-5 w-5" />
 									</div>
 									<h2 className="text-2xl font-bold text-gray-900">Deep Dive into Account Health</h2>
 								</div>
 								<p className="text-lg text-gray-600 mb-6 leading-relaxed">
-									Click into any account to see the full context: AI-generated activity summaries, Support Ticket Health, and a weighted 3-factor risk breakdown (Engagement, Sentiment, and Timeline Pressure).
+									Click into any account to see the full context: AI-generated activity summaries, Support Ticket Health, and a weighted 5-factor risk breakdown (Engagement Health, Sentiment & Value Realisation, Relationship Depth, Financial Health, and Renewal Momentum).
 								</p>
 								<ul className="space-y-3">
-									{["3-Factor Risk score (Engagement, Sentiment, Timeline)", "Analyze ROI signals and Support Traps", "Automated Ghosting and Stakeholder Drift detection"].map((t) => (
+									{["5-Factor Risk score with dynamic weights", "Analyze ROI signals and Support Traps", "Automated Ghosting and Stakeholder Drift detection"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
-											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
+											<CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" /> {t}
 										</li>
 									))}
 								</ul>
@@ -206,7 +208,7 @@ export function GlimpsesPage() {
 								<ul className="space-y-3">
 									{["Preview AI-rendered emails with live customer data", "Override, Send Now, or Skip any pending step", "Bulk campaign triggers with one-click enrollment"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
-											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
+											<CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" /> {t}
 										</li>
 									))}
 								</ul>
@@ -217,8 +219,8 @@ export function GlimpsesPage() {
 						<div className="grid md:grid-cols-2 gap-12 items-center">
 							<div>
 								<div className="flex items-center gap-3 mb-4">
-									<div className="w-10 h-10 rounded-xl bg-violet-50 flex items-center justify-center">
-										<MessageSquare className="text-violet-600 h-5 w-5" />
+									<div className="w-10 h-10 rounded-xl bg-brand-soft flex items-center justify-center">
+										<MessageSquare className="text-brand-deep h-5 w-5" />
 									</div>
 									<h2 className="text-2xl font-bold text-gray-900">AI Copilot - Your CS Co-pilot</h2>
 								</div>
@@ -228,7 +230,7 @@ export function GlimpsesPage() {
 								<ul className="space-y-3">
 									{["Natural language search, inspection, and analysis", "Draft emails, log touchpoints, and create tasks via chat", "Confirmation cards for every write action - nothing runs unreviewed"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
-											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
+											<CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" /> {t}
 										</li>
 									))}
 								</ul>
@@ -241,8 +243,8 @@ export function GlimpsesPage() {
 							<ExpandableImage src={sequenceBuilder} alt="Email Sequence Builder" containerClassName="order-2 md:order-1" />
 							<div className="order-1 md:order-2">
 								<div className="flex items-center gap-3 mb-4">
-									<div className="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center">
-										<Mail className="text-emerald-600 h-5 w-5" />
+									<div className="w-10 h-10 rounded-xl bg-brand-soft flex items-center justify-center">
+										<Mail className="text-brand-deep h-5 w-5" />
 									</div>
 									<h2 className="text-2xl font-bold text-gray-900">Email Sequence Builder</h2>
 								</div>
@@ -252,7 +254,7 @@ export function GlimpsesPage() {
 								<ul className="space-y-3">
 									{["Clone from templates or build custom sequences", "Cohort-based enrollment (90-day, 60-day, 30-day)", "Per-step funnel analytics and open rate tracking"].map((t) => (
 										<li key={t} className="flex items-start gap-3 text-gray-700 font-medium">
-											<CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" /> {t}
+											<CheckCircle2 className="h-5 w-5 text-brand shrink-0 mt-0.5" /> {t}
 										</li>
 									))}
 								</ul>

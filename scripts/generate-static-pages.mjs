@@ -260,11 +260,6 @@ const pageFaqs = {
             answer:
                 "Renewal360 pricing is built for growing SaaS teams that manage recurring renewals and need automation, health scoring, CRM integrations, and renewal visibility without enterprise CS platform overhead.",
         },
-        {
-            question: "Does Renewal360 charge per user?",
-            answer:
-                "No. Renewal360 plans include unlimited seats, which makes it easier for CS, RevOps, founders, and leadership to work from the same renewal view.",
-        },
     ],
     features: [
         {

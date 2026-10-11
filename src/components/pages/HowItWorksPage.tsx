@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { PageGlow } from "@/components/PageGlow";
 import { Zap, Target, Mail, Shield, BarChart3 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ export function HowItWorksPage() {
 			story: "As each renewal approaches, the pipeline triggers at key milestones - 90, 60, 30, and 7 days before the renewal date. It evaluates every account against risk level, ARR value, customer sentiment, and engagement history to decide the right action at the right time.",
 			detail: "No account slips through. Every milestone is tracked automatically.",
 			icon: <Target className="h-6 w-6 text-white" />,
-			color: "bg-indigo-600",
+			color: "bg-brand-deep",
 		},
 		{
 			step: "03",
@@ -36,7 +37,7 @@ export function HowItWorksPage() {
 			story: "For each triggered account, the Renewal Copilot - an AI agent analyses risk signals, recent engagement, and account context to draft a personalised email. High-risk accounts get empathetic, proactive messaging. Healthy accounts get celebratory, retention-focused outreach. Every draft is grounded in real data - never fabricated.",
 			detail: "Supports A/B testing, conditional branching, and tone customisation per sequence.",
 			icon: <Mail className="h-6 w-6 text-white" />,
-			color: "bg-violet-600",
+			color: "bg-brand-deep",
 		},
 		{
 			step: "04",
@@ -44,7 +45,7 @@ export function HowItWorksPage() {
 			story: "Before any email is sent, the Enrollment Engine runs 7 intelligent checks: Does the customer's risk level match? Is their ARR above the threshold? Is today a blackout day? Did the customer recently reply? Is this a high-value account that needs a human touch? If any guard triggers, the system pauses, skips, or escalates - automatically creating a task for your CSM with full context.",
 			detail: "You approve every email. Nothing sends without your team's sign-off.",
 			icon: <Shield className="h-6 w-6 text-white" />,
-			color: "bg-emerald-600",
+			color: "bg-brand-deep",
 		},
 		{
 			step: "05",
@@ -57,15 +58,17 @@ export function HowItWorksPage() {
 	];
 
 	return (
-		<div className="min-h-screen bg-gray-50 font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
+		<div className="relative isolate min-h-screen bg-background font-sans text-gray-900 selection:bg-blue-100 selection:text-blue-900">
 			<Navigation />
+			<PageGlow />
 
 			<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-				<div className="text-center mb-16">
-					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+				<div className="mb-16 max-w-3xl">
+					<p className="eyebrow mb-4">How it works</p>
+					<h1 className="text-5xl tracking-tight text-foreground sm:text-6xl mb-6">
 						Here's what happens after you connect your data.
 					</h1>
-					<p className="text-xl text-gray-600 max-w-3xl mx-auto">
+					<p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
 						Behind the scenes, Renewal360's AI engine continuously monitors every account, crafts intelligent outreach, and escalates at-risk revenue - so your team focuses only on what matters.
 					</p>
 				</div>

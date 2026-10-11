@@ -25,7 +25,7 @@ export function Integrations() {
     <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
       <div className="absolute inset-0 opacity-5 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500 via-transparent to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <div className="max-w-6xl mx-auto px-6 relative z-10 text-center">
         <h2 className="text-3xl md:text-5xl font-bold mb-4" style={{fontFamily: "'Syne', sans-serif"}}>
           Plugs into the tools your team already uses.
         </h2>
