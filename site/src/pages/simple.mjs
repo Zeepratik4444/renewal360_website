@@ -56,7 +56,8 @@ const about = {
 <section class="section">
   <div class="wrap narrow center reveal">
     <p class="eyebrow">The company</p>
-    <h2>${esc(site.company)}</h2>
+    <h2><a href="${site.companyUrl}" style="color:inherit;text-decoration:none">${esc(site.company)}</a></h2>
+    <p class="body-lg">Renewal360 is built by <a href="${site.companyUrl}">Ganvix</a>.</p>
     <p class="body-lg">${esc(site.address)}</p>
     <p class="body-lg"><a href="mailto:${site.email}">${site.email}</a></p>
   </div>

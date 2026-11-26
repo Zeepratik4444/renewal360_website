@@ -4,8 +4,10 @@ export const site = {
   url: "https://renewal360.in",
   // The app: trial sign-up, Google sign-up, "talk to us", sign-in and set-password all go here.
   appUrl: "https://copilot.renewal360.in",
-  email: "hello@renewal360.in",
+  email: "hello@ganvix.in",
   company: "Ganvix Technologies Pvt Ltd",
+  // The company behind Renewal360.
+  companyUrl: "https://ganvix.in",
   address: "B-128, Sector 2, Noida, Uttar Pradesh, India",
   tagline: "Let AI handle the renewal work, so you can focus on the customer.",
   description:

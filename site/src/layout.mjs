@@ -42,6 +42,7 @@ function footer(path = "/", noindex = false) {
     <div class="footer-brand">
       ${logo}
       <p>${esc(site.tagline)}</p>
+      <p>A product of <a href="${site.companyUrl}">Ganvix</a>.</p>
     </div>
     <div>
       <h2>Product</h2>
@@ -66,6 +67,7 @@ function footer(path = "/", noindex = false) {
       <a href="/blog">Blog</a>
       <a href="/glossary">Glossary</a>
       <a href="/contact">Contact</a>
+      <a href="${site.companyUrl}">Ganvix</a>
       <a href="mailto:${site.email}">${site.email}</a>
     </div>
     <div>
@@ -75,7 +77,7 @@ function footer(path = "/", noindex = false) {
     </div>
   </div>
   <div class="wrap footer-base">
-    <span>&copy; ${y} ${esc(site.company)}</span>
+    <span>&copy; ${y} <a class="md-link" href="${site.companyUrl}">${esc(site.company)}</a></span>
     <span>Made in India${noindex ? "" : ` · <a class="md-link" href="${mdPath(path)}">Markdown version</a>`}</span>
   </div>
 </footer>`;
@@ -114,6 +116,7 @@ export const organization = () => ({
   parentOrganization: {
     "@type": "Organization",
     name: site.company,
+    url: site.companyUrl,
     address: { "@type": "PostalAddress", ...site.postalAddress },
   },
 });

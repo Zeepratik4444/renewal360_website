@@ -94,7 +94,7 @@
       say("Setting up your trial...");
       post("/api/request-demo", { company_name: company.value.trim(), email_address: email.value.trim(), accepted_terms: terms.checked, ad_click: adClick() })
         .then(function (d) { trial.reset(); say(d.message || "Check your inbox for the link to set your password.", "ok"); })
-        .catch(function (e) { say(e.message + " You can also write to hello@renewal360.in.", "err"); })
+        .catch(function (e) { say(e.message + " You can also write to hello@ganvix.in.", "err"); })
         .finally(function () { syncTerms(); });
     });
   }
@@ -122,7 +122,7 @@
         email_address: talk.email.value.trim(), phone_number: talk.phone.value.trim() || null, message: talk.message.value.trim() || null,
       })
         .then(function (d) { talk.reset(); sayT(d.message || "Thanks. We will reply within one business day.", "ok"); })
-        .catch(function (e) { sayT(e.message + " You can also write to hello@renewal360.in.", "err"); })
+        .catch(function (e) { sayT(e.message + " You can also write to hello@ganvix.in.", "err"); })
         .finally(function () { b2.disabled = false; });
     });
   }
