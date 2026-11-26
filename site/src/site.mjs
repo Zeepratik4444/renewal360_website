@@ -4,7 +4,7 @@ export const site = {
   url: "https://renewal360.in",
   // The app: trial sign-up, Google sign-up, "talk to us", sign-in and set-password all go here.
   appUrl: "https://copilot.renewal360.in",
-  email: "hello@ganvix.in",
+  email: "contact@ganvix.in",
   company: "Ganvix Technologies Pvt Ltd",
   // The company behind Renewal360.
   companyUrl: "https://ganvix.in",
