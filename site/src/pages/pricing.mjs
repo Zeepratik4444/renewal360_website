@@ -78,9 +78,6 @@ const body = `<section class="page-hero">
         <button type="button" data-cycle="monthly" aria-pressed="true">Monthly</button>
         <button type="button" data-cycle="yearly" aria-pressed="false">Yearly <span class="save">save 20%</span></button>
       </div>
-      <div class="seg" role="group" aria-label="Currency">
-        ${["USD", "INR", "EUR", "GBP"].map((c) => `<button type="button" data-cur="${c}" aria-pressed="${c === "USD"}">${c}</button>`).join("")}
-      </div>
     </div>
     <div class="plans" id="plans">
       ${plans.map((p) => `<article class="plan${p.hl ? " hl" : ""}" data-plan="${p.name}">
@@ -93,7 +90,7 @@ const body = `<section class="page-hero">
         <a class="btn${p.hl ? "" : " btn-ghost"}" href="${p.href || trialHref}">${p.cta}</a>
       </article>`).join("")}
     </div>
-    <p class="muted center" style="margin-top:22px">Prices are per month. Paying yearly saves 20%. Need more room? Add 500 accounts for <span id="addon-price">${ADDON.USD}</span> on any paid plan.</p>
+    <p class="muted center" style="margin-top:22px">Prices are per month, shown in your local currency. Paying yearly saves 20%. Need more room? Add 500 accounts for <span id="addon-price">${ADDON.USD}</span> on any paid plan.</p>
     <script type="application/json" id="price-data">${JSON.stringify(priceData)}</script>
   </div>
 </section>
@@ -104,13 +101,6 @@ const body = `<section class="page-hero">
       <table class="cmp">
         <thead><tr><th scope="col">Feature</th>${plans.map((p) => `<th scope="col">${p.name}</th>`).join("")}</tr></thead>
         <tbody>${table.map(([cat, rows]) => `<tr class="cat"><td colspan="5">${cat}</td></tr>${rows.map(([f, ...v]) => `<tr><td>${esc(f)}</td>${v.map((x) => `<td>${cell(x)}</td>`).join("")}</tr>`).join("")}`).join("")}</tbody>
-      </table>
-    </div>
-    <div class="section-head reveal" style="margin:64px 0 24px"><h2>Prices in every currency</h2><p class="body-lg">Monthly price, and the monthly price when billed yearly.</p></div>
-    <div class="cmp-wrap reveal">
-      <table class="cmp">
-        <thead><tr><th scope="col">Plan</th>${Object.keys(P).map((c) => `<th scope="col">${c}</th>`).join("")}</tr></thead>
-        <tbody>${plans.map((p) => `<tr><td>${p.name}</td>${Object.keys(P).map((c) => `<td>${P[c][p.name][0]}${p.name === "Free" ? "" : ` <span class="muted">(${P[c][p.name][1]} yearly)</span>`}</td>`).join("")}</tr>`).join("")}</tbody>
       </table>
     </div>
   </div>

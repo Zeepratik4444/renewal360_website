@@ -1,194 +1,60 @@
-<p class="direct-answer">
-      SaaS renewal email automation is the process of syncing CRM account data, tracking weighted health signals, and using AI to draft personalized outreach emails at key contract milestones (like T-90, T-60, and T-30 days). By routing these drafts through a CSM approval queue and pausing sequences automatically upon reply, teams prevent human error and keep renewals on track. It is a core workflow within a complete CS operating platform that also features health scoring, bulk actions, and direct integrations.
-    </p>
+<p class="answer">To automate SaaS renewal emails well: list the emails each renewal needs, time them against the renewal or notice date, write each one for the account rather than as a blank template, stop the sequence the moment the customer replies, and have a person approve each draft until a step has proven itself. Automate the routine emails first; keep pricing, contract wording and your largest accounts with a person.</p>
 
-    <p>
-      The average SaaS CSM manages 40-60 accounts. At any given moment, a dozen of those are inside a 90-day renewal
-      window. Manually tracking who needs what email, when, and with what context is not a strategy - it's a recipe for
-      dropped balls.
-    </p>
-    <p>
-      This post walks through how a complete renewal email automation system actually works under the hood - the real
-      mechanics, not marketing promises.
-    </p>
+<p>Renewal emails are a good fit for automation because they are predictable: the same few conversations happen before every renewal. They are also risky, because a badly timed or generic email to an unhappy customer can lose the renewal. This guide shows how to get the time savings without the risk.</p>
 
-    <h2>Why is setting up simple email reminders not enough?</h2>
-    <p>
-      The instinct most teams start with is a simple calendar reminder or a basic drip sequence: send email at 90 days,
-      60 days, 30 days. This solves exactly one problem - not forgetting to send something. It ignores everything else:
-    </p>
-    <ul>
-      <li>Is this account actually at risk, or are they a healthy auto-renew?</li>
-      <li>Has someone from this company already replied to a previous email?</li>
-      <li>Has product usage dropped 40% in the last 30 days - a signal that changes everything?</li>
-      <li>Is this a $2,000 account or a $200,000 account? The effort should differ.</li>
-    </ul>
-    <p>
-      Effective renewal automation requires connecting three things: <strong>account health data, branching logic, and a
-        human approval layer</strong>. Here's how to build it.
-    </p>
+<h2>Why are simple email reminders not enough?</h2>
+<p>A scheduled template knows the date and nothing else. It does not know that the customer replied yesterday, that their champion left last month, that usage has dropped, or that there is an open escalation. So it sends the same cheerful note to a happy customer and to one who is about to leave. Good renewal email automation reads the account first.</p>
 
-    <!-- Step 1 -->
-    <div class="step-card">
-      <div class="step-num">Step 1</div>
-      <h3>Connect your CRM and pull live account data</h3>
-      <p>Before any email can be intelligently sent, the system needs to know the truth about each account. That means
-        pulling from Salesforce or HubSpot: ARR, renewal date, contract tier, primary contact, and historical activity.
-        This is not a one-time import - it's a live sync. An account's renewal date changes. Champion contacts leave.
-        ARR expands or contracts.</p>
-    </div>
+<h2>Which renewal emails should you automate?</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>Email</th><th>When</th><th>Automate?</th></tr></thead>
+  <tbody>
+    <tr><td>Value check-in</td><td>About 90 to 120 days out</td><td>Draft for approval</td></tr>
+    <tr><td>Business review invitation</td><td>About 90 days out</td><td>Draft for approval</td></tr>
+    <tr><td>Who signs and how renewal works</td><td>About 75 days out</td><td>Draft for approval; skip if already known</td></tr>
+    <tr><td>Notice-window reminder (auto-renewing contracts)</td><td>Before the notice deadline</td><td>Good candidate to run on its own once trusted</td></tr>
+    <tr><td>Commercial proposal</td><td>About 60 days out</td><td>Always written or approved by a person</td></tr>
+    <tr><td>Paperwork and final reminder</td><td>About 30 days out</td><td>Draft for approval</td></tr>
+    <tr><td>Thank-you after renewal</td><td>On renewal</td><td>Good candidate to run on its own once trusted</td></tr>
+  </tbody>
+</table></div>
+<p>Timings are a starting point for annual contracts. Start earlier for large accounts. For auto-renewing contracts, count back from the notice deadline.</p>
 
-    <p>
-      Most teams treat their CRM as a record system and their email tool as a separate silo. The renewal automation
-      layer sits between them - reading CRM state in real-time so that every email reflects current reality, not a
-      2-week-old export.
-    </p>
+<h2>How do you make automated renewal emails sound personal?</h2>
+<ul>
+  <li><strong>Write from the account's facts.</strong> Mention what the customer actually uses, the goals they set, and the last conversation.</li>
+  <li><strong>Send from the owner's own mailbox</strong> so replies go to a person, not a no-reply address.</li>
+  <li><strong>Keep it short.</strong> One purpose per email and one clear question.</li>
+  <li><strong>Learn from edits.</strong> When CSMs keep changing the same phrase, the drafts should change too.</li>
+  <li><strong>No long dashes or marketing tone.</strong> Renewal emails should read like a colleague wrote them.</li>
+</ul>
 
-    <!-- Step 2 -->
-    <div class="step-card">
-      <div class="step-num">Step 2</div>
-      <h3>Score each account's health before any email goes out</h3>
-      <p>Not every account in a 90-day renewal window needs the same treatment. A five-signal health score - built from
-        product usage, stakeholder engagement, support ticket volume, payment history, and NPS sentiment - tells you who
-        to prioritize, who to escalate, and who to let run on autopilot.</p>
-    </div>
+<h2>What rules keep renewal email automation safe?</h2>
+<ol>
+  <li><strong>Stop on reply.</strong> Any customer reply pauses the sequence and hands the account to its owner.</li>
+  <li><strong>Pause on trouble.</strong> High risk, an open escalation or a recent complaint moves the account from routine to a person.</li>
+  <li><strong>Never ask twice.</strong> If the customer already said who signs, skip that email, even on another contract.</li>
+  <li><strong>Limit contact.</strong> Set a ceiling on automatic emails per customer so nobody is flooded.</li>
+  <li><strong>Approval by default.</strong> Let a step send on its own only after it has been approved as written many times, and be able to take that back.</li>
+  <li><strong>A stop switch.</strong> Be able to pause outgoing email for one account or everyone, instantly.</li>
+</ol>
 
-    <p>The key word here is <em>weighted</em>. A support ticket spike matters more for a $150K account than a $5K
-      account. A 30% usage drop matters more in month 10 than in month 2. A good scoring model lets you tune the weights
-      per account tier - not just apply a flat formula.</p>
+<h2>What do leaders need to see?</h2>
+<p>Which renewals have had their key conversations and which have not, which drafts are waiting for approval, which emails went out and which were stopped, and why. If a sequence was stopped because the customer replied or the account turned risky, that should be visible, not silent.</p>
 
-    <div class="callout">
-      <strong>What this looks like in practice:</strong>
-      <p class="mt-2">An account scores 38/100 on health. Product usage is down 35% over 60 days. Zero activity from the
-        champion contact in 45 days. Two open support tickets unresolved for 10+ days. The system flags this
-        automatically and escalates it from a standard sequence to a high-risk intervention track - before your CSM even
-        opens their laptop.</p>
-      <p class="mt-2"><a href="/product" style="color:#ffffff;font-weight:700;">See how Renewal360 turns risk signals into approved renewal actions →</a></p>
-    </div>
+<h2>How long does it take to set up?</h2>
+<p>With a tool built for it, days rather than weeks. In Renewal360 you bring in renewals from a CSV or your CRM, each CSM connects their Gmail or Outlook, you choose your playbook steps and how each one runs, and the first drafts appear in Renewal Prep for approval. Routine drafts show their status at a glance: waiting, scheduled, sent or stopped.</p>
 
-    <!-- Step 3 -->
-    <div class="step-card">
-      <div class="step-num">Step 3</div>
-      <h3>Build sequences with branching logic, not linear drips</h3>
-      <p>A linear drip sequence sends email 1, then email 2, then email 3 - regardless of what happened in between. A
-        branching sequence is smarter: if the account replied to email 1, stop the sequence and notify the CSM. If
-        product usage dropped below a threshold after email 2, jump to the high-risk escalation track. If the renewal
-        date is inside 14 days and no response received, trigger an executive summary alert on Slack.</p>
-    </div>
+<section class="post-faq">
+  <h2>Frequently asked questions</h2>
+  <h3>Should renewal emails be fully automated?</h3>
+  <p>Only the most routine ones, and only after they have proven themselves under approval. Commercial and contract emails, and anything to your largest accounts, should always involve a person.</p>
+  <h3>When should the first renewal email go out?</h3>
+  <p>For annual contracts, about 90 to 120 days before the renewal date. For auto-renewing contracts, well before the notice deadline.</p>
+  <h3>What happens if the customer replies to an automated email?</h3>
+  <p>A good system stops the sequence and hands the conversation to the account owner. Renewal360 does this by default.</p>
+  <h3>Can AI write renewal emails?</h3>
+  <p>Yes, and it saves a lot of time when the drafts are based on the account's real history and a person approves them before sending.</p>
+</section>
 
-    <p>This is the difference between automation that helps and automation that annoys. Branch conditions are what stop
-      a churning customer from receiving a cheerful "just checking in!" email the day after they logged a complaint.</p>
-
-    <h2>What is the milestone email structure that works?</h2>
-    <p>Based on renewal outcome data, there are four natural touchpoints that perform consistently:</p>
-
-    <div style="margin: 1.5rem 0;">
-      <div class="timeline-row">
-        <div class="timeline-badge">90<br />days</div>
-        <div class="timeline-body">
-          <h4>Early relationship email</h4>
-          <p>Not a renewal push - an honest check-in. What's going well? What blockers exist? This opens a dialogue
-            early enough to actually fix problems, not just surface them.</p>
-        </div>
-      </div>
-      <div class="timeline-row">
-        <div class="timeline-badge">60<br />days</div>
-        <div class="timeline-body">
-          <h4>Value recap + expansion framing</h4>
-          <p>Summarise usage milestones, outcomes achieved, and - if warranted - introduce relevant upsell context. The
-            goal is to anchor their mental model around ROI before commercial conversations start.</p>
-        </div>
-      </div>
-      <div class="timeline-row">
-        <div class="timeline-badge">30<br />days</div>
-        <div class="timeline-body">
-          <h4>Commercial conversation trigger</h4>
-          <p>Introduce renewal terms. Request a call. For at-risk accounts, this email is replaced by a direct
-            CSM-to-champion call request instead.</p>
-        </div>
-      </div>
-      <div class="timeline-row">
-        <div class="timeline-badge">7<br />days</div>
-        <div class="timeline-body">
-          <h4>Final confirmation or escalation</h4>
-          <p>Confirm the renewal is proceeding, or escalate to manager-level contact. For accounts that have gone
-            silent, the system flags them for urgent human intervention - not another automated email.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="step-card">
-      <div class="step-num">Step 4</div>
-      <h3>Let AI draft the emails - but keep humans in the approval loop</h3>
-      <p>AI can personalise at scale in a way no template system can. It pulls account context - the industry, ARR tier,
-        recent activity, which features they've been using - and writes a draft that reads like a CSM wrote it
-        themselves. But "reads like a human wrote it" is different from "is correct and appropriate to send." That's why
-        every AI draft goes to the CSM for review before it touches a customer inbox.</p>
-    </div>
-
-    <p>
-      The approval queue becomes a 10-minute daily ritual: scan the drafts, make any edits, approve. Your CSM is no
-      longer the author - they're the editor. That shift alone saves 4-5 hours per week per CSM.
-    </p>
-
-    <!-- Step 5 -->
-    <div class="step-card">
-      <div class="step-num">Step 5</div>
-      <h3>Monitor replies and stop sequences automatically</h3>
-      <p>This is the step most teams forget. Sending emails is half the job. The system needs to watch the inbox too - by reading the inbox - so that when a customer replies, the sequence pauses immediately. Nothing undermines
-        customer trust faster than receiving a "have you had a chance to look at this?" follow-up 24 hours after they
-        already replied to the previous email.</p>
-    </div>
-
-    <p>
-      Reply detection should also classify intent. A "yes, let's discuss" reply is different from a "we're evaluating
-      other options" reply. Both should stop the automated sequence - but the second one should trigger an immediate
-      alert to the CSM and put the account into a manual intervention queue.
-    </p>
-
-    <h2>What does your executive team need to see from renewal automation?</h2>
-    <p>
-      Renewal automation without visibility is just automation running in the dark. Leadership needs a live view of:
-    </p>
-    <ul>
-      <li>Total ARR inside the 90-day renewal window</li>
-      <li>ARR flagged as at-risk (health score below threshold)</li>
-      <li>Renewal pipeline broken down by CSM and account tier</li>
-      <li>Email sequence performance - open rates, reply rates, conversion per milestone</li>
-    </ul>
-    <p>
-      When a board meeting comes up and someone asks "what's our churn forecast this quarter?", the answer shouldn't
-      require someone to spend two hours building a spreadsheet.
-    </p>
-
-    <h2>How long does it take to set up renewal automation?</h2>
-    <p>
-      The most common objection we hear from CS teams is: "this sounds like a six-month implementation project." It
-      isn't - if you're not trying to rebuild your CRM in the process. A focused renewal automation layer that connects
-      to your existing CRM, reads account health signals, and runs sequences through your existing email infrastructure
-      can be live in under two weeks. The bottleneck is usually deciding on sequence logic and approval workflows, not
-      the technical integration.
-    </p>
-    <p>
-      Start with your 20 highest-ARR accounts in a 90-day window. Run the system there first. The ROI case will be
-      obvious inside a quarter.
-    </p>
-
-    <!-- CTA -->
-    <div style="background: linear-gradient(135deg, #1e3a8a, #2563eb); border-radius: 1rem; padding: 2.5rem; margin: 3rem 0; text-align: center;">
-            <h2 style="color: white; margin: 0 0 0.75rem; font-size: 1.6rem; font-family: 'Lora', serif;">
-                Start your free trial
-            </h2>
-            <p style="color: #bfdbfe; margin: 0 0 1.5rem; font-size: 1rem;">
-                Free for 25 accounts, 7 days of the full Scale plan, no credit card. Automate your renewal outreach and prevent silent churn.
-            </p>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
-                <a href="/product" style="display: inline-block; background: white; color: #1d4ed8; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">
-                    See How It Works &rarr;
-                </a>
-                <a href="/pricing" style="display: inline-block; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">
-                    View Pricing &rarr;
-                </a>
-            </div>
-        </div>
+<p>See where emails fit in the wider process in <a href="/blog/how-to-build-a-renewal-playbook-from-scratch">how to build a renewal playbook</a>, or <a href="/contact">start a free trial</a> and approve your first drafts this week.</p>

@@ -1,236 +1,70 @@
-<p class="direct-answer">
-      Renewal automation is the process of automatically triggering, personalising, and sending renewal outreach emails based on account health signals and milestone dates - without CSMs doing it manually. It replaces simple calendar reminders with a closed-loop system of risk scoring, AI drafting, and reply-aware sequence pausing. It functions as a complete customer success lifecycle platform that includes weighted health scores, Visual Journey Builders, CRM/helpdesk integrations, and bulk actions.
-    </p>
+<p class="answer"><strong>Renewal automation</strong> is software that handles the repeatable work of renewing customers: it tracks every renewal date, watches each account for signs of risk, works out what is still missing before the renewal, prepares the outreach, and reminds the owner. People still make the decisions and have the conversations. The software makes sure nothing is left to memory.</p>
 
-    <p>
-      Most SaaS teams start renewal management with spreadsheets, CRM fields, calendar reminders, and a few saved email
-      templates. That approach works - until account volume grows, CSM capacity gets stretched, and renewals start
-      depending on memory instead of system.
-    </p>
-    <p>
-      Renewal automation fixes that by creating a reliable, repeatable system for when to act, what to say, who should
-      approve it, and when to stop. Not a reminder to do work - a system that helps the right work happen automatically,
-      with humans staying in control at the moments that matter.
-    </p>
+<p>Most SaaS teams already have pieces of this: a renewal date field in the CRM, a calendar reminder, maybe an email template. None of those is renewal automation on its own, because none of them knows whether the account is healthy, who you are talking to, or what has to happen before the date. This guide explains what a complete system includes, how it differs from reminders, and how to tell whether your team needs one.</p>
 
-    <h2>What is the exact definition of renewal automation?</h2>
-    <p>
-      <strong>Renewal automation</strong> is the process of using customer data, behavioural signals, and workflow rules
-      to manage renewal follow-up before, during, and after the renewal window - without requiring manual intervention
-      for each individual account.
-    </p>
-    <p>
-      A complete renewal automation system identifies upcoming renewals, detects risk early, generates personalised
-      outreach, routes messages for human approval, escalates accounts that go silent, and keeps leadership informed
-      about ARR at risk - all without a CSM needing to manually initiate each step.
-    </p>
+<h2>What does renewal automation include?</h2>
+<p>A complete renewal automation system does five jobs. If a tool only does one or two, you will still be doing the rest by hand.</p>
+<ol>
+  <li><strong>Keeps the renewal book.</strong> Every contract, its value, renewal date, notice period and owner, pulled from your CRM or a spreadsheet so nobody re-types it.</li>
+  <li><strong>Watches for risk.</strong> Reads the signals that come before churn: customers going quiet, a champion who stops replying, a negative turn in tone, falling product usage, open support issues and stalled deals.</li>
+  <li><strong>Finds what is missing.</strong> Checks each renewal for the things that decide it, such as proven value, an engaged champion, a second contact, a known signer and an agreed price, and turns each gap into a next step.</li>
+  <li><strong>Prepares the outreach.</strong> Drafts the check-in, the who-signs question, the business review invitation or the pricing conversation, written for that account.</li>
+  <li><strong>Keeps a person in charge.</strong> Puts every draft in front of the owner for approval, and lets the team decide which routine steps may run on their own.</li>
+</ol>
 
-    <div class="callout">
-      <strong>The simple version:</strong>
-      <p class="mt-2">Renewal automation turns renewal data into action. Not another dashboard where someone has to
-        remember to look. A workflow that helps the right follow-up happen at the right time - automatically, and with
-        human oversight at every customer touchpoint.</p>
-      <p class="mt-2"><a href="/product" style="color:#ffffff;font-weight:700;">See the features that make renewal automation work →</a></p>
-    </div>
+<h2>How is renewal automation different from reminders?</h2>
+<p>A reminder knows a date. Renewal automation knows the account. The difference shows up in three places.</p>
+<div class="table-wrap"><table>
+  <thead><tr><th></th><th>Calendar or CRM reminders</th><th>Renewal automation</th></tr></thead>
+  <tbody>
+    <tr><td><strong>When it acts</strong></td><td>On a fixed day before the date</td><td>When the account needs it, which can be months earlier</td></tr>
+    <tr><td><strong>What it knows</strong></td><td>The renewal date</td><td>Email, meetings, tickets, usage and the CRM record together</td></tr>
+    <tr><td><strong>What it produces</strong></td><td>A nudge to the owner</td><td>The reason, the gap and a drafted next step</td></tr>
+    <tr><td><strong>When the customer replies</strong></td><td>Nothing changes</td><td>The reply is read and the plan adjusts</td></tr>
+  </tbody>
+</table></div>
+<p>The last row matters more than it looks. A reminder sequence that keeps firing after a customer has answered, or after they have raised a complaint, does real damage. Good renewal automation stops and rethinks when something changes.</p>
 
-    <h2>What does a complete renewal automation system include?</h2>
-    <p>
-      Not all tools that claim to offer renewal automation actually deliver a complete system. Here are the seven
-      components that a genuine renewal automation layer needs to have:
-    </p>
-    <ul>
-      <li><strong>Live CRM sync:</strong> Renewal date, ARR value, contract tier, primary contact, and account owner - all pulled from Salesforce or HubSpot in real time, not via a one-time CSV import.</li>
-      <li><strong>Multi-signal health scoring:</strong> A composite risk score built from product usage trends,
-        stakeholder engagement recency, support ticket volume and sentiment, payment history, and NPS or CSAT data.</li>
-      <li><strong>Milestone-based sequence triggers:</strong> Automatic outreach initiation at 90, 60, 30, and 14 days
-        before renewal - calibrated to the account's health score rather than firing identically for all accounts.</li>
-      <li><strong>AI email drafting with account context:</strong> Per-account email drafts generated using real data - not merge fields in a template. The draft should reference specific usage patterns, recent support interactions,
-        and relationship history.</li>
-      <li><strong>Human approval queue:</strong> Every AI-drafted email lands in a CSM review queue before sending.
-        Approvals, edits, and rejections should all be possible in under 10 seconds per email.</li>
-      <li><strong>Reply detection and automatic sequence pause:</strong> Inbox monitoring that stops the automation the
-        moment a customer responds - preventing the common failure of automated follow-ups firing after a customer has
-        already engaged.</li>
-      <li><strong>Executive ARR visibility:</strong> A live dashboard showing pipeline by risk tier, ARR at risk by
-        renewal month, and per-CSM performance - updated continuously, not built from a weekly manual export.</li>
-    </ul>
+<h2>Which signals predict a renewal at risk?</h2>
+<p>No single signal predicts churn. Patterns do. These are the signals worth watching, roughly in the order they tend to appear:</p>
+<ul>
+  <li><strong>Engagement:</strong> the customer replies less, meetings get moved, a QBR never happens.</li>
+  <li><strong>People:</strong> the champion changes roles or leaves, and nobody else at the account is known.</li>
+  <li><strong>Sentiment:</strong> replies turn short or negative; the customer mentions reviewing their tools.</li>
+  <li><strong>Usage:</strong> fewer active users or less activity than a few months ago. A downward trend matters more than the absolute level.</li>
+  <li><strong>Support:</strong> serious tickets stay open close to the renewal date.</li>
+  <li><strong>Commercial:</strong> the deal stalls at a stage, or the pricing conversation has not started.</li>
+</ul>
+<p>The key is reading these together, every day, for every account. That is the part people cannot do by hand once a book grows past a few dozen accounts. We cover the warning signs in more detail in <a href="/blog/signs-your-renewal-process-is-quietly-broken">7 signs your renewal process is quietly broken</a>.</p>
 
-    <div style="background: #f0f7ff; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0; border-radius: 0 0.5rem 0.5rem 0;">
-            <p style="margin: 0; color: #1e3a8a; font-weight: 600; font-size: 1.05rem;">
-                See how Renewal360 handles this automatically.
-            </p>
-            <p style="margin: 0.5rem 0 1rem; color: #374151; font-size: 0.95rem; line-height: 1.6;">
-                Our renewal automation engine syncs data, designs playbooks, and queues up AI-drafted outreach.
-            </p>
-            <a href="/product" style="display: inline-block; color: #2563eb; font-weight: 700; text-decoration: none; font-size: 0.95rem; hover:underline;">
-                Explore Renewal360 Features &rarr;
-            </a>
-        </div>
+<h2>Why should a person approve renewal emails?</h2>
+<p>Because a renewal email can lose a customer as easily as keep one. AI drafting saves real time, but it can miss context only the account owner knows: a recent call, a sensitive negotiation, a personal relationship. An approval step keeps that judgement in the loop at very little cost, since approving a good draft takes seconds.</p>
+<p>The sensible model is graduated trust. Start with every draft reviewed. When a routine step, such as a thank-you note or a notice-window reminder, has been approved as written again and again, let it go on its own. Keep your largest accounts and anything about price or contract wording with a person, always. And make sure you can take automation back, or pause all outgoing email, at any time.</p>
 
-    <h2>Why are simple calendar reminders not considered renewal automation?</h2>
-    <p>
-      Calendar reminders tell someone to do work. Renewal automation helps the work happen. That distinction matters
-      enormously when a CSM is managing 60-150 accounts.
-    </p>
-    <p>
-      A reminder cannot assess whether an account's usage has dropped 30% since last month. It cannot draft a
-      personalised email referencing the customer's specific onboarding milestones. It cannot pause itself when the
-      customer replies. It cannot alert leadership when a $120K account goes silent inside a 30-day renewal window.
-    </p>
-    <p>
-      Basic email sequence tools fare slightly better - they remove the drafting burden - but most linear drip tools
-      share a critical flaw: they fire on a timer regardless of what has actually happened with the account between
-      emails. An account can file three support tickets, have their champion contact leave the company, and drop 40% in
-      product usage - and the sequence will still fire the next scheduled "just checking in!" email as if nothing
-      happened.
-    </p>
+<h2>Who needs renewal automation?</h2>
+<p>You probably need it if two or more of these are true:</p>
+<ul>
+  <li>Your team manages more renewals than it can review personally each week.</li>
+  <li>Renewal status lives in a spreadsheet or in one person's head.</li>
+  <li>You regularly learn a customer is leaving at the last minute.</li>
+  <li>CSMs spend hours a week writing similar renewal emails.</li>
+  <li>Leadership cannot see revenue at risk this quarter without someone building a report.</li>
+</ul>
+<p>If your team has a handful of large accounts that each get weekly attention, a spreadsheet may still be enough. Our <a href="/blog/renewal360-vs-spreadsheets-honest-comparison">honest comparison with spreadsheets</a> covers where that line is.</p>
 
-    <h2>What are the five health signals that feed a real risk score?</h2>
-    <p>
-      The quality of a renewal automation system's risk detection depends entirely on how many signals it can integrate
-      and how intelligently it weights them. Here are the five signals that, in combination, reliably identify churn
-      risk before it shows up in a churned ARR report:
-    </p>
+<h2>What does renewal automation look like in practice?</h2>
+<p>In Renewal360, each CSM starts the day in the Action Center: customers waiting for a reply, one-click decisions, and the calls and tasks that matter most, each showing days left until renewal. Every account explains its own risk score in plain English. Renewal Prep holds the routine emails the app has drafted, waiting for approval. A renewal playbook sets the steps your team takes before each renewal, and for each step you choose whether the app reminds you, drafts it, or sends it once trusted. You can see all of this in the <a href="/product#tour">five-minute product tour</a>.</p>
 
-    <div class="signal-card">
-      <h4>1. Product Usage Trend</h4>
-      <p>Not just current usage level - the direction of change over 30, 60, and 90-day windows. A customer at 40% of
-        their licensed capacity who was at 80% three months ago is very different from a customer who has always been at
-        40%. Declining trajectories are the most reliable leading indicator of churn.</p>
-    </div>
-    <div class="signal-card">
-      <h4>2. Stakeholder Engagement Recency</h4>
-      <p>How recently the champion contact logged in to the product. When contacts who were previously active go silent,
-        it often signals an internal priority shift, a role change, or early-stage evaluation of alternatives - all of
-        which require CSM attention before renewal.</p>
-    </div>
-    <div class="signal-card">
-      <h4>3. Support Ticket Volume and Sentiment</h4>
-      <p>The number of open tickets matters, but sentiment matters more. A customer with three resolved tickets
-        expressing frustration in the ticket text is at higher risk than one with five efficiently resolved neutral
-        tickets. AI-powered sentiment analysis on ticket descriptions catches what raw volume metrics miss.</p>
-    </div>
-    <div class="signal-card">
-      <h4>4. Payment History</h4>
-      <p>Failed payments, late payments, and downgrade requests are direct churn signals that often appear weeks before
-        the account becomes an active renewal risk. Surfacing these in the health score - rather than routing them only
-        through a billing team - gives CS the lead time to intervene.</p>
-    </div>
-    <div class="signal-card">
-      <h4>5. NPS and CSAT Scores</h4>
-      <p>Customers who rate 6 or below on NPS surveys renew at significantly lower rates than promoters (9-10). When
-        survey scores integrate directly into the health score - and trigger immediate CSM alerts for detractors - the
-        feedback loop closes in hours rather than quarters.</p>
-    </div>
+<section class="post-faq">
+  <h2>Frequently asked questions</h2>
+  <h3>Is renewal automation the same as subscription billing automation?</h3>
+  <p>No. Billing tools automate invoices and payments when a subscription renews. Renewal automation works on the customer relationship before the renewal: risk, gaps, outreach and follow-up, so the customer wants to renew in the first place.</p>
+  <h3>Does renewal automation replace customer success managers?</h3>
+  <p>No. It removes the tracking, checking and first-draft writing so CSMs spend their time on conversations, business reviews and saving at-risk accounts. Decisions and relationships stay with people.</p>
+  <h3>Can renewal automation work without a CRM?</h3>
+  <p>Yes. You can start from a spreadsheet of renewals and add the CRM later. The more sources you connect, such as email, calendar, support and product usage, the earlier risk shows up.</p>
+  <h3>How long does it take to set up?</h3>
+  <p>With Renewal360 you can import a CSV and see your renewals the same day. Connecting your CRM and inbox and setting your playbook usually takes a few days.</p>
+</section>
 
-    <h2>What operational changes happen when renewal automation is working?</h2>
-    <div class="before-after">
-      <div class="ba-col ba-before">
-        <h4>Before Automation</h4>
-        <ul>
-          <li>Renewal tracking lives in spreadsheets</li>
-          <li>CSMs write similar emails repeatedly</li>
-          <li>Risk is discovered late - often at 30 days</li>
-          <li>Leadership gets manual end-of-week updates</li>
-          <li>Automated follow-ups fire after customer replies</li>
-          <li>Churn is a surprise at quarter close</li>
-        </ul>
-      </div>
-      <div class="ba-col ba-after">
-        <h4>After Automation</h4>
-        <ul>
-          <li>Renewal windows monitored automatically</li>
-          <li>AI drafts the first version of outreach</li>
-          <li>Risk flagged 60-90 days out via health scoring</li>
-          <li>Leadership sees live ARR-at-risk dashboard</li>
-          <li>Sequences pause immediately on customer reply</li>
-          <li>Churn forecast visible 3 months ahead</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2>Who actually needs renewal automation?</h2>
-    <p>
-      Renewal automation creates the most immediate value for SaaS teams at two specific inflection points. The first is
-      when account volume grows beyond what one CSM can reasonably track manually - typically somewhere above 50-75
-      accounts per CSM. The second is when churn starts appearing at quarter-end as a surprise rather than a known risk - indicating that risk signals are not being surfaced early enough for anyone to act on them.
-    </p>
-    <p>
-      If your CSMs are spending significant time each week deciding who to email, what to say, and when to follow up - and churn is still catching you off guard - renewal automation will create immediate, measurable leverage.
-    </p>
-    <p>
-      It is also increasingly valuable for founders and revenue leaders who need earlier visibility into churn risk for
-      board-level planning. A live ARR-at-risk dashboard is a fundamentally different tool for a quarterly planning
-      conversation than a manually prepared slide deck built from last week's CRM exports.
-    </p>
-
-    <h2>Why is the human-in-the-loop principle critical for renewal outreach?</h2>
-    <p>
-      The most effective renewal automation systems do not remove humans from the customer relationship - they remove
-      humans from the administrative overhead of managing it. Every email that an AI drafts should pass through a human
-      review gate before it reaches a customer inbox. Every sequence that fires should stop the moment a customer
-      responds. Every high-risk alert should surface to a CSM who can make a judgment call about the right intervention.
-    </p>
-    <p>
-      Full autopilot on customer communications creates reputation risk and erodes trust. Human-in-the-loop automation
-      scales personalisation without removing the judgment and empathy that make the difference between a saved renewal
-      and a churned account.
-    </p>
-
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h3>What is the difference between renewal automation and a drip email sequence?</h3>
-      <p>Drip sequences fire on a fixed schedule regardless of what happens in between. Renewal automation systems adapt - they adjust based on account health score changes, reply detection, and live CRM data. An account that files
-        three support tickets mid-sequence should not receive a cheerful renewal nudge; a proper automation system knows
-        this and routes the account differently.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How many accounts does renewal automation start becoming valuable at?</h3>
-      <p>Most teams see meaningful time savings starting at around 50 accounts per CSM. At 100+ accounts, the automation
-        layer becomes essential rather than optional - no CSM can monitor 100+ accounts for usage drops, ticket spikes,
-        and renewal windows simultaneously without systematic help.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Does renewal automation require a CRM to work?</h3>
-      <p>A CRM is the recommended data foundation, but not strictly required. Teams without a CRM can use CSV imports to
-        seed account data. However, the live sync capability - where CRM changes propagate to the automation system in
-        real time - is what enables the most accurate health scoring and timely sequence triggers.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Can renewal automation handle multi-year contract renewals differently from annual renewals?</h3>
-      <p>Yes. The renewal window and milestone triggers are configurable per contract type. Multi-year renewals
-        typically warrant earlier outreach (120 days vs. 90) and more executive touchpoints. The sequence logic can
-        branch based on contract type, ARR value, or health score - allowing different account tiers to receive
-        different renewal treatment automatically.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How does renewal automation interact with Salesforce or HubSpot?</h3>
-      <p>The best renewal automation systems connect to your CRM via OAuth for continuous bi-directional sync. Changes
-        in Salesforce - new contacts, updated renewal dates, deal stage changes - propagate to the automation system
-        within minutes. Outreach activity is written back to CRM records automatically, keeping your sales team's view
-        of account history accurate without requiring manual updates.</p>
-    </div>
-
-    <div style="background: #f8faff; border: 1px solid #dbeafe; border-radius: 1rem; padding: 2.5rem; margin: 3rem 0; text-align: center;">
-            <h2 style="color: #1e3a8a; margin: 0 0 0.75rem; font-size: 1.5rem; font-family: 'Lora', serif;">
-                Ready to automate your renewal playbooks?
-            </h2>
-            <p style="color: #374151; margin: 0 0 1.5rem; font-size: 0.95rem; line-height: 1.7;">
-                See how Renewal360 turns your manual playbooks into automated, high-conversion customer success motions.
-            </p>
-            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                <a href="/product" style="display: inline-block; background: #1d4ed8; color: white; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">
-                    Explore Features &rarr;
-                </a>
-                <a href="/blog/how-renewal360-works" style="display: inline-block; background: white; color: #1d4ed8; border: 1px solid #dbeafe; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">
-                    How Renewal360 Works &rarr;
-                </a>
-            </div>
-        </div>
-
-    <p style="max-width:48rem;margin:0 auto 2.5rem;padding:0 1.5rem;font-size:0.85rem;color:#9ca3af;">
-        Related reading:
-        <a href="/product" style="color:#2563eb;">Features</a> ·
-        <a href="/blog/how-renewal360-works" style="color:#2563eb;">How Renewal360 Works</a> ·
-        <a href="/blog/how-to-automate-saas-renewal-emails" style="color:#2563eb;">How to Automate SaaS Renewal Emails</a>
-    </p>
+<p>Want to see it on your own renewals? <a href="/contact">Start a free trial</a>: free for 25 accounts, with 7 days of the full Scale plan and no credit card. Or compare plans on the <a href="/pricing">pricing page</a>.</p>

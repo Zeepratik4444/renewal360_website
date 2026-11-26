@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { site } from "../site.mjs";
 import { ctaBand, esc } from "../layout.mjs";
 
@@ -45,15 +45,29 @@ const related = (p) => posts
   .slice(0, 3)
   .map((r) => r.x);
 
+const plain = (s) => s.replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/&rarr;/g, "->").replace(/\s+/g, " ").trim();
+
+// A post's <section class="post-faq"> (h3 question, p answer) becomes FAQPage markup.
+function faqOf(html) {
+  const sec = /<section class="post-faq">([\s\S]*?)<\/section>/.exec(html);
+  if (!sec) return null;
+  const items = [...sec[1].matchAll(/<h3>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)].map(([, q, a]) => ({
+    "@type": "Question", name: plain(q), acceptedAnswer: { "@type": "Answer", text: plain(a) },
+  }));
+  return items.length ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: items } : null;
+}
+
 const postPages = posts.map((p) => {
   const html = readFileSync(new URL(`../blog/posts/${p.slug}.html`, import.meta.url), "utf8");
-  const css = readFileSync(new URL(`../blog/styles/${p.slug}.css`, import.meta.url), "utf8");
+  const cssFile = new URL(`../blog/styles/${p.slug}.css`, import.meta.url);
+  const css = existsSync(cssFile) ? readFileSync(cssFile, "utf8") : "";
+  const faq = faqOf(html);
   return {
     path: `/blog/${p.slug}`,
     title: p.title,
     seoTitle: seo[p.slug]?.title,
     description: seo[p.slug]?.description || p.summary,
-    head: `<style>${css}</style>`,
+    head: css ? `<style>${css}</style>` : "",
     schema: [
       {
         "@context": "https://schema.org",
@@ -68,6 +82,7 @@ const postPages = posts.map((p) => {
         publisher: { "@id": `${site.url}/#organization` },
         mainEntityOfPage: `${site.url}/blog/${p.slug}`,
       },
+      ...(faq ? [faq] : []),
     ],
     body: `<article class="post">
   <header class="post-head wrap narrow">

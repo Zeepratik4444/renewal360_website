@@ -2,10 +2,10 @@
  {
   "slug": "signs-your-renewal-process-is-quietly-broken",
   "title": "7 Signs Your Renewal Process Is Quietly Broken",
-  "summary": "Renewal problems rarely announce themselves with a crisis. They show up as patterns - a little extra scramble at quarter end, a CSM who \"just knows\" which accounts are risky, churn that surprises everyone in the post-mortem. Here's how to read those signals before they cost you ARR.",
+  "summary": "Seven warning signs that renewals are being lost before the numbers show it, and the fix for each one.",
   "date": "2026-05-20",
-  "modified": "2026-05-20",
-  "readTime": "9 min read",
+  "modified": "2026-11-26",
+  "readTime": "4 min read",
   "tags": [
    "Renewal Process",
    "Customer Success",
@@ -15,10 +15,10 @@
  {
   "slug": "renewal360-vs-spreadsheets-honest-comparison",
   "title": "Renewal360 vs Spreadsheets: The Honest Comparison",
-  "summary": "Spreadsheets aren't a bad renewal tool - they're a good tool used past their limit. This comparison covers what spreadsheets genuinely do well, the three specific places they break down at scale, and how to know when the switch to a dedicated system pays for itself.",
+  "summary": "When a spreadsheet is enough for tracking renewals, when it starts costing you customers, and what switching involves.",
   "date": "2026-05-20",
-  "modified": "2026-05-20",
-  "readTime": "10 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "Comparison",
    "Renewal360",
@@ -28,10 +28,10 @@
  {
   "slug": "renewal360-setup-guide-live-in-7-days",
   "title": "Renewal360 Setup Guide: Live in 7 Days",
-  "summary": "From first login to live sequences running on real accounts - a day-by-day guide to getting Renewal360 fully operational. No implementation partner required. Average setup time: 3-4 hours across the week.",
+  "summary": "A day-by-day checklist for getting Renewal360 running: renewals, inboxes, signals, playbook and first approvals.",
   "date": "2026-05-20",
-  "modified": "2026-05-20",
-  "readTime": "11 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "Setup Guide",
    "Renewal360",
@@ -41,10 +41,10 @@
  {
   "slug": "how-to-build-a-renewal-playbook-from-scratch",
   "title": "How to Build a Renewal Playbook from Scratch",
-  "summary": "Most CS teams have renewal instincts. Fewer have renewal systems. This is the practical guide to turning institutional knowledge into a documented, repeatable playbook - one that works whether your best CSM is on call or on holiday.",
+  "summary": "Five steps to a renewal playbook your whole team can run: segments, signals, timed steps, escalation and a leadership view.",
   "date": "2026-05-20",
-  "modified": "2026-05-20",
-  "readTime": "12 min read",
+  "modified": "2026-11-26",
+  "readTime": "5 min read",
   "tags": [
    "Playbook",
    "Customer Success",
@@ -54,10 +54,10 @@
  {
   "slug": "hidden-cost-of-manual-renewal-process",
   "title": "The Hidden Cost of a Manual Renewal Process",
-  "summary": "\"We do renewals manually\" sounds like a workflow choice. It's actually a revenue decision - one that compounds quietly across every account, every quarter. Here's how to calculate what it's actually costing you.",
+  "summary": "How to put a number on CSM time, preventable churn and missed expansion, with a worked example you can fill in.",
   "date": "2026-05-20",
-  "modified": "2026-05-20",
-  "readTime": "10 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "RevOps",
    "Customer Success",
@@ -67,10 +67,10 @@
  {
   "slug": "cs-metrics-every-saas-team-should-track",
   "title": "5 CS Metrics Every SaaS Team Should Track (and One to Ignore)",
-  "summary": "Most CS teams are measuring the wrong things - or measuring the right things in ways that tell them nothing actionable. Here are the five metrics that actually predict renewal outcomes, and the one that gets the most attention but provides the least signal.",
+  "summary": "GRR, NRR, time to first value, health score accuracy and revenue per CSM, with formulas, plus why raw NPS is a weak churn predictor.",
   "date": "2026-05-20",
-  "modified": "2026-05-20",
-  "readTime": "10 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "CS Metrics",
    "RevOps",
@@ -80,10 +80,10 @@
  {
   "slug": "how-to-run-your-entire-cs-operation-in-renewal360",
   "title": "How to Run Your Entire CS Operation in Renewal360",
-  "summary": "You do not need five different tools to manage your customers. Here is the complete playbook for using Renewal360 as your core CS operating system - from day one to fully automated.",
+  "summary": "A daily, weekly and monthly rhythm for running customer success in Renewal360.",
   "date": "2026-04-20",
-  "modified": "2026-05-07",
-  "readTime": "12 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "Tutorial",
    "Operations",
@@ -93,10 +93,10 @@
  {
   "slug": "how-renewal360-works",
   "title": "How Renewal360 Works: The CS Platform Built for SaaS Retention",
-  "summary": "Customer success does not fail because teams lack data. It fails because action is late, manual, or generic. Renewal360 turns customer signals into approved actions across the full lifecycle - here is exactly how.",
+  "summary": "A walk through Renewal360 from a CSM's morning list to a manager's view of the whole book.",
   "date": "2026-04-18",
-  "modified": "2026-05-07",
-  "readTime": "9 min read",
+  "modified": "2026-11-26",
+  "readTime": "4 min read",
   "tags": [
    "How It Works",
    "Renewal Automation",
@@ -106,10 +106,10 @@
  {
   "slug": "what-is-renewal-automation",
   "title": "What Is Renewal Automation? And Why Your CS Team Needs It",
-  "summary": "Renewal automation is not just reminder emails. Done well, it turns renewal dates, account health signals, product usage, and customer replies into approved actions your CS team can trust - at a scale no manual process can match.",
+  "summary": "What renewal automation is, what a complete system includes, how it differs from reminders, and why a person should approve every renewal email.",
   "date": "2026-04-15",
-  "modified": "2026-05-07",
-  "readTime": "7 min read",
+  "modified": "2026-11-26",
+  "readTime": "5 min read",
   "tags": [
    "Renewal Automation",
    "Customer Success",
@@ -119,10 +119,10 @@
  {
   "slug": "totango-alternative-faster-renewal-automation",
   "title": "Totango Alternative for Faster Renewal Automation",
-  "summary": "Totango is built for broad customer growth programs. Renewal360 is built for the team that needs renewal follow-up fixed now - risk signals, AI drafts, human approval, and action before silence turns into churn.",
+  "summary": "When a renewal-focused tool fits a growing team better than a modular CS platform, and when Totango is still the right call.",
   "date": "2026-04-12",
-  "modified": "2026-05-07",
-  "readTime": "8 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "Totango Alternative",
    "Renewal Automation",
@@ -132,10 +132,10 @@
  {
   "slug": "zendesk-hubspot-salesforce-cs-platform-comparison",
   "title": "Zendesk, HubSpot, and Salesforce: The Modern CS Integration Guide",
-  "summary": "Your CS platform is only as good as the data it can see. Here is how to build a unified customer view across your support, CRM, and success tools - without the \"integration tax\" that kills most implementations.",
+  "summary": "What Zendesk, HubSpot and Salesforce are each for, how they connect, and why support data matters for renewals.",
   "date": "2026-04-10",
-  "modified": "2026-05-07",
-  "readTime": "11 min read",
+  "modified": "2026-11-26",
+  "readTime": "4 min read",
   "tags": [
    "Integrations",
    "Technology",
@@ -145,10 +145,10 @@
  {
   "slug": "churnzero-alternative-growing-saas-teams",
   "title": "ChurnZero Alternative for Growing SaaS Teams",
-  "summary": "ChurnZero is a powerful CS command centre. But if your immediate problem is missed renewal action - not a lack of dashboards - Renewal360 may be the sharper first move for your team.",
+  "summary": "Does ChurnZero flag accounts at risk? Yes. Here is what growing teams need beyond that, and how Renewal360 compares.",
   "date": "2026-04-10",
-  "modified": "2026-05-07",
-  "readTime": "8 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "ChurnZero Alternative",
    "Customer Success",
@@ -158,10 +158,10 @@
  {
   "slug": "gainsight-vs-totango-vs-renewal360",
   "title": "Gainsight vs Totango vs Renewal360 - Which CS Platform Is Right for You?",
-  "summary": "You do not lose renewals because you lack another dashboard. You lose them because nobody acted soon enough. If your team needs automation, approved outreach, and next-best actions - here is an honest comparison.",
+  "summary": "Who each platform is built for, how they differ on pricing, setup and renewal outreach, and when each one is the right choice.",
   "date": "2026-04-08",
-  "modified": "2026-05-07",
-  "readTime": "9 min read",
+  "modified": "2026-11-26",
+  "readTime": "4 min read",
   "tags": [
    "Comparison",
    "Gainsight Alternative",
@@ -171,10 +171,10 @@
  {
   "slug": "why-saas-companies-lose-renewals",
   "title": "Why SaaS Companies Lose Renewals - And How AI Fixes It",
-  "summary": "Most SaaS churn isn't caused by a bad product. It's caused by a broken process - late outreach, missed risk signals, and decisions made from stale data. Here's what's actually going wrong, and what fixing it looks like.",
+  "summary": "The five patterns behind most lost renewals, what fixes each one, and where AI helps and where it should not.",
   "date": "2026-04-05",
-  "modified": "2026-05-07",
-  "readTime": "10 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "Churn Prevention",
    "AI in CS",
@@ -184,10 +184,10 @@
  {
   "slug": "customer-success-platform-for-growing-saas",
   "title": "The Customer Success Platform Built for Growing SaaS Teams",
-  "summary": "Most CS platforms were built for the enterprise. We built one for the rest of us - the teams who need to prevent churn without a 6-month implementation project or a dedicated RevOps admin.",
+  "summary": "What a growing SaaS team needs from a CS platform, what it can skip, and how fast it should be running.",
   "date": "2026-04-01",
-  "modified": "2026-05-07",
-  "readTime": "10 min read",
+  "modified": "2026-11-26",
+  "readTime": "3 min read",
   "tags": [
    "Strategy",
    "Customer Success",
@@ -197,10 +197,10 @@
  {
   "slug": "how-to-automate-saas-renewal-emails",
   "title": "How to Automate SaaS Renewal Emails (Step-by-Step)",
-  "summary": "Most CS teams are one missed follow-up away from a lost renewal. Here's how a proper automation system works - from CRM sync to AI draft to sent email - without removing your team from the loop.",
+  "summary": "Which renewal emails to automate, when to send them, how to keep them personal, and the rules that keep automation safe.",
   "date": "2026-04-01",
-  "modified": "2026-05-07",
-  "readTime": "8 min read",
+  "modified": "2026-11-26",
+  "readTime": "4 min read",
   "tags": [
    "Automation",
    "Customer Success"

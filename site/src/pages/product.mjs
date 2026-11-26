@@ -67,7 +67,7 @@ ${tourSection}
     <div class="reveal">
       <p class="eyebrow">Renewal readiness</p>
       <h2>A score tells you to worry. A checklist tells you what to do.</h2>
-      <p class="body-lg">Every renewal is checked against the questions that decide it. Each answer is backed by evidence from your tools: covered, at risk, a gap, or unknown when the evidence is not there. Unknown never passes as healthy.</p>
+      <p class="body-lg">Every renewal is checked against the questions that decide it. Each answer is backed by evidence from your tools: covered, at risk, a gap, or unknown when the evidence is not there yet.</p>
     </div>
     <div class="r-card reveal">
       <div class="r-head"><strong>What every renewal is checked for</strong></div>

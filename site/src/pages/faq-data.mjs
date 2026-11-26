@@ -36,7 +36,7 @@ export const faqs = [
   },
   {
     q: "How much does Renewal360 cost?",
-    a: "There is a free plan for 25 accounts. Paid plans are SMB at $199 a month for 200 accounts, Growth at $599 a month for 1,000 accounts and Scale at $999 a month with unlimited accounts. Paying yearly saves 20%. Prices are also shown in rupees, euros and pounds on the pricing page.",
+    a: "There is a free plan for 25 accounts. Paid plans are SMB at $199 a month for 200 accounts, Growth at $599 a month for 1,000 accounts and Scale at $999 a month with unlimited accounts. Paying yearly saves 20%. The pricing page shows prices in your local currency: rupees in India, pounds in the UK and euros in the euro area.",
   },
   {
     q: "Is there a free trial?",

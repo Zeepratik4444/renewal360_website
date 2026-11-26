@@ -21,7 +21,7 @@
  },
  "hidden-cost-of-manual-renewal-process": {
   "title": "The Hidden Cost of a Manual Renewal Process",
-  "description": "What a manual renewal process really costs a SaaS team: CSM hours, late surprises, missed notice windows and lost revenue, and how to work out your own number."
+  "description": "What a manual renewal process really costs a SaaS team in CSM time, preventable churn and missed expansion, and how to work out your own number with a worked example."
  },
  "how-renewal360-works": {
   "title": "How Renewal360 Works: From Signals to Next Steps",
@@ -57,7 +57,7 @@
  },
  "why-saas-companies-lose-renewals": {
   "title": "Why SaaS Companies Lose Renewals, and How to Fix It",
-  "description": "The real reasons SaaS customers do not renew: a lost champion, unproven value, silent accounts and late outreach, and how AI helps teams catch them in time."
+  "description": "The five reasons SaaS customers do not renew: late outreach, one-size sequences, hidden risk signals, template emails and automation that ignores replies, and how to fix each."
  },
  "zendesk-hubspot-salesforce-cs-platform-comparison": {
   "title": "Zendesk, HubSpot and Salesforce Data for CS Teams",

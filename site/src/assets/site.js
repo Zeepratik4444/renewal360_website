@@ -150,13 +150,17 @@
     });
   }
 
-  // Pricing: currency (guessed from the time zone, changeable) and monthly or yearly.
+  // Pricing: the currency follows the visitor's location (their time zone, no lookup
+  // service); monthly or yearly is the only choice on the page.
   var plans = document.getElementById("plans");
   if (plans) {
     var data = JSON.parse(document.getElementById("price-data").textContent);
     var tz = "";
     try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) { /* old browser */ }
-    var cur = /Kolkata|Calcutta/.test(tz) ? "INR" : /^Europe\/London/.test(tz) ? "GBP" : /^Europe\//.test(tz) ? "EUR" : "USD";
+    var EURO = /^(Europe\/(Amsterdam|Athens|Berlin|Bratislava|Brussels|Busingen|Dublin|Helsinki|Lisbon|Ljubljana|Luxembourg|Madrid|Malta|Monaco|Paris|Riga|Rome|San_Marino|Tallinn|Vatican|Vienna|Vilnius|Zagreb|Andorra|Podgorica|Nicosia)|Atlantic\/(Azores|Madeira|Canary)|Asia\/Nicosia)$/;
+    var cur = /^Asia\/(Kolkata|Calcutta)$/.test(tz) ? "INR"
+      : /^Europe\/(London|Belfast|Guernsey|Isle_of_Man|Jersey)$/.test(tz) ? "GBP"
+      : EURO.test(tz) ? "EUR" : "USD";
     var yearly = false;
     var render = function () {
       Object.keys(data.plans[cur]).forEach(function (name) {
@@ -168,10 +172,8 @@
       });
       var add = document.getElementById("addon-price");
       if (add) add.textContent = data.addon[cur];
-      document.querySelectorAll("[data-cur]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-cur") === cur)); });
       document.querySelectorAll("[data-cycle]").forEach(function (b) { b.setAttribute("aria-pressed", String((b.getAttribute("data-cycle") === "yearly") === yearly)); });
     };
-    document.querySelectorAll("[data-cur]").forEach(function (b) { b.addEventListener("click", function () { cur = b.getAttribute("data-cur"); render(); }); });
     document.querySelectorAll("[data-cycle]").forEach(function (b) { b.addEventListener("click", function () { yearly = b.getAttribute("data-cycle") === "yearly"; render(); }); });
     document.querySelectorAll(".price-controls").forEach(function (c) { c.hidden = false; });
     render();
