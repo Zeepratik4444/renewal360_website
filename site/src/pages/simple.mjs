@@ -190,7 +190,7 @@ const terms = {
   <div class="wrap narrow">
     <p class="eyebrow">Legal</p>
     <h1>Terms of Service and Privacy Policy</h1>
-    <p class="muted">${esc(site.company)}, ${esc(site.address)}. Last updated 6 September 2026.</p>
+    <p class="muted">${esc(site.company)}, ${esc(site.address)}. Last updated 27 November 2026.</p>
   </div>
 </section>
 <section class="section section-tight">
