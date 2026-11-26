@@ -1,0 +1,66 @@
+{
+ "how-to-automate-saas-renewal-emails": {
+  "title": "How to Automate SaaS Renewal Emails, Step by Step",
+  "description": "How to automate SaaS renewal emails without losing the personal touch: which emails to automate, when to send them, and why a person should approve each one first."
+ },
+ "churnzero-alternative-growing-saas-teams": {
+  "title": "ChurnZero Alternative for Growing SaaS Teams",
+  "description": "Looking for a ChurnZero alternative? How a renewal-focused tool compares for growing SaaS teams: setup effort, pricing, risk signals and who does the follow-up."
+ },
+ "cs-metrics-every-saas-team-should-track": {
+  "title": "5 CS Metrics Every SaaS Team Should Track",
+  "description": "The five customer success metrics that predict renewals: GRR, NRR, time to first value, health score accuracy and CSM capacity, plus why raw NPS is a poor churn predictor."
+ },
+ "customer-success-platform-for-growing-saas": {
+  "title": "Customer Success Platform for Growing SaaS Teams",
+  "description": "What a growing SaaS team needs from a customer success platform, what it can skip, and how to protect renewals without an enterprise suite or a CS operations hire."
+ },
+ "gainsight-vs-totango-vs-renewal360": {
+  "title": "Gainsight vs Totango vs Renewal360: Which Fits?",
+  "description": "Gainsight vs Totango vs Renewal360 compared: who each platform is built for, setup effort, pricing model and how each handles renewal risk and follow-up."
+ },
+ "hidden-cost-of-manual-renewal-process": {
+  "title": "The Hidden Cost of a Manual Renewal Process",
+  "description": "What a manual renewal process really costs a SaaS team: CSM hours, late surprises, missed notice windows and lost revenue, and how to work out your own number."
+ },
+ "how-renewal360-works": {
+  "title": "How Renewal360 Works: From Signals to Next Steps",
+  "description": "How Renewal360 works: it reads your CRM, inbox, meetings, tickets and usage, checks each renewal for what is missing, and drafts the next step for your approval."
+ },
+ "how-to-build-a-renewal-playbook-from-scratch": {
+  "title": "How to Build a SaaS Renewal Playbook From Scratch",
+  "description": "A step-by-step guide to building a SaaS renewal playbook: renewal segments, health signals, outreach timing from 120 days out, escalation tracks and what leaders need to see."
+ },
+ "how-to-run-your-entire-cs-operation-in-renewal360": {
+  "title": "How to Run Your CS Operation in Renewal360",
+  "description": "A practical guide to running day-to-day customer success in Renewal360: the daily list, account reviews, approvals, playbooks and the manager view of the book."
+ },
+ "renewal360-setup-guide-live-in-7-days": {
+  "title": "Renewal360 Setup Guide: Live in 7 Days",
+  "description": "Set up Renewal360 in a week: import renewals or connect your CRM, connect inboxes, set your playbook and approve the first drafts. A day-by-day checklist."
+ },
+ "renewal360-vs-spreadsheets-honest-comparison": {
+  "title": "Renewal360 vs Spreadsheets: An Honest Comparison",
+  "description": "When is a spreadsheet enough for tracking SaaS renewals, and when does it start costing you customers? An honest comparison with renewal software, both ways."
+ },
+ "signs-your-renewal-process-is-quietly-broken": {
+  "title": "7 Signs Your Renewal Process Is Quietly Broken",
+  "description": "Seven warning signs that your SaaS renewal process is failing before the numbers show it, from late surprises to single-threaded accounts, and what to fix first."
+ },
+ "totango-alternative-faster-renewal-automation": {
+  "title": "Totango Alternative for Faster Renewal Automation",
+  "description": "Considering a Totango alternative? When a renewal-focused tool fits a growing SaaS team better than a modular CS suite, with setup, pricing and workflow compared."
+ },
+ "what-is-renewal-automation": {
+  "title": "What Is Renewal Automation? Definition and Guide",
+  "description": "Renewal automation, defined: what it is, what it should include, how risk signals and AI drafting work together, and why reminders alone do not protect ARR."
+ },
+ "why-saas-companies-lose-renewals": {
+  "title": "Why SaaS Companies Lose Renewals, and How to Fix It",
+  "description": "The real reasons SaaS customers do not renew: a lost champion, unproven value, silent accounts and late outreach, and how AI helps teams catch them in time."
+ },
+ "zendesk-hubspot-salesforce-cs-platform-comparison": {
+  "title": "Zendesk, HubSpot and Salesforce Data for CS Teams",
+  "description": "How Zendesk, HubSpot and Salesforce fit together for a customer success team, what each sees about renewal risk, and how to connect support and CRM data."
+ }
+}

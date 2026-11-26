@@ -1,0 +1,11 @@
+{
+  "name": "renewal360-site",
+  "private": true,
+  "type": "module",
+  "description": "renewal360.in marketing site. Static HTML built by a small Node script, no dependencies.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs 4322"
+  },
+  "engines": { "node": ">=20.11" }
+}

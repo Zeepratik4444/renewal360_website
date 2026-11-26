@@ -1,0 +1,77 @@
+{
+ "fps": 30,
+ "chapters": [
+  {
+   "id": "intro",
+   "title": "Introduction",
+   "start": 0,
+   "text": "This is Renewal360, the renewal workspace for customer success teams. In the next few minutes, you'll see how it spots risk early, tells you what to do next, and keeps your whole team on track. We'll follow Oliver, a customer success manager at a software company called Ganvix."
+  },
+  {
+   "id": "action",
+   "title": "Action Center",
+   "start": 21,
+   "text": "Every day starts in the Action Center. Across the top, you see your pipeline, revenue at risk, how much is on your list, and anything past due. Below that, your to do list is split three ways. Customers waiting are people who wrote to you, and are waiting on a reply. Decide holds one click choices, and Do is your calls and tasks. Each row gives you the account, the reason, and how many days are left until renewal. Further down, risk score movements show which accounts got worse or better since the last check, so nothing changes quietly. Your calendar keeps renewals, meetings and tasks in one view. And the at risk radar lists the accounts with the most revenue on the line, so you know where to spend your time."
+  },
+  {
+   "id": "list",
+   "title": "All Renewals",
+   "start": 72,
+   "text": "All Renewals is your full book of accounts. Each one shows its value, renewal date, days left, risk score and status. You can search, filter, or save a view for the accounts you care about most. Let's open Quarry Robotics."
+  },
+  {
+   "id": "account",
+   "title": "Account view",
+   "start": 90,
+   "text": "Every account opens on one page, with the full picture. At the top is where the deal stands. Quarry has a proposal out, but the deal has stalled, and the next step is waiting on the customer. On the right, it tells you why the account was flagged. Fifteen days at proposal sent, when it should move within two weeks. Below, the risk analysis explains the score in plain English. The customer is reviewing their tools, the tone has turned negative, and product usage is low. It lists the key drivers, and how each factor scores, so you never have to guess why an account is flagged. The score trend shows how risk has moved over time. And it suggests a next move. Here, a quick call to understand the review, and find the people who decide. Next, the timeline."
+  },
+  {
+   "id": "timeline",
+   "title": "Timeline",
+   "start": 147,
+   "text": "The timeline shows the renewal journey, from early engagement right through to renewal day. Each stage keeps its own record of emails, meetings, surveys and alerts. And the activity feed brings every email, meeting and risk update into one place. Here's the customer's own reply, flagged as negative. They're reviewing their software, exactly what the risk analysis picked up."
+  },
+  {
+   "id": "nuva",
+   "title": "Ask Nuva",
+   "start": 175,
+   "text": "Need a quick answer? Ask Nuva, your renewals assistant. Nuva already knows which account you're looking at, and suggests questions to start with. Let's ask how this account is doing. In seconds, you get the facts. Value, renewal date, risk score, owner, and the next step. Followed by the risk factors, and the recent activity behind them. Nuva can also draft a check in email for you. But nothing goes out until you approve it."
+  },
+  {
+   "id": "prep",
+   "title": "Renewal Prep",
+   "start": 207,
+   "text": "Renewal Prep is where emails the app writes for routine renewals wait for your review. Waiting, scheduled, sent and stopped are always in plain view. And nothing goes out until it's approved."
+  },
+  {
+   "id": "exec",
+   "title": "Manager view",
+   "start": 221,
+   "text": "Now let's switch to Nayeem, who leads customer success at Ganvix. The executive summary shows the whole book at a glance. Total value, revenue at risk, renewal rate, and accounts that have gone quiet. This quarter's renewals are split by risk, so you can see how much is safe, and how much needs work. The urgency chart places each at risk account by how close it is to renewal. And urgent actions shows exactly where to step in first."
+  },
+  {
+   "id": "gaps",
+   "title": "Gaps across the book",
+   "start": 253,
+   "text": "The gaps view shows what's missing across every renewal, sorted by the money at stake. Here, pricing that isn't agreed yet, and accounts with no recent strategic conversation, top the list. So coaching goes where it matters most."
+  },
+  {
+   "id": "rules",
+   "title": "Automation rules",
+   "start": 270,
+   "text": "And you decide how much the system does on its own. For each kind of gap, choose the approach. Act when it's confident, always ask the CSM, or simply keep watch. Every step is spelled out, so there are no surprises."
+  },
+  {
+   "id": "start",
+   "title": "Getting started",
+   "start": 287,
+   "text": "Getting started is simple. Connect your CRM and inbox, or import a spreadsheet of your renewals. Renewal360 reads it all, and your Action Center is ready."
+  },
+  {
+   "id": "outro",
+   "title": "Start your trial",
+   "start": 299,
+   "text": "Try Renewal360 free for seven days, at renewal360.in."
+  }
+ ]
+}

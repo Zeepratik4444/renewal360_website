@@ -1,0 +1,268 @@
+<p class="direct-answer">
+            Building a SaaS renewal playbook from scratch requires five steps: defining customer segments, setting health scoring signals, mapping branching sequences, creating escalation protocols, and building a leadership visibility layer. Instead of trying to run these steps manually, teams can use Renewal360 to automate the entire playbook lifecycle with built-in health scores, CRM/helpdesk integrations, visual sequence builders, bulk action options, and a CSM approval queue.
+        </p>
+
+        <div class="stat-row">
+            <div class="stat-box">
+                <div class="num">90 days</div>
+                <div class="label">Minimum lead time your playbook should trigger for standard renewals</div>
+            </div>
+            <div class="stat-box">
+                <div class="num">5 signals</div>
+                <div class="label">The health scoring inputs that reliably predict renewal risk for most SaaS products
+                </div>
+            </div>
+            <div class="stat-box">
+                <div class="num">3 tracks</div>
+                <div class="label">Minimum sequence tracks a complete renewal playbook needs: healthy, at-risk,
+                    escalated</div>
+            </div>
+        </div>
+
+        <p>
+            A renewal playbook is not a list of email templates. It's a decision system - a set of documented rules that
+            determine what happens, when, for which accounts, and who owns it. Done right, it takes the institutional
+            knowledge that lives in your best CSM's head and turns it into something the whole team can execute
+            consistently.
+        </p>
+        <p>
+            This guide covers the five components of a functional renewal playbook, in the order you should build them.
+            Each section includes the specific questions you need to answer before moving to the next.
+        </p>
+
+        <h2>Step 1: Define your renewal segments</h2>
+        <div class="step-card">
+            <div class="step-num">Step 1 of 5</div>
+            <h3>Segment before you sequence</h3>
+            <p>The most common mistake in renewal playbook design is building a single sequence and applying it to all
+                accounts. Segmentation - deciding which accounts get which treatment - has to come first, because every
+                subsequent decision (timing, touch frequency, escalation path) depends on which segment an account is
+                in.</p>
+            <p>At minimum, build two dimensions: ARR tier and risk level. ARR tier determines the commercial weight of
+                the renewal (how much attention it deserves). Risk level determines the urgency and track (healthy,
+                at-risk,
+                or escalated).</p>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Segment</th>
+                        <th>ARR Range</th>
+                        <th>Outreach Start</th>
+                        <th>Touch Frequency</th>
+                        <th>Escalation Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Enterprise</strong></td>
+                        <td>$100K+</td>
+                        <td>120 days</td>
+                        <td>Weekly touchpoints</td>
+                        <td>VP CS + AE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mid-market</strong></td>
+                        <td>$20K-$100K</td>
+                        <td>90 days</td>
+                        <td>Bi-weekly</td>
+                        <td>Senior CSM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SMB</strong></td>
+                        <td>Under $20K</td>
+                        <td>60 days</td>
+                        <td>Automated + CSM review</td>
+                        <td>CSM queue</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            Add a risk modifier: any account regardless of ARR tier that crosses a health score threshold drops into the
+            escalation track immediately, overriding the standard timing. A $15K account showing three concurrent churn
+            signals at T-100 gets treated like a mid-market account, not left on the standard SMB track.
+        </p>
+
+        <h2>Step 2: Define your health scoring signals</h2>
+        <div class="step-card green">
+            <div class="step-num">Step 2 of 5</div>
+            <h3>Pick 4-5 signals, weight them, set your threshold</h3>
+            <p>Health scoring collapses to a single question: what behaviours in the 60-90 days before renewal are
+                predictive of churn at your specific company? The signals vary by product, but the categories that
+                matter
+                most for most SaaS products are consistent.</p>
+        </div>
+
+        <div class="signal-grid">
+            <div class="signal-box">
+                <div class="signal-name">Product usage trend</div>
+                <div class="signal-desc">Is weekly/monthly active usage increasing, flat, or declining over the last 60
+                    days? Decline rate matters more than absolute level.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">Champion engagement</div>
+                <div class="signal-desc">Is the primary contact still logging in? Has the champion changed? Engagement
+                    frequency of the key decision-maker is a leading indicator.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">Support ticket sentiment</div>
+                <div class="signal-desc">Volume, resolution time, and tone of recent support tickets. Unresolved or
+                    negatively-toned tickets in the last 30 days are a strong signal.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">Payment reliability</div>
+                <div class="signal-desc">Late payments, failed charges, or invoice disputes in the last 2 billing
+                    cycles. Not a standalone signal, but strong when combined with others.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">NPS or CSAT recency</div>
+                <div class="signal-desc">Most recent survey response score and trend. A score drop of 20+ points since
+                    last survey is a significant risk flag.</div>
+            </div>
+            <div class="signal-box">
+                <div class="signal-name">Stakeholder breadth</div>
+                <div class="signal-desc">How many users across the account are actively using the product? Single-user
+                    adoption at the account level is a concentration risk.</div>
+            </div>
+        </div>
+
+        <p>
+            Assign each signal a weight based on its historical correlation with churn at your company. Score each
+            account 0-100. Set a threshold - typically 65 - below which an account enters the at-risk track. Set a
+            secondary threshold - typically 45 - below which an account enters the escalation track. Revisit the weights
+            quarterly as you accumulate more outcome data.
+        </p>
+
+        <h2>Step 3: Map your sequence timing and branching logic</h2>
+        <div class="step-card purple">
+            <div class="step-num">Step 3 of 5</div>
+            <h3>Build sequences that adapt - not timers that fire regardless</h3>
+            <p>A renewal sequence is not a drip. A drip fires on a fixed schedule. A sequence fires on a schedule, then
+                adapts based on what actually happens - a reply, a health score change, a click, an escalation. That
+                distinction is the difference between automation that helps and automation that damages the
+                relationship.</p>
+        </div>
+
+        <p>
+            For each segment, map the sequence as a decision tree, not a list. The nodes are: touchpoint fired →
+            response detected? → if yes: pause and route to CSM. If no: is health score still above threshold? → if
+            yes: next scheduled touchpoint. If no: escalate and move to escalation track. This logic should be written
+            down before it's built into any tool.
+        </p>
+
+        <div class="callout-dark">
+            <h3>The three non-negotiable sequence rules</h3>
+            <p>
+                1. Every sequence pauses immediately when the customer replies - no exceptions.<br />
+                2. Every email passes through CSM approval before sending - AI-drafted or template-based.<br />
+                3. Health score changes override the sequence timeline - a score drop overrides "next email at T-60."
+            </p>
+            <p>
+                <a href="/product" style="color:#ffffff;font-weight:700;">See the Renewal360 features that operationalize these rules →</a>
+            </p>
+        </div>
+
+        <h2>Step 4: Build your escalation tracks before you need them</h2>
+        <div class="step-card amber">
+            <div class="step-num">Step 4 of 5</div>
+            <h3>The escalation protocol has to exist before an account enters it</h3>
+            <p>Escalation track design is the part most playbooks get wrong - because it gets built reactively. An
+                account hits a crisis point, and the team improvises an escalation response. By the time the executive
+                sponsor is looped in, the optimal response window has already closed. The escalation protocol has to be
+                documented before any account needs it.</p>
+        </div>
+
+        <p>The escalation track needs four things defined in advance:</p>
+        <ul>
+            <li><strong>Trigger conditions</strong> - the specific signal combinations that move an account into
+                escalation (health score below threshold, or specific manual override)</li>
+            <li><strong>Owner assignment</strong> - who owns the escalated account immediately and who is looped in at
+                what stage</li>
+            <li><strong>Response SLA</strong> - maximum time between escalation trigger and first owner action (24 hours
+                is a reasonable standard)</li>
+            <li><strong>Resolution criteria</strong> - what outcome closes the escalation (renewal committed, account
+                moved to active risk, or specific decision date set)</li>
+        </ul>
+
+        <h2>Step 5: Build your leadership visibility layer</h2>
+        <div class="step-card">
+            <div class="step-num">Step 5 of 5</div>
+            <h3>The playbook is only complete when leadership can act on it in real time</h3>
+            <p>A renewal playbook that produces good CSM-level execution but no leadership visibility isn't a system - it's a better version of the old manual process. The final layer of the playbook defines what leadership
+                can see, how current it is, and what decisions they can make from it without asking the CS team.</p>
+        </div>
+
+        <p>
+            At minimum, leadership needs three views: total ARR renewing by month over the next 90 days, ARR by risk
+            tier (healthy / at-risk / escalated), and per-CSM renewal pipeline health. These aren't reporting views - they're intervention triggers. When the VP of CS sees that 30% of next quarter's renewal ARR is in the
+            at-risk tier in January, they can reallocate CSM bandwidth in February. That's the value of the visibility
+            layer: it turns lagging indicators into leading actions.
+        </p>
+
+        <h2>What a complete playbook looks like on one page</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>What it defines</th>
+                        <th>Who owns it</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Segmentation rules</strong></td>
+                        <td>Which tier each account belongs to and why</td>
+                        <td>VP CS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Health scoring model</strong></td>
+                        <td>5 signals, weights, and risk thresholds</td>
+                        <td>CS Ops / RevOps</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sequence map</strong></td>
+                        <td>Timing, content, branching logic per tier</td>
+                        <td>CS Team</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Escalation protocol</strong></td>
+                        <td>Triggers, owners, SLAs, resolution criteria</td>
+                        <td>VP CS + AE</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Leadership dashboard</strong></td>
+                        <td>ARR at risk by tier, per-CSM pipeline, 90-day forecast</td>
+                        <td>CS Ops</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            A playbook that covers all five components converts the renewal motion from something that depends on
+            individual CSM quality to something that runs consistently at the system level. New CSMs onboard faster.
+            Coverage during absence doesn't degrade. Leadership can resource proactively. The process itself becomes
+            a competitive advantage. To see how Renewal360 executes each of these five components automatically, visit
+            <a href="/product" style="color:#2563eb;font-weight:600;">How It Works</a> or review the full
+            <a href="/product" style="color:#2563eb;font-weight:600;">feature set</a>.
+        </p>
+
+        <div
+            style="background: linear-gradient(135deg, #1e3a8a, #2563eb); border-radius: 1rem; padding: 2.5rem; margin: 3rem 0; text-align: center;">
+            <h2 style="color: white; margin: 0 0 0.75rem; font-size: 1.6rem; font-family: 'Lora', serif;">
+                Ready to run this playbook in a system that executes it automatically?
+            </h2>
+            <p style="color: #bfdbfe; margin: 0 0 1.5rem; font-size: 1rem;">
+                Renewal360 implements the segmentation, health scoring, sequences, escalation tracks, and leadership
+                dashboard from this playbook - configured to your accounts in 7 days. No credit card required.
+            </p>
+            <a href="/contact"
+                style="display: inline-block; background: white; color: #1d4ed8; font-weight: 700; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-size: 0.95rem;">
+                Start free trial →
+            </a>
+        </div>
