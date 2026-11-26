@@ -125,15 +125,14 @@ ${tourSection}
   </div>
 </section>
 <section class="section section-tint" id="nuva">
-  <div class="wrap split split-media">
+  <div class="wrap split">
     <div class="reveal">
       <p class="eyebrow">Ask Nuva</p>
       <h2>An assistant that already knows the account.</h2>
+    </div>
+    <div class="reveal">
       <p class="body-lg">Nuva answers questions about any account or the whole book, with the facts and the activity behind them: how is this account doing, what changed this week, which renewals this quarter have no business review. It can draft a check-in for you, which waits for approval like everything else.</p>
     </div>
-    <figure class="shot reveal" style="max-width:380px;justify-self:center">
-      <img src="/img/product-nuva.webp" width="640" height="1080" loading="lazy" alt="Ask Nuva panel answering how Quarry Robotics is doing: value, renewal date, risk score, owner, next step, risk factors and recent activity, with suggested follow-up questions">
-    </figure>
   </div>
 </section>
 <section class="section" id="managers">
