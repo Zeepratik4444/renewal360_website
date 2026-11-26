@@ -83,6 +83,10 @@ ${tourSection}
       <p class="body-lg">Risk scores move as the evidence moves, and every account explains its own score in plain English: the customer is reviewing their tools, the tone turned negative, usage is low. Nothing changes quietly.</p>
     </div>
     <figure class="shot reveal">
+      <img src="/img/product-account-risk.webp" width="1400" height="1211" loading="lazy" alt="Renewal360 risk analysis for one account: a 74.5 risk score with a plain-English explanation, key risk drivers, risk by factor, the score trend and a recommended next step">
+      <figcaption>Risk analysis on one account: the score, the reasons, risk by factor and the suggested next step.</figcaption>
+    </figure>
+    <figure class="shot reveal" style="margin-top:28px">
       <img src="/img/product-risk.webp" width="1600" height="509" loading="lazy" alt="Renewal360 risk score movements: accounts that got worse or better, with score, change, risk level, days to renewal and ARR, next to a renewal calendar">
       <figcaption>Risk score movements and the renewal calendar, on our Ganvix demo workspace.</figcaption>
     </figure>
@@ -121,14 +125,15 @@ ${tourSection}
   </div>
 </section>
 <section class="section section-tint" id="nuva">
-  <div class="wrap split">
+  <div class="wrap split split-media">
     <div class="reveal">
       <p class="eyebrow">Ask Nuva</p>
       <h2>An assistant that already knows the account.</h2>
-    </div>
-    <div class="reveal">
       <p class="body-lg">Nuva answers questions about any account or the whole book, with the facts and the activity behind them: how is this account doing, what changed this week, which renewals this quarter have no business review. It can draft a check-in for you, which waits for approval like everything else.</p>
     </div>
+    <figure class="shot reveal" style="max-width:380px;justify-self:center">
+      <img src="/img/product-nuva.webp" width="640" height="1080" loading="lazy" alt="Ask Nuva panel answering how Quarry Robotics is doing: value, renewal date, risk score, owner, next step, risk factors and recent activity, with suggested follow-up questions">
+    </figure>
   </div>
 </section>
 <section class="section" id="managers">
@@ -145,6 +150,12 @@ ${tourSection}
         <li>Alerts to Slack, with quiet hours set by managers</li>
       </ul>
     </div>
+  </div>
+  <div class="wrap" style="margin-top:48px">
+    <figure class="shot reveal">
+      <img src="/img/product-exec.webp" width="1600" height="760" loading="lazy" alt="Renewal360 executive summary: total ARR, at-risk revenue, renewal rate, average deal size and silent accounts, the quarter's renewals split by risk, and a renewal urgency chart of at-risk accounts">
+      <figcaption>The executive summary for a CS leader, on our Ganvix demo workspace.</figcaption>
+    </figure>
   </div>
 </section>
 <section class="section section-tint" id="questions">
